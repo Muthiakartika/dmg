@@ -5,9 +5,9 @@ import Footer from "@/components/Layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Terms and Conditions for Using Our Site - DMG Masonry",
+  title: "Please Review Our Terms and Conditions Before You Begin",
   description:
-    "Review the rules that apply when you use the DMG Masonry website, request a quote or hire our team for masonry work anywhere in the greater Calgary region.",
+    "Review the rules that apply when you use our website, request a quote or hire our team for masonry work anywhere in the greater Calgary region.",
   path: "/terms-conditions/",
 });
 

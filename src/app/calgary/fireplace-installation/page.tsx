@@ -163,7 +163,7 @@ const fireplaceFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Fireplace Installation Experts in Calgary - DMG Masonry",
+  title: "Fireplace Installation Experts Serving All Calgary",
   description:
     "We build a custom outdoor fireplace for backyards across Calgary, adding warmth, ambiance and a natural gathering spot for family and friends every season.",
   path: "/calgary/fireplace-installation/",

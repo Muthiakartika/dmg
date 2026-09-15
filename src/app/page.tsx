@@ -20,9 +20,9 @@ import { buildMetadata } from "@/lib/seo";
 import heroBgImg from "../../public/images/main-banner/home/1.webp";
 
 export const metadata = buildMetadata({
-  title: "DMG Masonry – Build Your Dream Home with Pro Stone Masons",
+  title: "Build Your Dream Home with Pro Masonry Contractor",
   description:
-    "DMG Masonry offers masonry services throughout Calgary, from brick and stone repair to custom patios, fireplaces and fire pits built to last for years.",
+    "Our team offers masonry services throughout Calgary, from brick and stone repair to custom patios, fireplaces and fire pits built to last for many years.",
   path: "/",
 });
 

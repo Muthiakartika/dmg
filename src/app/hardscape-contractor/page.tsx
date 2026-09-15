@@ -192,7 +192,7 @@ const hardscapeFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Five-Star Hardscape Contractors in Calgary - DMG Masonry",
+  title: "Hardscape Contractors Pro Serving All in Calgary",
   description:
     "We provide hardscape services and hardscape construction across Calgary, from patios to retaining walls, all built to last through many years of weather.",
   path: "/hardscape-contractor/",

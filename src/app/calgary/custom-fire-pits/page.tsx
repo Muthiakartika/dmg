@@ -212,7 +212,7 @@ const firePitsFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Custom Fire Pits for Home Yards in Calgary – DMG Masonry",
+  title: "Custom Fire Pits for Calgary Home Yards and Patios",
   description:
     "We design fire pits Calgary homeowners enjoy year round, using durable stone and brick to create a lasting, comfortable gathering spot for family and friends.",
   path: "/calgary/custom-fire-pits/",

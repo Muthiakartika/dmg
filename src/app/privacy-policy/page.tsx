@@ -5,9 +5,9 @@ import Footer from "@/components/Layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Our Privacy Policy for Website Visitors - DMG Masonry",
+  title: "Read Our Full Privacy Policy for Every Website Visitor",
   description:
-    "Read how DMG Masonry collects, uses and protects your personal information when you visit our website, call our team or request a quote for any service.",
+    "Read how we collect, use, and protect your personal information when you visit our website, call our team, or request a quote for any service.",
   path: "/privacy-policy/",
 });
 

@@ -13,17 +13,17 @@ export interface BlogSeoOverride {
  */
 export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
   "how-to-seal-a-masonry-patio-a-diy-guide": {
-    title: "How to Properly Seal a Masonry Patio - DMG Masonry",
+    title: "How to Properly Seal a Masonry Patio Before Winter",
     description:
       "This guide walks through the tools, timing and steps needed to protect a stone or brick patio from moisture, staining and long term winter freeze damage.",
   },
   "maintaining-a-100-year-old-chimney-in-calgary": {
-    title: "Caring for a Century Old Calgary Chimney - DMG Masonry",
+    title: "Caring for a Century Old Chimney in Your Calgary Home",
     description:
       "Older chimneys face unique problems that newer builds do not. Here is what to expect during an inspection and how a full masonry restoration typically works.",
   },
   "signs-of-foundation-masonry-failure-causes-solutions": {
-    title: "Signs Your Foundation Masonry Needs Help - DMG Masonry",
+    title: "Signs Your Foundation Masonry Needs Help Right Away",
     description:
       "From hairline cracks to shifting walls, here are the early warning signs of foundation masonry failure and the common causes and issues behind each one.",
   },

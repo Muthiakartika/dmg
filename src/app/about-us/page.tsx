@@ -13,9 +13,9 @@ import Footer from "@/components/Layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "About Special Masonry Contractor for You - DMG Masonry",
+  title: "Meet the Masons Building Calgary Dream Homes to Last",
   description:
-    "Learn about DMG Masonry, a Calgary based team specializing in brick and stone craftsmanship, historic restorations and custom outdoor living builds for homes.",
+    "Learn about our company, a Calgary based team specializing in brick and stone craftsmanship, historic restorations and custom outdoor living builds for homes.",
   path: "/about-us/",
 });
 

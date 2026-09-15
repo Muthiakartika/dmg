@@ -82,7 +82,7 @@ const brickRepairProcessSteps = [
 ];
 
 export const metadata = buildMetadata({
-  title: "Brick Repair From a Trusted Calgary Mason - DMG Masonry",
+  title: "Brick Repair From a Trusted and Experienced Calgary Mason",
   description:
     "Our brick mason team handles brick repair for homes and businesses across Calgary, matching mortar and materials for a clean, seamless finish every time.",
   path: "/calgary/brick-repair/",

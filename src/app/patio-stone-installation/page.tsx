@@ -144,7 +144,7 @@ const patioStoneFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Patio Stone Installation for Calgary Homes - DMG Masonry",
+  title: "Patio Stone Installation for Calgary Area Homes Today",
   description:
     "We handle every stage of your patio project, from grading to laying patio stones, creating a durable outdoor surface built for daily use and years of weather.",
   path: "/patio-stone-installation/",

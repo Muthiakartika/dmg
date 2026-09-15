@@ -119,7 +119,7 @@ const chimneyFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Leading Chimney Repair Services in Calgary - DMG Masonry",
+  title: "Leading Chimney Repair Services Across Calgary Homes",
   description:
     "Our chimney repair service covers Calgary and the surrounding area, fixing cracks and leaks fast. Ask us for a chimney repair cost estimate before winter.",
   path: "/calgary/chimney-repair/",

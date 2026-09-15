@@ -155,7 +155,7 @@ const masonryFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Find Masonry Repair Near You Quickly - DMG Masonry",
+  title: "Find Masonry Repair Near You in Calgary Quickly Today",
   description:
     "If you are looking for a mason to fix cracked brick, chipped stone or crumbling mortar, our Calgary team offers lasting masonry restoration you can count on.",
   path: "/calgary/masonry-repair/",

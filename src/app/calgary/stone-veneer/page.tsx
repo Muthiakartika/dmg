@@ -156,7 +156,7 @@ const stoneVeneerFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Upgrade Your Home with Stone Veneer Calgary | DMG Masonry",
+  title: "Upgrade Your Home with strong Stone Veneer Calgary",
   description:
     "Our Calgary stones veneer installations add texture and character to any home, using durable materials built to handle the local climate every season.",
   path: "/calgary/stone-veneer/",

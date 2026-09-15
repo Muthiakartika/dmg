@@ -12,7 +12,7 @@ import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Foundation Repair Solutions in Calgary - DMG Masonry",
+  title: "Foundation Repair Solutions for Calgary Homeowners",
   description:
     "Cracks and shifting can signal deeper structural issues. Our team provides foundation repair across Calgary to protect your home's value for years to come.",
   path: "/calgary/foundation-repair/",

@@ -6,7 +6,7 @@ import { getPublishedBlogsPage } from "@/lib/cmsBlogs";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Masonry Know-How from Professional Masons - DMG Masonry",
+  title: "Masonry Know How From Our Professional Calgary Masons",
   description:
     "Browse our collection of masonry tips covering chimney care, patio sealing, foundation issues and more, written for Calgary homeowners like you and your family.",
   path: "/blogs/",

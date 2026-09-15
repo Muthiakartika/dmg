@@ -150,7 +150,7 @@ const retainingWallFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Pro Retaining Wall Installation in Calgary – DMG Masonry",
+  title: "Pro Retaining Wall Installation Across Calgary Homes",
   description:
     "Our retaining wall Calgary projects manage sloped yards and control erosion. Ask us for a retaining wall cost estimate before your next landscaping project.",
   path: "/calgary/retaining-wall-construction/",

@@ -159,7 +159,7 @@ const outdoorKitchenFeedbacks = [
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Calgary’s Favorite Custom Outdoor Kitchens – DMG Masonry",
+  title: "Calgary's Favorite Custom Outdoor Kitchen Builds Today",
   description:
     "From a simple outdoor barbecue setup to a full outdoor kitchen with pizza oven, we help you plan the layout, materials and overall project cost upfront.",
   path: "/outdoor-kitchen-contractor/",

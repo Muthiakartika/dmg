@@ -25,7 +25,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
   {
     slug: "bragg-creek",
     name: "Bragg Creek",
-    metadataTitle: "Trusted Chimney Repair in Bragg Creek - DMG Masonry",
+    metadataTitle: "Trusted Chimney Repair Serving the Bragg Creek Area",
     metadataDescription:
       "Homes around Bragg Creek face harsh mountain weather that wears chimneys down fast. Our masons repair cracks, leaks and structural damage all year round.",
     description:
@@ -72,7 +72,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
   {
     slug: "longview",
     name: "Longview",
-    metadataTitle: "Expert Chimney Repair Serving Longview Alberta - DMG Masonry",
+    metadataTitle: "Expert Chimney Repair Serving Longview Alberta Homes",
     metadataDescription:
       "Our team travels out to Longview for chimney repair, fixing cracked brick and worn mortar so your fireplace stays safe and reliable through every season.",
     description:
@@ -118,7 +118,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
   {
     slug: "kananaskis",
     name: "Kananaskis",
-    metadataTitle: "Expert Chimney Repair in the Kananaskis Area - DMG Masonry",
+    metadataTitle: "Expert Chimney Repair Covering the Kananaskis Area",
     metadataDescription:
       "From mountain cabins to full time residences, we handle chimney repair throughout Kananaskis, restoring safety and function to aging fireplace structures.",
     description:
@@ -167,7 +167,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
   {
     slug: "sundre",
     name: "Sundre",
-    metadataTitle: "Expert Chimney Repair Serving Sundre Alberta - DMG Masonry",
+    metadataTitle: "Expert Chimney Repair Serving Sundre Alberta Homes",
     metadataDescription:
       "We help Sundre homeowners with chimney repair, from small mortar touch ups to full masonry restoration on older or historic fireplace structures nearby.",
     description:
@@ -214,7 +214,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
   {
     slug: "three-hills",
     name: "Three Hills",
-    metadataTitle: "Expert Chimney Repair for Homes in Three Hills - DMG Masonry",
+    metadataTitle: "Expert Chimney Repair for Homes Across Three Hills",
     metadataDescription:
       "Our masons provide chimney repair across the Three Hills area, addressing spalling brick, cracked mortar and other common issues before they spread further.",
     description:
@@ -260,7 +260,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
   {
     slug: "drumheller",
     name: "Drumheller",
-    metadataTitle: "Expert Chimney Repair Serving Drumheller Homes - DMG Masonry",
+    metadataTitle: "Expert Chimney Repair Serving Drumheller Area Homes",
     metadataDescription:
       "Our masonry crew serves Drumheller homeowners, addressing cracked brick, water damage and worn mortar on chimneys before small problems become costly repairs.",
     description:
@@ -306,7 +306,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
   {
     slug: "claresholm",
     name: "Claresholm",
-    metadataTitle: "Expert Chimney Repair for Homes in Claresholm - DMG Masonry",
+    metadataTitle: "Claresholm Homeowners Trust Our Chimney Repair Experts",
     metadataDescription:
       "We provide chimney repair for homes throughout Claresholm, fixing mortar damage and structural issues to keep your fireplace safe and reliable each winter.",
     description:

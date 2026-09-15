@@ -5,7 +5,7 @@ import Footer from "@/components/Layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Get a Free Masonry Estimate in Calgary - DMG Masonry",
+  title: "Get a Free Masonry Estimate From Our Calgary Team Now",
   description:
     "Tell us about your project and we will provide clear, upfront pricing for repairs, patios, fireplaces or any other masonry work across the Calgary area.",
   path: "/request-quote/",

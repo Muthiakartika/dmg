@@ -8,7 +8,7 @@ import Footer from "@/components/Layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Explore Our Special Masonry Services - DMG Masonry",
+  title: "Explore Our Full Range of Special Masonry Services",
   description:
     "From repairs to custom outdoor builds, our masonry contractor team handles every project across Calgary with skilled, reliable craftsmanship every time.",
   path: "/services/",

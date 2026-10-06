@@ -1,14 +1,15 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
+import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Patio Stone Installation
 const patioStoneFaqs = [
@@ -54,58 +55,42 @@ const patioMaintenanceTopics = [
   {
     title: "Does a patio need sealing?",
     text: "Sealing is optional. It helps with staining and can deepen the colour of natural stone, but it needs redoing periodically and is not what determines whether the patio lasts. Base preparation is.",
-    aosDelay: "100",
   },
   {
     title: "How do I maintain a paver patio?",
     text: "Sweep it, keep joint sand topped up, and pull weeds from joints before they establish. Re-sanding joints every few years keeps the interlock working, which is what stops individual pavers shifting.",
-    aosDelay: "200",
   },
   {
     title: "Is salt bad for a stone patio?",
     text: "De-icing salt is hard on natural stone and on the surface of some concrete products. Sand or a stone-safe alternative is the safer choice on a patio you care about the look of.",
-    aosDelay: "300",
   },
   {
     title: "How much does patio stone installation cost?",
     text: "Cost is driven by area, the material chosen, how much excavation the site needs, and access for equipment. A flat, open backyard and a terraced site with a narrow gate are very different jobs at the same square footage, which is why we quote after seeing the space.",
-    aosDelay: "400",
   },
 ];
 
 // Tahapan proses spesifik untuk Patio Stone Installation
 const patioStoneProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/pation_stone/2.webp",
     title: "Assess The Site",
     text: "We evaluate ground conditions, drainage, and layout prior to installation.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/pation_stone/3.webp",
     title: "Prepare The Base",
     text: "Proper grading and base work are completed to support a stable patio surface.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/pation_stone/4.webp",
     title: "Install The Stones",
     text: "Each patio stone is placed with care to ensure alignment, level, and strength.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/pation_stone/5.webp",
     title: "Complete The Surface",
     text: "Final adjustments are made to achieve a clean, durable, and even finish.",
-    aosDelay: "400",
   },
 ];
 
@@ -115,33 +100,28 @@ const patioStoneOverviewItems = [
     image: "/images/services/service/pation_stone/6.webp",
     titleNormal: "Natural Flagstone",
     titleHighlight: "Patios",
-    aosDelay: "100",
   },
   {
     image: "/images/services/service/pation_stone/7.webp",
     titleNormal: "Interlocking",
     titleHighlight: "Pavers",
-    aosDelay: "200",
   },
 ];
 
 // Testimonial klien spesifik untuk Patio Stone Installation
 const patioStoneFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "We originally contacted DMG Masonry about repairing our patio, but after talking through the options, we decided on a new installation instead. Looking back, it was definitely the right decision for our space.",
     name: "Nicole H.",
   },
   {
-    id: "2",
     feedbackText:
       "Our backyard finally feels finished. The patio connects everything together, thank you DMG Masonry.",
     name: "Melissa W.",
   },
 ];
 
-import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Patio Stone Installation for Calgary Area Homes Today",
@@ -153,7 +133,7 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle
         title="Patio Stone Installation"
@@ -164,8 +144,7 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/pation_stone/1.webp"
         title="Patio Stone Installation Calgary: Hardscape Patios & Pavers"
-        subtitle="SERVICE"
-        description1="DMG Masonry is a patio stone installer in Calgary, Alberta. A properly installed patio stone surface can improve both the function and appearance of an outdoor space. Our patio stone installation focuses on building stable, well-structured surfaces for everyday use and long-term durability in Calgary's climate."
+        description="DMG Masonry is a patio stone installer in Calgary, Alberta. A properly installed patio stone surface can improve both the function and appearance of an outdoor space. Our patio stone installation focuses on building stable, well-structured surfaces for everyday use and long-term durability in Calgary's climate."
         paragraphsHeading="What affects how long a patio lasts?"
         paragraphs={[
           "Outdoor patio areas are exposed to constant movement, seasonal weather changes, and moisture over time. At DMG Masonry, we install patio stones using dependable hardscape construction methods and carefully selected materials to ensure the surface remains stable, properly aligned, and visually consistent through years of use in Calgary's freeze-thaw climate.",
@@ -185,12 +164,12 @@ export default function Page() {
         ]}
       />
 
-      <Process
+      <ProcessSteps
         title="How Does Patio Stone Installation Work?"
         steps={patioStoneProcessSteps}
       />
 
-      <Overview fullWidth items={patioStoneOverviewItems} />
+      <ServiceGallery items={patioStoneOverviewItems} />
 
       <MaterialsSection
         subtitle="MAINTENANCE & COST"
@@ -198,15 +177,14 @@ export default function Page() {
         items={patioMaintenanceTopics}
       />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="What Calgary Thinks"
         titleHighlight="About Our Patios"
         feedbacks={patioStoneFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/pation_stone/8.webp"
-        subtitle="WHY CHOOSE US"
         title="Why Choose DMG Masonry For Patio Stone Installation In Calgary?"
         description="A properly installed patio stone surface helps create a functional, balanced outdoor space. As masonry contractors in Calgary, we build patio installations with strong structure and a clean, timeless finish for everyday use."
         listItems={[
@@ -220,14 +198,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={patioStoneFaqs}
         title="Patio Stone Installation Calgary: Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/pation_stone/9.webp"
           title="Design Your Perfect Patio"
           subtitle="REQUEST A QUOTE"

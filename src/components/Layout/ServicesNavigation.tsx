@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { servicesData } from "@/lib/servicesData";
+import { services } from "@/lib/services";
 
 interface ServicesNavigationProps {
   currentRoute: string;
@@ -13,19 +13,16 @@ function isCurrentRoute(currentRoute: string, link: string) {
   return currentRoute === link || currentRoute === `${link}/`;
 }
 
-export function DesktopServicesNavigation({
-  currentRoute,
-}: ServicesNavigationProps) {
+function isServiceActive(currentRoute: string, link: string) {
+  return isCurrentRoute(currentRoute, link) || currentRoute.startsWith(`${link}/`);
+}
+
+/** Items of the desktop "Services" dropdown (with the chimney town flyout). */
+export function DesktopServicesNavigation({ currentRoute }: ServicesNavigationProps) {
   return (
     <>
-      {servicesData.map((service) => {
-        const locations =
-          "locations" in service && Array.isArray(service.locations)
-            ? service.locations
-            : [];
-        const isServiceActive =
-          isCurrentRoute(currentRoute, service.link) ||
-          currentRoute.startsWith(`${service.link}/`);
+      {services.map((service) => {
+        const locations = service.locations ?? [];
 
         return (
           <li
@@ -35,7 +32,7 @@ export function DesktopServicesNavigation({
             <Link
               href={service.link}
               className={`nav-link ${locations.length ? "dropdown-toggle" : ""} ${
-                isServiceActive ? "active" : ""
+                isServiceActive(currentRoute, service.link) ? "active" : ""
               }`}
             >
               {service.title}
@@ -48,9 +45,7 @@ export function DesktopServicesNavigation({
                     <Link
                       href={location.link}
                       className={`nav-link ${
-                        isCurrentRoute(currentRoute, location.link)
-                          ? "active"
-                          : ""
+                        isCurrentRoute(currentRoute, location.link) ? "active" : ""
                       }`}
                     >
                       {location.name}
@@ -66,31 +61,24 @@ export function DesktopServicesNavigation({
   );
 }
 
-export function MobileServicesNavigation({
-  currentRoute,
-}: ServicesNavigationProps) {
+/** Items of the mobile "Services" accordion panel. */
+export function MobileServicesNavigation({ currentRoute }: ServicesNavigationProps) {
   const [isLocationsOpen, setLocationsOpen] = useState(
     currentRoute.startsWith("/calgary/chimney-repair/"),
   );
 
   return (
     <>
-      {servicesData.map((service) => {
-        const locations =
-          "locations" in service && Array.isArray(service.locations)
-            ? service.locations
-            : [];
-        const isServiceActive =
-          isCurrentRoute(currentRoute, service.link) ||
-          currentRoute.startsWith(`${service.link}/`);
+      {services.map((service) => {
+        const locations = service.locations ?? [];
+        const linkClassName = `nav-link ${
+          isServiceActive(currentRoute, service.link) ? "active" : ""
+        }`;
 
         if (locations.length === 0) {
           return (
             <li key={service.id}>
-              <Link
-                href={service.link}
-                className={`nav-link ${isServiceActive ? "active" : ""}`}
-              >
+              <Link href={service.link} className={linkClassName}>
                 {service.title}
               </Link>
             </li>
@@ -100,28 +88,17 @@ export function MobileServicesNavigation({
         return (
           <li className="mobile-service-with-children" key={service.id}>
             <div className="mobile-service-row">
-              <Link
-                href={service.link}
-                className={`nav-link ${isServiceActive ? "active" : ""}`}
-              >
+              <Link href={service.link} className={linkClassName}>
                 {service.title}
               </Link>
               <button
                 type="button"
                 className="mobile-submenu-toggle"
                 aria-expanded={isLocationsOpen}
-                aria-label={`${isLocationsOpen ? "Hide" : "Show"} ${
-                  service.title
-                } locations`}
+                aria-label={`${isLocationsOpen ? "Hide" : "Show"} ${service.title} locations`}
                 onClick={() => setLocationsOpen((open) => !open)}
               >
-                <i
-                  className={
-                    isLocationsOpen
-                      ? "ri-arrow-up-s-line"
-                      : "ri-arrow-down-s-line"
-                  }
-                />
+                <i className={isLocationsOpen ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"} />
               </button>
             </div>
 
@@ -132,9 +109,7 @@ export function MobileServicesNavigation({
                     <Link
                       href={location.link}
                       className={`nav-link ${
-                        isCurrentRoute(currentRoute, location.link)
-                          ? "active"
-                          : ""
+                        isCurrentRoute(currentRoute, location.link) ? "active" : ""
                       }`}
                     >
                       {location.name}

@@ -1,14 +1,15 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
+import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Stone Veneer
 const stoneVeneerFaqs = [
@@ -52,36 +53,24 @@ const stoneVeneerFaqs = [
 // Tahapan proses spesifik untuk Stone Veneer
 const stoneVeneerProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/stone_veneer/2.webp",
     title: "Evaluate The Project",
     text: "We review the space, surface conditions, and installation needs.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/stone_veneer/3.webp",
     title: "Prepare Materials & Layout",
     text: "Stone veneer selections, layout patterns, and installation details are prepared.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/stone_veneer/4.webp",
     title: "Apply The Stone Veneer",
     text: "Each section is installed carefully for secure placement and appearance.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/stone_veneer/5.webp",
     title: "Complete The Final Finish",
     text: "The surface is refined to ensure clean detailing and long-term durability.",
-    aosDelay: "400",
   },
 ];
 
@@ -91,13 +80,11 @@ const stoneVeneerOverviewItems = [
     image: "/images/services/service/stone_veneer/6.webp",
     titleNormal: "Natural Thin",
     titleHighlight: "Stone Veneer",
-    aosDelay: "100"
   },
   {
     image: "/images/services/service/stone_veneer/7.webp",
     titleNormal: "Manufactured",
     titleHighlight: "Cultured Stone",
-    aosDelay: "200"
   }
 ];
 
@@ -106,54 +93,45 @@ const stoneVeneerApplications = [
   {
     title: "Exterior facades and accent walls",
     text: "Stone veneer is most often used on the front elevation, around entryways, and on columns or wainscot bands to break up siding. It is light enough to apply over most prepared exterior surfaces.",
-    aosDelay: "100",
   },
   {
     title: "Interior feature walls and fireplace surrounds",
     text: "Indoors, stone veneer is used on fireplace surrounds, feature walls and basement bars. Interior installs avoid the freeze-thaw exposure of exterior work, so material choice is driven mainly by appearance.",
-    aosDelay: "200",
   },
   {
     title: "Outdoor kitchens, fire pits and retaining walls",
     text: "Stone veneer is frequently used to clad outdoor kitchen bases, fire pit surrounds and the face of block retaining walls, which is how a hardscape project ends up looking like one connected design rather than separate builds.",
-    aosDelay: "300",
   },
   {
     title: "Can stone veneer go over existing brick or concrete?",
     text: "In many cases yes, provided the substrate is sound and properly prepared. We assess the existing surface first, because veneer applied over a wall that is already failing will fail with it.",
-    aosDelay: "400",
   },
 ];
 
 // Testimonial klien spesifik untuk Stone Veneer
 const stoneVeneerFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "We had stone veneer installed around our fireplace and it completely changed the space. The installation was neat and everything lined up nicely.",
     name: "Olivia S.",
   },
   {
-    id: "2",
     feedbackText:
       "DMG Masonry helped us choose a stone that suited the style of our home instead of just picking what looked good on its own. Really happy with the result.",
     name: "Melissa K.",
   },
   {
-    id: "3",
     feedbackText:
       "Our old fireplace looked pretty dated, so we decided to update it with stone veneer. The room feels much warmer and more inviting now.",
     name: "Brian T.",
   },
   {
-    id: "4",
     feedbackText:
       "I liked that they took the time to explain the different options before we made a decision. It made choosing the right finish a lot easier than we expected.",
     name: "Ashley M.",
   },
 ];
 
-import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Upgrade Your Home with strong Stone Veneer Calgary",
@@ -165,15 +143,14 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle title="Stone Veneer" homeText="Home" homeUrl="/" />
 
       <ServiceDetailsContent
         mainImage="/images/services/service/stone_veneer/1.webp"
         title="Stone Veneer in Calgary: Professional Installation Services"
-        subtitle="SERVICE"
-        description1="Stone veneer is a masonry finish that uses a thin layer of natural or engineered stone on interior and exterior surfaces. DMG Masonry is a stone veneer installer in Calgary, Alberta, focused on appearance, durability, and long-term performance."
+        description="Stone veneer is a masonry finish that uses a thin layer of natural or engineered stone on interior and exterior surfaces. DMG Masonry is a stone veneer installer in Calgary, Alberta, focused on appearance, durability, and long-term performance."
         paragraphsHeading="Why do property owners choose stone veneer?"
         paragraphs={[
           "Stone veneer is widely used because it offers a flexible way to achieve a natural stone look without the weight and cost of full stone construction. It can be applied to feature walls, exterior facades, fireplaces, and other architectural surfaces while still maintaining structural efficiency.",
@@ -193,13 +170,12 @@ export default function Page() {
         ]}
       />
 
-      <Process
+      <ProcessSteps
         title="How Does Our Stone Veneer Installation Work?"
         steps={stoneVeneerProcessSteps}
       />
 
-      <Overview
-        fullWidth
+      <ServiceGallery
         items={stoneVeneerOverviewItems}
       />
 
@@ -209,15 +185,14 @@ export default function Page() {
         items={stoneVeneerApplications}
       />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="What Our Clients"
         titleHighlight="Say About Our Stone Veneer"
         feedbacks={stoneVeneerFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/stone_veneer/8.webp"
-        subtitle="WHY CHOOSE US"
         title="Why Do Calgary Property Owners Choose Stone Veneer?"
         description="Stone veneer offers the timeless look of natural stone with a lighter structure and efficient installation. We create surfaces that enhance visual appeal, durability, and property value."
         listItems={[
@@ -230,14 +205,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={stoneVeneerFaqs}
         title="Stone Veneer Calgary: Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/stone_veneer/9.webp"
           title="Enhance Your Property With Stone Veneer"
           subtitle="REQUEST A QUOTE"

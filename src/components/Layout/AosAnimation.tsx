@@ -1,15 +1,18 @@
 "use client";
 
-import React from "react";
+import { useEffect } from "react";
 import AOS from "aos";
-import "../../../node_modules/aos/dist/aos.css";
+import "aos/dist/aos.css";
 
-const AosAnimation = () => {
-  React.useEffect(() => {
+/**
+ * Starts AOS once for the whole app. AOS watches the DOM itself, so blocks
+ * rendered by later client-side navigations are picked up automatically.
+ * Elements opt in through the attributes from `fadeUp()` in lib/aos.ts.
+ */
+export default function AosAnimation() {
+  useEffect(() => {
     AOS.init();
   }, []);
 
-  return <div></div>;
-};
-
-export default AosAnimation;
+  return null;
+}

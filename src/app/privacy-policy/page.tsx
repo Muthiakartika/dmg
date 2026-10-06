@@ -1,6 +1,6 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import PrivacyPolicyContent from "@/components/PrivacyPolicy/PrivacyPolicyContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import PrivacyPolicyContent from "@/components/Legal/PrivacyPolicyContent";
 import Footer from "@/components/Layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle 
         title="Privacy Policy"

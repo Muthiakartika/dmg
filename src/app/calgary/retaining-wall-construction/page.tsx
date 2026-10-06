@@ -1,14 +1,15 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
+import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Retaining Wall
 const retainingWallFaqs = [
@@ -54,58 +55,42 @@ const retainingWallTypes = [
   {
     title: "Segmental block retaining walls",
     text: "Engineered block units that lock together without mortar. They are the most common retaining wall in Calgary because they allow drainage through the wall, can be curved or stepped to follow a slope, and tolerate small ground movements without cracking.",
-    aosDelay: "100",
   },
   {
     title: "Natural stone and boulder walls",
     text: "Large quarried stone or boulders set into a slope. These suit terraced and naturalised landscapes and can look considerably less engineered than block, which is usually the point. They need machine access to build.",
-    aosDelay: "200",
   },
   {
     title: "Poured and reinforced concrete walls",
     text: "Used where the structural demand is high or the space is tight. Strong and long-lived, but less forgiving than block and typically clad afterwards in stone veneer if appearance matters.",
-    aosDelay: "300",
   },
   {
     title: "Why we do not recommend timber",
     text: "Timber walls are cheaper to build and are the ones we most often get called out to replace. In contact with wet soil through repeated freeze-thaw cycles, they have a much shorter life than masonry.",
-    aosDelay: "400",
   },
 ];
 
 // Tahapan proses spesifik untuk Retaining Wall
 const retainingWallProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/retaining_wall/2.webp",
     title: "Evaluate The Site",
     text: "We assess grading, drainage, and soil conditions before installation begins.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/retaining_wall/3.webp",
     title: "Plan The Wall Structure",
     text: "Layout, materials, and wall support requirements are carefully prepared.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/retaining_wall/4.webp",
     title: "Build The Retaining Wall",
     text: "The retaining wall is constructed using durable materials and proper installation methods.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/retaining_wall/5.webp",
     title: "Complete The Finishing",
     text: "Final adjustments help ensure structural support and a clean overall appearance.",
-    aosDelay: "400",
   },
 ];
 
@@ -115,39 +100,33 @@ const retainingWallOverviewItems = [
     image: "/images/services/service/retaining_wall/6.webp",
     titleNormal: "Segmental Block",
     titleHighlight: "Retaining Walls",
-    aosDelay: "100",
   },
   {
     image: "/images/services/service/retaining_wall/7.webp",
     titleNormal: "Natural Boulder",
     titleHighlight: "Terraced Slopes",
-    aosDelay: "200",
   },
 ];
 
 // Testimonial klien spesifik untuk Retaining Wall
 const retainingWallFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "The finished wall looks great, but what impressed me most was how solid everything feels. You can tell a lot of care went into getting it right.",
     name: "Steven M.",
   },
   {
-    id: "2",
     feedbackText:
       "We'd been putting this project off for a while because we thought it would be more complicated. It ended up being a smooth process, and we're glad we finally got it done.",
     name: "Brian L.",
   },
   {
-    id: "3",
     feedbackText:
       "They kept the site organized, and there wasn't much cleanup left for us once the job was finished.",
     name: "Daniel H.",
   },
 ];
 
-import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Pro Retaining Wall Installation Across Calgary Homes",
@@ -159,7 +138,7 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle
         title="Retaining Wall Construction"
@@ -170,8 +149,7 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/retaining_wall/1.webp"
         title="Retaining Walls Calgary: Construction & Installation Services"
-        subtitle="SERVICE"
-        description1="DMG Masonry builds retaining walls in Calgary, Alberta. Retaining walls help manage sloped landscapes while improving the structure and appearance of an outdoor space. Ours are designed for dependable support, proper drainage, and a clean finish that fits naturally with the property."
+        description="DMG Masonry builds retaining walls in Calgary, Alberta. Retaining walls help manage sloped landscapes while improving the structure and appearance of an outdoor space. Ours are designed for dependable support, proper drainage, and a clean finish that fits naturally with the property."
         paragraphsHeading="What does a retaining wall actually do?"
         paragraphs={[
           "A properly built retaining wall helps reduce soil movement, erosion, and water-related issues that can affect the stability of the landscape over time. Our team carefully plans each installation to ensure the wall performs reliably while maintaining a balanced and visually cohesive appearance within the outdoor environment.",
@@ -191,12 +169,12 @@ export default function Page() {
         ]}
       />
 
-      <Process
+      <ProcessSteps
         title="How Does Retaining Wall Installation Work?"
         steps={retainingWallProcessSteps}
       />
 
-      <Overview fullWidth items={retainingWallOverviewItems} />
+      <ServiceGallery items={retainingWallOverviewItems} />
 
       <MaterialsSection
         subtitle="WALL TYPES"
@@ -204,15 +182,14 @@ export default function Page() {
         items={retainingWallTypes}
       />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="Hear From Our"
         titleHighlight="Retaining Wall Clients"
         feedbacks={retainingWallFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/retaining_wall/8.webp"
-        subtitle="WHY CHOOSE US"
         title="Why Choose DMG Masonry For Retaining Walls In Calgary?"
         description="Retaining walls help support uneven ground and improve outdoor usability. We build retaining walls Calgary homeowners and commercial property owners rely on for dependable performance and a clean appearance."
         listItems={[
@@ -226,14 +203,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={retainingWallFaqs}
         title="Retaining Walls Calgary: Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/retaining_wall/9.webp"
           title="Start Your Retaining Wall Project"
           subtitle="REQUEST A QUOTE"

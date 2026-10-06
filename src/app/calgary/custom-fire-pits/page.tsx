@@ -1,14 +1,15 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
+import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Custom Fire Pits
 const firePitsFaqs = [
@@ -89,22 +90,18 @@ const firePitBenefits = [
   {
     title: "It extends the outdoor season",
     text: "In a climate like Calgary's, a fire pit is the difference between a yard that gets used four months a year and one that gets used well into the shoulder seasons and on cool summer evenings.",
-    aosDelay: "100",
   },
   {
     title: "It gives the yard a focal point",
     text: "Seating arranged around nothing tends not to get used. A fire pit gives the outdoor space a centre, which is why it is often the piece that makes the rest of a patio work.",
-    aosDelay: "200",
   },
   {
     title: "It is low maintenance",
     text: "A masonry fire pit built on a proper base needs very little beyond clearing ash and the occasional joint check. There is no mechanism to service on a wood-burning build.",
-    aosDelay: "300",
   },
   {
     title: "It integrates with the rest of the yard",
     text: "Fire pits are usually built alongside patios, seating walls and outdoor kitchens using the same stone, so the finished space reads as one design rather than an add-on.",
-    aosDelay: "400",
   },
 ];
 
@@ -113,61 +110,45 @@ const firePitMaterials = [
     icon: "flaticon-cube",
     title: "Natural Stone",
     text: "Natural stone gives a fire pit a textured, organic look that pairs well with both traditional and modern outdoor spaces, while standing up to years of outdoor exposure.",
-    aosDelay: "100",
   },
   {
     icon: "flaticon-facade",
     title: "Stone Veneer",
     text: "Stone veneer delivers the look of full stone masonry at a lighter weight, making it one of the most popular finishes for Calgary fire pit installations while still offering excellent durability.",
-    aosDelay: "200",
   },
   {
     icon: "flaticon-mansory",
     title: "Brick",
     text: "Brick provides a clean, classic finish that suits a wide range of backyard styles and holds up well to Calgary's seasonal temperature swings.",
-    aosDelay: "300",
   },
   {
     icon: "flaticon-houses",
     title: "Eco-Friendly & Custom Finishes",
     text: "We're also able to source eco-friendly and sustainably produced masonry materials for homeowners who want their fire pit project to reflect that priority, along with custom finish options to match your outdoor space.",
-    aosDelay: "400",
   },
 ];
 
 // Tahapan proses spesifik untuk Custom Fire Pits
 const firePitsProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/custom_firepit/2.webp",
     title: "Review The Space",
     text: "We assess the layout and installation area before construction begins.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/custom_firepit/3.webp",
     title: "Plan The Design",
     text: "Materials, fuel type, and functionality are carefully planned for your custom fire pit.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/custom_firepit/4.webp",
     title: "Build The Fire Pit",
     text: "The structure is installed using durable masonry materials built to last.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/custom_firepit/5.webp",
     title: "Complete The Finishing",
     text: "Final details support safe use, clean lines, and lasting visual balance.",
-    aosDelay: "400",
   },
 ];
 
@@ -177,39 +158,33 @@ const firePitsOverviewItems = [
     image: "/images/services/service/custom_firepit/6.webp",
     titleNormal: "Wood-Burning",
     titleHighlight: "Fire Pits",
-    aosDelay: "100"
   },
   {
     image: "/images/services/service/custom_firepit/7.webp",
     titleNormal: "Gas & Propane",
     titleHighlight: "Fire Tables",
-    aosDelay: "200"
   }
 ];
 
 // Testimonial klien spesifik untuk Custom Fire Pits
 const firePitsFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "The fire pit has become our favorite part of the backyard. Big thanks to DMG Masonry.",
     name: "Amanda S.",
   },
   {
-    id: "2",
     feedbackText:
       "I was mostly focused on how it would look, but it ended up being a really practical addition too. It's nice having a place where everyone naturally gathers.",
     name: "Lisa W.",
   },
   {
-    id: "3",
     feedbackText:
       "It looks natural in the space, and the quality of the stonework really stands out.",
     name: "Kyle T.",
   },
 ];
 
-import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Custom Fire Pits for Calgary Home Yards and Patios",
@@ -221,15 +196,14 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle title="Custom Fire Pits" homeText="Home" homeUrl="/" />
 
       <ServiceDetailsContent
         mainImage="/images/services/service/custom_firepit/1.webp"
         title="Fire Pits Calgary: Custom Fire Pit Installation & Design"
-        subtitle="SERVICE"
-        description1="DMG Masonry builds custom fire pits in Calgary, Alberta. A custom fire pit can transform any outdoor area into a more comfortable and inviting space for gathering and relaxation. Our fire pit installation combines practical function with timeless design, giving homeowners a fire pit built for lasting enjoyment and everyday visual appeal."
+        description="DMG Masonry builds custom fire pits in Calgary, Alberta. A custom fire pit can transform any outdoor area into a more comfortable and inviting space for gathering and relaxation. Our fire pit installation combines practical function with timeless design, giving homeowners a fire pit built for lasting enjoyment and everyday visual appeal."
         paragraphsHeading="What makes a fire pit last outdoors?"
         paragraphs={[
           "Outdoor fire features must be built to handle regular use, changing weather conditions, and long-term exposure to heat and moisture. Using reliable construction methods and durable masonry materials, our fire pit installation Calgary homeowners rely on is designed to maintain both structural stability and a consistent visual appearance for years to come.",
@@ -257,12 +231,12 @@ export default function Page() {
         items={firePitMaterials}
       />
 
-      <Process
+      <ProcessSteps
         title="How Does Fire Pit Installation Work In Calgary?"
         steps={firePitsProcessSteps}
       />
 
-      <Overview fullWidth items={firePitsOverviewItems} />
+      <ServiceGallery items={firePitsOverviewItems} />
 
       <MaterialsSection
         subtitle="BENEFITS"
@@ -270,15 +244,14 @@ export default function Page() {
         items={firePitBenefits}
       />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="Hear From Our"
         titleHighlight="Happy Calgary Fire Pit Owners"
         feedbacks={firePitsFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/custom_firepit/8.webp"
-        subtitle="WHY CHOOSE US"
         title="Why Choose DMG Masonry For Custom Fire Pits In Calgary?"
         description="An expertly crafted custom fire pit can create a more inviting outdoor setting while adding practical value and lasting character to your property. Our fire pit installation Calgary homeowners choose creates safe, dependable gathering areas built for everyday outdoor living."
         listItems={[
@@ -294,14 +267,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={firePitsFaqs}
         title="Fire Pits Calgary: Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/custom_firepit/9.webp"
           title="Create Your Ideal Fire Pit"
           subtitle="REQUEST A QUOTE"

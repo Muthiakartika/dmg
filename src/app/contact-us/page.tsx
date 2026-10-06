@@ -1,9 +1,8 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import GoogleMap from "@/components/ContactUs/GoogleMap";
+import ContactSection from "@/components/Contact/ContactSection";
+import GoogleMap from "@/components/Contact/GoogleMap";
 import Footer from "@/components/Layout/Footer";
-
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -16,24 +15,18 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
-
-      <PageTitle
-        title="Contact Us"
-        homeText="Home"
-        homeUrl="/"
-        titleAsHeading
-      />
+      <Navbar />
+      <PageTitle title="Contact Us" homeText="Home" homeUrl="/" titleAsHeading />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo priorityImage />
+        <ContactSection priorityImage />
       </div>
 
       <div className="pb-100">
         <GoogleMap />
       </div>
- 
+
       <Footer />
     </>
-  )
+  );
 }

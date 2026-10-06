@@ -1,3 +1,8 @@
+import {
+  chimneyRepairAreas,
+  type ChimneyRepairAreaSlug,
+} from "./chimneyRepairAreas";
+
 export interface ChimneyRepairLocationImages {
   main: string;
   process: [string, string, string, string];
@@ -5,9 +10,7 @@ export interface ChimneyRepairLocationImages {
   contact: string;
 }
 
-export interface ChimneyRepairLocation {
-  slug: string;
-  name: string;
+export interface ChimneyRepairLocationContent {
   metadataTitle: string;
   metadataDescription: string;
   description: string;
@@ -21,10 +24,13 @@ export interface ChimneyRepairLocation {
   images: ChimneyRepairLocationImages;
 }
 
-export const chimneyRepairLocations: ChimneyRepairLocation[] = [
-  {
-    slug: "bragg-creek",
-    name: "Bragg Creek",
+export interface ChimneyRepairLocation extends ChimneyRepairLocationContent {
+  slug: ChimneyRepairAreaSlug;
+  name: string;
+}
+
+const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationContent> = {
+  "bragg-creek": {
     metadataTitle: "Trusted Chimney Repair Serving the Bragg Creek Area",
     metadataDescription:
       "Homes around Bragg Creek face harsh mountain weather that wears chimneys down fast. Our masons repair cracks, leaks and structural damage all year round.",
@@ -69,9 +75,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
       contact: "/images/services/braggcreek/braggcreek-7.webp",
     },
   },
-  {
-    slug: "longview",
-    name: "Longview",
+  "longview": {
     metadataTitle: "Expert Chimney Repair Serving Longview Alberta Homes",
     metadataDescription:
       "Our team travels out to Longview for chimney repair, fixing cracked brick and worn mortar so your fireplace stays safe and reliable through every season.",
@@ -115,9 +119,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
       contact: "/images/services/longview/longview-7.webp",
     },
   },
-  {
-    slug: "kananaskis",
-    name: "Kananaskis",
+  "kananaskis": {
     metadataTitle: "Expert Chimney Repair Covering the Kananaskis Area",
     metadataDescription:
       "From mountain cabins to full time residences, we handle chimney repair throughout Kananaskis, restoring safety and function to aging fireplace structures.",
@@ -164,9 +166,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
       contact: "/images/services/kananaskis/kananaskis-6.webp",
     },
   },
-  {
-    slug: "sundre",
-    name: "Sundre",
+  "sundre": {
     metadataTitle: "Expert Chimney Repair Serving Sundre Alberta Homes",
     metadataDescription:
       "We help Sundre homeowners with chimney repair, from small mortar touch ups to full masonry restoration on older or historic fireplace structures nearby.",
@@ -211,9 +211,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
       contact: "/images/services/sundre/sundre-7.webp",
     },
   },
-  {
-    slug: "three-hills",
-    name: "Three Hills",
+  "three-hills": {
     metadataTitle: "Expert Chimney Repair for Homes Across Three Hills",
     metadataDescription:
       "Our masons provide chimney repair across the Three Hills area, addressing spalling brick, cracked mortar and other common issues before they spread further.",
@@ -257,9 +255,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
       contact: "/images/services/threehills/threehills-7.webp",
     },
   },
-  {
-    slug: "drumheller",
-    name: "Drumheller",
+  "drumheller": {
     metadataTitle: "Expert Chimney Repair Serving Drumheller Area Homes",
     metadataDescription:
       "Our masonry crew serves Drumheller homeowners, addressing cracked brick, water damage and worn mortar on chimneys before small problems become costly repairs.",
@@ -303,9 +299,7 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
       contact: "/images/services/drumheller/drumheller-7.webp",
     },
   },
-  {
-    slug: "claresholm",
-    name: "Claresholm",
+  "claresholm": {
     metadataTitle: "Claresholm Homeowners Trust Our Chimney Repair Experts",
     metadataDescription:
       "We provide chimney repair for homes throughout Claresholm, fixing mortar damage and structural issues to keep your fireplace safe and reliable each winter.",
@@ -349,7 +343,11 @@ export const chimneyRepairLocations: ChimneyRepairLocation[] = [
       contact: "/images/services/claresholm/claresholm-7.webp",
     },
   },
-];
+};
+
+export const chimneyRepairLocations: ChimneyRepairLocation[] = chimneyRepairAreas.map(
+  (area) => ({ ...area, ...locationContent[area.slug] }),
+);
 
 export function getChimneyRepairLocation(slug: string) {
   return chimneyRepairLocations.find((location) => location.slug === slug);

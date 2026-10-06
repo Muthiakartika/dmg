@@ -1,395 +1,105 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 
-import logoWebp from "/public/images/logo.webp";
-import whiteLogoWebp from "/public/images/whitelogo.webp";
+import MobileMenu from "./MobileMenu";
+import NavSearch from "./NavSearch";
+import ThemeLogo from "./ThemeLogo";
 import ThemeToggle from "./ThemeToggle";
-import { useTheme } from "./ThemeProvider";
-import { servicesData } from "@/lib/servicesData";
-import {
-  DesktopServicesNavigation,
-  MobileServicesNavigation,
-} from "./ServicesNavigation";
+import { DesktopServicesNavigation } from "./ServicesNavigation";
+import { isActiveLink, primaryLinks } from "./navLinks";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  /** Inner pages use the alternate colour scheme (`navbar-with-different-color`). */
+  variant?: "home" | "inner";
+}
+
+const STICKY_OFFSET = 100;
+
+export default function Navbar({ variant = "inner" }: NavbarProps) {
   const currentRoute = usePathname();
-  const { theme } = useTheme();
-  const [menu] = useState<boolean>(true);
+  const navRef = useRef<HTMLElement>(null);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
+  // Pin the navbar once the page has scrolled past the header.
   useEffect(() => {
-    let elementId = document.getElementById("navbar");
-    document.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        elementId?.classList.add("sticky");
-      } else {
-        elementId?.classList.remove("sticky");
-      }
-    });
+    const handleScroll = () => {
+      navRef.current?.classList.toggle("sticky", window.scrollY > STICKY_OFFSET);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const classOne: string = menu
-    ? "collapse navbar-collapse mean-menu"
-    : "collapse navbar-collapse show";
-  const classTwo: string = menu
-    ? "navbar-toggler navbar-toggler-right collapsed"
-    : "navbar-toggler navbar-toggler-right";
+  const [home, about, blogs, contactUs] = primaryLinks;
 
-  // SearchModal
-  const [isActive, setActive] = useState<boolean>(false);
-  const [searchQuery, setSearchQuery] = useState<string>("");
-
-  const handleToggleSearchModal = () => {
-    setActive(!isActive);
-    if (isActive) setSearchQuery("");
-  };
-
-  const filteredServices = servicesData.filter((service) =>
-    service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    service.link.toLowerCase().includes(searchQuery.toLowerCase())
+  const renderItem = (link: (typeof primaryLinks)[number]) => (
+    <li className="nav-item">
+      <Link
+        href={link.href}
+        className={`nav-link ${isActiveLink(link, currentRoute) ? "active" : ""}`}
+      >
+        {link.label}
+      </Link>
+    </li>
   );
 
-  // Mobile Menu
-  const [isMobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
-  const handleToggleMobileMenu = () => {
-    setMobileMenuActive(!isMobileMenuActive);
-  };
+  const navClassName =
+    variant === "inner"
+      ? "navbar navbar-expand-lg navbar-with-different-color"
+      : "navbar navbar-expand-lg";
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg" id="navbar">
+      <nav className={navClassName} id="navbar" ref={navRef}>
         <div className="container-fluid position-relative">
           <Link className="navbar-brand" href="/">
             <span className="navbar-brand-inner">
               <span className="navbar-brand-mark">
-                <Image
-                  src={theme === "dark" ? whiteLogoWebp : logoWebp}
-                  alt="DMG Masonry Logo"
-                  width={220}
-                  height={64}
-                  priority
-                />
+                <ThemeLogo width={220} height={64} priority />
               </span>
             </span>
           </Link>
 
-          {/* Toggle navigation */}
           <button
-            className={classTwo}
+            className="navbar-toggler navbar-toggler-right collapsed"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            onClick={handleToggleMobileMenu}
+            onClick={toggleMobileMenu}
           >
             <span className="icon-bar top-bar"></span>
             <span className="icon-bar middle-bar"></span>
             <span className="icon-bar bottom-bar"></span>
           </button>
 
-          {/* Menu For Desktop Device */}
-          <div className={classOne} id="navbarSupportedContent">
+          <div className="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <Link
-                  className={`nav-link ${currentRoute === "/" ? "active" : ""}`}
-                  href="/"
-                >
-                  Home
-                </Link>
-
-                {/* <ul className="dropdown-menu">
-                  <li className="nav-item">
-                    <Link
-                      className={`nav-link ${
-                        currentRoute === "/" ? "active" : ""
-                      }`}
-                      href="/"
-                    >
-                      Architecture Home
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      className={`nav-link ${
-                        currentRoute === "/interior-home/" ? "active" : ""
-                      }`}
-                      href="/interior-home/"
-                    >
-                      Interior Home
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      className={`nav-link ${
-                        currentRoute === "/architecture-studio/" ? "active" : ""
-                      }`}
-                      href="/architecture-studio/"
-                    >
-                      Architecture Studio
-                    </Link>
-                  </li>
-                </ul> */}
-              </li>
+              {renderItem(home)}
+              {renderItem(about)}
 
               <li className="nav-item">
-                <Link
-                  href="/about-us/"
-                  className={`nav-link ${currentRoute === "/about-us/" ? "active" : ""
-                    }`}
-                >
-                  About Us
-                </Link>
-              </li>
-
-              {/* <li className="nav-item">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Portfolio
-                </Link>
-
-                <ul className="dropdown-menu">
-                  <li className="nav-item">
-                    <Link
-                      href="/portfolio/"
-                      className={`nav-link ${currentRoute === "/portfolio/" ? "active" : ""
-                        }`}
-                    >
-                      Portfolio Style 01
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/portfolio-2/"
-                      className={`nav-link ${currentRoute === "/portfolio-2/" ? "active" : ""
-                        }`}
-                    >
-                      Portfolio Style 02
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/portfolio/portfolio-details/"
-                      className={`nav-link ${currentRoute === "/portfolio/portfolio-details/"
-                        ? "active"
-                        : ""
-                        }`}
-                    >
-                      Portfolio Details
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
-
-              <li className="nav-item">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="/services/"
-                >
+                <Link className="nav-link dropdown-toggle" href="/services/">
                   Services
                 </Link>
-
                 <ul className="dropdown-menu">
                   <DesktopServicesNavigation currentRoute={currentRoute} />
                 </ul>
               </li>
 
-              <li className="nav-item">
-                <Link
-                  href="/blogs/"
-                  className={`nav-link ${currentRoute.startsWith("/blogs/") ? "active" : ""}`}
-                >
-                  Blogs
-                </Link>
-              </li>
-
-              {/* <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Blog
-                </Link>
-
-                <ul className="dropdown-menu">
-                  <li className="nav-item">
-                    <Link
-                      href="/blog/"
-                      className={`nav-link ${currentRoute === "/blog/" ? "active" : ""
-                        }`}
-                    >
-                      Blog Grid
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/blog-right-sidebar/"
-                      className={`nav-link ${currentRoute === "/blog-right-sidebar/" ? "active" : ""
-                        }`}
-                    >
-                      Right Sidebar
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/blog-left-sidebar/"
-                      className={`nav-link ${currentRoute === "/blog-left-sidebar/" ? "active" : ""
-                        }`}
-                    >
-                      Left Sidebar
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/single-blog/"
-                      className={`nav-link ${currentRoute === "/single-blog/" ? "active" : ""
-                        }`}
-                    >
-                      Single Blog
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Others
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/author/"
-                          className={`nav-link ${currentRoute === "/author/" ? "active" : ""
-                            }`}
-                        >
-                          Author
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/categories/"
-                          className={`nav-link ${currentRoute === "/categories/" ? "active" : ""
-                            }`}
-                        >
-                          Categories
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/tags/"
-                          className={`nav-link ${currentRoute === "/tags/" ? "active" : ""
-                            }`}
-                        >
-                          Tags
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> */}
-
-              <li className="nav-item">
-                <Link
-                  href="/contact-us/"
-                  className={`nav-link ${currentRoute === "/contact-us/" ? "active" : ""
-                    }`}
-                >
-                  Contact Us
-                </Link>
-              </li>
+              {renderItem(blogs)}
+              {renderItem(contactUs)}
             </ul>
           </div>
 
-          {/* others-options */}
           <div className="others-option d-flex align-items-center">
             <ThemeToggle />
-
-            <div className="option-item position-relative">
-              <div className="search-btn" onClick={handleToggleSearchModal} style={{ cursor: 'pointer' }}>
-                <i className="ri-search-line"></i>
-              </div>
-
-              {isActive && (
-                <div 
-                  className="search-dropdown shadow-sm" 
-                  style={{
-                    position: "absolute",
-                    top: "100%",
-                    right: 0,
-                    width: "280px",
-                    backgroundColor: "var(--whiteColor)",
-                    padding: "15px",
-                    borderRadius: "8px",
-                    zIndex: 999,
-                    marginTop: "15px",
-                    border: "1px solid var(--borderColor)"
-                  }}
-                >
-                  <form onSubmit={(e) => e.preventDefault()}>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Search services..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      autoFocus
-                      style={{ marginBottom: "10px", fontSize: "14px" }}
-                    />
-                  </form>
-                  {searchQuery && (
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0, maxHeight: "250px", overflowY: "auto" }}>
-                      {filteredServices.length > 0 ? (
-                        filteredServices.map((service) => (
-                          <li key={service.id} style={{ borderBottom: "1px solid var(--borderColor)", padding: "10px 0" }}>
-                            <Link 
-                              href={service.link}
-                              onClick={() => {
-                                setActive(false);
-                                setSearchQuery("");
-                              }}
-                              style={{ color: "var(--headingColor)", textDecoration: "none", display: "block", fontSize: "15px", fontWeight: 500 }}
-                            >
-                              {service.title}
-                            </Link>
-                          </li>
-                        ))
-                      ) : (
-                        <li style={{ padding: "10px 0", fontSize: "14px", color: "var(--paragraphColor)" }}>No services found</li>
-                      )}
-                    </ul>
-                  )}
-                </div>
-              )}
-            </div>
-
+            <NavSearch />
             <div className="option-item">
               <Link href="/request-quote" className="default-btn">
                 Request A Quote
@@ -399,99 +109,11 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Menu For Mobile Device */}
-      <div
-        className={`modal mobile-menu-modal ${isMobileMenuActive ? "show" : ""
-          }`}
-      >
-        <div className="modal-dialog modal-dialog-scrollable">
-          <div className="modal-content">
-            <div className="modal-header d-flex align-items-center justify-content-between">
-              <div className="navbar-brand-inner">
-                <span className="navbar-brand-mark">
-                  <Image
-                    src={theme === "dark" ? whiteLogoWebp : logoWebp}
-                    alt="DMG Masonry Logo"
-                    width={220}
-                    height={64}
-                  />
-                </span>
-              </div>
-
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-                onClick={handleToggleMobileMenu}
-              >
-                <i className="ri-close-line"></i>
-              </button>
-            </div>
-
-            <div className="modal-body">
-              <Accordion allowZeroExpanded>
-                <Link
-                  className={`nav-link ${currentRoute === "/" ? "active" : ""
-                    }`}
-                  href="/"
-                >
-                  Home
-                </Link>
-
-                <Link
-                  href="/about-us/"
-                  className={`nav-link ${currentRoute === "/about-us/" ? "active" : ""
-                    }`}
-                >
-                  About Us
-                </Link>
-
-                <AccordionItem uuid="c">
-                  <AccordionItemHeading>
-                    <AccordionItemButton>Services</AccordionItemButton>
-                  </AccordionItemHeading>
-
-                  <AccordionItemPanel>
-                    <ul className="menu-list">
-                      <MobileServicesNavigation currentRoute={currentRoute} />
-                    </ul>
-                  </AccordionItemPanel>
-                </AccordionItem>
-
-                <Link
-                  href="/blogs/"
-                  className={`nav-link ${currentRoute.startsWith("/blogs/") ? "active" : ""}`}
-                >
-                  Blogs
-                </Link>
-
-                <Link
-                  href="/contact-us/"
-                  className={`nav-link ${currentRoute === "/contact-us/" ? "active" : ""
-                    }`}
-                >
-                  Contact Us
-                </Link>
-              </Accordion>
-
-              <div className="others-option d-lg-none mt-4">
-                <div className="option-item">
-                  <Link href="/request-quote" className="default-btn">
-                    Request A Quote
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="close-overlay" onClick={handleToggleMobileMenu}></div>
-      </div>
-
-      {/* Search Modal Removed - Replaced with Dropdown */}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onToggle={toggleMobileMenu}
+        currentRoute={currentRoute}
+      />
     </>
   );
-};
-
-export default Navbar;
+}

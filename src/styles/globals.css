@@ -1,40 +1,36 @@
 /*
- * Global CSS Entry File
- * 
- * All CSS imports are consolidated here in a single file
- * to guarantee correct cascade ordering in production builds.
- * Next.js production builds may reorder CSS chunks when imported
- * separately in layout.tsx, causing responsive styles to be 
- * overridden by base styles.
+ * Global CSS entry file.
+ *
+ * Every stylesheet is imported here, in this order, so the cascade is the
+ * same in every build: Next.js production builds may reorder CSS chunks when
+ * they are imported from separate components, which used to let base styles
+ * override the responsive ones. Keep responsive.css last.
  */
 
 /* Third-party libraries */
 @import "bootstrap/dist/css/bootstrap.min.css";
-@import "../../public/css/remixicon-subset.css";
-/* Only the Swiper modules this app registers: Autoplay (no CSS),
-   Pagination and EffectFade. The full bundle pulls in every module. */
+@import "./remixicon-subset.css";
+/* Only the Swiper modules this app registers: Autoplay (no CSS) and Pagination. */
 @import "swiper/css";
 @import "swiper/css/pagination";
-@import "swiper/css/effect-fade";
 @import "react-accessible-accordion/dist/fancy-example.css";
 
-/* Base styles */
-@import "../../public/css/flaticon_astle.css";
+/* Icon font */
+@import "./flaticon.css";
 
 /* Component styles */
-@import "../../public/css/navbar.css";
-@import "../../public/css/chimney-location-menu.css";
-@import "../../public/css/services-details.css";
-@import "../../public/css/materials-section.css";
-@import "../../public/css/portfolio-details.css";
-@import "../../public/css/blog-details.css";
-@import "../../public/css/footer.css";
+@import "./navbar.css";
+@import "./chimney-location-menu.css";
+@import "./services-details.css";
+@import "./materials-section.css";
+@import "./blog-details.css";
+@import "./footer.css";
 
 /* Global styles */
-@import "../../public/css/style.css";
+@import "./style.css";
 
 /* Local overrides / fixes */
-@import "../../public/css/form-fixes.css";
+@import "./form-fixes.css";
 
 /* Responsive overrides - MUST be last to ensure proper cascade */
-@import "../../public/css/responsive.css";
+@import "./responsive.css";

@@ -1,14 +1,15 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
+import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Custom Pizza Oven
 const pizzaOvenFaqs = [
@@ -92,61 +93,45 @@ const pizzaOvenMaterials = [
     icon: "flaticon-mansory",
     title: "Heat-Resistant Brick",
     text: "Firebrick and heat-resistant brick are the traditional choice for pizza oven interiors, prized for how efficiently they retain and radiate heat for consistent cooking results.",
-    aosDelay: "100",
   },
   {
     icon: "flaticon-cube",
     title: "Natural Stone",
     text: "Natural stone is often used for the oven's exterior and surrounding structure, giving it a durable, textured finish that holds up well outdoors while complementing the rest of your backyard.",
-    aosDelay: "200",
   },
   {
     icon: "flaticon-facade",
     title: "Stone Veneer & Brick Finishes",
     text: "For homeowners who want the visual character of stone or brick without the added weight, veneer finishes are a practical option that still delivers a strong, long-lasting exterior for your oven.",
-    aosDelay: "300",
   },
   {
     icon: "flaticon-houses",
     title: "Eco-Friendly Material Options",
     text: "We're able to source eco-friendly and sustainably produced masonry materials for pizza oven builds, so you can choose a construction approach that aligns with your environmental priorities without sacrificing performance.",
-    aosDelay: "400",
   },
 ];
 
 // Tahapan proses spesifik untuk Custom Pizza Oven
 const pizzaOvenProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/custome_pizza/2.webp",
     title: "Assess the Space",
     text: "We review your layout and cooking needs.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/custome_pizza/3.webp",
     title: "Plan the Installation",
     text: "We create a tailored setup based on your space and requirements.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/custome_pizza/4.webp",
     title: "Build the Custom Pizza Oven",
     text: "We build with focus on structure, heat performance, and durability.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/custome_pizza/5.webp",
     title: "Final Finish",
     text: "We ensure a clean and long-lasting result ready for outdoor use.",
-    aosDelay: "400",
   },
 ];
 
@@ -156,33 +141,28 @@ const pizzaOvenOverviewItems = [
     image: "/images/services/service/custome_pizza/6.webp",
     titleNormal: "Wood-Fired",
     titleHighlight: "Pizza Ovens",
-    aosDelay: "100",
   },
   {
     image: "/images/services/service/custome_pizza/7.webp",
     titleNormal: "Custom Masonry",
     titleHighlight: "Oven Builds",
-    aosDelay: "200",
   },
 ];
 
 // Testimonial klien spesifik untuk Custom Pizza Oven
 const pizzaOvenFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "I'd wanted a wood-fired pizza oven for a long time, but never knew where to start. DMG Masonry helped us come up with a design that fit our backyard without taking over the whole space.",
     name: "Matt R.",
   },
   {
-    id: "2",
     feedbackText:
       "The finished pizza oven looks really clean and fits the space perfectly.",
     name: "Hannah M.",
   },
 ];
 
-import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Custom Outdoor Pizza Oven Installation Across Calgary",
@@ -194,15 +174,14 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle title="Custom Pizza Oven" homeText="Home" homeUrl="/" />
 
       <ServiceDetailsContent
         mainImage="/images/services/service/custome_pizza/1.webp"
         title="Custom Outdoor Pizza Oven Installation in Calgary"
-        subtitle="SERVICE"
-        description1="Outdoor pizza ovens bring a different rhythm to outdoor living in Calgary, where cooking, heat, and gathering come together in one space. We design and build custom outdoor pizza ovens that are made to perform reliably while fitting naturally into any outdoor environment."
+        description="Outdoor pizza ovens bring a different rhythm to outdoor living in Calgary, where cooking, heat, and gathering come together in one space. We design and build custom outdoor pizza ovens that are made to perform reliably while fitting naturally into any outdoor environment."
         paragraphs={[
           "Built for high-temperature cooking and year-round exposure, each outdoor pizza oven requires careful material selection and precise construction. We use durable masonry systems designed to retain heat efficiently, handle repeated use, and maintain structural stability through Calgary's changing weather conditions, ensuring consistent performance.",
           "A well-designed pizza oven often becomes more than a cooking feature. It naturally becomes a social focal point in the outdoor space, influencing how people gather, cook, and spend time together in a more engaging setting, while adding both function and atmosphere to the overall outdoor experience.",
@@ -226,22 +205,21 @@ export default function Page() {
         items={pizzaOvenMaterials}
       />
 
-      <Process
+      <ProcessSteps
         title="Our Outdoor Pizza Oven Installation Process in Calgary"
         steps={pizzaOvenProcessSteps}
       />
 
-      <Overview fullWidth items={pizzaOvenOverviewItems} />
+      <ServiceGallery items={pizzaOvenOverviewItems} />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="What Outdoor Chefs"
         titleHighlight="Say About Our Pizza Ovens"
         feedbacks={pizzaOvenFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/custome_pizza/8.webp"
-        subtitle="WHY CHOOSE US"
         title="Custom Outdoor Pizza Ovens Built for Calgary Backyards"
         description="A wood-fired outdoor pizza oven adds warmth, character, and functionality to any outdoor space in Calgary. We create custom-built pizza ovens designed for reliable cooking performance while complementing the overall style of your backyard area."
         listItems={[
@@ -257,14 +235,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={pizzaOvenFaqs}
         title="Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/custome_pizza/9.webp"
           title="Build Your Ideal Outdoor Pizza Oven in Calgary"
           subtitle="REQUEST A QUOTE"

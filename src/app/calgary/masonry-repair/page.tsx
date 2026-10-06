@@ -1,14 +1,15 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
+import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Masonry Repair
 const masonryRepairFaqs = [
@@ -52,36 +53,24 @@ const masonryRepairFaqs = [
 // Tahapan proses spesifik untuk Masonry Repair
 const masonryProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/masonry_repair/2.webp",
     title: "Inspect The Damage",
     text: "We assess cracks and structural issues to identify the condition of the brick or stone.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/masonry_repair/3.webp",
     title: "Plan The Repair",
     text: "We determine the most effective masonry repair approach for lasting results.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/masonry_repair/4.webp",
     title: "Restore The Masonry",
     text: "Brick, stone, and mortar are repaired with durable materials.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/masonry_repair/5.webp",
     title: "Ensure Lasting Performance",
     text: "Repairs are completed with attention to durability and appearance.",
-    aosDelay: "400",
   },
 ];
 
@@ -91,13 +80,11 @@ const masonryOverviewItems = [
     image: "/images/services/service/masonry_repair/6.webp",
     titleNormal: "Brick & Mortar",
     titleHighlight: "Restoration",
-    aosDelay: "100"
   },
   {
     image: "/images/services/service/masonry_repair/7.webp",
     titleNormal: "Stone Masonry",
     titleHighlight: "Refurbishing",
-    aosDelay: "200"
   }
 ];
 
@@ -106,53 +93,44 @@ const masonryDamageTypes = [
   {
     title: "What is spalling brick?",
     text: "Spalling is when the face of a brick flakes, chips or pops off, leaving a rough, crumbling surface. It happens when water soaks into the brick, freezes and expands. Calgary sees a high number of freeze-thaw cycles each winter, which is why spalling shows up here more than in milder climates. Spalled brick cannot be patched - the affected units are cut out and replaced.",
-    aosDelay: "100",
   },
   {
     title: "What does cracked or crumbling mortar mean?",
     text: "Mortar is designed to be softer than the brick around it so that it wears first and the brick survives. When joints turn powdery, hollow or start falling out, water can get behind the wall. The fix is repointing: raking out the failed mortar to a consistent depth and packing in fresh mortar matched to the original.",
-    aosDelay: "200",
   },
   {
     title: "Why is my brick wall bulging or leaning?",
     text: "Bulging usually means the masonry has lost its connection to the structure behind it, or moisture has built up inside the wall. This is the most serious of the common signs. A bulging wall should be inspected rather than watched, because the failure is already structural.",
-    aosDelay: "300",
   },
   {
     title: "What is efflorescence on brick?",
     text: "Efflorescence is the white, powdery deposit that appears on brick and mortar. It is mineral salt left behind as water travels through the masonry and evaporates at the surface. The staining itself is cosmetic and washes off, but it is a signal that water is getting into the wall somewhere.",
-    aosDelay: "400",
   },
   {
     title: "What do stair-step cracks mean?",
     text: "Stair-step cracks follow the mortar joints diagonally in a stepped pattern. They usually point to movement or settlement below the wall rather than a fault in the brick itself, which is why the repair often starts at the foundation rather than the face of the masonry.",
-    aosDelay: "500",
   },
 ];
 
 // Testimonial klien spesifik untuk Masonry Repair
 const masonryFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "The damaged area had been bothering us for a while because it was becoming more noticeable each year. After the repairs, you wouldn't know there had ever been an issue.",
     name: "Eric T.",
   },
   {
-    id: "2",
     feedbackText:
       "I wasn't sure if the cracks needed to be repaired right away, so I had them come take a look. They explained what was worth fixing now and what could wait. That kind of honesty was really appreciated.",
     name: "Ryan K.",
   },
   {
-    id: "3",
     feedbackText:
       "Our brickwork was starting to show its age, especially around a few spots near the front of the house. The repairs kept the original look of the house without drawing attention to the repaired areas.",
     name: "Emily W.",
   },
 ];
 
-import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Find Masonry Repair Near You in Calgary Quickly Today",
@@ -164,15 +142,14 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle title="Masonry Repair" homeText="Home" homeUrl="/" />
 
       <ServiceDetailsContent
         mainImage="/images/services/service/masonry_repair/1.webp"
         title="Masonry Repair in Calgary: Professional Brick & Stone Restoration"
-        subtitle="SERVICE"
-        description1="DMG Masonry is a masonry repair contractor in Calgary, Alberta. We provide masonry repair and masonry restoration services designed to restore strength, stability, and timeless appearance for residential and commercial properties, helping structures perform reliably for years to come."
+        description="DMG Masonry is a masonry repair contractor in Calgary, Alberta. We provide masonry repair and masonry restoration services designed to restore strength, stability, and timeless appearance for residential and commercial properties, helping structures perform reliably for years to come."
         paragraphsHeading="What causes masonry to need repair?"
         paragraphs={[
           "Over time, masonry can experience cracks, surface wear, moisture damage, and structural deterioration caused by weather exposure and Calgary's freeze-thaw cycles. Our team handles brick and stone masonry repair carefully using reliable techniques and quality materials to restore both function and appearance while maintaining the original character of the structure.",
@@ -192,13 +169,12 @@ export default function Page() {
         ]}
       />
 
-      <Process
+      <ProcessSteps
         title="How Does Our Masonry Repair Process Work?"
         steps={masonryProcessSteps}
       />
 
-      <Overview
-        fullWidth
+      <ServiceGallery
         items={masonryOverviewItems}
       />
 
@@ -208,15 +184,14 @@ export default function Page() {
         items={masonryDamageTypes}
       />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="What Calgary Residents"
         titleHighlight="Say About Us"
         feedbacks={masonryFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/masonry_repair/8.webp"
-        subtitle="WHY CHOOSE US"
         title="What Are The Signs Your Masonry Needs Repair?"
         description="Small masonry issues can develop into larger structural problems if left untreated. As masonry repair contractors in Calgary, we identify early signs of deterioration before they affect the structure's strength, stability, and appearance."
         listItems={[
@@ -230,14 +205,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={masonryRepairFaqs}
         title="Masonry Repair Calgary: Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/masonry_repair/9.webp"
           title="Restore Your Masonry"
           subtitle="REQUEST A QUOTE"

@@ -2,14 +2,14 @@
 // in production builds (fixes responsive styles being overridden on Vercel)
 import "@/styles/globals.css";
 
-import React from "react";
-import AosAnimation from "@/components/Layout/AosAnimation";
-import BackToTop from "@/components/Layout/BackToTop";
-import Preloader from "@/components/Layout/Preloader";
-
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 
+import AosAnimation from "@/components/Layout/AosAnimation";
+import BackToTop from "@/components/Layout/BackToTop";
+import Preloader from "@/components/Layout/Preloader";
+import { ThemeProvider } from "@/components/Layout/ThemeProvider";
 import { siteConfig } from "@/lib/site";
 
 const jost = Jost({ subsets: ["latin"] });
@@ -47,8 +47,6 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
   },
 };
-
-import { ThemeProvider } from "@/components/Layout/ThemeProvider";
 
 const themeInitializationScript = `
   (function () {
@@ -91,11 +89,7 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
@@ -116,17 +110,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
 
-        {/* Preloader */}
         <Preloader />
-
-        {/* AosAnimation */}
         <AosAnimation />
-
-        {/* BackToTop */}
         <BackToTop />
       </body>
     </html>

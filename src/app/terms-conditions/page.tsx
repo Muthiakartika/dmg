@@ -1,6 +1,6 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import TermsConditionsContent from "@/components/TermsConditions/TermsConditionsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import TermsConditionsContent from "@/components/Legal/TermsConditionsContent";
 import Footer from "@/components/Layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle 
         title="Terms & Conditions"

@@ -1,0 +1,62 @@
+/*
+ * flaticon_astle - subset.
+ *
+ * The shipped font carried 166 glyphs; this app uses 7, so the font files in
+ * public/fonts were regenerated with only those. The .eot and .svg sources were
+ * dropped from the src list entirely - they exist for IE and pre-2013 Safari,
+ * and the .svg alone was 540 KB.
+ *
+ * ADDING AN ICON: only the 7 glyphs in the font are listed below. The class
+ * names and codepoints of the other 159 glyphs are in the original stylesheet:
+ *
+ *   git show b7e90d4:public/css/flaticon_astle.css
+ *
+ * Copy the rule you need, then recover the full font and re-subset it - a
+ * class whose glyph is not in the font renders as a blank box:
+ *
+ *   git show d37c41a:public/fonts/flaticon_astle.ttf > /tmp/flaticon-full.ttf
+ *   pip install fonttools brotli
+ *   pyftsubset /tmp/flaticon-full.ttf --flavor=woff2 --no-hinting
+ *     --layout-features= --output-file=public/fonts/flaticon_astle.woff2
+ *     --unicodes=U+f10b,U+f117,U+f11a,U+f120,U+f12f,U+f133,U+f136,<new>
+ *   (repeat with --flavor=woff and with no flavor for .ttf)
+ */
+@font-face {
+    font-family: "flaticon_astle";
+    font-display: swap;
+    src: url("../../public/fonts/flaticon_astle.woff2") format("woff2"),
+url("../../public/fonts/flaticon_astle.woff") format("woff"),
+url("../../public/fonts/flaticon_astle.ttf") format("truetype");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_astle !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.flaticon-facade:before {
+    content: "\f10b";
+}
+.flaticon-measuring:before {
+    content: "\f117";
+}
+.flaticon-fireplace:before {
+    content: "\f11a";
+}
+.flaticon-interior-design:before {
+    content: "\f120";
+}
+.flaticon-houses:before {
+    content: "\f12f";
+}
+.flaticon-mansory:before {
+    content: "\f133";
+}
+.flaticon-cube:before {
+    content: "\f136";
+}

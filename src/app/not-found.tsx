@@ -1,11 +1,28 @@
-"use client";
+import Image from "next/image";
+import Link from "next/link";
 
-import Custom404 from '@/components/Error/Custom404';
- 
+import errorImg from "../../public/images/error.png";
+
 export default function NotFound() {
   return (
-    <>
-      <Custom404 />
-    </>
-  )
+    <div className="not-found-area ptb-100">
+      <div className="container">
+        <div className="not-found-content text-center">
+          <Image src={errorImg} alt="error-image" width={250} height={250} />
+
+          <div style={{ maxWidth: "500px", margin: "0 auto 15px" }}>
+            <h3>Oops! That page can&apos;t be found</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <Link href="/" className="default-btn">
+            Back to Home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }

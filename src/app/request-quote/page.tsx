@@ -1,7 +1,7 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import RequestAQuoteForm from "@/components/RequestAQuote/RequestAQuoteForm";
+import QuoteSection from "@/components/Contact/QuoteSection";
 import Footer from "@/components/Layout/Footer";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -14,18 +14,10 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
-
-      <PageTitle 
-        title="Request a Quote"
-        homeText="Home"
-        homeUrl="/"
-        titleAsHeading
-      />
-
-      <RequestAQuoteForm />
- 
+      <Navbar />
+      <PageTitle title="Request a Quote" homeText="Home" homeUrl="/" titleAsHeading />
+      <QuoteSection />
       <Footer />
     </>
-  )
+  );
 }

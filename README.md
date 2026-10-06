@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DMG Masonry website
 
-## Getting Started
+Marketing site and blog CMS for DMG Masonry, built with Next.js 14 (App Router),
+React 18 and TypeScript. Deployed on Vercel behind Cloudflare.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # development server
+npm run build      # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Environment variables are listed in `.env.example`. The blog CMS (Neon +
+Cloudflare R2) is documented in [ADMIN_CMS.md](ADMIN_CMS.md); without a
+`DATABASE_URL` the blog falls back to the posts in `src/lib/blogsData.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+src/
+  app/                  Routes. Each page composes sections and holds its own copy.
+  components/
+    Layout/             Navbar (+ MobileMenu, NavSearch), Footer, theme, preloader,
+                        back-to-top, AOS init
+    Sections/           Blocks shared by several pages: PageTitle, ProcessSteps,
+                        FaqSection, TestimonialSlider/Carousel, TextMarquee, Partners
+    Home/ About/        Sections used by a single page
+    Services/           Service page building blocks (details, gallery, why-choose-us…)
+    Contact/            Contact & quote forms, Turnstile, ContactInfo, map
+    Legal/ Blog/ Admin/
+    UI/                 Small presentational pieces (ArrowList, SocialIcons)
+  lib/                  Site config, service list, content data, server helpers
+  styles/               globals.css and the stylesheets it imports
+public/                 Images, video and icon fonts
+```
 
-## Learn More
+## Conventions
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Server Components by default.** Only components that need state, effects or
+  browser APIs carry `"use client"` (navbar, forms, sliders, accordions, video,
+  hero lightbox, theme).
+- **Styles** are plain CSS imported once, in a fixed order, from
+  `src/styles/globals.css`; keep `responsive.css` last. Bootstrap is used for its
+  CSS only (grid, utilities, modal, forms).
+- **Icons** come from subsetted Remixicon and Flaticon fonts. Adding an icon
+  means regenerating the font; see the comments at the top of
+  `src/styles/remixicon-subset.css` and `src/styles/flaticon.css`.
+- **Scroll animations** use AOS. Spread `fadeUp(delay)` from `src/lib/aos.ts` on
+  an element; list items use `staggerDelay(index)`.
+- **Contact details and social links** live in `src/lib/site.ts`; the service
+  list used by the navbar, footer and sidebar lives in `src/lib/services.ts`.
+- **Chimney repair town pages** are generated from `src/lib/chimneyRepairLocations.ts`.
+  Town names for the navigation are in `src/lib/chimneyRepairAreas.ts`, kept
+  separate so the long page copy never reaches the browser bundle.
+- **Forms** use `useFormSubmission` on the client and `handleFormSubmission`
+  (`src/lib/formRoute.ts`) in the API routes; both verify a Cloudflare Turnstile
+  token.

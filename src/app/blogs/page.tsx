@@ -1,7 +1,7 @@
 import BlogsCollection from "@/components/Blog/BlogsCollection";
-import PageTitle from "@/components/Common/PageTitle";
+import PageTitle from "@/components/Sections/PageTitle";
 import Footer from "@/components/Layout/Footer";
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
+import Navbar from "@/components/Layout/Navbar";
 import { getPublishedBlogsPage } from "@/lib/cmsBlogs";
 import { buildMetadata } from "@/lib/seo";
 
@@ -27,7 +27,7 @@ export default async function BlogsPage({ searchParams }: BlogsPageProps) {
 
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle
         title="Blogs"

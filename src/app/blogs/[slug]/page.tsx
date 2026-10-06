@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import BlogDetailsContent from "@/components/Blog/BlogDetailsContent";
-import PageTitle from "@/components/Common/PageTitle";
+import PageTitle from "@/components/Sections/PageTitle";
 import Footer from "@/components/Layout/Footer";
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
+import Navbar from "@/components/Layout/Navbar";
 import { getPublishedBlogBySlug, getPublishedBlogs } from "@/lib/cmsBlogs";
 import { getBlogSeoOverride } from "@/lib/blogSeo";
 import { buildMetadata } from "@/lib/seo";
@@ -47,7 +47,7 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
 
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle title="Blog Details" homeText="Blogs" homeUrl="/blogs/" />
 

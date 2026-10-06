@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import FaqsContent from "@/components/Faqs/FaqsContent";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import FaqSection from "@/components/Sections/FaqSection";
 import Footer from "@/components/Layout/Footer";
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import Process from "@/components/ServiceDetails/Process";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
-import Overview from "@/components/InteriorHome/Overview";
+import Navbar from "@/components/Layout/Navbar";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
+import ServiceGallery from "@/components/Services/ServiceGallery";
 import {
   chimneyRepairLocations,
   getChimneyRepairLocation,
 } from "@/lib/chimneyRepairLocations";
-import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+import { buildMetadata } from "@/lib/seo";
 
 interface ChimneyLocationPageProps {
   params: { location: string };
@@ -46,25 +46,21 @@ const chimneyOverviewItems = [
     image: "/images/services/service/chimney_repair/6.webp",
     titleNormal: "Cap/Crown",
     titleHighlight: "Repair",
-    aosDelay: "100",
   },
   {
     image: "/images/services/service/chimney_repair/7.webp",
     titleNormal: "Tuckpointing",
     titleHighlight: "Restoration",
-    aosDelay: "200",
   },
 ];
 
 const chimneyFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "After a heavy rain, we started seeing signs of moisture around the fireplace. DMG Masonry found the problem with the chimney and repaired it before it turned into something bigger. It's been holding up well ever since.",
     name: "Allison P.",
   },
   {
-    id: "2",
     feedbackText:
       "The finished work blends in really well, and it doesn't stand out like a patch job.",
     name: "Trevor L.",
@@ -105,12 +101,8 @@ export default function ChimneyLocationPage({
   }
 
   const processSteps = chimneyProcessContent.map((step, index) => ({
-    id: `${index + 1}`,
-    number: `${index + 1}`,
+    ...step,
     image: location.images.process[index],
-    title: step.title,
-    text: step.text,
-    aosDelay: `${(index + 1) * 100}`,
   }));
 
   const faqs = [
@@ -177,7 +169,7 @@ export default function ChimneyLocationPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle
         title={`Chimney Repair in ${location.name}`}
@@ -188,29 +180,27 @@ export default function ChimneyLocationPage({
       <ServiceDetailsContent
         mainImage={location.images.main}
         title={`Chimney Repair Services in ${location.name}`}
-        subtitle="SERVICE"
-        description1={location.description}
+        description={location.description}
         paragraphs={location.paragraphs}
         benefits={location.benefits}
         extraParagraphs={location.extraParagraphs}
       />
 
-      <Process
+      <ProcessSteps
         title={`Our ${location.name} Chimney Repair Process`}
         steps={processSteps}
       />
 
-      <Overview fullWidth items={chimneyOverviewItems} />
+      <ServiceGallery items={chimneyOverviewItems} />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="What Clients Say"
         titleHighlight="About Our Chimney Repair"
         feedbacks={chimneyFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image={location.images.whyChoose}
-        subtitle="WHY CHOOSE US"
         title={location.whyChooseTitle}
         description={location.whyChooseDescription}
         listItems={location.whyChooseItems}
@@ -218,14 +208,13 @@ export default function ChimneyLocationPage({
         buttonLink="/contact-us/"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={faqs}
         title={`Chimney Repair FAQs for ${location.name}`}
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image={location.images.contact}
           title={`Request Chimney Repair in ${location.name}`}
           subtitle="REQUEST A QUOTE"

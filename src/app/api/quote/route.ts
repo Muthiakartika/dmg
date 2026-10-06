@@ -1,65 +1,19 @@
-import { NextRequest, NextResponse } from "next/server";
-import { sendQuoteNotification, sendQuoteAutoReply } from "@/lib/sendEmail";
-import { verifyTurnstile } from "@/lib/turnstile";
+import type { NextRequest } from "next/server";
+
+import { handleFormSubmission } from "@/lib/formRoute";
+import { sendQuoteAutoReply, sendQuoteNotification } from "@/lib/sendEmail";
 
 export const runtime = "edge";
 
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { name, email, phone, category, location, message, turnstileToken } =
-      body;
-
-    // Validate required fields
-    if (!name || !email || !phone || !category || !location || !message) {
-      return NextResponse.json(
-        { success: false, message: "All fields are required." },
-        { status: 400 }
-      );
-    }
-
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { success: false, message: "Please provide a valid email address." },
-        { status: 400 }
-      );
-    }
-
-    // Anti-bot: verify the Cloudflare Turnstile token before sending anything.
-    const ip =
-      request.headers.get("CF-Connecting-IP") ||
-      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-      undefined;
-    const isHuman = await verifyTurnstile(turnstileToken, ip);
-    if (!isHuman) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Bot verification failed. Please refresh the page and try again.",
-        },
-        { status: 403 }
-      );
-    }
-
-    const formData = { name, email, phone, category, location, message };
-
-    // Send notification to admin and auto-reply to user in parallel
-    await Promise.all([
-      sendQuoteNotification(formData),
-      sendQuoteAutoReply(formData),
-    ]);
-
-    return NextResponse.json({
-      success: true,
-      message: "Your quote request has been submitted successfully! We'll prepare your estimate shortly.",
-    });
-  } catch (error) {
-    console.error("Quote form error:", error);
-    return NextResponse.json(
-      { success: false, message: "Something went wrong. Please try again later." },
-      { status: 500 }
-    );
-  }
+export function POST(request: NextRequest) {
+  return handleFormSubmission(request, {
+    fields: ["name", "email", "phone", "category", "location", "message"],
+    missingFieldsMessage: "All fields are required.",
+    requireTurnstile: true,
+    successMessage:
+      "Your quote request has been submitted successfully! We'll prepare your estimate shortly.",
+    logLabel: "Quote form",
+    // Notify the admin and auto-reply to the visitor in parallel.
+    send: (data) => Promise.all([sendQuoteNotification(data), sendQuoteAutoReply(data)]),
+  });
 }

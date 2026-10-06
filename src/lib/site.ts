@@ -1,4 +1,5 @@
-// Central site configuration used for SEO metadata, sitemap and robots.
+// Central site configuration used for SEO metadata, sitemap, robots and the
+// contact details repeated across the layout and forms.
 //
 // The production domain is not live yet, so this defaults to localhost for dev.
 // When deploying, set NEXT_PUBLIC_SITE_URL (e.g. https://dmgmasonry.ca) at build
@@ -20,3 +21,33 @@ export const siteConfig = {
     "https://www.instagram.com/d.m.gmasonry/",
   ],
 } as const;
+
+export const contact = {
+  phoneHref: "tel:+14036198727",
+  phoneLabel: "1-403-619-8727",
+  emailHref: `mailto:${siteConfig.email}`,
+  email: siteConfig.email,
+  address: "1111 - 46 Ave S.E., Calgary, Alberta T2G 2A5",
+  whatsappUrl: `https://wa.me/${siteConfig.telephone.replace(/\D/g, "")}`,
+} as const;
+
+export const socialLinks = [
+  {
+    id: "facebook",
+    label: "Facebook",
+    icon: "ri-facebook-line",
+    link: siteConfig.sameAs[0],
+  },
+  {
+    id: "instagram",
+    label: "Instagram",
+    icon: "ri-instagram-line",
+    link: siteConfig.sameAs[1],
+  },
+  {
+    id: "whatsapp",
+    label: "WhatsApp",
+    icon: "ri-whatsapp-line",
+    link: contact.whatsappUrl,
+  },
+] as const;

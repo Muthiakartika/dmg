@@ -1,14 +1,15 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
+import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Hardscape Contractor
 const hardscapeFaqs = [
@@ -82,27 +83,22 @@ const hardscapeMaterials = [
   {
     title: "Concrete pavers",
     text: "Interlocking pavers are the most common hardscape surface in Calgary. They flex slightly with ground movement instead of cracking, and individual units can be lifted and reset if a section settles.",
-    aosDelay: "100",
   },
   {
     title: "Natural stone",
     text: "Flagstone and quarried stone give a less uniform, more organic surface. Every piece is different, so it takes longer to lay, but the result does not repeat the way a manufactured pattern does.",
-    aosDelay: "200",
   },
   {
     title: "Segmental retaining wall block",
     text: "Engineered block systems are used for most retaining walls. They lock together, allow drainage through the wall, and can be stepped or curved to follow a slope.",
-    aosDelay: "300",
   },
   {
     title: "Stone veneer over block",
     text: "Where a wall or outdoor kitchen base needs to match the house, we build in block and clad the face in stone veneer. It is the usual way to get a natural stone appearance on a structural element.",
-    aosDelay: "400",
   },
   {
     title: "How do you choose between them?",
     text: "Material choice comes down to how the space is used, how much ground movement the site has, what the house is finished in, and budget. We walk through options against your actual property rather than recommending one material for every job.",
-    aosDelay: "500",
   },
 ];
 
@@ -111,49 +107,35 @@ const hardscapeFeatures = [
     icon: "flaticon-houses",
     title: "Patios",
     text: "A well-built patio creates a durable, low-maintenance space for everyday outdoor living, finished with materials chosen to hold up to Calgary's climate.",
-    aosDelay: "100",
   },
   {
     icon: "flaticon-facade",
     title: "Retaining Walls",
     text: "Retaining walls in Calgary manage grade changes and support sloped areas of a property, combining structural performance with a finished, natural appearance. We also build walkways, driveways, and other outdoor stone features as part of a complete hardscape plan tailored to your property.",
-    aosDelay: "200",
   },
 ];
 
 // Tahapan proses spesifik untuk Hardscape Contractor
 const hardscapeProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/hardscape_constructor/2.webp",
     title: "Evaluate The Project Area",
     text: "We review site conditions and outdoor layout before construction begins.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/hardscape_constructor/3.webp",
     title: "Prepare The Base",
     text: "Grading and foundation preparation help support long-term stability.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/hardscape_constructor/4.webp",
     title: "Install The Features",
     text: "Outdoor surfaces and structures are built with durable masonry materials.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/hardscape_constructor/5.webp",
     title: "Refine The Final Result",
     text: "Finishing details improve functionality, appearance, and long-term durability.",
-    aosDelay: "400",
   },
 ];
 
@@ -163,33 +145,28 @@ const hardscapeOverviewItems = [
     image: "/images/services/service/hardscape_constructor/6.webp",
     titleNormal: "Custom Stone",
     titleHighlight: "Patios",
-    aosDelay: "100"
   },
   {
     image: "/images/services/service/hardscape_constructor/7.webp",
     titleNormal: "Structural",
     titleHighlight: "Retaining Walls",
-    aosDelay: "200"
   }
 ];
 
 // Testimonial klien spesifik untuk Hardscape Contractor
 const hardscapeFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "One of the things I noticed right away was how much care went into the details. The lines are straight, everything feels solid, and nothing looks rushed.",
     name: "Adam P.",
   },
   {
-    id: "2",
     feedbackText:
       "DMG Masonry helped us figure out a layout that made better use of the space. It turned out much more functional.",
     name: "Jennifer L.",
   },
 ];
 
-import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Hardscape Contractors Pro Serving All in Calgary",
@@ -201,15 +178,14 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle title="Hardscape Contractor" homeText="Home" homeUrl="/" />
 
       <ServiceDetailsContent
         mainImage="/images/services/service/hardscape_constructor/1.webp"
         title="Hardscape Construction Calgary: Patios, Retaining Walls & Outdoor Surfaces"
-        subtitle="SERVICE"
-        description1="DMG Masonry is a hardscape contractor in Calgary, Alberta. We handle hardscape construction including patios, retaining walls, pathways, and outdoor surfaces built for long-term performance and a timeless, well-finished appearance."
+        description="DMG Masonry is a hardscape contractor in Calgary, Alberta. We handle hardscape construction including patios, retaining walls, pathways, and outdoor surfaces built for long-term performance and a timeless, well-finished appearance."
         paragraphsHeading="What is hardscape construction?"
         paragraphs={[
           "Hardscape construction covers the built, non-planted parts of an outdoor space: patios, retaining walls, walkways, driveways, and outdoor kitchens. These features are constantly exposed to weather changes, moisture, ground movement, and everyday use. Using durable materials and reliable hardscape construction methods, we build outdoor surfaces designed to maintain their structure, stability, and visual quality for years to come.",
@@ -239,12 +215,12 @@ export default function Page() {
         items={hardscapeFeatures}
       />
 
-      <Process
+      <ProcessSteps
         title="How Does Our Hardscape Construction Process Work?"
         steps={hardscapeProcessSteps}
       />
 
-      <Overview fullWidth items={hardscapeOverviewItems} />
+      <ServiceGallery items={hardscapeOverviewItems} />
 
       <MaterialsSection
         subtitle="MATERIALS"
@@ -252,15 +228,14 @@ export default function Page() {
         items={hardscapeMaterials}
       />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="Hear From Our Happy"
         titleHighlight="Hardscape Clients"
         feedbacks={hardscapeFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/hardscape_constructor/8.webp"
-        subtitle="WHY CHOOSE US"
         title="Why Choose DMG Masonry For Hardscape Construction In Calgary?"
         description="Well-planned hardscape construction creates outdoor spaces that are functional, durable, and visually balanced. We use careful planning and quality installation practices to support long-term usability for every hardscape project."
         listItems={[
@@ -276,14 +251,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={hardscapeFaqs}
         title="Hardscape Construction Calgary: Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/hardscape_constructor/9.webp"
           title="Upgrade Your Outdoor Living Space"
           subtitle="REQUEST A QUOTE"

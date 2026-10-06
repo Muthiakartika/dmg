@@ -1,10 +1,9 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServicesCard from "@/components/Services/ServicesCard";
-import Partner from "@/components/Common/Partner";
+import ContactSection from "@/components/Contact/ContactSection";
 import Footer from "@/components/Layout/Footer";
-
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import Partners from "@/components/Sections/Partners";
+import ServicesGrid from "@/components/Services/ServicesGrid";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -17,24 +16,16 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
+      <PageTitle title="Services" homeText="Home" homeUrl="/" titleAsHeading />
+      <ServicesGrid />
+      <Partners />
 
-      <PageTitle
-        title="Services"
-        homeText="Home"
-        homeUrl="/"
-        titleAsHeading
-      />
-
-      <ServicesCard />
-
-      <Partner />
-   
       <div className="pb-100">
-        <ContactFormStyleTwo />
+        <ContactSection />
       </div>
-      
+
       <Footer />
     </>
-  )
+  );
 }

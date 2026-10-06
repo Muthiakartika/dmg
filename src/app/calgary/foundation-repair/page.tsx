@@ -1,14 +1,14 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import ServiceDetailsContent from "@/components/ServiceDetails/ServiceDetailsContent";
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
 import Footer from "@/components/Layout/Footer";
-import Process from "@/components/ServiceDetails/Process";
-import Overview from "@/components/InteriorHome/Overview";
-import AboutUsContent from "@/components/ArchitectureStudio/AboutUsContent";
-import FaqsContent from "@/components/Faqs/FaqsContent";
-import ClientsFeedbackSlider from "@/components/ArchitectureHome/ClientsFeedbackSlider";
-import MaterialsSection from "@/components/ServiceDetails/MaterialsSection";
+import ProcessSteps from "@/components/Sections/ProcessSteps";
+import ServiceGallery from "@/components/Services/ServiceGallery";
+import WhyChooseUs from "@/components/Services/WhyChooseUs";
+import FaqSection from "@/components/Sections/FaqSection";
+import TestimonialSlider from "@/components/Sections/TestimonialSlider";
+import MaterialsSection from "@/components/Services/MaterialsSection";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -66,63 +66,46 @@ const foundationRepairMethods = [
   {
     title: "Crack injection",
     text: "Non-structural cracks are commonly sealed by injecting epoxy or polyurethane into the full depth of the crack from the inside. It seals the water path and can be done without excavation.",
-    aosDelay: "100",
   },
   {
     title: "Exterior excavation and waterproofing",
     text: "Where water is getting in over a larger area, the affected section is excavated to the footing, the wall cleaned and repaired, and a waterproof membrane and drainage applied before backfilling. It is the more involved option and the more durable one where water is the problem.",
-    aosDelay: "200",
   },
   {
     title: "Parging and surface repair",
     text: "Deteriorated exterior surfaces on the exposed part of a foundation are cleaned back and re-parged. This is cosmetic and protective rather than structural, but it stops further surface loss.",
-    aosDelay: "300",
   },
   {
     title: "Structural reinforcement",
     text: "Where a wall has moved, reinforcement addresses the movement itself rather than the crack. The right method depends on the wall type, the direction of movement and how far it has gone, which is why it follows an assessment rather than preceding it.",
-    aosDelay: "400",
   },
   {
     title: "How do you decide which method to use?",
     text: "By what is causing it. A crack from curing shrinkage, a crack from settlement and a wall bowing under soil pressure look similar from the inside and need entirely different work. The assessment is what determines the repair.",
-    aosDelay: "500",
   },
 ];
 
 // Tahapan proses spesifik untuk Foundation Repair
 const foundationProcessSteps = [
   {
-    id: "1",
-    number: "1",
     image: "/images/services/service/foundation_repair/2.webp",
     title: "Inspect the Foundation",
     text: "We assess structural movement, cracks, and foundation conditions.",
-    aosDelay: "100",
   },
   {
-    id: "2",
-    number: "2",
     image: "/images/services/service/foundation_repair/3.webp",
     title: "Plan the Repair",
     text: "We determine the right foundation repair solution for the structure and damage level.",
-    aosDelay: "200",
   },
   {
-    id: "3",
-    number: "3",
     image: "/images/services/service/foundation_repair/4.webp",
     title: "Complete the Repairs",
     text: "Foundation areas are reinforced using reliable repair methods and materials.",
-    aosDelay: "300",
   },
   {
-    id: "4",
-    number: "4",
     image: "/images/services/service/foundation_repair/5.webp",
     title: "Ensure Long-Term Stability",
     text: "Final work is completed with focus on strength, durability, and performance.",
-    aosDelay: "400",
   },
 ];
 
@@ -132,26 +115,22 @@ const foundationOverviewItems = [
     image: "/images/services/service/foundation_repair/6.webp",
     titleNormal: "Basement Crack",
     titleHighlight: "Injection",
-    aosDelay: "100",
   },
   {
     image: "/images/services/service/foundation_repair/7.webp",
     titleNormal: "Exterior Concrete",
     titleHighlight: "Waterproofing",
-    aosDelay: "200",
   },
 ];
 
 // Testimonial klien spesifik untuk Foundation Repair
 const foundationFeedbacks = [
   {
-    id: "1",
     feedbackText:
       "I appreciated that they answered all of our questions before starting the work. It made us feel a lot more comfortable moving forward with the repairs.",
     name: "Karen L.",
   },
   {
-    id: "2",
     feedbackText:
       "The whole process was well organized from the inspection through the repairs. Once everything was finished, the work area was left clean and the repairs blended in nicely.",
     name: "Jennifer W.",
@@ -161,15 +140,14 @@ const foundationFeedbacks = [
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar />
 
       <PageTitle title="Foundation Repair" homeText="Home" homeUrl="/" />
 
       <ServiceDetailsContent
         mainImage="/images/services/service/foundation_repair/1.webp"
         title="Foundation Repair Calgary: Structural & Masonry Foundation Repairs"
-        subtitle="SERVICE"
-        description1="DMG Masonry is a masonry and foundation repair contractor in Calgary, Alberta. Foundation problems can affect the safety and condition of a property if left unresolved. We provide foundation repair services to correct structural issues and reinforce weakened areas."
+        description="DMG Masonry is a masonry and foundation repair contractor in Calgary, Alberta. Foundation problems can affect the safety and condition of a property if left unresolved. We provide foundation repair services to correct structural issues and reinforce weakened areas."
         paragraphsHeading="What are the signs of foundation damage?"
         paragraphs={[
           "Cracked foundation walls, uneven floors, sticking doors, and visible structural movement are often signs of underlying foundation issues. These problems can result from soil settlement, moisture exposure, or shifting structural loads over time. Our team carefully inspects the condition of the foundation to determine the cause and recommend repairs suited to the structure's specific needs.",
@@ -189,12 +167,12 @@ export default function Page() {
         ]}
       />
 
-      <Process
+      <ProcessSteps
         title="How Does Our Foundation Repair Process Work?"
         steps={foundationProcessSteps}
       />
 
-      <Overview fullWidth items={foundationOverviewItems} />
+      <ServiceGallery items={foundationOverviewItems} />
 
       <MaterialsSection
         subtitle="REPAIR METHODS"
@@ -202,15 +180,14 @@ export default function Page() {
         items={foundationRepairMethods}
       />
 
-      <ClientsFeedbackSlider
+      <TestimonialSlider
         titleNormal="What Clients Say"
         titleHighlight="About Our Foundation Repairs"
         feedbacks={foundationFeedbacks}
       />
 
-      <AboutUsContent
+      <WhyChooseUs
         image="/images/services/service/foundation_repair/8.webp"
-        subtitle="WHY CHOOSE US"
         title="Why Choose DMG Masonry For Foundation Repair In Calgary?"
         description="Foundation damage can affect the safety and performance of a building if not repaired properly. As masonry contractors in Calgary, we provide foundation repair services focused on structural stability."
         listItems={[
@@ -224,14 +201,13 @@ export default function Page() {
         buttonLink="/contact-us"
       />
 
-      <FaqsContent
+      <FaqSection
         faqs={foundationFaqs}
         title="Foundation Repair Calgary: Frequently Asked Questions"
-        subtitle="FAQ"
       />
 
       <div className="ptb-100">
-        <ContactFormStyleTwo
+        <ContactSection
           image="/images/services/service/foundation_repair/9.webp"
           title="Restore Strength to Your Foundation"
           subtitle="REQUEST A QUOTE"

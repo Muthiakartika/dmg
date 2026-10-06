@@ -1,15 +1,12 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import PageTitle from "@/components/Common/PageTitle";
-import AboutUsContent from "@/components/AboutUs/AboutUsContent";
-import LatestRecognition from "@/components/ArchitectureStudio/LatestRecognition";
-import QuoteText from "@/components/AboutUs/QuoteText";
-import ClientsFeedbackSlider from "@/components/Common/ClientsFeedbackSlider";
-import TextSlide from "@/components/Common/TextSlide";
-import TeamMemberStyle2 from "@/components/Common/TeamMemberStyle2";
-import Partner from "@/components/Common/Partner";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
+import AboutContent from "@/components/About/AboutContent";
+import QuoteText from "@/components/About/QuoteText";
+import TeamSection from "@/components/About/TeamSection";
+import ContactSection from "@/components/Contact/ContactSection";
 import Footer from "@/components/Layout/Footer";
-
+import Navbar from "@/components/Layout/Navbar";
+import PageTitle from "@/components/Sections/PageTitle";
+import TestimonialCarousel from "@/components/Sections/TestimonialCarousel";
+import type { Testimonial } from "@/components/Sections/TestimonialSlider";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -19,16 +16,13 @@ export const metadata = buildMetadata({
   path: "/about-us/",
 });
 
-// Testimonial klien spesifik untuk About Us
-const aboutFeedbacks = [
+const feedbacks: Testimonial[] = [
   {
-    id: "1",
     feedbackText:
       "I reached out to a few contractors before deciding, and I'm glad I chose DMG Masonry. They were easy to deal with, explained everything clearly, and the work turned out just the way we wanted.",
     name: "Mark H.",
   },
   {
-    id: "2",
     feedbackText:
       "You can tell they care about doing things properly. We're really happy with how everything came together.",
     name: "Laura P.",
@@ -38,38 +32,22 @@ const aboutFeedbacks = [
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
-
-      <PageTitle
-        title="About Us"
-        homeText="Home"
-        homeUrl="/"
-        titleAsHeading
-      />
-
-      <AboutUsContent />
-
-      {/* <LatestRecognition /> */}
-
+      <Navbar />
+      <PageTitle title="About Us" homeText="Home" homeUrl="/" titleAsHeading />
+      <AboutContent />
       <QuoteText />
 
       <div className="ptb-100">
-        <ClientsFeedbackSlider feedbacks={aboutFeedbacks} />
+        <TestimonialCarousel feedbacks={feedbacks} />
       </div>
 
-      {/* <TextSlide /> */}
-
-      <TeamMemberStyle2 />
-
-      {/* <div className="pt-100">
-        <Partner />
-      </div> */}
+      <TeamSection />
 
       <div className="pb-100 pt-100">
-        <ContactFormStyleTwo image="/images/about/new/3.webp" />
+        <ContactSection image="/images/about/new/3.webp" />
       </div>
 
       <Footer />
     </>
-  )
+  );
 }

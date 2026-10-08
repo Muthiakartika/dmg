@@ -5,6 +5,7 @@ import {
   useEffect,
   useImperativeHandle,
   useRef,
+  useState,
 } from "react";
 import Script from "next/script";
 
@@ -106,13 +107,38 @@ const Turnstile = forwardRef<TurnstileHandle, TurnstileProps>(function Turnstile
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // The script (~30 KB) is only requested once the form is within reach, so a
+  // form at the bottom of a page does not compete with the hero image while
+  // the page is loading.
+  const [isNearViewport, setNearViewport] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || typeof IntersectionObserver === "undefined") {
+      setNearViewport(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setNearViewport(true);
+        observer.disconnect();
+      },
+      { rootMargin: "800px" },
+    );
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        strategy="afterInteractive"
-        onLoad={renderWidget}
-      />
+      {isNearViewport && (
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+          onLoad={renderWidget}
+        />
+      )}
       <div ref={containerRef} />
     </>
   );

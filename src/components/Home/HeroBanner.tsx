@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,8 +8,8 @@ import Link from "next/link";
 import SocialIcons from "@/components/UI/SocialIcons";
 import { fadeUp } from "@/lib/aos";
 import { contact } from "@/lib/site";
+import { heroImage, heroImageMobile } from "./heroImages";
 
-import heroBgImg from "../../../public/images/main-banner/home/1.webp";
 import shapeImg from "../../../public/images/main-banner/shape.png";
 import arrowRightIcon from "../../../public/images/main-banner/arrow-right.svg";
 
@@ -18,6 +18,13 @@ import arrowRightIcon from "../../../public/images/main-banner/arrow-right.svg";
 const FsLightbox = dynamic(() => import("fslightbox-react"), { ssr: false });
 
 const heroReveal = (delay: number) => fadeUp(delay, { once: false });
+
+// The stylesheet picks one of these per breakpoint (see heroImages.ts), so
+// phones never download the desktop file.
+const heroImageVars = {
+  "--hero-image": `url(${heroImage.src})`,
+  "--hero-image-mobile": `url(${heroImageMobile.src})`,
+} as CSSProperties;
 
 export default function HeroBanner() {
   // FsLightbox opens whenever the `toggler` prop changes.
@@ -46,10 +53,7 @@ export default function HeroBanner() {
         </div>
 
         {/* LCP element: no AOS fade so it paints immediately; uses real WebP */}
-        <div
-          className="main-banner-image"
-          style={{ backgroundImage: `url(${heroBgImg.src})` }}
-        ></div>
+        <div className="main-banner-image" style={heroImageVars}></div>
 
         <div className="main-banner-wrap-shape">
           <Image src={shapeImg} alt="Shape" width={502} height={287} />

@@ -40,6 +40,28 @@ const muteButtonStyle: CSSProperties = {
 export default function LazyVideo({ src, poster }: LazyVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+  const [showPoster, setShowPoster] = useState(false);
+
+  // The poster is a 70 KB image far below the fold. Browsers fetch posters
+  // eagerly, so it is only attached when the video is a couple of screens
+  // away — still well before it can scroll into view.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || typeof IntersectionObserver === "undefined") {
+      setShowPoster(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setShowPoster(true);
+        observer.disconnect();
+      },
+      { rootMargin: "1500px" },
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -85,7 +107,7 @@ export default function LazyVideo({ src, poster }: LazyVideoProps) {
       <video
         ref={videoRef}
         src={src}
-        poster={poster}
+        poster={showPoster ? poster : undefined}
         muted
         loop
         playsInline

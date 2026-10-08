@@ -95,6 +95,8 @@
     right: 0;
     text-align: center;
     margin: auto;
+    /* Smaller crop of the same picture; see src/components/Home/heroImages.ts. */
+    background-image: var(--hero-image-mobile);
   }
   .main-banner-wrap-shape {
     display: none;

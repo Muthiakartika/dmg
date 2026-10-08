@@ -65,10 +65,23 @@ const Preloader: React.FC = () => {
   // When pathname changes → the new page has rendered, schedule hide.
   // Search params are observed separately so they cannot prevent this
   // component's preloader markup from being server-rendered.
+  //
+  // On the first page load the server-rendered page is already painted under
+  // the overlay, so the fade starts as soon as the app is interactive instead
+  // of holding for 1.2s (that hold alone pushed mobile Speed Index past 3s).
+  // Client-side navigations keep the 1.2s hold.
+  const lastPathname = useRef<string | null>(null);
   useEffect(() => {
-    handleNavigationComplete();
+    // Comparing paths (not a "has run" flag) keeps Strict Mode's double effect
+    // run in development on the first-load branch.
+    const isFirstLoad =
+      lastPathname.current === null || lastPathname.current === pathname;
+    lastPathname.current = pathname;
+
+    if (isFirstLoad) scheduleHide(0);
+    else handleNavigationComplete();
     return clearHideTimer;
-  }, [pathname, handleNavigationComplete, clearHideTimer]);
+  }, [pathname, handleNavigationComplete, scheduleHide, clearHideTimer]);
 
   // Normalise a pathname by stripping trailing slashes for comparison
   const normalisePath = (p: string) => (p.endsWith("/") && p.length > 1 ? p.slice(0, -1) : p);

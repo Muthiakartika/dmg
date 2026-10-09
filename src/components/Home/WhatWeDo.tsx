@@ -33,7 +33,7 @@ export default function WhatWeDo() {
           {...fadeUp(100)}
         >
           <h2>
-            What <span>We Do</span> For You
+            Our <span>Masonry Services</span>
           </h2>
           <Link href="/services">VIEW ALL SERVICES</Link>
         </div>

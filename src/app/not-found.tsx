@@ -13,8 +13,8 @@ export default function NotFound() {
           <div style={{ maxWidth: "500px", margin: "0 auto 15px" }}>
             <h3>Oops! That page can&apos;t be found</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              The page you are looking for may have moved or no longer exists. Head back to
+              the home page to explore our masonry services.
             </p>
           </div>
 

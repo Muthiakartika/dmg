@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+
+import LazySwiper from "@/components/UI/LazySwiper";
 
 import quoteIcon from "../../../public/images/client/quote.svg";
 import shape1 from "../../../public/images/client/shape1.png";
@@ -36,14 +34,15 @@ export default function TestimonialSlider({
         </div>
 
         {feedbacks.length > 0 && (
-          <Swiper
-            pagination={{ dynamicBullets: true, clickable: true }}
-            autoplay={{ delay: 5000, disableOnInteraction: true, pauseOnMouseEnter: true }}
-            modules={[Autoplay, Pagination]}
+          <LazySwiper
             className="client-swiper"
-          >
-            {feedbacks.map((feedback, index) => (
-              <SwiperSlide key={index}>
+            options={{
+              pagination: { dynamicBullets: true, clickable: true },
+              autoplay: { delay: 5000, disableOnInteraction: true, pauseOnMouseEnter: true },
+            }}
+            slides={feedbacks.map((feedback, index) => ({
+              key: index,
+              content: (
                 <div className="client-content">
                   <div className="icon">
                     <Image src={quoteIcon} alt="quote" width={56} height={56} />
@@ -56,9 +55,9 @@ export default function TestimonialSlider({
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              ),
+            }))}
+          />
         )}
       </div>
 

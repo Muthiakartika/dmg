@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+
+import LazySwiper from "@/components/UI/LazySwiper";
 
 import quoteIcon from "../../../public/images/client/quote.svg";
 import type { Testimonial } from "./TestimonialSlider";
@@ -23,20 +21,22 @@ export default function TestimonialCarousel({ feedbacks }: TestimonialCarouselPr
       </div>
 
       <div className="container-fluid">
-        <Swiper
-          spaceBetween={25}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 5000, disableOnInteraction: true, pauseOnMouseEnter: true }}
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1200: { slidesPerView: 3 },
-          }}
-          modules={[Autoplay, Pagination]}
+        <LazySwiper
           className="client-swiper"
-        >
-          {feedbacks.map((feedback, index) => (
-            <SwiperSlide key={index} style={{ paddingBottom: "30px" }}>
+          options={{
+            spaceBetween: 25,
+            pagination: { clickable: true },
+            autoplay: { delay: 5000, disableOnInteraction: true, pauseOnMouseEnter: true },
+            breakpoints: {
+              0: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1200: { slidesPerView: 3 },
+            },
+          }}
+          slides={feedbacks.map((feedback, index) => ({
+            key: index,
+            style: { paddingBottom: "30px" },
+            content: (
               <div className="client-wrap-card">
                 <div className="icon">
                   <Image src={quoteIcon} alt="quote" width={56} height={56} />
@@ -50,9 +50,9 @@ export default function TestimonialCarousel({ feedbacks }: TestimonialCarouselPr
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            ),
+          }))}
+        />
       </div>
     </div>
   );

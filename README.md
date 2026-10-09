@@ -30,7 +30,7 @@ src/
     Services/           Service page building blocks (details, gallery, why-choose-us…)
     Contact/            Contact & quote forms, Turnstile, ContactInfo, map
     Legal/ Blog/ Admin/
-    UI/                 Small presentational pieces (ArrowList, SocialIcons)
+    UI/                 Small shared pieces (ArrowList, SocialIcons, LazySwiper)
   lib/                  Site config, service list, content data, server helpers
   styles/               globals.css plus one stylesheet per component:
                         vendor/ (Bootstrap, Remixicon), base/ (tokens, elements,
@@ -60,6 +60,10 @@ public/                 Images, video and icon fonts
   service icon font `dmg-icons` (`flaticon-*` classes). Adding an icon means
   regenerating the font; see the comments at the top of
   `src/styles/vendor/remixicon-subset.css` and `src/styles/base/icons.css`.
+- **Sliders** go through `LazySwiper` (`src/components/UI/LazySwiper.tsx`). It
+  server-renders Swiper's markup and downloads the Swiper library only when the
+  slider is a couple of screens away, keeping it out of the initial load. Do
+  not import `swiper/react` from a page or section directly.
 - **Scroll animations** use AOS. Spread `fadeUp(delay)` from `src/lib/aos.ts` on
   an element; list items use `staggerDelay(index)`.
 - **Contact details and social links** live in `src/lib/site.ts`; the service

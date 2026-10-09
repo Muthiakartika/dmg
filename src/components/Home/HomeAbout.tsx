@@ -39,6 +39,8 @@ export default function HomeAbout() {
           <div className="col-lg-8 col-md-12">
             <div className="about-one-content" {...fadeUp(200)}>
               <div className="title">
+                {/* Previous h1, kept in case the client wants it back:
+                    Who We Are: Professional<span> Masonry Services</span> in Calgary */}
                 <h1>
                   Masonry<span> Contractor Service</span> Calgary
                 </h1>

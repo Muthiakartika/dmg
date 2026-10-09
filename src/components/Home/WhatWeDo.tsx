@@ -32,6 +32,8 @@ export default function WhatWeDo() {
           className="section-title d-flex justify-content-between align-items-center"
           {...fadeUp(100)}
         >
+          {/* Previous h2, kept in case the client wants it back:
+              What <span>We Do</span> For You */}
           <h2>
             Our <span>Masonry Services</span>
           </h2>

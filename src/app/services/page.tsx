@@ -2,7 +2,6 @@ import ContactSection from "@/components/Contact/ContactSection";
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import PageTitle from "@/components/Sections/PageTitle";
-import Partners from "@/components/Sections/Partners";
 import ServicesGrid from "@/components/Services/ServicesGrid";
 import { buildMetadata } from "@/lib/seo";
 
@@ -19,7 +18,10 @@ export default function Page() {
       <Navbar />
       <PageTitle title="Services" homeText="Home" homeUrl="/" titleAsHeading />
       <ServicesGrid />
-      <Partners />
+
+      {/* The partner logo strip is left out until there are real partners to show:
+          the template's placeholder brands would otherwise be indexed as our own.
+          Component kept at src/components/Sections/Partners.tsx. */}
 
       <div className="pb-100">
         <ContactSection />

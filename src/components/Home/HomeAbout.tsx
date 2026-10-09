@@ -17,7 +17,8 @@ const highlights = [
   "Custom masonry solutions for every project",
 ];
 
-/** "Who We Are" block under the home hero. */
+/** "Who We Are" block under the home hero. Carries the page's h1 — it keeps the
+ *  previous site's h1 wording — because the hero tagline above is not a heading. */
 export default function HomeAbout() {
   return (
     <div className="about-area ptb-100">
@@ -38,9 +39,9 @@ export default function HomeAbout() {
           <div className="col-lg-8 col-md-12">
             <div className="about-one-content" {...fadeUp(200)}>
               <div className="title">
-                <h2>
+                <h1>
                   Who We Are: Professional<span> Masonry Services</span> in Calgary
-                </h2>
+                </h1>
               </div>
 
               <div className="row justify-content-center">

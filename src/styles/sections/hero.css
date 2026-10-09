@@ -31,13 +31,18 @@
   z-index: 2;
 }
 
-.main-banner-content h1 {
+/* Styled like a heading but it is a <div>: see src/components/Home/HeroBanner.tsx.
+   font-weight and line-height are restated here because they used to come from
+   the h1 element rules. */
+.main-banner-content .banner-title {
   color: var(--headingColor);
   font-size: 70px;
+  font-weight: bold;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
-.main-banner-content h1 span {
+.main-banner-content .banner-title span {
   color: transparent;
   -webkit-text-stroke: 0.5px var(--headingColor);
   -webkit-user-select: none;
@@ -257,12 +262,12 @@
     max-width: 540px;
   }
 
-  .main-banner-area .main-banner-content h1 {
+  .main-banner-area .main-banner-content .banner-title {
     color: var(--whiteTextColor);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
   }
 
-  .main-banner-area .main-banner-content h1 span {
+  .main-banner-area .main-banner-content .banner-title span {
     color: var(--whiteTextColor);
     -webkit-text-stroke: 0;
   }
@@ -277,7 +282,7 @@
     background-color: rgba(22, 21, 18, 0.25);
   }
 
-  .main-banner-content h1 {
+  .main-banner-content .banner-title {
     font-size: 32px;
   }
 
@@ -322,7 +327,7 @@
     padding-bottom: 250px;
   }
 
-  .main-banner-area h1 {
+  .main-banner-area .banner-title {
     font-size: 50px;
   }
 
@@ -347,7 +352,7 @@
     padding-bottom: 330px;
   }
 
-  .main-banner-area h1 {
+  .main-banner-area .banner-title {
     font-size: 60px;
   }
 

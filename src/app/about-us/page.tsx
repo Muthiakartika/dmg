@@ -1,6 +1,5 @@
 import AboutContent from "@/components/About/AboutContent";
 import QuoteText from "@/components/About/QuoteText";
-import TeamSection from "@/components/About/TeamSection";
 import ContactSection from "@/components/Contact/ContactSection";
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
@@ -41,7 +40,9 @@ export default function Page() {
         <TestimonialCarousel feedbacks={feedbacks} />
       </div>
 
-      <TeamSection />
+      {/* The team section is left out until there are real staff photos and names:
+          the template's invented people would otherwise be indexed as our team.
+          Component kept at src/components/About/TeamSection.tsx. */}
 
       <div className="pb-100 pt-100">
         <ContactSection image="/images/about/new/3.webp" />

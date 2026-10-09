@@ -9,6 +9,32 @@
   color: var(--textColor);
 }
 
+/* The subtitle is vertical text in the 45px gutter left of the heading. Here it
+   is a flex item rather than absolutely positioned (45px = 24px of text + the
+   21px gap), because these sections use two-word labels: absolutely positioned,
+   a label too long for the heading's height wrapped into a second column and
+   covered the first letter of the heading. In flow it stays one column and
+   makes the block taller instead. */
+.services-wrap-area.without-bg-color.materials-area .section-title-wrap {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 21px;
+  padding-left: 0;
+}
+
+.materials-area .section-title-wrap > span {
+  position: static;
+  white-space: nowrap;
+  /* Matches the `top` the absolutely positioned label used. */
+  margin-top: 8.8px;
+  flex: none;
+}
+
+.materials-area .section-title-wrap > .title-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 .materials-area .services-item p {
   margin-bottom: 0;
 }
@@ -270,6 +296,12 @@
 
   .services-wrap-area.without-bg-color .section-title-wrap {
     padding-left: 0;
+  }
+
+  /* The label sits above the heading on phones, in normal horizontal text. */
+  .materials-area .section-title-wrap > span {
+    margin-top: 0;
+    white-space: normal;
   }
 }
 

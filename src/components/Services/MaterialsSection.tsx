@@ -27,10 +27,16 @@ export default function MaterialsSection({
     // No pt-*: the section before it (ServiceDetailsContent) already ends in pb-100.
     <div className="services-wrap-area without-bg-color materials-area pb-75">
       <div className="container">
+        {/* The vertical subtitle and the text are flex siblings (see
+            services.css) so a long label such as "MAINTENANCE & COST" stays in
+            one column in the left gutter instead of wrapping into two columns
+            and running underneath the heading. */}
         <div className="section-title-wrap">
           <span>{subtitle}</span>
-          <h2>{title}</h2>
-          {description && <p>{description}</p>}
+          <div className="title-text">
+            <h2>{title}</h2>
+            {description && <p>{description}</p>}
+          </div>
         </div>
 
         <div className="row justify-content-center">

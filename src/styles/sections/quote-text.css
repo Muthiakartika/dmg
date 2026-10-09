@@ -1,0 +1,87 @@
+/* Large statement band on the About page. */
+
+.box-style-area .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.box-style-inner {
+  background: var(--cardBg);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 170px;
+  padding-bottom: 170px;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.box-style-inner h3 {
+  font-size: 40px;
+  font-weight: 400;
+  max-width: 1045px;
+  margin: auto;
+  line-height: 1.4;
+}
+
+.box-style-inner .wrap-shape {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  opacity: var(--shapeOpacity);
+}
+
+@media only screen and (max-width: 767px) {
+  .box-style-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 540px;
+  }
+
+  .box-style-inner {
+    padding: 50px 20px;
+  }
+
+  .box-style-inner h3 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .box-style-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 720px;
+  }
+
+  .box-style-inner {
+    padding: 80px 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .box-style-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .box-style-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .box-style-area .container-fluid {
+    padding-left: 80px;
+    padding-right: 80px;
+    max-width: 1920px;
+  }
+}

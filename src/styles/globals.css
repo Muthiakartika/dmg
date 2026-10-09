@@ -1,36 +1,51 @@
 /*
- * Global CSS entry file.
+ * Stylesheet entry point. Everything is imported here, in this order, so the
+ * cascade is identical in every build (Next.js may reorder CSS that is
+ * imported from separate components).
  *
- * Every stylesheet is imported here, in this order, so the cascade is the
- * same in every build: Next.js production builds may reorder CSS chunks when
- * they are imported from separate components, which used to let base styles
- * override the responsive ones. Keep responsive.css last.
+ * Each component file holds its base rules followed by its own responsive
+ * rules. Rules of equal specificity can override each other across files, so
+ * keep this order when adding files: vendor, base, layout, sections, footer.
  */
 
-/* Third-party libraries */
-@import "./bootstrap.css"; /* trimmed copy, see scripts/purge-bootstrap.mjs */
-@import "./remixicon-subset.css";
+/* Third-party */
+@import "./vendor/bootstrap.css"; /* trimmed copy, see scripts/purge-bootstrap.mjs */
+@import "./vendor/remixicon-subset.css";
 /* Only the Swiper modules this app registers: Autoplay (no CSS) and Pagination. */
 @import "swiper/css";
 @import "swiper/css/pagination";
 @import "react-accessible-accordion/dist/fancy-example.css";
 
-/* Icon font */
-@import "./flaticon.css";
+/* Base */
+@import "./base/icons.css";
+@import "./base/tokens.css";
+@import "./base/elements.css";
+@import "./base/forms.css";
+@import "./base/utilities.css";
 
-/* Component styles */
-@import "./navbar.css";
-@import "./chimney-location-menu.css";
-@import "./services-details.css";
-@import "./materials-section.css";
-@import "./blog-details.css";
-@import "./footer.css";
+/* Layout */
+@import "./layout/preloader.css";
+@import "./layout/navbar.css";
 
-/* Global styles */
-@import "./style.css";
+/* Page sections */
+@import "./sections/hero.css";
+@import "./sections/about.css";
+@import "./sections/services.css";
+@import "./sections/overview.css";
+@import "./sections/features.css";
+@import "./sections/marquee.css";
+@import "./sections/process.css";
+@import "./sections/testimonials.css";
+@import "./sections/service-details.css";
+@import "./sections/blog.css";
+@import "./sections/contact.css";
+@import "./sections/partners.css";
+@import "./sections/team.css";
+@import "./sections/page-title.css";
+@import "./sections/quote-text.css";
+@import "./sections/faq.css";
+@import "./sections/legal.css";
+@import "./sections/not-found.css";
 
-/* Local overrides / fixes */
-@import "./form-fixes.css";
-
-/* Responsive overrides - MUST be last to ensure proper cascade */
-@import "./responsive.css";
+/* Footer last: its links rely on the base link styles above. */
+@import "./layout/footer.css";

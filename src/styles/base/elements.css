@@ -1,0 +1,66 @@
+/* Defaults for bare HTML elements (body, headings, links, images). */
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+  font-size: var(--fontSize);
+  font-weight: 400;
+}
+
+p {
+  color: var(--textColor);
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headingColor);
+  font-weight: bold;
+}
+
+a {
+  transition: var(--transition);
+  color: var(--headingColor);
+  text-decoration: none;
+  outline: 0 !important;
+}
+
+a:hover {
+  color: var(--headingColor);
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}

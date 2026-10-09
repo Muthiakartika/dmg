@@ -1,0 +1,11 @@
+/* Native form-control fixes shared by every form. */
+
+/* Native <select> option lists are drawn by the OS on a white background
+   regardless of the page theme, so in dark mode the inherited light text
+   would be invisible. Options always use dark text on white. */
+.form-select option,
+.form-control option,
+select option {
+  color: #1a1a2e;
+  background-color: #ffffff;
+}

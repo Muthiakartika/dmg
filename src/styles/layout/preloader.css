@@ -1,0 +1,78 @@
+/* Full-screen loading overlay with the waving DMG MASONRY letters. */
+
+.preloader-area {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background: var(--preloaderBg);
+}
+
+.preloader-area .loader {
+  left: 0;
+  right: 0;
+  top: 48%;
+  position: absolute;
+  transform: translateY(-48%);
+}
+
+.preloader-area .loader .waviy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.preloader-area .loader .waviy .waviy-line {
+  display: flex;
+  justify-content: center;
+}
+
+.preloader-area .loader .waviy span {
+  animation: flip 2s infinite;
+  color: var(--whiteTextColor);
+  display: inline-block;
+  animation-delay: 0.2s;
+  font-size: 45px;
+  font-weight: 800;
+}
+
+.preloader-area .loader .waviy span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.preloader-area .loader .waviy span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.preloader-area .loader .waviy span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.preloader-area .loader .waviy span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .preloader-area .loader {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .preloader-area .loader .waviy {
+    gap: 6px;
+  }
+
+  .preloader-area .loader .waviy .waviy-line:first-child span,
+  .preloader-area .loader .waviy .waviy-line:last-child span {
+    font-size: 34px;
+  }
+}

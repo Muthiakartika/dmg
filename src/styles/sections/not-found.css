@@ -1,0 +1,21 @@
+/* 404 page. */
+
+.not-found-content img {
+  margin-bottom: 35px;
+}
+
+.not-found-content h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.not-found-content .default-btn {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .not-found-content h3 {
+    font-size: 20px;
+  }
+}

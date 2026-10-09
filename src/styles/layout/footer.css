@@ -1,6 +1,5 @@
-/*================================================
-Footer Area CSS
-=================================================*/
+/* Footer columns, newsletter form, copyright bar and the back-to-top button. */
+
 .footer-area {
   background: var(--footerBgSolid);
   margin: 0;
@@ -160,9 +159,6 @@ Footer Area CSS
   transition: color 0.3s ease;
 }
 
-/*================================================
-Copyright Area CSS
-=================================================*/
 .copyright-area {
   background: var(--footerCopyrightBg);
   padding: 14px 0;
@@ -203,9 +199,6 @@ Copyright Area CSS
   color: var(--footerHover);
 }
 
-/*================================================
-Back to Top CSS
-=================================================*/
 #back-to-top {
   right: 20px;
   z-index: 9999;

@@ -1,0 +1,97 @@
+/* Breadcrumb banner under the navbar on inner pages. */
+
+.page-banner-area {
+  margin-top: 30px;
+}
+
+.page-banner-area .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.page-banner-inner {
+  background: var(--cardBg);
+  padding: 20px 30px;
+}
+
+.page-banner-inner .list {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.page-banner-inner .list li {
+  list-style-type: none;
+  color: var(--mutedColor);
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  margin-right: 30px;
+}
+
+.page-banner-inner .list li a {
+  color: var(--headingColor);
+}
+
+.page-banner-inner .list li a:hover {
+  color: var(--primaryColor);
+}
+
+.page-banner-inner .list li::before {
+  position: absolute;
+  content: "";
+  right: -17.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--mutedColor);
+  height: 2px;
+  width: 5px;
+}
+
+.page-banner-inner .list li:last-child {
+  margin-right: 0;
+}
+
+.page-banner-inner .list li:last-child::before {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .page-banner-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .page-banner-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .page-banner-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .page-banner-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .page-banner-area .container-fluid {
+    padding-left: 80px;
+    padding-right: 80px;
+    max-width: 1920px;
+  }
+}

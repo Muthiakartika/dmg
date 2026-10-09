@@ -1,0 +1,113 @@
+/* Captioned photo pairs (home overview and the service page gallery). */
+
+/* Placed after the Overview gallery rather than directly after
+   ServiceDetailsContent: .overview-inner-area leaves only 40px under its dashed
+   rule, where the usual position inherits a full pb-100 above it. */
+.overview-area + .materials-area {
+  padding-top: 60px;
+}
+
+.overview-area .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.overview-area.wrap-color .overview-card {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.overview-area.wrap-color .overview-card h3 {
+  padding-left: 0;
+  color: var(--headingColor);
+}
+
+.overview-card {
+  border-bottom: 1px dashed #414040;
+  padding-bottom: 40px;
+}
+
+.overview-card .image {
+  overflow: hidden;
+}
+
+.overview-card .image img {
+  transition: var(--transition);
+}
+
+.overview-card h3 {
+  margin-bottom: 0;
+  font-size: 24px;
+  color: var(--headingColor);
+  padding-top: 30px;
+  padding-left: 10px;
+}
+
+.overview-card h3 span {
+  color: var(--mutedColor);
+  font-size: var(--fontSize);
+  font-weight: 400;
+}
+
+.overview-card:hover .image img {
+  transform: scale(1.2);
+}
+
+.overview-inner-area {
+  border-bottom: 1px dashed var(--borderColor);
+  padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .overview-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 540px;
+  }
+
+  .overview-card h3 {
+    font-size: 20px;
+    padding-left: 0;
+    padding-top: 25px;
+  }
+
+  .overview-inner-area {
+    padding-bottom: 10px;
+  }
+
+  .overview-inner-area .overview-card {
+    margin-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .overview-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 720px;
+  }
+
+  .overview-inner-area {
+    padding-bottom: 10px;
+  }
+
+  .overview-inner-area .overview-card {
+    margin-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .overview-area .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .overview-area .container-fluid {
+    padding-left: 80px;
+    padding-right: 80px;
+    max-width: 1920px;
+  }
+}

@@ -1,0 +1,79 @@
+/* Privacy policy and terms pages. */
+
+.privacy-policy-content .h1,
+.privacy-policy-content .h2,
+.privacy-policy-content .h3,
+.privacy-policy-content .h4,
+.privacy-policy-content h1,
+.privacy-policy-content h2,
+.privacy-policy-content h3,
+.privacy-policy-content h4,
+.privacy-policy-content h5,
+.privacy-policy-content h6 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.privacy-policy-content .h1:not(:first-child),
+.privacy-policy-content .h2:not(:first-child),
+.privacy-policy-content .h3:not(:first-child),
+.privacy-policy-content .h4:not(:first-child),
+.privacy-policy-content h1:not(:first-child),
+.privacy-policy-content h2:not(:first-child),
+.privacy-policy-content h3:not(:first-child),
+.privacy-policy-content h4:not(:first-child),
+.privacy-policy-content h5:not(:first-child),
+.privacy-policy-content h6:not(:first-child) {
+  margin-top: 30px;
+}
+
+.privacy-policy-content strong {
+  color: var(--headingColor);
+  font-weight: 500;
+}
+
+.privacy-policy-content p a {
+  color: var(--primaryColor);
+}
+
+.privacy-policy-content p a:hover {
+  text-decoration: underline;
+}
+
+.privacy-policy-content ul li,
+.privacy-policy-content ol li {
+  color: var(--textColor);
+  margin-bottom: 20px;
+}
+
+.privacy-policy-content ul li a,
+.privacy-policy-content ol li a {
+  color: var(--primaryColor);
+}
+
+.privacy-policy-content ul li a:hover,
+.privacy-policy-content ol li a:hover {
+  text-decoration: underline;
+}
+
+.privacy-policy-content ul li:last-child,
+.privacy-policy-content ol li:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .privacy-policy-content .h1,
+  .privacy-policy-content .h2,
+  .privacy-policy-content .h3,
+  .privacy-policy-content .h4,
+  .privacy-policy-content h1,
+  .privacy-policy-content h2,
+  .privacy-policy-content h3,
+  .privacy-policy-content h4,
+  .privacy-policy-content h5,
+  .privacy-policy-content h6 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

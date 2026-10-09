@@ -1,0 +1,255 @@
+/* Spacing helpers, the primary button and the section headings used across pages. */
+
+.theme-heading-color {
+  color: var(--headingColor) !important;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pb-75 {
+  padding-bottom: 75px;
+}
+
+.default-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--primaryColor);
+  color: var(--whiteTextColor);
+  font-size: 18px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.default-btn:hover {
+  background-color: var(--blackColor);
+  color: var(--whiteTextColor);
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  color: var(--headingColor);
+  margin-bottom: 0;
+}
+
+.section-title h2 span {
+  color: transparent;
+  -webkit-text-stroke: 0.5px var(--headingColor);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.section-title a {
+  color: var(--subtitleColor);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.section-title a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--primaryColor);
+  transition: var(--transition);
+}
+
+.section-title a:hover {
+  color: var(--primaryColor);
+}
+
+.section-title a:hover::before {
+  width: 100%;
+}
+
+.section-title-wrap {
+  max-width: 850px;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 50px;
+}
+
+.section-title-wrap span {
+  font-weight: 500;
+  color: var(--primaryColor);
+  font-size: 15.7px;
+  writing-mode: vertical-lr;
+  position: absolute;
+  left: 0;
+  top: 8.8px;
+  letter-spacing: 1px;
+}
+
+.section-title-wrap h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .pt-100 {
+    padding-top: 50px;
+  }
+
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+
+  .pb-75 {
+    padding-bottom: 25px;
+  }
+
+  .default-btn {
+    padding: 10px 20px;
+    font-size: 14.5px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title.d-flex {
+    display: block !important;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+  }
+
+  .section-title h2 span {
+    -webkit-text-stroke: 1px var(--headingColor);
+  }
+
+  .section-title a {
+    font-size: 12px;
+    display: block;
+    margin-top: 15px;
+  }
+
+  .p-0 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .ps-0 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .pe-0 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .ps-5 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .pe-5 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .section-title-wrap {
+    padding-left: 0;
+    margin-bottom: 30px;
+    display: block !important;
+  }
+
+  .section-title-wrap span {
+    font-size: 12.7px;
+    writing-mode: unset;
+    position: relative;
+    top: 0;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .section-title-wrap h2 {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .p-0 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .ps-0 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .pe-0 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .ps-5 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .pe-5 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .section-title-wrap {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .p-0 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .ps-0 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .pe-0 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .ps-5 {
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .pe-5 {
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+}

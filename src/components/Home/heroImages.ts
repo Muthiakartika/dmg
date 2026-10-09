@@ -9,7 +9,7 @@
 import heroImage from "../../../public/images/main-banner/home/1.webp";
 import heroImageMobile from "../../../public/images/main-banner/home/1-mobile.webp";
 
-/** Must match the max-width of the `--hero-image-mobile` rule in responsive.css. */
+/** Must match the max-width of the `--hero-image-mobile` rule in src/styles/sections/hero.css. */
 export const HERO_MOBILE_QUERY = "(max-width: 767px)";
 export const HERO_DESKTOP_QUERY = "(min-width: 768px)";
 

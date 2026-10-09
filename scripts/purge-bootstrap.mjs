@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Writes src/styles/bootstrap.css: Bootstrap's stylesheet without the rules
+// Writes src/styles/vendor/bootstrap.css: Bootstrap's stylesheet without the rules
 // for classes this site never uses.
 //
 // The site takes only Bootstrap's CSS — grid, a handful of utilities, modal,
@@ -21,7 +21,7 @@ import { join } from "node:path";
 import postcss from "postcss";
 
 const SOURCE = "node_modules/bootstrap/dist/css/bootstrap.min.css";
-const OUTPUT = "src/styles/bootstrap.css";
+const OUTPUT = "src/styles/vendor/bootstrap.css";
 
 // Classes toggled at runtime by code outside src/ (none today, but keep the
 // state classes Bootstrap styles in case a library starts adding them).

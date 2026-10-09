@@ -1,9 +1,9 @@
 import { fadeUp, staggerDelay } from "@/lib/aos";
 
 export interface MaterialItem {
-  // Optional: the flaticon font is subsetted to the 7 glyphs the site already
+  // Optional: the icon font is subsetted to the 7 glyphs the site already
   // uses, so a card with no matching glyph renders without an icon rather than
-  // with an empty box. See src/styles/flaticon.css.
+  // with an empty box. See src/styles/base/icons.css.
   icon?: string;
   title: string;
   text: string;

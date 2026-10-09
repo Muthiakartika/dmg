@@ -1,0 +1,76 @@
+/* Design tokens: colour palette and the dark-theme overrides. */
+
+:root {
+  --primaryColor: #BA8D6D;
+  --blackColor: #161512;
+  --whiteColor: #ffffff;
+  --whiteTextColor: #f7f7f7;
+  --paragraphColor: #7C7772;
+  --fontSize: 17px;
+  --transition: .6s;
+  --backgroundColor: var(--whiteColor);
+  --textColor: var(--paragraphColor);
+  --headingColor: var(--blackColor);
+  --subtitleColor: #6C6661;
+  --mutedColor: #6C6661;
+  --cardBg: #F4F4F4;
+  --borderColor: #E7E0E0;
+  --navLinkColor: var(--blackColor);
+  --navStickyBg: var(--whiteColor);
+  --navStickyShadow: rgba(0, 0, 0, 0.1);
+  --inputBg: transparent;
+  --inputBorder: #E7E0E0;
+  --shapeOpacity: 1;
+  --bannerOverlay: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.3) 100%);
+  --preloaderBg: #24231D;
+  --footerBg: #c57e47;
+  --footerBgSolid: #c57e47;
+  --footerCopyrightBg: #b66f39;
+  --footerText: #fff7f0;
+  --footerMutedText: rgba(255, 247, 240, 0.88);
+  --footerHeading: #fffaf6;
+  --footerHover: #2b1b12;
+  --footerSocialBg: #2a1b12;
+  --footerSocialHoverBg: #fff7f0;
+  --footerSocialHoverText: #b66f39;
+  --footerAccent: #f0c39d;
+  --footerInputBorder: rgba(255, 247, 240, 0.18);
+  --footerOverlayTop: rgba(255, 255, 255, 0.04);
+  --footerOverlayBottom: rgba(0, 0, 0, 0.03);
+  --footerImageFade: linear-gradient(180deg, rgba(191, 119, 64, 0.08) 0%, rgba(191, 119, 64, 0.82) 18%, #BF7740 42%);
+}
+
+[data-theme='dark'] {
+  --backgroundColor: var(--blackColor);
+  --paragraphColor: #f7f7f7;
+  --textColor: #f7f7f7;
+  --headingColor: #f7f7f7;
+  --subtitleColor: #f7f7f7;
+  --whiteTextColor: #f7f7f7;
+  --mutedColor: #9D9A97;
+  --cardBg: #24231D;
+  --borderColor: #3A3835;
+  --navLinkColor: var(--whiteTextColor);
+  --navStickyBg: var(--blackColor);
+  --navStickyShadow: rgba(0, 0, 0, 0.9);
+  --inputBg: transparent;
+  --inputBorder: #3A3835;
+  --shapeOpacity: 0.15;
+  --bannerOverlay: linear-gradient(180deg, rgba(22, 21, 18, 0.9) 0%, rgba(22, 21, 18, 0.3) 100%);
+  --preloaderBg: #24231D;
+  --footerBg: #1d1814;
+  --footerBgSolid: #1a1613;
+  --footerCopyrightBg: #110f0d;
+  --footerText: #f7f7f7;
+  --footerMutedText: #f7f7f7;
+  --footerHeading: #f7f7f7;
+  --footerHover: #ddb691;
+  --footerSocialBg: #0f0d0b;
+  --footerSocialHoverBg: #f4e6d8;
+  --footerSocialHoverText: #201914;
+  --footerAccent: #d0a783;
+  --footerInputBorder: rgba(255, 248, 242, 0.08);
+  --footerOverlayTop: rgba(255, 255, 255, 0.02);
+  --footerOverlayBottom: rgba(0, 0, 0, 0.16);
+  --footerImageFade: linear-gradient(180deg, rgba(36, 32, 28, 0.08) 0%, rgba(36, 32, 28, 0.84) 18%, #211D19 42%);
+}

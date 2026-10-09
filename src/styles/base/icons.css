@@ -1,0 +1,67 @@
+/* Service icon font (dmg-icons).
+
+   The font in public/fonts holds only the 7 glyphs the site uses. The class
+   names keep their original "flaticon-" prefix because components reference
+   them.
+
+   Adding an icon: the full glyph list (class names and codepoints) and the
+   full font live in git history. Copy the rule you need, then re-subset the
+   font with the new codepoint added — a class whose glyph is missing from the
+   font renders as a blank box:
+
+     git show b7e90d4:public/css/flaticon_astle.css
+     git show d37c41a:public/fonts/flaticon_astle.ttf > /tmp/icons-full.ttf
+     pip install fonttools brotli
+     pyftsubset /tmp/icons-full.ttf --flavor=woff2 --no-hinting
+       --layout-features= --output-file=public/fonts/dmg-icons.woff2
+       --unicodes=U+f10b,U+f117,U+f11a,U+f120,U+f12f,U+f133,U+f136,<new>
+     (repeat with --flavor=woff and with no flavor for .ttf) */
+
+@font-face {
+  font-family: "dmg-icons";
+  font-display: swap;
+  src:
+    url("../../../public/fonts/dmg-icons.woff2") format("woff2"),
+    url("../../../public/fonts/dmg-icons.woff") format("woff"),
+    url("../../../public/fonts/dmg-icons.ttf") format("truetype");
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+  font-family: dmg-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-facade:before {
+  content: "\f10b";
+}
+
+.flaticon-measuring:before {
+  content: "\f117";
+}
+
+.flaticon-fireplace:before {
+  content: "\f11a";
+}
+
+.flaticon-interior-design:before {
+  content: "\f120";
+}
+
+.flaticon-houses:before {
+  content: "\f12f";
+}
+
+.flaticon-mansory:before {
+  content: "\f133";
+}
+
+.flaticon-cube:before {
+  content: "\f136";
+}

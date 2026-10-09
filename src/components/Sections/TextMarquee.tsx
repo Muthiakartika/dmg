@@ -3,7 +3,7 @@ const phrases = ["Professional Masonry Contractors", "Custom Masonry Services in
 // Three copies of the pair keep the CSS marquee seamless on wide screens.
 const repeatedPhrases = [...phrases, ...phrases, ...phrases];
 
-/** Scrolling outlined text band (animation lives in style.css). */
+/** Scrolling outlined text band (animation lives in src/styles/sections/marquee.css). */
 export default function TextMarquee() {
   return (
     <div className="animation-view-area pb-100">

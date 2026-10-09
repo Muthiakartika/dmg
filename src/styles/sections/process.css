@@ -1,0 +1,329 @@
+/* Numbered process step cards. */
+
+.process-area {
+  background: var(--cardBg);
+  overflow: hidden;
+}
+
+.col-xl-3:nth-child(1) .process-card {
+  position: relative;
+  z-index: 1;
+  padding: 25px 0 35px 25px;
+}
+
+.col-xl-3:nth-child(1) .process-card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-image: url(/images/process/vector1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 2px;
+  height: 307px;
+}
+
+.col-xl-3:nth-child(1) .process-card::after {
+  position: absolute;
+  content: "";
+  left: -85px;
+  top: -7px;
+  background-image: url(/images/process/vector2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 404px;
+  height: 12px;
+}
+
+.col-xl-3:nth-child(2) .process-card {
+  position: relative;
+  z-index: 1;
+  padding: 25px 0 35px 25px;
+}
+
+.col-xl-3:nth-child(2) .process-card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 25px;
+  background-image: url(/images/process/vector1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 2px;
+  height: 333px;
+}
+
+.col-xl-3:nth-child(2) .process-card::after {
+  position: absolute;
+  content: "";
+  left: -85px;
+  bottom: -7px;
+  background-image: url(/images/process/vector2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 404px;
+  height: 12px;
+}
+
+.col-xl-3:nth-child(3) .process-card {
+  position: relative;
+  z-index: 1;
+  padding: 25px 0 35px 25px;
+}
+
+.col-xl-3:nth-child(3) .process-card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-image: url(/images/process/vector1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 2px;
+  height: 333px;
+}
+
+.col-xl-3:nth-child(3) .process-card::after {
+  position: absolute;
+  content: "";
+  left: -85px;
+  top: -7px;
+  background-image: url(/images/process/vector2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 404px;
+  height: 12px;
+}
+
+.col-xl-3:nth-child(4) .process-card {
+  position: relative;
+  z-index: 1;
+  padding: 25px 0 35px 25px;
+}
+
+.col-xl-3:nth-child(4) .process-card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 25px;
+  background-image: url(/images/process/vector1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 2px;
+  height: 333px;
+}
+
+.col-xl-3:nth-child(4) .process-card::after {
+  position: absolute;
+  content: "";
+  left: -85px;
+  bottom: -7px;
+  background-image: url(/images/process/vector2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 404px;
+  height: 12px;
+}
+
+.process-card {
+  margin-bottom: 25px;
+}
+
+.process-card .process-image {
+  position: relative;
+}
+
+.process-card .process-image span {
+  background: var(--brown-gradient, linear-gradient(135deg, #D8B798 0%, #BA8D6D 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.process-card .process-content {
+  margin-top: 30px;
+}
+
+.process-card .process-content h3 {
+  font-size: 20px;
+  color: var(--subtitleColor);
+  margin-bottom: 15px;
+}
+
+.process-card .process-content p {
+  color: var(--mutedColor);
+}
+
+@media only screen and (max-width: 767px) {
+  .col-xl-3:nth-child(1) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(1) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(1) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(2) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(2) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(2) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(3) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(3) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(3) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(4) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(4) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(4) .process-card::after {
+    display: none;
+  }
+
+  .process-card .process-content {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .col-xl-3:nth-child(1) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(1) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(1) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(2) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(2) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(2) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(3) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(3) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(3) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(4) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(4) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(4) .process-card::after {
+    display: none;
+  }
+
+  .process-card .process-content {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .col-xl-3:nth-child(1) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(1) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(1) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(2) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(2) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(2) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(3) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(3) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(3) .process-card::after {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(4) .process-card {
+    padding: 0;
+  }
+
+  .col-xl-3:nth-child(4) .process-card::before {
+    display: none;
+  }
+
+  .col-xl-3:nth-child(4) .process-card::after {
+    display: none;
+  }
+
+  .process-card .process-content {
+    margin-top: 25px;
+  }
+}

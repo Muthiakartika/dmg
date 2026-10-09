@@ -1,0 +1,223 @@
+/* Home 'Form & Function' block with the years-of-experience badge. */
+
+.features-area {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.features-content {
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-bottom: 15px;
+}
+
+.features-content h2 {
+  font-size: 40px;
+  color: var(--headingColor);
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+.features-content h2 span {
+  color: transparent;
+  -webkit-text-stroke: 0.5px var(--headingColor);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.features-content .inner-box {
+  background: #24231F;
+  padding: 40px 35px 210px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-right: -25px;
+}
+
+.features-content .inner-box h3 {
+  font-size: 57px;
+  color: var(--whiteTextColor);
+  font-weight: 400;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.features-content .inner-box span {
+  color: #9D9A97;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.features-content .inner-box span b {
+  display: block;
+  font-weight: 400;
+}
+
+.features-content .inner-box .wrap {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+}
+
+.features-content .inner-content {
+  padding-left: 50px;
+}
+
+.features-content .about-one-content p {
+  color: var(--mutedColor);
+}
+
+.features-content .inner-content p {
+  color: var(--textColor);
+  margin-bottom: 25px;
+}
+
+.features-content .inner-content .list {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.features-content .inner-content .list li {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--headingColor);
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.features-content .inner-content .list li:last-child {
+  margin-bottom: 0;
+}
+
+.features-content .inner-content .list li img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.features-content .inner-content .features-btn {
+  margin-top: 40px;
+}
+
+.features-content .inner-content .features-btn .default-btn {
+  background-color: transparent;
+  border: 1px solid var(--primaryColor);
+  color: var(--headingColor);
+}
+
+.features-content .inner-content .features-btn .default-btn:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteTextColor);
+}
+
+.features-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.features-shape {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 767px) {
+  .features-content h2 span {
+    -webkit-text-stroke: 1px var(--headingColor);
+  }
+
+  .features-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .features-content h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .features-content .inner-box {
+    padding: 25px 25px 190px;
+    margin-right: 0;
+  }
+
+  .features-content .inner-box .inner-box h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .features-content .inner-box .inner-box span {
+    font-size: 14px;
+  }
+
+  .features-content .inner-content {
+    padding-left: 0;
+    margin-top: 25px;
+  }
+
+  .features-content .inner-content .list li {
+    font-size: 15px;
+  }
+
+  .features-content .inner-content .features-btn {
+    margin-top: 30px;
+  }
+
+  .features-image {
+    height: 450px;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .features-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .features-content .inner-box {
+    margin-right: 0;
+  }
+
+  .features-content .inner-content {
+    padding-left: 0;
+  }
+
+  .features-image {
+    height: 550px;
+    margin-top: 30px;
+  }
+
+  .features-content h2 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .features-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .features-content .inner-box {
+    margin-right: 0;
+  }
+
+  .features-content .inner-content {
+    padding-left: 0;
+  }
+}

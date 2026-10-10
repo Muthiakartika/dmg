@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import SocialIcons from "@/components/UI/SocialIcons";
 import { contact } from "@/lib/site";
-import { heroImage, heroImageMobile } from "./heroImages";
+import { HERO_MOBILE_QUERY, heroImage, heroImageMobile } from "./heroImages";
 
 import shapeImg from "../../../public/images/main-banner/shape.png";
 import arrowRightIcon from "../../../public/images/main-banner/arrow-right.svg";
@@ -20,13 +20,6 @@ const FsLightbox = dynamic(() => import("fslightbox-react"), { ssr: false });
 // AOS: AOS keeps [data-aos] at opacity 0 until its script runs after
 // hydration, which on a slow phone left the hero without its text for seconds.
 const revealDelay = (delay: number): CSSProperties => ({ animationDelay: `${delay}ms` });
-
-// The stylesheet picks one of these per breakpoint (see heroImages.ts), so
-// phones never download the desktop file.
-const heroImageVars = {
-  "--hero-image": `url(${heroImage.src})`,
-  "--hero-image-mobile": `url(${heroImageMobile.src})`,
-} as CSSProperties;
 
 export default function HeroBanner() {
   // FsLightbox opens whenever the `toggler` prop changes.
@@ -56,8 +49,23 @@ export default function HeroBanner() {
           </div>
         </div>
 
-        {/* LCP element: no AOS fade so it paints immediately; uses real WebP */}
-        <div className="main-banner-image" style={heroImageVars}></div>
+        {/* LCP element, so no fade. An <img> rather than a CSS background: the
+            browser finds it in the HTML instead of after the stylesheet, and
+            PageSpeed times it as an image request. The <picture> picks the crop
+            per breakpoint, so phones never download the desktop file.
+            Decorative, hence the empty alt. */}
+        <div className="main-banner-image">
+          <picture>
+            <source media={HERO_MOBILE_QUERY} srcSet={heroImageMobile.src} />
+            <img
+              src={heroImage.src}
+              width={heroImage.width}
+              height={heroImage.height}
+              alt=""
+              fetchPriority="high"
+            />
+          </picture>
+        </div>
 
         <div className="main-banner-wrap-shape">
           <Image src={shapeImg} alt="Shape" width={502} height={287} />

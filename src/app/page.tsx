@@ -14,13 +14,6 @@ import TextMarquee from "@/components/Sections/TextMarquee";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
-import {
-  HERO_DESKTOP_QUERY,
-  HERO_MOBILE_QUERY,
-  heroImage,
-  heroImageMobile,
-} from "@/components/Home/heroImages";
-
 import processImg1 from "../../public/images/main-banner/home/10.webp";
 import processImg2 from "../../public/images/main-banner/home/11.webp";
 import processImg3 from "../../public/images/main-banner/home/12.webp";
@@ -136,26 +129,6 @@ const faqs: FaqItem[] = [
 export default function Home() {
   return (
     <>
-      {/* Preload the LCP hero background so the browser fetches it early
-          (CSS background-images are not seen by the preload scanner). Each
-          viewport only downloads the variant its stylesheet will use. */}
-      <link
-        rel="preload"
-        as="image"
-        href={heroImage.src}
-        type="image/webp"
-        fetchPriority="high"
-        media={HERO_DESKTOP_QUERY}
-      />
-      <link
-        rel="preload"
-        as="image"
-        href={heroImageMobile.src}
-        type="image/webp"
-        fetchPriority="high"
-        media={HERO_MOBILE_QUERY}
-      />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}

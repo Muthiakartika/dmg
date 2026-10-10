@@ -42,7 +42,7 @@ export default function HomeAbout() {
                 {/* Previous h1, kept in case the client wants it back:
                     Who We Are: Professional<span> Masonry Services</span> in Calgary */}
                 <h1>
-                  Masonry<span> Contractor Service</span> Calgary
+                  Masonry<span> Contractor</span> in Calgary: Repair, Restoration & Custom Builds
                 </h1>
               </div>
 

@@ -14,6 +14,11 @@ const nextConfig = {
         destination: "/services/",
         permanent: true,
       },
+      {
+        source: "/brick-repair",
+        destination: "/calgary/brick-repair/",
+        permanent: true,
+      },
     ];
   },
   // Multi-tier caching for the Cloudflare (layer 1) + Vercel (layer 2) setup.

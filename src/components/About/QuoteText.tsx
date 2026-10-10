@@ -8,10 +8,10 @@ export default function QuoteText() {
     <div className="box-style-area">
       <div className="container-fluid">
         <div className="box-style-inner">
-          <h3>
+          <p>
             We Help Every Client Create Functional and Long-Lasting Masonry Spaces Designed for
             Everyday Living
-          </h3>
+          </p>
           <div className="wrap-shape">
             <Image src={shapeImg} alt="image" width={260} height={276} />
           </div>

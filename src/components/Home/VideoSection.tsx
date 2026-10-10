@@ -24,7 +24,7 @@ export default function VideoSection() {
             <div className="services-details-desc">
               <div className="title">
                 <span>SERVICE</span>
-                <h2>What Works and What to Consider in Masonry Services</h2>
+                <h2>How to Choose a Masonry Company in Calgary</h2>
                 <p>
                   At DMG Masonry, we believe good masonry work starts with clear planning and the
                   right expectations. We help clients understand where masonry performs best so

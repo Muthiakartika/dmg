@@ -33,9 +33,9 @@ export interface ChimneyRepairLocation extends ChimneyRepairLocationContent {
 
 const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationContent> = {
   "bragg-creek": {
-    metadataTitle: "Trusted Chimney Repair Serving the Bragg Creek Area",
+    metadataTitle: "Chimney Repair Bragg Creek – Cracks, Leaks & Caps – DMG",
     metadataDescription:
-      "Homes around Bragg Creek face harsh mountain weather that wears chimneys down fast. Our masons repair cracks, leaks and structural damage all year round.",
+      "Chimney repair in Bragg Creek, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
       "DMG Masonry provides chimney repair in Bragg Creek for homes affected by cracked mortar, loose brickwork, water entry, and a deteriorated cap/crown. Our repairs are planned to restore stability while preserving the character of the existing masonry.",
     paragraphs: [
@@ -78,9 +78,9 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     },
   },
   "longview": {
-    metadataTitle: "Expert Chimney Repair Serving Longview Alberta Homes",
+    metadataTitle: "Chimney Repair Longview – Cracks, Leaks & Caps – DMG",
     metadataDescription:
-      "Our team travels out to Longview for chimney repair, fixing cracked brick and worn mortar so your fireplace stays safe and reliable through every season.",
+      "Chimney repair in Longview, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
       "Our chimney repair services in Longview help homeowners correct weathered mortar, cracked brick, unstable masonry, and water-related deterioration. DMG Masonry focuses on repairs that support safe function, lasting strength, and a finish that suits the property.",
     paragraphs: [
@@ -122,9 +122,9 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     },
   },
   "kananaskis": {
-    metadataTitle: "Expert Chimney Repair Covering the Kananaskis Area",
+    metadataTitle: "Chimney Repair Kananaskis – Cracks, Leaks & Caps – DMG",
     metadataDescription:
-      "From mountain cabins to full time residences, we handle chimney repair throughout Kananaskis, restoring safety and function to aging fireplace structures.",
+      "Chimney repair in Kananaskis, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
       "DMG Masonry provides chimney repair in Kananaskis for cabins, residences, and mountain properties where masonry must withstand demanding seasonal exposure. We restore damaged brick, stone, mortar, and the cap/crown with an emphasis on stability and moisture protection.",
     paragraphs: [
@@ -170,9 +170,9 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     },
   },
   "sundre": {
-    metadataTitle: "Expert Chimney Repair Serving Sundre Alberta Homes",
+    metadataTitle: "Chimney Repair Sundre – Cracks, Leaks & Caps – DMG",
     metadataDescription:
-      "We help Sundre homeowners with chimney repair, from small mortar touch ups to full masonry restoration on older or historic fireplace structures nearby.",
+      "Chimney repair in Sundre, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
       "DMG Masonry offers chimney repair in Sundre for residential and rural properties with cracked joints, damaged brick or stone, a leaking cap/crown, and aging masonry. Our work is designed to restore dependable performance without compromising the chimney's appearance.",
     paragraphs: [
@@ -216,9 +216,9 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     },
   },
   "three-hills": {
-    metadataTitle: "Expert Chimney Repair for Homes Across Three Hills",
+    metadataTitle: "Chimney Repair Three Hills – Cracks, Leaks & Caps – DMG",
     metadataDescription:
-      "Our masons provide chimney repair across the Three Hills area, addressing spalling brick, cracked mortar and other common issues before they spread further.",
+      "Chimney repair in Three Hills, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
       "Our chimney repair service in Three Hills addresses failing mortar, cracked or spalling brick, cap/crown damage, leaks, and loose masonry. DMG Masonry provides a detailed assessment followed by repairs suited to the age and construction of the chimney.",
     paragraphs: [
@@ -261,9 +261,9 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     },
   },
   "drumheller": {
-    metadataTitle: "Expert Chimney Repair Serving Drumheller Area Homes",
+    metadataTitle: "Chimney Repair Drumheller – Cracks, Leaks & Caps – DMG",
     metadataDescription:
-      "Our masonry crew serves Drumheller homeowners, addressing cracked brick, water damage and worn mortar on chimneys before small problems become costly repairs.",
+      "Chimney repair in Drumheller, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
       "DMG Masonry provides chimney repair in Drumheller for masonry affected by age, movement, moisture, and temperature extremes. We repair mortar joints, brickwork, the cap/crown, and unstable sections to restore a stronger, cleaner chimney assembly.",
     paragraphs: [
@@ -306,9 +306,9 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     },
   },
   "claresholm": {
-    metadataTitle: "Claresholm Homeowners Trust Our Chimney Repair Experts",
+    metadataTitle: "Chimney Repair Claresholm – Cracks, Leaks & Caps – DMG",
     metadataDescription:
-      "We provide chimney repair for homes throughout Claresholm, fixing mortar damage and structural issues to keep your fireplace safe and reliable each winter.",
+      "Chimney repair in Claresholm, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
       "Our Claresholm chimney repair service restores deteriorated mortar, damaged brick or stone, a cracked cap/crown, and loose masonry. DMG Masonry plans each repair around the existing structure and the weather exposure common to southern Alberta.",
     paragraphs: [

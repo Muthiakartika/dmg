@@ -119,13 +119,13 @@ const fireplaceProcessSteps = [
 const fireplaceOverviewItems = [
   {
     image: "/images/services/service/fireplace_installation/6.webp",
-    titleNormal: "Indoor Luxury",
-    titleHighlight: "Fireplaces",
+    titleNormal: "Indoor Fireplace",
+    titleHighlight: "Builds",
   },
   {
     image: "/images/services/service/fireplace_installation/7.webp",
-    titleNormal: "Patio Outdoor",
-    titleHighlight: "Fireplaces",
+    titleNormal: "Patio Fireplace",
+    titleHighlight: "Builds",
   },
 ];
 
@@ -145,9 +145,9 @@ const fireplaceFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Fireplace Installation Experts Serving All Calgary",
+  title: "Outdoor Fireplaces Calgary – Design & Installation – DMG",
   description:
-    "We build a custom outdoor fireplace for backyards across Calgary, adding warmth, ambiance and a natural gathering spot for family and friends every season.",
+    "Custom outdoor fireplaces and indoor fireplace installation in Calgary. Request a quote or call 1-403-619-8727.",
   path: "/calgary/fireplace-installation/",
   image: "/images/services/service/fireplace_installation/1.webp",
 });
@@ -166,7 +166,7 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/fireplace_installation/1.webp"
         mainImageFocus="85%"
-        title="Outdoor Fireplace Design & Installation in Calgary"
+        title="Outdoor Fireplace Builders in Calgary: Design & Installation"
         description="At DMG Masonry, we create custom indoor and outdoor fireplace installations that add warmth, comfort, and visual character to residential and commercial properties throughout Calgary, while providing dependable performance and lasting durability."
         paragraphs={[
           "Outdoor fireplaces create a natural gathering space where people can relax and enjoy their backyard comfortably through different seasons, whether you're drawn to a patio outdoor fireplace or a more traditional indoor luxury fireplace built into your living space. Each fireplace is designed to fit naturally within its setting while adding both functionality and character.",
@@ -203,14 +203,14 @@ export default function Page() {
       <ServiceGallery items={fireplaceOverviewItems} />
 
       <TestimonialSlider
-        titleNormal="What Our Clients Say"
-        titleHighlight="About Their Outdoor Fireplaces"
+        titleNormal="Calgary Outdoor"
+        titleHighlight="Fireplace Reviews"
         feedbacks={fireplaceFeedbacks}
       />
 
       <WhyChooseUs
         image="/images/services/service/fireplace_installation/8.webp"
-        title="Designed for Comfort & Year-Round Outdoor Enjoyment"
+        title="Outdoor Fireplaces Built for Calgary's Four Seasons"
         description="We build custom outdoor fireplaces in Calgary that add warmth, comfort, and visual character to outdoor living spaces, supporting long-term outdoor use while complementing the overall style of the property."
         listItems={[
           "Built for outdoor durability",
@@ -226,8 +226,9 @@ export default function Page() {
       />
 
       <FaqSection
+        questionsAsHeadings
         faqs={fireplaceFaqs}
-        title="Frequently Asked Questions"
+        title="Outdoor Fireplace Calgary FAQs"
       />
 
       <div className="ptb-100">

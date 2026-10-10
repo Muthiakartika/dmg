@@ -169,9 +169,9 @@ const hardscapeFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Hardscape Contractors Pro Serving All in Calgary",
+  title: "Hardscape Contractor Calgary – Patios & Retaining Walls",
   description:
-    "We provide hardscape services and hardscape construction across Calgary, from patios to retaining walls, all built to last through many years of weather.",
+    "Calgary hardscape contractor for stone patios, pavers and retaining walls. Request a quote or call 1-403-619-8727.",
   path: "/hardscape-contractor/",
   image: "/images/services/service/hardscape_constructor/1.webp",
 });
@@ -186,9 +186,9 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/hardscape_constructor/1.webp"
         mainImageFocus="60%"
-        title="Hardscape Construction Calgary: Patios, Retaining Walls & Outdoor Surfaces"
+        title="Hardscape Contractor in Calgary: Patios, Retaining Walls & Pavers"
         description="DMG Masonry is a hardscape contractor in Calgary, Alberta. We handle hardscape construction including patios, retaining walls, pathways, and outdoor surfaces built for long-term performance and a timeless, well-finished appearance."
-        paragraphsHeading="What is hardscape construction?"
+        paragraphsHeading="What Is Hardscaping? Patios, Walls and Walkways"
         paragraphs={[
           "Hardscape construction covers the built, non-planted parts of an outdoor space: patios, retaining walls, walkways, driveways, and outdoor kitchens. These features are constantly exposed to weather changes, moisture, ground movement, and everyday use. Using durable materials and reliable hardscape construction methods, we build outdoor surfaces designed to maintain their structure, stability, and visual quality for years to come.",
           "Thoughtful hardscape construction also improves the usability and overall value of a property. Carefully planned layouts, clean finishing, and practical design choices help outdoor spaces remain visually balanced, low-maintenance, and functional for years, creating a more cohesive and comfortable outdoor environment.",
@@ -202,7 +202,7 @@ export default function Page() {
           "Outdoor Kitchen & BBQ Area Construction",
           "Natural Stone & Stone Veneer Finishes",
         ]}
-        extraParagraphsHeading="What does a hardscape project involve?"
+        extraParagraphsHeading="What a Calgary Hardscape Project Involves"
         extraParagraphs={[
           "Every hardscape project requires careful planning before construction begins. Site layout, drainage conditions, material selection, and intended use all play an important role in creating outdoor spaces that perform reliably over time while maintaining proper functionality, stability, and visual balance.",
           "From patios and retaining walls to walkways and outdoor kitchens, our team approaches each hardscape construction project with attention to detail and practical building methods. The goal is to create outdoor features that complement the property while supporting everyday functionality, long-term durability, and a clean, cohesive appearance.",
@@ -212,7 +212,7 @@ export default function Page() {
 
       <MaterialsSection
         subtitle="HARDSCAPE FEATURES"
-        title="What Hardscape Features Do We Build?"
+        title="Hardscape Services We Offer in Calgary"
         description="Hardscape construction covers a wide range of outdoor features, and most projects combine more than one. Here's a look at what we build most often in Calgary."
         items={hardscapeFeatures}
       />
@@ -231,8 +231,8 @@ export default function Page() {
       />
 
       <TestimonialSlider
-        titleNormal="Hear From Our Happy"
-        titleHighlight="Hardscape Clients"
+        titleNormal="Calgary Hardscape"
+        titleHighlight="Contractor Reviews"
         feedbacks={hardscapeFeedbacks}
       />
 
@@ -255,13 +255,13 @@ export default function Page() {
 
       <FaqSection
         faqs={hardscapeFaqs}
-        title="Hardscape Construction Calgary: Frequently Asked Questions"
+        title="Hardscape Contractor Calgary: FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/hardscape_constructor/9.webp"
-          title="Upgrade Your Outdoor Living Space"
+          title="Request a Hardscape Quote in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

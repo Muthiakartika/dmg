@@ -23,7 +23,7 @@ export default function HomeContactSection() {
             <div className="contact-form-wrap" {...fadeUp(200)}>
               <div className="title">
                 <h2>
-                  <span>Start Your</span> Masonry Project
+                  <span>Request a Quote</span> from a Calgary Masonry Contractor
                 </h2>
                 <p>
                   Let&apos;s discuss your masonry project and how we can help create a timeless

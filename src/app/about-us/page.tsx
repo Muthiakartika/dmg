@@ -9,7 +9,7 @@ import type { Testimonial } from "@/components/Sections/TestimonialSlider";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Meet the Masons Building Calgary Dream Homes to Last",
+  title: "About DMG Masonry – Calgary Masonry Contractors",
   description:
     "Learn about our company, a Calgary based team specializing in brick and stone craftsmanship, historic restorations and custom outdoor living builds for homes.",
   path: "/about-us/",
@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <PageTitle title="About Us" homeText="Home" homeUrl="/" titleAsHeading />
+      <PageTitle title="About DMG Masonry: Calgary Masonry Contractors" homeText="Home" homeUrl="/" titleAsHeading />
       <AboutContent />
       <QuoteText />
 

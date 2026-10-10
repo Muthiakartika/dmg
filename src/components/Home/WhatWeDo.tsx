@@ -35,7 +35,7 @@ export default function WhatWeDo() {
           {/* Previous h2, kept in case the client wants it back:
               What <span>We Do</span> For You */}
           <h2>
-            Our <span>Masonry Services</span>
+            <span>Masonry Services</span> in Calgary
           </h2>
           <Link href="/services">VIEW ALL SERVICES</Link>
         </div>

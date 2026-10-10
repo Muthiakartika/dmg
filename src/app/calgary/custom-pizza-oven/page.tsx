@@ -165,9 +165,9 @@ const pizzaOvenFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Custom Outdoor Pizza Oven Installation Across Calgary",
+  title: "Outdoor Pizza Ovens Calgary – Custom Wood-Fired Builds – DMG",
   description:
-    "Premium outdoor pizza ovens designed for authentic wood-fired flavor, easy maintenance, expert construction for residential or commercial projects.",
+    "Custom wood-fired outdoor pizza ovens built in Calgary, for homes and commercial projects. Request a quote or call 1-403-619-8727.",
   path: "/calgary/custom-pizza-oven/",
   image: "/images/services/service/custome_pizza/1.webp",
 });
@@ -181,7 +181,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/custome_pizza/1.webp"
-        title="Custom Outdoor Pizza Oven Installation in Calgary"
+        title="Custom Outdoor Pizza Ovens in Calgary"
         description="Outdoor pizza ovens bring a different rhythm to outdoor living in Calgary, where cooking, heat, and gathering come together in one space. We design and build custom outdoor pizza ovens that are made to perform reliably while fitting naturally into any outdoor environment."
         paragraphs={[
           "Built for high-temperature cooking and year-round exposure, each outdoor pizza oven requires careful material selection and precise construction. We use durable masonry systems designed to retain heat efficiently, handle repeated use, and maintain structural stability through Calgary's changing weather conditions, ensuring consistent performance.",
@@ -201,27 +201,27 @@ export default function Page() {
       />
 
       <MaterialsSection
-        title="Pizza Oven Materials We Use"
+        title="Materials for Wood-Fired Pizza Ovens"
         description="Because pizza ovens operate at high, sustained temperatures, material choice matters even more than it does for most outdoor structures. Here's what we typically work with."
         items={pizzaOvenMaterials}
       />
 
       <ProcessSteps
-        title="Our Outdoor Pizza Oven Installation Process in Calgary"
+        title="How We Build Your Outdoor Pizza Oven in Calgary"
         steps={pizzaOvenProcessSteps}
       />
 
       <ServiceGallery items={pizzaOvenOverviewItems} />
 
       <TestimonialSlider
-        titleNormal="What Outdoor Chefs"
-        titleHighlight="Say About Our Pizza Ovens"
+        titleNormal="Calgary Pizza Oven"
+        titleHighlight="Reviews"
         feedbacks={pizzaOvenFeedbacks}
       />
 
       <WhyChooseUs
         image="/images/services/service/custome_pizza/8.webp"
-        title="Custom Outdoor Pizza Ovens Built for Calgary Backyards"
+        title="Outdoor Pizza Ovens for North & South Calgary Backyards"
         description="A wood-fired outdoor pizza oven adds warmth, character, and functionality to any outdoor space in Calgary. We create custom-built pizza ovens designed for reliable cooking performance while complementing the overall style of your backyard area."
         listItems={[
           "Custom-built pizza oven designs",
@@ -237,8 +237,9 @@ export default function Page() {
       />
 
       <FaqSection
+        questionsAsHeadings
         faqs={pizzaOvenFaqs}
-        title="Frequently Asked Questions"
+        title="Pizza Oven Calgary FAQs"
       />
 
       <div className="ptb-100">

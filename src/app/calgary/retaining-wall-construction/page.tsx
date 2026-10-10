@@ -99,7 +99,7 @@ const retainingWallOverviewItems = [
   {
     image: "/images/services/service/retaining_wall/6.webp",
     titleNormal: "Segmental Block",
-    titleHighlight: "Retaining Walls",
+    titleHighlight: "Wall Installation",
   },
   {
     image: "/images/services/service/retaining_wall/7.webp",
@@ -129,9 +129,9 @@ const retainingWallFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Pro Retaining Wall Installation Across Calgary Homes",
+  title: "Retaining Walls Calgary – Contractor & Builder – DMG Masonry",
   description:
-    "Our retaining wall Calgary projects manage sloped yards and control erosion. Ask us for a retaining wall cost estimate before your next landscaping project.",
+    "Retaining wall contractor in Calgary: block, stone and concrete walls for sloped yards and erosion control. Request a quote or call 1-403-619-8727.",
   path: "/calgary/retaining-wall-construction/",
   image: "/images/services/service/retaining_wall/1.webp",
 });
@@ -150,9 +150,9 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/retaining_wall/1.webp"
         mainImageFocus="75%"
-        title="Retaining Walls Calgary: Construction & Installation Services"
+        title="Retaining Wall Contractor in Calgary: Construction & Installation"
         description="DMG Masonry builds retaining walls in Calgary, Alberta. Retaining walls help manage sloped landscapes while improving the structure and appearance of an outdoor space. Ours are designed for dependable support, proper drainage, and a clean finish that fits naturally with the property."
-        paragraphsHeading="What does a retaining wall actually do?"
+        paragraphsHeading="What a Retaining Wall Does for Calgary Yards"
         paragraphs={[
           "A properly built retaining wall helps reduce soil movement, erosion, and water-related issues that can affect the stability of the landscape over time. Our team carefully plans each installation to ensure the wall performs reliably while maintaining a balanced and visually cohesive appearance within the outdoor environment.",
           "Beyond structural support, retaining walls can also help define outdoor spaces and improve long-term property functionality. Whether used for elevation changes, garden areas, or landscape organization, a professionally installed retaining wall adds both durability and visual structure to the property.",
@@ -163,7 +163,7 @@ export default function Page() {
           "Proper Drainage Solutions",
           "Clean Landscape Integration",
         ]}
-        extraParagraphsHeading="What is planned before a retaining wall is built?"
+        extraParagraphsHeading="Planning a Retaining Wall: Slope, Drainage & Soil"
         extraParagraphs={[
           "Proper planning is an essential part of any retaining wall installation. Before construction begins, we evaluate soil conditions, grading, drainage flow, and site layout to determine the most suitable wall structure for the property while helping support long-term stability and performance.",
           "As a hardscape contractor in Calgary, we build retaining walls using a variety of materials and finish options to match different landscape styles and structural needs. Whether using natural stone, concrete block, or modular retaining wall systems, our installations are designed to provide dependable support while maintaining a clean and cohesive outdoor appearance.",
@@ -180,19 +180,19 @@ export default function Page() {
 
       <MaterialsSection
         subtitle="WALL TYPES"
-        title="What Types Of Retaining Wall Are There?"
+        title="Concrete, Block & Natural Stone Retaining Walls"
         items={retainingWallTypes}
       />
 
       <TestimonialSlider
-        titleNormal="Hear From Our"
-        titleHighlight="Retaining Wall Clients"
+        titleNormal="Calgary Retaining"
+        titleHighlight="Wall Reviews"
         feedbacks={retainingWallFeedbacks}
       />
 
       <WhyChooseUs
         image="/images/services/service/retaining_wall/8.webp"
-        title="Why Choose DMG Masonry For Retaining Walls In Calgary?"
+        title="Why Choose DMG Masonry as Your Retaining Wall Builder in Calgary?"
         description="Retaining walls help support uneven ground and improve outdoor usability. We build retaining walls Calgary homeowners and commercial property owners rely on for dependable performance and a clean appearance."
         listItems={[
           "Helps stabilize uneven terrain",
@@ -207,13 +207,13 @@ export default function Page() {
 
       <FaqSection
         faqs={retainingWallFaqs}
-        title="Retaining Walls Calgary: Frequently Asked Questions"
+        title="Retaining Walls Calgary: FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/retaining_wall/9.webp"
-          title="Start Your Retaining Wall Project"
+          title="Request a Retaining Wall Quote in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

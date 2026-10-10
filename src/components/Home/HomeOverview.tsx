@@ -22,7 +22,7 @@ export default function HomeOverview() {
                 />
               </div>
               <h3>
-                Outdor Kitchen <span>Contractor</span>
+                Outdoor Kitchen <span>Contractor</span>
               </h3>
             </div>
           </div>

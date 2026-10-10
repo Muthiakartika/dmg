@@ -134,9 +134,9 @@ const stoneVeneerFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Upgrade Your Home with strong Stone Veneer Calgary",
+  title: "Stone Veneer Calgary – Installation & Design – DMG Masonry",
   description:
-    "Our Calgary stones veneer installations add texture and character to any home, using durable materials built to handle the local climate every season.",
+    "Natural and cultured stone veneer installed on Calgary homes, from siding to fireplace surrounds. Request a quote or call 1-403-619-8727.",
   path: "/calgary/stone-veneer/",
   image: "/images/services/service/stone_veneer/1.webp",
 });
@@ -151,9 +151,9 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/stone_veneer/1.webp"
         mainImageFocus="20%"
-        title="Stone Veneer in Calgary: Professional Installation Services"
+        title="Stone Veneer Installation in Calgary: Natural & Cultured Stone"
         description="Stone veneer is a masonry finish that uses a thin layer of natural or engineered stone on interior and exterior surfaces. DMG Masonry is a stone veneer installer in Calgary, Alberta, focused on appearance, durability, and long-term performance."
-        paragraphsHeading="Why do property owners choose stone veneer?"
+        paragraphsHeading="What Is Stone Veneer and Why Use It?"
         paragraphs={[
           "Stone veneer is widely used because it offers a flexible way to achieve a natural stone look without the weight and cost of full stone construction. It can be applied to feature walls, exterior facades, fireplaces, and other architectural surfaces while still maintaining structural efficiency.",
           "In addition to its visual appeal, stone veneer is a practical choice for long-term property value. When installed correctly, it performs well in Calgary's changing weather conditions, requires minimal maintenance, and helps enhance both residential and commercial spaces with a timeless stone finish."
@@ -164,7 +164,7 @@ export default function Page() {
           "Repairs & Maintenance",
           "Interior & Exterior Applications",
         ]}
-        extraParagraphsHeading="What does proper stone veneer installation involve?"
+        extraParagraphsHeading="Stone Veneer Installer in Calgary: How Proper Installation Works"
         extraParagraphs={[
           "Proper installation is essential to ensure stone veneer remains secure, stable, and performs well over time. Our team carefully handles surface preparation, material application, and finishing to achieve strong adhesion, clean detailing, and long-lasting results across both interior and exterior surfaces.",
           "As stone veneer contractors in Calgary, we also guide clients through material and design selection to ensure the stone style complements the property's character, architecture, and intended use. By considering both function and appearance, we help create a balanced result that feels cohesive, durable, and visually appealing for the space.",
@@ -188,8 +188,8 @@ export default function Page() {
       />
 
       <TestimonialSlider
-        titleNormal="What Our Clients"
-        titleHighlight="Say About Our Stone Veneer"
+        titleNormal="Calgary Stone"
+        titleHighlight="Veneer Reviews"
         feedbacks={stoneVeneerFeedbacks}
       />
 
@@ -209,13 +209,13 @@ export default function Page() {
 
       <FaqSection
         faqs={stoneVeneerFaqs}
-        title="Stone Veneer Calgary: Frequently Asked Questions"
+        title="Stone Veneer Calgary: FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/stone_veneer/9.webp"
-          title="Enhance Your Property With Stone Veneer"
+          title="Request a Stone Veneer Quote in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

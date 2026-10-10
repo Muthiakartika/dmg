@@ -12,9 +12,9 @@ import MaterialsSection from "@/components/Services/MaterialsSection";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Foundation Repair Solutions for Calgary Homeowners",
+  title: "Foundation Repair Calgary – Cracks & Waterproofing – DMG",
   description:
-    "Cracks and shifting can signal deeper structural issues. Our team provides foundation repair across Calgary to protect your home's value for years to come.",
+    "Foundation repair in Calgary: crack injection, waterproofing and parging. Request an assessment or call 1-403-619-8727.",
   path: "/calgary/foundation-repair/",
   image: "/images/services/service/foundation_repair/1.webp",
 });
@@ -149,7 +149,7 @@ export default function Page() {
         mainImage="/images/services/service/foundation_repair/1.webp"
         title="Foundation Repair Calgary: Structural & Masonry Foundation Repairs"
         description="DMG Masonry is a masonry and foundation repair contractor in Calgary, Alberta. Foundation problems can affect the safety and condition of a property if left unresolved. We provide foundation repair services to correct structural issues and reinforce weakened areas."
-        paragraphsHeading="What are the signs of foundation damage?"
+        paragraphsHeading="Signs of Foundation Damage in Calgary Homes"
         paragraphs={[
           "Cracked foundation walls, uneven floors, sticking doors, and visible structural movement are often signs of underlying foundation issues. These problems can result from soil settlement, moisture exposure, or shifting structural loads over time. Our team carefully inspects the condition of the foundation to determine the cause and recommend repairs suited to the structure's specific needs.",
           "Repairing foundation damage early can help limit further deterioration and reduce the risk of additional structural complications. Proper repair work also helps improve the overall reliability of the building while protecting against moisture intrusion and ongoing movement that may impact surrounding areas of the property.",
@@ -177,13 +177,13 @@ export default function Page() {
 
       <MaterialsSection
         subtitle="REPAIR METHODS"
-        title="How Is Foundation Repair Actually Done?"
+        title="Foundation Crack Repair Methods: Injection, Waterproofing & Parging"
         items={foundationRepairMethods}
       />
 
       <TestimonialSlider
-        titleNormal="What Clients Say"
-        titleHighlight="About Our Foundation Repairs"
+        titleNormal="Calgary Foundation"
+        titleHighlight="Repair Reviews"
         feedbacks={foundationFeedbacks}
       />
 
@@ -204,13 +204,13 @@ export default function Page() {
 
       <FaqSection
         faqs={foundationFaqs}
-        title="Foundation Repair Calgary: Frequently Asked Questions"
+        title="Foundation Repair Calgary: FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/foundation_repair/9.webp"
-          title="Restore Strength to Your Foundation"
+          title="Request a Foundation Repair Assessment in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

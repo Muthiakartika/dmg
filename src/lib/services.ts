@@ -32,6 +32,13 @@ export const services: Service[] = [
     link: "/calgary/masonry-repair",
   },
   {
+    id: "12",
+    icon: "/images/service/MasonryRepair.png",
+    title: "Brick Repair",
+    text: "Repair for cracked, spalled and loose brick, with mortar matched for a clean, lasting finish.",
+    link: "/calgary/brick-repair",
+  },
+  {
     id: "2",
     icon: "/images/service/StoneVineer.png",
     title: "Stone Veneer",

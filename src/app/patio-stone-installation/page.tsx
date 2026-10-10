@@ -124,9 +124,9 @@ const patioStoneFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Patio Stone Installation for Calgary Area Homes Today",
+  title: "Patio Stone Installation Calgary – Pavers & Flagstone – DMG",
   description:
-    "We handle every stage of your patio project, from grading to laying patio stones, creating a durable outdoor surface built for daily use and years of weather.",
+    "Paving stone patios, pavers and flagstone installed in Calgary, from grading to finish. Request a quote or call 1-403-619-8727.",
   path: "/patio-stone-installation/",
   image: "/images/services/service/pation_stone/1.webp",
 });
@@ -145,9 +145,9 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/pation_stone/1.webp"
         mainImageFocus="90%"
-        title="Patio Stone Installation Calgary: Hardscape Patios & Pavers"
+        title="Patio Stone Installation in Calgary: Paving Stone, Pavers & Flagstone"
         description="DMG Masonry is a patio stone installer in Calgary, Alberta. A properly installed patio stone surface can improve both the function and appearance of an outdoor space. Our patio stone installation focuses on building stable, well-structured surfaces for everyday use and long-term durability in Calgary's climate."
-        paragraphsHeading="What affects how long a patio lasts?"
+        paragraphsHeading="How Long Does a Stone Patio Last in Calgary?"
         paragraphs={[
           "Outdoor patio areas are exposed to constant movement, seasonal weather changes, and moisture over time. At DMG Masonry, we install patio stones using dependable hardscape construction methods and carefully selected materials to ensure the surface remains stable, properly aligned, and visually consistent through years of use in Calgary's freeze-thaw climate.",
           "Beyond functionality, a patio also plays an important role in shaping how the overall outdoor environment comes together. With the right layout and planning, we help create spaces that feel practical for everyday use while still remaining comfortable and inviting for hosting, relaxation, and outdoor gatherings, while maintaining a cohesive connection with the rest of the property.",
@@ -158,7 +158,7 @@ export default function Page() {
           "Professional Patio Stone Installation",
           "Repair & Re-Leveling Services",
         ]}
-        extraParagraphsHeading="What does patio stone installation involve?"
+        extraParagraphsHeading="What Patio Stone Installation Involves"
         extraParagraphs={[
           "Every patio project starts with a detailed assessment of the space, including soil condition, drainage patterns, and intended use of the area. As masonry contractors in Calgary, we carefully evaluate these factors before installation begins to determine the most suitable construction approach and to help ensure long-term performance and structural reliability.",
           "During installation, each stone is carefully positioned and adjusted to achieve consistent leveling, proper alignment, and strong structural stability. We focus on precise workmanship throughout the process, ensuring the surface not only looks clean and even but also performs well under regular foot traffic and varying weather conditions.",
@@ -167,7 +167,7 @@ export default function Page() {
       />
 
       <ProcessSteps
-        title="How Does Patio Stone Installation Work?"
+        title="How We Install Paving Stone Patios in Calgary"
         steps={patioStoneProcessSteps}
       />
 
@@ -180,8 +180,8 @@ export default function Page() {
       />
 
       <TestimonialSlider
-        titleNormal="What Calgary Thinks"
-        titleHighlight="About Our Patios"
+        titleNormal="Calgary Patio Stone"
+        titleHighlight="Installation Reviews"
         feedbacks={patioStoneFeedbacks}
       />
 
@@ -202,13 +202,13 @@ export default function Page() {
 
       <FaqSection
         faqs={patioStoneFaqs}
-        title="Patio Stone Installation Calgary: Frequently Asked Questions"
+        title="Patio Stone Installation Calgary: FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/pation_stone/9.webp"
-          title="Design Your Perfect Patio"
+          title="Request a Patio Installation Quote in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

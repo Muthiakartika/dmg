@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import { fadeUp, staggerDelay } from "@/lib/aos";
 
 export interface MaterialItem {
@@ -14,6 +16,8 @@ interface MaterialsSectionProps {
   title: string;
   description?: string;
   items: readonly MaterialItem[];
+  /** Optional line under the cards, e.g. a link to a related page. */
+  after?: ReactNode;
 }
 
 /** Two-column card grid for materials, options, damage types, etc. */
@@ -22,6 +26,7 @@ export default function MaterialsSection({
   title,
   description,
   items,
+  after,
 }: MaterialsSectionProps) {
   return (
     // No pt-*: the section before it (ServiceDetailsContent) already ends in pb-100.
@@ -58,6 +63,8 @@ export default function MaterialsSection({
             </div>
           ))}
         </div>
+
+        {after && <p className="materials-after">{after}</p>}
       </div>
     </div>
   );

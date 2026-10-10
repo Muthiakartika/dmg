@@ -187,9 +187,9 @@ const firePitsFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Custom Fire Pits for Calgary Home Yards and Patios",
+  title: "Fire Pits Calgary – Custom Fire Pit Design & Install – DMG",
   description:
-    "We design fire pits Calgary homeowners enjoy year round, using durable stone and brick to create a lasting, comfortable gathering spot for family and friends.",
+    "Custom stone and brick fire pits designed and installed in Calgary and across Alberta. Request a quote or call 1-403-619-8727.",
   path: "/calgary/custom-fire-pits/",
   image: "/images/services/service/custom_firepit/1.webp",
 });
@@ -206,7 +206,7 @@ export default function Page() {
         mainImageFocus="45%"
         title="Fire Pits Calgary: Custom Fire Pit Installation & Design"
         description="DMG Masonry builds custom fire pits in Calgary, Alberta. A custom fire pit can transform any outdoor area into a more comfortable and inviting space for gathering and relaxation. Our fire pit installation combines practical function with timeless design, giving homeowners a fire pit built for lasting enjoyment and everyday visual appeal."
-        paragraphsHeading="What makes a fire pit last outdoors?"
+        paragraphsHeading="What Makes a Custom Fire Pit Last in Alberta Winters?"
         paragraphs={[
           "Outdoor fire features must be built to handle regular use, changing weather conditions, and long-term exposure to heat and moisture. Using reliable construction methods and durable masonry materials, our fire pit installation Calgary homeowners rely on is designed to maintain both structural stability and a consistent visual appearance for years to come.",
         ]}
@@ -219,7 +219,7 @@ export default function Page() {
           "Wood-Burning & Gas Fire Pit Options",
           "Natural Stone & Stone Veneer Finishes",
         ]}
-        extraParagraphsHeading="What is planned before a fire pit is built?"
+        extraParagraphsHeading="Fire Pit Planning & Design in Calgary"
         extraParagraphs={[
           "Careful planning is an important part of every fire pit installation. Layout, material selection, fuel type, and overall functionality are all carefully considered to ensure the final custom fire pit complements the outdoor space while supporting reliable performance, practical everyday use, and long-term durability.",
           "Our team designs and builds custom fire pits Calgary homeowners can enjoy for years, from modern outdoor features to more rustic masonry layouts, with quality craftsmanship maintained throughout each stage of construction. Every fire pit installation is completed with clean finishing, dependable functionality, and durable construction suited for outdoor living spaces.",
@@ -247,8 +247,8 @@ export default function Page() {
       />
 
       <TestimonialSlider
-        titleNormal="Hear From Our"
-        titleHighlight="Happy Calgary Fire Pit Owners"
+        titleNormal="Calgary Fire Pit"
+        titleHighlight="Reviews"
         feedbacks={firePitsFeedbacks}
       />
 
@@ -277,7 +277,7 @@ export default function Page() {
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/custom_firepit/9.webp"
-          title="Create Your Ideal Fire Pit"
+          title="Request a Fire Pit Installation Quote in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

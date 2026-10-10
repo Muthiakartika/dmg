@@ -136,9 +136,9 @@ const outdoorKitchenFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Calgary's Favorite Custom Outdoor Kitchen Builds Today",
+  title: "Outdoor Kitchens Calgary – Custom BBQ & Patio Kitchens – DMG",
   description:
-    "From a simple outdoor barbecue setup to a full outdoor kitchen with pizza oven, we help you plan the layout, materials and overall project cost upfront.",
+    "Custom outdoor kitchens and built-in BBQs in Calgary, planned with layout, materials and cost upfront. Request a quote or call 1-403-619-8727.",
   path: "/outdoor-kitchen-contractor/",
   image: "/images/services/service/outdoor_kitchen/1.webp",
 });
@@ -157,9 +157,9 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/outdoor_kitchen/1.webp"
         mainImageFocus="60%"
-        title="Outdoor Kitchen Calgary: BBQ & Outdoor Kitchen Contractor"
+        title="Outdoor Kitchens in Calgary: Custom BBQ & Patio Kitchen Contractor"
         description="DMG Masonry is an outdoor kitchen contractor in Calgary, Alberta. A professionally designed outdoor kitchen creates a space where cooking, dining, and gathering happen in one connected outdoor environment. We build practical and timeless outdoor BBQ and cooking spaces that complement your property."
-        paragraphsHeading="What is an outdoor kitchen?"
+        paragraphsHeading="Outdoor Kitchen Ideas for Calgary Patios"
         paragraphs={[
           "An outdoor kitchen is a permanent, built-in cooking and dining area, usually combining a BBQ grill, prep counters, storage and seating in one masonry structure. Outdoor cooking spaces experience continuous exposure to heat, moisture, changing temperatures, and everyday activity. Through reliable installation methods and carefully selected materials, we construct outdoor kitchens in Calgary designed to remain dependable, visually consistent, and suitable for regular use throughout the seasons.",
           "Thoughtful outdoor layouts can also improve how a space feels and functions over time. From built-in grills and preparation counters to bar seating and entertainment areas, every feature is planned to create a welcoming outdoor setting that feels organized, comfortable, and naturally integrated with the surrounding space.",
@@ -170,7 +170,7 @@ export default function Page() {
           "Reliable Outdoor Construction",
           "Everyday-use Spaces",
         ]}
-        extraParagraphsHeading="What is planned before an outdoor kitchen is built?"
+        extraParagraphsHeading="Planning Your Outdoor Kitchen: Layout, Materials & Cost"
         extraParagraphs={[
           "Planning is an important part of every outdoor kitchen project. Layout, cooking requirements, available space, and material selection are all reviewed carefully to ensure the final design supports both usability and long-term performance while fitting naturally with the overall outdoor environment and how the space will be used day to day.",
           "From simple outdoor barbecue stations to more complete outdoor cooking setups, each project we handle is approached with a focus on practical construction and clean execution. Every detail is considered to ensure the space works well in real use, not just in design, while also maintaining a balanced and functional layout that suits the property.",
@@ -187,13 +187,13 @@ export default function Page() {
 
       <MaterialsSection
         subtitle="FEATURES"
-        title="What Goes Into An Outdoor Kitchen?"
+        title="Built-In BBQ Grills, Counters & Features"
         items={outdoorKitchenComponents}
       />
 
       <TestimonialSlider
-        titleNormal="What Backyard Chefs"
-        titleHighlight="Say About Our Work"
+        titleNormal="Calgary Outdoor"
+        titleHighlight="Kitchen Reviews"
         feedbacks={outdoorKitchenFeedbacks}
       />
 
@@ -213,14 +213,15 @@ export default function Page() {
       />
 
       <FaqSection
+        questionsAsHeadings
         faqs={outdoorKitchenFaqs}
-        title="Outdoor Kitchen Calgary: Frequently Asked Questions"
+        title="Outdoor Kitchens Calgary: FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/outdoor_kitchen/9.webp"
-          title="Build Your Perfect Outdoor Kitchen"
+          title="Request an Outdoor Kitchen Quote in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

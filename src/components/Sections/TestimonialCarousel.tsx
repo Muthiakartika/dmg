@@ -16,7 +16,7 @@ export default function TestimonialCarousel({ feedbacks }: TestimonialCarouselPr
       <div className="container">
         <div className="section-title-wrap">
           <span>REVIEWS</span>
-          <h2>Our Clients Talk About Us & Believe In Our Work</h2>
+          <h2>What Calgary Clients Say About DMG Masonry</h2>
         </div>
       </div>
 

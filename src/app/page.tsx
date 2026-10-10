@@ -20,9 +20,9 @@ import processImg3 from "../../public/images/main-banner/home/12.webp";
 import processImg4 from "../../public/images/main-banner/home/13.webp";
 
 export const metadata = buildMetadata({
-  title: "Build Your Dream Home with Pro Masonry Contractor",
+  title: "Masonry Contractors Calgary – Brick & Stone – DMG Masonry",
   description:
-    "Our team offers masonry services throughout Calgary, from brick and stone repair to custom patios, fireplaces and fire pits built to last for many years.",
+    "Calgary masonry contractors for brick and stone repair, restoration, fireplaces, fire pits and outdoor kitchens. Request a quote: 1-403-619-8727.",
   path: "/",
 });
 
@@ -145,13 +145,17 @@ export default function Home() {
       <ProcessSteps
         title={
           <>
-            <span>How</span> We Work
+            <span>How Our</span> Calgary Masonry Projects Work
           </>
         }
         steps={processSteps}
       />
-      <TestimonialSlider feedbacks={feedbacks} />
-      <FaqSection faqs={faqs} title="Frequently Asked Questions" />
+      <TestimonialSlider
+        feedbacks={feedbacks}
+        titleNormal="Calgary Masonry"
+        titleHighlight="Contractor Reviews"
+      />
+      <FaqSection faqs={faqs} title="Masonry Contractors Calgary: FAQs" />
 
       {/* Instagram wall via Behold: add a Feed ID and render
           <BeholdFeed feedId="..." /> from "@/components/Sections/BeholdFeed". */}

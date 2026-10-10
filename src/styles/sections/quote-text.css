@@ -16,12 +16,14 @@
   padding-right: 55px;
 }
 
-.box-style-inner h3 {
+.box-style-inner h3,
+.box-style-inner p {
   font-size: 40px;
   font-weight: 400;
   max-width: 1045px;
   margin: auto;
   line-height: 1.4;
+  color: var(--headingColor);
 }
 
 .box-style-inner .wrap-shape {
@@ -45,7 +47,8 @@
     padding: 50px 20px;
   }
 
-  .box-style-inner h3 {
+  .box-style-inner h3,
+  .box-style-inner p {
     font-size: 30px;
   }
 }

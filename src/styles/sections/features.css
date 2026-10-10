@@ -36,7 +36,7 @@
   margin-right: -25px;
 }
 
-.features-content .inner-box h3 {
+.features-content .inner-box .counter {
   font-size: 57px;
   color: var(--whiteTextColor);
   font-weight: 400;

@@ -70,9 +70,9 @@ const brickRepairProcessSteps = [
 ];
 
 export const metadata = buildMetadata({
-  title: "Brick Repair From a Trusted and Experienced Calgary Mason",
+  title: "Brick Repair Calgary – Brickwork & Mortar Repair – DMG",
   description:
-    "Our brick mason team handles brick repair for homes and businesses across Calgary, matching mortar and materials for a clean, seamless finish every time.",
+    "Brick repair in Calgary for cracked, spalled and loose brick, with mortar matched for a clean finish. Request a quote or call 1-403-619-8727.",
   path: "/calgary/brick-repair/",
   image: "/images/services/service/brick_repair/1.webp",
 });
@@ -86,7 +86,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/brick_repair/1.webp"
-        title="Professional Brick Repair Services"
+        title="Brick Repair in Calgary: Cracked Brick, Spalling & Mortar Repair"
         description="Damaged brickwork can gradually affect both the appearance and structural condition of a property. DMG Masonry provides professional brick repair services to restore damaged masonry while helping preserve the strength, stability, and character of your brick structures."
         paragraphs={[
           "Cracked bricks, deteriorating mortar joints, loose masonry, and weather-related damage are common issues that develop as buildings age. Exposure to moisture, temperature changes, and natural settling can all contribute to brick deterioration over time. Our experienced masons carefully assess the condition of the brickwork to identify the underlying cause before recommending repair solutions suited to your property's specific needs.",
@@ -106,13 +106,13 @@ export default function Page() {
       />
 
       <ProcessSteps
-        title="Our Brick Repair Process"
+        title="Our Brick Repair Process in Calgary"
         steps={brickRepairProcessSteps}
       />
 
       <WhyChooseUs
         image="/images/services/service/brick_repair/8.webp"
-        title="Restoring Brickwork with Strength and Precision"
+        title="Brickwork Repair for Homes and Businesses in Calgary"
         description="Damaged brickwork can gradually weaken both the appearance and stability of a structure if left untreated. Our brick repair services are designed to restore masonry while helping protect your property for years to come."
         listItems={[
           "Brick Damage Assessment",
@@ -126,13 +126,13 @@ export default function Page() {
 
       <FaqSection
         faqs={brickRepairFaqs}
-        title="Frequently Asked Questions"
+        title="Brick Repair Calgary: FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/service/brick_repair/9.webp"
-          title="Restore the Strength and Beauty of Your Brickwork"
+          title="Request a Brick Repair Quote in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

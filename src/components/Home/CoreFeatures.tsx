@@ -24,14 +24,14 @@ export default function CoreFeatures() {
           <div className="col-lg-8 col-md-12">
             <div className="features-content" {...fadeUp(100)}>
               <h2>
-                Form & Function: <span>Masonry Spaces Designed</span> to Last for Years
+                Masonry Built for <span>Calgary&apos;s Climate</span>
               </h2>
 
               <div className="row justify-content-center align-items-center">
                 <div className="col-lg-4 col-md-5">
                   <div className="inner-box">
                     <div className="title">
-                      <h3 className="counter">35+</h3>
+                      <div className="counter">35+</div>
                       <span>
                         YEARS OF <b>EXPERIENCE</b>
                       </span>

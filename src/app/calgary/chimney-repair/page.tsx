@@ -103,9 +103,9 @@ const chimneyFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Leading Chimney Repair Services Across Calgary Homes",
+  title: "Chimney Repair Calgary – Leaks, Cracks, Caps & Crowns – DMG",
   description:
-    "Our chimney repair service covers Calgary and the surrounding area, fixing cracks and leaks fast. Ask us for a chimney repair cost estimate before winter.",
+    "Chimney repair in Calgary for cracks, leaks, failing caps and crowns. Request an estimate before winter or call 1-403-619-8727.",
   path: "/calgary/chimney-repair/",
   image: "/images/services/service/chimney_repair/1.webp",
 });
@@ -120,7 +120,7 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/chimney_repair/1.webp"
         mainImageFocus="20%"
-        title="Chimney Repair Services in Calgary"
+        title="Chimney Repair in Calgary: Leaks, Cracks, Caps & Crowns"
         description="Chimneys are constantly exposed to moisture, temperature changes, and weather conditions that can weaken masonry over time. Our chimney repair services help restore safe performance, reliable function, and long-term durability for any property."
         paragraphs={[
           "Cracked mortar joints, loose brickwork, water penetration, and surface deterioration are common signs of chimney damage. Through detailed inspections and careful repair methods, damaged areas are restored using durable materials that help maintain both structural stability and the original appearance of the chimney.",
@@ -140,21 +140,21 @@ export default function Page() {
       />
 
       <ProcessSteps
-        title="Our Chimney Repair Process "
+        title="How Our Calgary Chimney Repair Process Works"
         steps={chimneyProcessSteps}
       />
 
       <ServiceGallery items={chimneyOverviewItems} />
 
       <TestimonialSlider
-        titleNormal="What Clients Say"
-        titleHighlight="About Our Chimney Repair"
+        titleNormal="Calgary Chimney"
+        titleHighlight="Repair Reviews"
         feedbacks={chimneyFeedbacks}
       />
 
       <WhyChooseUs
         image="/images/services/service/chimney_repair/8.webp"
-        title="Protecting the Long-Term Performance of Your Chimney"
+        title="Brick Chimney Repair Built to Last"
         description="Chimney damage can affect the safety and condition of a masonry structure over time. Our repair approach helps restore structural reliability and protect the chimney from further deterioration."
         listItems={[
           "Reinforced structural stability",
@@ -167,14 +167,15 @@ export default function Page() {
       />
 
       <FaqSection
+        questionsAsHeadings
         faqs={chimneyRepairFaqs}
-        title="Chimney Repair Frequently Asked Questions"
+        title="Calgary Chimney Repair FAQs"
       />
 
       <div className="ptb-100">
         <ContactSection
           image="/images/services/calgary/calgary-1.webp"
-          title="Chimney Repair Solutions"
+          title="Book a Chimney Repair Estimate in Calgary"
           subtitle="REQUEST A QUOTE"
         />
       </div>

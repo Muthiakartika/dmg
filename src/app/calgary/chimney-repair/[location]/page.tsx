@@ -181,7 +181,7 @@ export default function ChimneyLocationPage({
       <ServiceDetailsContent
         mainImage={location.images.main}
         mainImageFocus={location.images.mainFocus}
-        title={`Chimney Repair Services in ${location.name}`}
+        title={`Chimney Repair in ${location.name}, Alberta`}
         description={location.description}
         paragraphs={location.paragraphs}
         benefits={location.benefits}
@@ -218,7 +218,7 @@ export default function ChimneyLocationPage({
       <div className="ptb-100">
         <ContactSection
           image={location.images.contact}
-          title={`Request Chimney Repair in ${location.name}`}
+          title={`Request a Chimney Repair Estimate in ${location.name}`}
           subtitle="REQUEST A QUOTE"
         />
       </div>

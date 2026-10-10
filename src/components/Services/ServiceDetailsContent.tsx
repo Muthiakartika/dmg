@@ -9,6 +9,11 @@ interface ServiceDetailsContentProps {
   title: string;
   subtitle?: string;
   mainImage: string | StaticImageData;
+  /**
+   * Horizontal focus of the banner in its taller phone crop, as a CSS
+   * object-position x value (e.g. "85%"). Defaults to the centre.
+   */
+  mainImageFocus?: string;
   description: string;
   /** Question-form h2 introducing `paragraphs`. */
   paragraphsHeading?: string;
@@ -25,6 +30,7 @@ export default function ServiceDetailsContent({
   title,
   subtitle = "SERVICE",
   mainImage,
+  mainImageFocus,
   description,
   paragraphsHeading,
   paragraphs,
@@ -48,8 +54,18 @@ export default function ServiceDetailsContent({
 
               {/* The banner is the LCP element on every page that renders this
                   component, so it must not be lazy-loaded: `priority` marks it
-                  eager and sets fetchpriority="high". */}
-              <Image src={mainImage} alt={title} width={1400} height={645} priority />
+                  eager and sets fetchpriority="high". On phones it is cropped
+                  taller (see .services-details-banner); objectPosition only
+                  matters there, since the desktop box has the photo's own shape. */}
+              <Image
+                src={mainImage}
+                alt={title}
+                width={1400}
+                height={645}
+                priority
+                className="services-details-banner"
+                style={mainImageFocus ? { objectPosition: `${mainImageFocus} 50%` } : undefined}
+              />
 
               {paragraphsHeading && <h2 className="body-question">{paragraphsHeading}</h2>}
 

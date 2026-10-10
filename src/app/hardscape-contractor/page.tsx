@@ -185,6 +185,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/hardscape_constructor/1.webp"
+        mainImageFocus="60%"
         title="Hardscape Construction Calgary: Patios, Retaining Walls & Outdoor Surfaces"
         description="DMG Masonry is a hardscape contractor in Calgary, Alberta. We handle hardscape construction including patios, retaining walls, pathways, and outdoor surfaces built for long-term performance and a timeless, well-finished appearance."
         paragraphsHeading="What is hardscape construction?"

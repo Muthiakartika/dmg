@@ -165,6 +165,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/fireplace_installation/1.webp"
+        mainImageFocus="85%"
         title="Outdoor Fireplace Design & Installation in Calgary"
         description="At DMG Masonry, we create custom indoor and outdoor fireplace installations that add warmth, comfort, and visual character to residential and commercial properties throughout Calgary, while providing dependable performance and lasting durability."
         paragraphs={[

@@ -180,6 +180,7 @@ export default function ChimneyLocationPage({
 
       <ServiceDetailsContent
         mainImage={location.images.main}
+        mainImageFocus={location.images.mainFocus}
         title={`Chimney Repair Services in ${location.name}`}
         description={location.description}
         paragraphs={location.paragraphs}

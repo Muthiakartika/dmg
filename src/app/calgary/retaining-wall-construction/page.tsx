@@ -149,6 +149,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/retaining_wall/1.webp"
+        mainImageFocus="75%"
         title="Retaining Walls Calgary: Construction & Installation Services"
         description="DMG Masonry builds retaining walls in Calgary, Alberta. Retaining walls help manage sloped landscapes while improving the structure and appearance of an outdoor space. Ours are designed for dependable support, proper drainage, and a clean finish that fits naturally with the property."
         paragraphsHeading="What does a retaining wall actually do?"

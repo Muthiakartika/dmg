@@ -149,6 +149,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/masonry_repair/1.webp"
+        mainImageFocus="40%"
         title="Masonry Repair in Calgary: Professional Brick & Stone Restoration"
         description="DMG Masonry is a masonry repair contractor in Calgary, Alberta. We provide masonry repair and masonry restoration services designed to restore strength, stability, and timeless appearance for residential and commercial properties, helping structures perform reliably for years to come."
         paragraphsHeading="What causes masonry to need repair?"

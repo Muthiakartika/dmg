@@ -119,6 +119,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/chimney_repair/1.webp"
+        mainImageFocus="20%"
         title="Chimney Repair Services in Calgary"
         description="Chimneys are constantly exposed to moisture, temperature changes, and weather conditions that can weaken masonry over time. Our chimney repair services help restore safe performance, reliable function, and long-term durability for any property."
         paragraphs={[

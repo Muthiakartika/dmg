@@ -396,6 +396,16 @@
     -webkit-text-stroke: 1px var(--headingColor);
   }
 
+  /* The /about-us banner is about 3:1, a thin strip on a phone. A 16:9 crop
+     keeps the glove, trowel and brick; taller would upscale the 696px source
+     too far. */
+  .about-image-three .about-banner {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: 25% 50%;
+  }
+
   .about-image-one {
     height: 450px;
   }

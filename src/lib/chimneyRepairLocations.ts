@@ -5,6 +5,8 @@ import {
 
 export interface ChimneyRepairLocationImages {
   main: string;
+  /** Phone crop focus for `main`; see ServiceDetailsContent's mainImageFocus. */
+  mainFocus?: string;
   process: [string, string, string, string];
   whyChoose: string;
   contact: string;
@@ -154,6 +156,7 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
       "Kananaskis mountain properties experience snow, moisture, wind, and fast temperature shifts that can be particularly demanding on exposed chimneys.",
     images: {
       main: "/images/services/kananaskis/kananaskis-1.webp",
+      mainFocus: "20%",
       process: [
         "/images/services/kananaskis/kananaskis-2.webp",
         "/images/services/kananaskis/kananaskis-3.webp",
@@ -201,6 +204,7 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
       "Sundre's foothills weather brings seasonal moisture, snow, and freeze-thaw cycling that can gradually weaken mortar and masonry.",
     images: {
       main: "/images/services/sundre/sundre-1.webp",
+      mainFocus: "45%",
       process: [
         "/images/services/sundre/sundre-2.webp",
         "/images/services/sundre/sundre-3.webp",
@@ -245,6 +249,7 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
       "Three Hills properties can experience open prairie wind, blowing precipitation, and large seasonal temperature swings that stress exposed masonry.",
     images: {
       main: "/images/services/threehills/threehills-1.webp",
+      mainFocus: "90%",
       process: [
         "/images/services/threehills/threehills-2.webp",
         "/images/services/threehills/threehills-3.webp",
@@ -289,6 +294,7 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
       "Drumheller chimneys are exposed to sun, wind, winter freezing, and rapid weather changes that can widen existing cracks and weaken aged joints.",
     images: {
       main: "/images/services/drumheller/drumheller-1.webp",
+      mainFocus: "0%",
       process: [
         "/images/services/drumheller/drumheller-2.webp",
         "/images/services/drumheller/drumheller-3.webp",
@@ -333,6 +339,7 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
       "Claresholm's southern Alberta setting can bring strong wind and fast temperature shifts that test chimney joints, the cap/crown, and exposed masonry.",
     images: {
       main: "/images/services/claresholm/claresholm-1.webp",
+      mainFocus: "55%",
       process: [
         "/images/services/claresholm/claresholm-2.webp",
         "/images/services/claresholm/claresholm-3.webp",

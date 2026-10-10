@@ -28,8 +28,16 @@ export default function AboutContent() {
         </div>
 
         <div className="about-image-three">
-          {/* First thing under the breadcrumb, so it is this page's LCP. */}
-          <Image src={aboutImg} alt="image" width={1320} height={430} priority />
+          {/* First thing under the breadcrumb, so it is this page's LCP.
+              Cropped taller on phones; see .about-banner in about.css. */}
+          <Image
+            src={aboutImg}
+            alt="image"
+            width={1320}
+            height={430}
+            priority
+            className="about-banner"
+          />
         </div>
 
         <div className="about-three-inner">

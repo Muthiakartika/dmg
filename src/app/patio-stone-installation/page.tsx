@@ -144,6 +144,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/pation_stone/1.webp"
+        mainImageFocus="90%"
         title="Patio Stone Installation Calgary: Hardscape Patios & Pavers"
         description="DMG Masonry is a patio stone installer in Calgary, Alberta. A properly installed patio stone surface can improve both the function and appearance of an outdoor space. Our patio stone installation focuses on building stable, well-structured surfaces for everyday use and long-term durability in Calgary's climate."
         paragraphsHeading="What affects how long a patio lasts?"

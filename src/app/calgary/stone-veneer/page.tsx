@@ -150,6 +150,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/stone_veneer/1.webp"
+        mainImageFocus="20%"
         title="Stone Veneer in Calgary: Professional Installation Services"
         description="Stone veneer is a masonry finish that uses a thin layer of natural or engineered stone on interior and exterior surfaces. DMG Masonry is a stone veneer installer in Calgary, Alberta, focused on appearance, durability, and long-term performance."
         paragraphsHeading="Why do property owners choose stone veneer?"

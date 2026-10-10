@@ -156,6 +156,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/outdoor_kitchen/1.webp"
+        mainImageFocus="60%"
         title="Outdoor Kitchen Calgary: BBQ & Outdoor Kitchen Contractor"
         description="DMG Masonry is an outdoor kitchen contractor in Calgary, Alberta. A professionally designed outdoor kitchen creates a space where cooking, dining, and gathering happen in one connected outdoor environment. We build practical and timeless outdoor BBQ and cooking spaces that complement your property."
         paragraphsHeading="What is an outdoor kitchen?"

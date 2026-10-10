@@ -197,6 +197,15 @@
     padding-right: 0;
   }
 
+  /* The banner photos are ~2.2:1, which shrinks to a thin strip on a phone.
+     Show a 4:3 crop of the same photo instead; each page can move the crop
+     with ServiceDetailsContent's mainImageFocus. */
+  .services-details-desc .services-details-banner {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
   .services-details-desc .title {
     padding-left: 0;
     margin-bottom: 30px;

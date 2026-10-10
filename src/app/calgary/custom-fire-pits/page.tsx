@@ -203,6 +203,7 @@ export default function Page() {
 
       <ServiceDetailsContent
         mainImage="/images/services/service/custom_firepit/1.webp"
+        mainImageFocus="45%"
         title="Fire Pits Calgary: Custom Fire Pit Installation & Design"
         description="DMG Masonry builds custom fire pits in Calgary, Alberta. A custom fire pit can transform any outdoor area into a more comfortable and inviting space for gathering and relaxation. Our fire pit installation combines practical function with timeless design, giving homeowners a fire pit built for lasting enjoyment and everyday visual appeal."
         paragraphsHeading="What makes a fire pit last outdoors?"

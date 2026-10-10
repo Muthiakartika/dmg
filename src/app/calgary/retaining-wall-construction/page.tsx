@@ -133,6 +133,7 @@ export const metadata = buildMetadata({
   description:
     "Our retaining wall Calgary projects manage sloped yards and control erosion. Ask us for a retaining wall cost estimate before your next landscaping project.",
   path: "/calgary/retaining-wall-construction/",
+  image: "/images/services/service/retaining_wall/1.webp",
 });
 
 export default function Page() {

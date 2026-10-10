@@ -140,6 +140,7 @@ export const metadata = buildMetadata({
   description:
     "From a simple outdoor barbecue setup to a full outdoor kitchen with pizza oven, we help you plan the layout, materials and overall project cost upfront.",
   path: "/outdoor-kitchen-contractor/",
+  image: "/images/services/service/outdoor_kitchen/1.webp",
 });
 
 export default function Page() {

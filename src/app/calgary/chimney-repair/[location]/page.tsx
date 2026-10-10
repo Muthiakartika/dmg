@@ -88,6 +88,7 @@ export function generateMetadata({
     title: location.metadataTitle,
     description: location.metadataDescription,
     path: `/calgary/chimney-repair/${location.slug}/`,
+    image: location.images.main,
   });
 }
 

@@ -149,6 +149,7 @@ export const metadata = buildMetadata({
   description:
     "We build a custom outdoor fireplace for backyards across Calgary, adding warmth, ambiance and a natural gathering spot for family and friends every season.",
   path: "/calgary/fireplace-installation/",
+  image: "/images/services/service/fireplace_installation/1.webp",
 });
 
 export default function Page() {

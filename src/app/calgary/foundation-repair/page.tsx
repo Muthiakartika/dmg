@@ -16,6 +16,7 @@ export const metadata = buildMetadata({
   description:
     "Cracks and shifting can signal deeper structural issues. Our team provides foundation repair across Calgary to protect your home's value for years to come.",
   path: "/calgary/foundation-repair/",
+  image: "/images/services/service/foundation_repair/1.webp",
 });
 
 // Data FAQ khusus untuk halaman Foundation Repair

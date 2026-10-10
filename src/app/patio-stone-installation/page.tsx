@@ -128,6 +128,7 @@ export const metadata = buildMetadata({
   description:
     "We handle every stage of your patio project, from grading to laying patio stones, creating a durable outdoor surface built for daily use and years of weather.",
   path: "/patio-stone-installation/",
+  image: "/images/services/service/pation_stone/1.webp",
 });
 
 export default function Page() {

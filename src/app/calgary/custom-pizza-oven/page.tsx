@@ -169,6 +169,7 @@ export const metadata = buildMetadata({
   description:
     "Premium outdoor pizza ovens designed for authentic wood-fired flavor, easy maintenance, expert construction for residential or commercial projects.",
   path: "/calgary/custom-pizza-oven/",
+  image: "/images/services/service/custome_pizza/1.webp",
 });
 
 export default function Page() {

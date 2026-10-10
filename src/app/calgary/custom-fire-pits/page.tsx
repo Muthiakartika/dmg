@@ -191,6 +191,7 @@ export const metadata = buildMetadata({
   description:
     "We design fire pits Calgary homeowners enjoy year round, using durable stone and brick to create a lasting, comfortable gathering spot for family and friends.",
   path: "/calgary/custom-fire-pits/",
+  image: "/images/services/service/custom_firepit/1.webp",
 });
 
 export default function Page() {

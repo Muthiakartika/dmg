@@ -107,6 +107,7 @@ export const metadata = buildMetadata({
   description:
     "Our chimney repair service covers Calgary and the surrounding area, fixing cracks and leaks fast. Ask us for a chimney repair cost estimate before winter.",
   path: "/calgary/chimney-repair/",
+  image: "/images/services/service/chimney_repair/1.webp",
 });
 
 export default function Page() {

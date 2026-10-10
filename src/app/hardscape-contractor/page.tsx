@@ -173,6 +173,7 @@ export const metadata = buildMetadata({
   description:
     "We provide hardscape services and hardscape construction across Calgary, from patios to retaining walls, all built to last through many years of weather.",
   path: "/hardscape-contractor/",
+  image: "/images/services/service/hardscape_constructor/1.webp",
 });
 
 export default function Page() {

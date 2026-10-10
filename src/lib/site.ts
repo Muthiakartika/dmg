@@ -12,8 +12,11 @@ export const siteConfig = {
   // No trailing slash here; paths are appended starting with "/".
   url: rawUrl.replace(/\/+$/, ""),
   locale: "en_US",
-  // Default social-share image (used for og:image / twitter:image).
-  ogImage: "/images/main-banner/home/1.webp",
+  // Default social-share image (used for og:image / twitter:image) for pages
+  // that do not pass their own. It is an opaque 1200x630 crop of the home hero
+  // (main-banner/home/1.webp is a transparent cut-out, which Google showed as a
+  // blank or odd thumbnail).
+  ogImage: "/images/og-default.jpg",
   telephone: "+1-403-619-8727",
   email: "will@dmgmasonry.ca",
   sameAs: [

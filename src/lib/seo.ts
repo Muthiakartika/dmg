@@ -10,6 +10,12 @@ export interface PageSeo {
    * layout) for canonical and og:url.
    */
   path?: string;
+  /**
+   * og:image / twitter:image for this page, e.g. the service page's hero
+   * photo. Google also uses it to pick the page thumbnail (Search Console,
+   * Discover). Defaults to `siteConfig.ogImage`.
+   */
+  image?: string;
 }
 
 /**
@@ -20,6 +26,7 @@ export function buildMetadata({
   title,
   description,
   path = "/",
+  image = siteConfig.ogImage,
 }: PageSeo): Metadata {
   return {
     title,
@@ -34,13 +41,13 @@ export function buildMetadata({
       siteName: siteConfig.name,
       title,
       description,
-      images: [{ url: siteConfig.ogImage }],
+      images: [{ url: image }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [siteConfig.ogImage],
+      images: [image],
     },
   };
 }

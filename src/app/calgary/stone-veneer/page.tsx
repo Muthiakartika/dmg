@@ -138,6 +138,7 @@ export const metadata = buildMetadata({
   description:
     "Our Calgary stones veneer installations add texture and character to any home, using durable materials built to handle the local climate every season.",
   path: "/calgary/stone-veneer/",
+  image: "/images/services/service/stone_veneer/1.webp",
 });
 
 export default function Page() {

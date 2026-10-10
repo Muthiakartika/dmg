@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: BlogDetailsPageProps): Promis
     title: seo?.title ?? `${post.title} | DMG Masonry`,
     description: seo?.description ?? post.excerpt,
     path: `/blogs/${post.slug}/`,
+    image: post.coverImage || undefined,
   });
 }
 

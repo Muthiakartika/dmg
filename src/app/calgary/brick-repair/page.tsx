@@ -74,6 +74,7 @@ export const metadata = buildMetadata({
   description:
     "Our brick mason team handles brick repair for homes and businesses across Calgary, matching mortar and materials for a clean, seamless finish every time.",
   path: "/calgary/brick-repair/",
+  image: "/images/services/service/brick_repair/1.webp",
 });
 
 export default function Page() {

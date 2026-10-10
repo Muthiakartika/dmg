@@ -2,6 +2,9 @@ import type { BlogStatus } from "./cmsBlogs";
 import {
   MAX_SOURCE_IMAGE_BYTES,
   SAFE_IMAGE_UPLOAD_BYTES,
+  WEB_IMAGE_KEEP_BYTES,
+  WEB_IMAGE_MAX_DIMENSION,
+  WEB_IMAGE_WEBP_QUALITY,
   isAllowedImageType,
 } from "./blogImageConfig";
 
@@ -96,6 +99,14 @@ function canvasToBlob(canvas: HTMLCanvasElement, quality: number) {
 
 async function optimizeRasterImage(file: File) {
   const bitmap = await createImageBitmap(file, { imageOrientation: "from-image" });
+  const longestSide = Math.max(bitmap.width, bitmap.height);
+
+  // Already web-sized: keep the original bytes rather than re-encoding them.
+  if (longestSide <= WEB_IMAGE_MAX_DIMENSION && file.size <= WEB_IMAGE_KEEP_BYTES) {
+    bitmap.close();
+    return file;
+  }
+
   const canvas = document.createElement("canvas");
   const context = canvas.getContext("2d");
   if (!context) {
@@ -104,8 +115,8 @@ async function optimizeRasterImage(file: File) {
   }
 
   try {
-    let scale = Math.min(1, 2560 / Math.max(bitmap.width, bitmap.height));
-    const qualities = [0.84, 0.72, 0.6, 0.48];
+    let scale = Math.min(1, WEB_IMAGE_MAX_DIMENSION / longestSide);
+    const qualities = [WEB_IMAGE_WEBP_QUALITY, 0.72, 0.6, 0.48];
 
     for (let resizeAttempt = 0; resizeAttempt < 4; resizeAttempt += 1) {
       canvas.width = Math.max(1, Math.round(bitmap.width * scale));
@@ -115,6 +126,10 @@ async function optimizeRasterImage(file: File) {
 
       for (const quality of qualities) {
         const blob = await canvasToBlob(canvas, quality);
+        // A file that was not resized and does not get smaller stays as it was.
+        if (scale === 1 && blob.size >= file.size && file.size <= SAFE_IMAGE_UPLOAD_BYTES) {
+          return file;
+        }
         if (blob.size <= SAFE_IMAGE_UPLOAD_BYTES) {
           const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
           return new File([blob], `${baseName}.webp`, {
@@ -140,8 +155,9 @@ export async function prepareImageForUpload(file: File) {
   if (file.size > MAX_SOURCE_IMAGE_BYTES) {
     throw new Error("Choose an image that is 20 MB or smaller.");
   }
-  if (file.size <= SAFE_IMAGE_UPLOAD_BYTES) return file;
+  // GIFs are not redrawn: a canvas would keep only the first frame.
   if (file.type === "image/gif") {
+    if (file.size <= SAFE_IMAGE_UPLOAD_BYTES) return file;
     throw new Error("Animated GIF files must be 3.5 MB or smaller.");
   }
 

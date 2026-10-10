@@ -33,6 +33,7 @@ import { getR2Asset, uploadR2Asset } from "../src/lib/r2";
 loadEnvConfig(process.cwd());
 
 const apply = process.argv.includes("--apply");
+const MIN_SAVING_RATIO = 0.1;
 const kb = (bytes: number) => `${Math.round(bytes / 1024)} KB`;
 
 async function main() {
@@ -77,8 +78,10 @@ async function main() {
       .webp({ quality: Math.round(WEB_IMAGE_WEBP_QUALITY * 100) })
       .toBuffer({ resolveWithObject: true });
 
-    if (data.length >= original.length) {
-      console.log(`${id}: ${before}, re-encoding would not make it smaller, skipped.`);
+    // Below a 10% saving the re-encode only costs quality. This also keeps a
+    // second run from re-encoding files the first run already produced.
+    if (data.length > original.length * (1 - MIN_SAVING_RATIO)) {
+      console.log(`${id}: ${before}, re-encoding would save under 10%, skipped.`);
       continue;
     }
 

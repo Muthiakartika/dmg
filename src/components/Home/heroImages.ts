@@ -3,9 +3,11 @@
 //
 // Below 768px the banner is 800px tall with `background-size: cover` anchored
 // top-left, so the image is always drawn at 800/815 scale and only its left
-// ~780px are ever visible. 1-mobile.webp is exactly that strip — the left
-// 800x815px of 1.webp, re-encoded at WebP quality 90 — so phones download 88 KB
-// instead of 194 KB and see the same picture.
+// ~780px are ever visible. 1-mobile.webp is an 800x815px strip of 1.webp
+// starting at x=1040, re-encoded at WebP quality 90, so phones download 119 KB
+// instead of 194 KB. The strip starts on the house's main brick gable
+// rather than at the left edge: 1.webp's left ~700px are only trees, which is
+// all a phone showed of the hero before.
 import heroImage from "../../../public/images/main-banner/home/1.webp";
 import heroImageMobile from "../../../public/images/main-banner/home/1-mobile.webp";
 

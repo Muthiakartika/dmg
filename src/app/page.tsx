@@ -12,6 +12,7 @@ import ProcessSteps, { type ProcessStep } from "@/components/Sections/ProcessSte
 import TestimonialSlider, { type Testimonial } from "@/components/Sections/TestimonialSlider";
 import TextMarquee from "@/components/Sections/TextMarquee";
 import { buildMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 
 import {
   HERO_DESKTOP_QUERY,
@@ -31,6 +32,23 @@ export const metadata = buildMetadata({
     "Our team offers masonry services throughout Calgary, from brick and stone repair to custom patios, fireplaces and fire pits built to last for many years.",
   path: "/",
 });
+
+// Names the share image as this page's main image. The hero is a CSS
+// background, which Google does not count as a page image, so without this the
+// first <img> it found was the white-on-transparent navbar logo, and Search
+// Console showed the homepage with a blank thumbnail.
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteConfig.url}/#webpage`,
+  url: `${siteConfig.url}/`,
+  isPartOf: { "@id": `${siteConfig.url}/#website` },
+  about: { "@id": `${siteConfig.url}/#organization` },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: `${siteConfig.url}${siteConfig.ogImage}`,
+  },
+};
 
 const processSteps: ProcessStep[] = [
   {
@@ -136,6 +154,11 @@ export default function Home() {
         type="image/webp"
         fetchPriority="high"
         media={HERO_MOBILE_QUERY}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       <Navbar variant="home" />

@@ -13,6 +13,9 @@ export const metadata = buildMetadata({
   description:
     "Learn about our company, a Calgary based team specializing in brick and stone craftsmanship, historic restorations and custom outdoor living builds for homes.",
   path: "/about-us/",
+  // The page's own banner (a mason laying brick), rather than the homepage
+  // house photo every page without a banner shares.
+  image: "/images/about/new/1.webp",
 });
 
 const feedbacks: Testimonial[] = [

@@ -33,7 +33,12 @@ const SearchParamsObserver: React.FC<SearchParamsObserverProps> = ({
 };
 
 const Preloader: React.FC = () => {
-  const [show, setShow] = useState(true);
+  // The overlay only covers client-side navigations, so it starts hidden. On
+  // the first page load the server-rendered page is what the visitor is
+  // waiting for, and the overlay's markup sits at the end of the HTML: on a
+  // slow phone the page above it had already painted when it arrived, so it
+  // covered that content again until hydration (about 1.5s on throttled 4G).
+  const [show, setShow] = useState(false);
   const pathname = usePathname();
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -62,14 +67,10 @@ const Preloader: React.FC = () => {
     scheduleHide(1200);
   }, [scheduleHide]);
 
-  // When pathname changes → the new page has rendered, schedule hide.
-  // Search params are observed separately so they cannot prevent this
-  // component's preloader markup from being server-rendered.
-  //
-  // On the first page load the server-rendered page is already painted under
-  // the overlay, so the fade starts as soon as the app is interactive instead
-  // of holding for 1.2s (that hold alone pushed mobile Speed Index past 3s).
-  // Client-side navigations keep the 1.2s hold.
+  // When pathname changes → the new page has rendered, schedule hide (after
+  // a 1.2s hold). Search params are observed separately so they cannot
+  // prevent this component's preloader markup from being server-rendered.
+  // The first page load has nothing to hide: the overlay starts hidden.
   const lastPathname = useRef<string | null>(null);
   useEffect(() => {
     // Comparing paths (not a "has run" flag) keeps Strict Mode's double effect
@@ -78,10 +79,9 @@ const Preloader: React.FC = () => {
       lastPathname.current === null || lastPathname.current === pathname;
     lastPathname.current = pathname;
 
-    if (isFirstLoad) scheduleHide(0);
-    else handleNavigationComplete();
+    if (!isFirstLoad) handleNavigationComplete();
     return clearHideTimer;
-  }, [pathname, handleNavigationComplete, scheduleHide, clearHideTimer]);
+  }, [pathname, handleNavigationComplete, clearHideTimer]);
 
   // Normalise a pathname by stripping trailing slashes for comparison
   const normalisePath = (p: string) => (p.endsWith("/") && p.length > 1 ? p.slice(0, -1) : p);

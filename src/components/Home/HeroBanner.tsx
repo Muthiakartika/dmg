@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import SocialIcons from "@/components/UI/SocialIcons";
-import { fadeUp } from "@/lib/aos";
 import { contact } from "@/lib/site";
 import { heroImage, heroImageMobile } from "./heroImages";
 
@@ -17,7 +16,10 @@ import arrowRightIcon from "../../../public/images/main-banner/arrow-right.svg";
 // and loaded after hydration instead of with the page's initial JavaScript.
 const FsLightbox = dynamic(() => import("fslightbox-react"), { ssr: false });
 
-const heroReveal = (delay: number) => fadeUp(delay, { once: false });
+// The hero copy fades up with a CSS animation (.hero-reveal in hero.css), not
+// AOS: AOS keeps [data-aos] at opacity 0 until its script runs after
+// hydration, which on a slow phone left the hero without its text for seconds.
+const revealDelay = (delay: number): CSSProperties => ({ animationDelay: `${delay}ms` });
 
 // The stylesheet picks one of these per breakpoint (see heroImages.ts), so
 // phones never download the desktop file.
@@ -39,14 +41,14 @@ export default function HeroBanner() {
           <div className="main-banner-content">
             {/* Styled like a heading but deliberately not one: the page h1 is the
                 "Professional Masonry Services in Calgary" heading in HomeAbout. */}
-            <div className="banner-title" {...heroReveal(100)}>
+            <div className="banner-title hero-reveal" style={revealDelay(100)}>
               A Legacy of Timeless Masonry <span>Craftsmanship & Quality</span>
             </div>
-            <p {...heroReveal(200)}>
+            <p className="hero-reveal" style={revealDelay(200)}>
               Welcome to DMG Masonry, where timeless craftsmanship and enduring materials define
               every project. With durability at the core, our work stands as a lasting legacy.
             </p>
-            <div className="banner-btn" {...heroReveal(300)}>
+            <div className="banner-btn hero-reveal" style={revealDelay(300)}>
               <Link href="/contact-us" className="default-btn">
                 Contact Us
               </Link>

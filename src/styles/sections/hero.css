@@ -279,20 +279,21 @@
 }
 
 @media only screen and (max-width: 767px) {
-  /* The copy starts 190px down so the house's gables show above it. */
+  /* The copy sits at the top and the photo follows below it, 60vw tall, with
+     its transparent sky band tucked under the button. */
   .main-banner-area {
-    padding-top: 190px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: calc(60vw - 10px);
   }
 
-  /* Light over the gables, dark from where the copy starts. */
+  /* Dark behind the copy, fading out over the photo's transparent band (the
+     top 28.5% of it, where the gable peaks are) so the sky starts clear. */
   .main-banner-area::before {
     background: linear-gradient(
       180deg,
-      rgba(22, 21, 18, 0.25) 0,
-      rgba(22, 21, 18, 0.45) 145px,
-      rgba(22, 21, 18, 0.72) 260px,
-      rgba(22, 21, 18, 0.75) 100%
+      rgba(22, 21, 18, 0.92) 0,
+      rgba(22, 21, 18, 0.92) calc(100% - 60vw),
+      rgba(22, 21, 18, 0) calc(100% - 42.9vw)
     );
   }
 
@@ -330,19 +331,18 @@
     padding: 10px 20px;
   }
 
-  /* Spans the whole banner, so the photo's top (transparent sky band and the
-     gable peaks) lines up with the top of the banner. The <picture> in
-     HeroBanner switches to a smaller crop of the same photo here; see
-     src/components/Home/heroImages.ts. */
+  /* Pinned to the bottom of the banner and to the photo's right edge, so the
+     house and the tree in front of it show whole and only the trees at the far
+     left are cut. The <picture> in HeroBanner switches to a smaller copy of the
+     same photo here; see src/components/Home/heroImages.ts. */
   .main-banner-image {
-    top: 0;
     left: 0;
     right: 0;
-    height: auto;
+    height: 60vw;
   }
 
   .main-banner-image img {
-    object-position: 72% top;
+    object-position: right bottom;
   }
 
   .main-banner-wrap-shape {

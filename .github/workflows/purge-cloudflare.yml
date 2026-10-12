@@ -29,5 +29,5 @@ jobs:
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}')
           echo "$resp"
-          echo "$resp" | grep -q '"success":true' \
+          echo "$resp" | grep -Eq '"success":[[:space:]]*true' \
             || { echo "::error::Cloudflare purge failed"; exit 1; }

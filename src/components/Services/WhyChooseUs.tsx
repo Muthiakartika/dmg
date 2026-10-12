@@ -12,6 +12,8 @@ interface WhyChooseUsProps {
   title: string;
   description: string;
   listItems: readonly string[];
+  /** Optional line between the list and the button. */
+  note?: string;
   buttonText: string;
   buttonLink: string;
 }
@@ -23,6 +25,7 @@ export default function WhyChooseUs({
   title,
   description,
   listItems,
+  note,
   buttonText,
   buttonLink,
 }: WhyChooseUsProps) {
@@ -43,6 +46,8 @@ export default function WhyChooseUs({
               <p>{description}</p>
 
               <ArrowList items={listItems} icon={arrowIcon} />
+
+              {note && <p className="about-two-note">{note}</p>}
 
               <div className="about-btn">
                 <Link href={buttonLink} className="default-btn">

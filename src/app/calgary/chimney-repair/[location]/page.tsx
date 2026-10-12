@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import FaqSection from "@/components/Sections/FaqSection";
@@ -25,19 +24,19 @@ interface ChimneyLocationPageProps {
 const chimneyProcessContent = [
   {
     title: "Inspect The Chimney",
-    text: "We assess the masonry, cap/crown, joints, spalling brick, and visible damage.",
+    text: "We check the masonry, cap/crown, joints and any spalling brick.",
   },
   {
     title: "Plan The Repair",
-    text: "The repair scope is matched to the structure and source of damage.",
+    text: "We match the repair to the structure and the cause of the damage.",
   },
   {
     title: "Restore The Masonry",
-    text: "Spalling brick is replaced and failed stone and mortar are restored.",
+    text: "Spalled brick is replaced, and failed mortar and stone are repaired.",
   },
   {
     title: "Finish & Protect",
-    text: "The completed work is detailed for strength and weather resistance.",
+    text: "We finish the work for strength and weather resistance.",
   },
 ];
 
@@ -51,19 +50,6 @@ const chimneyOverviewItems = [
     image: "/images/services/service/chimney_repair/7.webp",
     titleNormal: "Tuckpointing",
     titleHighlight: "Restoration",
-  },
-];
-
-const chimneyFeedbacks = [
-  {
-    feedbackText:
-      "After a heavy rain, we started seeing signs of moisture around the fireplace. DMG Masonry found the problem with the chimney and repaired it before it turned into something bigger. It's been holding up well ever since.",
-    name: "Allison P.",
-  },
-  {
-    feedbackText:
-      "The finished work blends in really well, and it doesn't stand out like a patch job.",
-    name: "Trevor L.",
   },
 ];
 
@@ -111,35 +97,35 @@ export default function ChimneyLocationPage({
       uuid: `faq-${location.slug}-1`,
       question: `What are the signs that my ${location.name} chimney needs repair?`,
       answers: [
-        "Cracked or missing mortar, loose brick or stone, spalling brick faces that are flaking or crumbling, white staining, pieces of masonry near the roof, water marks around the fireplace, and a visibly cracked cap/crown are all reasons to arrange an inspection. Early assessment can often keep the repair more focused.",
+        "Cracked or missing mortar, loose brick or stone, brick faces flaking off (spalling), white staining, bits of masonry near the roof, water marks around the fireplace, or a cracked cap or crown. Any of these is a reason to book an inspection. The sooner we look, the smaller the repair tends to be.",
       ],
     },
     {
       uuid: `faq-${location.slug}-2`,
       question: `How does local weather affect chimneys in ${location.name}?`,
       answers: [
-        `${location.climateContext} Once water enters a crack or open joint, freezing can expand the affected area and speed up deterioration. Sound mortar and cap/crown details help reduce that exposure.`,
+        location.weatherFaqAnswer,
       ],
     },
     {
       uuid: `faq-${location.slug}-3`,
       question: "Can you repair part of a chimney, or does it need rebuilding?",
       answers: [
-        "Many chimneys can be repaired selectively when the surrounding masonry remains stable. Repointing joints, replacing individual units, or rebuilding only the upper courses may be sufficient. A broader rebuild is recommended when movement or deterioration has affected the chimney's overall stability.",
+        "Often a chimney can be repaired in sections if the rest of the masonry is sound. That might mean repointing joints, replacing individual bricks or rebuilding only the top courses. If the chimney has moved or deteriorated overall, a bigger rebuild may be the safer choice, and we'll tell you which.",
       ],
     },
     {
       uuid: `faq-${location.slug}-4`,
       question: "What chimney components can DMG Masonry repair?",
       answers: [
-        "Our masonry repair scope can include brick and stone units, replacement of spalling brick, mortar joints, the chimney cap/crown, and unstable sections of the stack. An inspection determines which components are contributing to leaks, movement, or visible deterioration.",
+        "Brick and stone, spalled brick, mortar joints, the cap or crown, and unstable sections of the stack. The inspection shows which of them are causing the leak, movement or damage.",
       ],
     },
     {
       uuid: `faq-${location.slug}-5`,
       question: `How do I request a chimney repair quote in ${location.name}?`,
       answers: [
-        `Contact DMG Masonry with your ${location.name} property details and a description of the concern. Photos are helpful for initial context, and an on-site assessment can then confirm the condition and appropriate repair scope.`,
+        `Contact us with your ${location.name} address and a short description of the problem. Photos help. We'll arrange a visit to confirm the condition and the repair.`,
       ],
     },
   ];
@@ -195,12 +181,6 @@ export default function ChimneyLocationPage({
 
       <ServiceGallery items={chimneyOverviewItems} />
 
-      <TestimonialSlider
-        titleNormal="What Clients Say"
-        titleHighlight="About Our Chimney Repair"
-        feedbacks={chimneyFeedbacks}
-      />
-
       <WhyChooseUs
         image={location.images.whyChoose}
         title={location.whyChooseTitle}
@@ -220,6 +200,7 @@ export default function ChimneyLocationPage({
           image={location.images.contact}
           title={`Request a Chimney Repair Estimate in ${location.name}`}
           subtitle="REQUEST A QUOTE"
+          description={`Seeing cracks or a leak? Send us your ${location.name} address and a few photos, and we'll arrange an inspection. Call 1-403-619-8727 or fill in the form.`}
         />
       </div>
 

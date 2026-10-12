@@ -9,17 +9,17 @@ const offerings = [
   {
     icon: "flaticon-measuring",
     title: "Masonry Repair",
-    text: "Reliable masonry repairs for cracks, damage, and worn surfaces to keep your property safe and sound.",
+    text: "Fixes for cracked mortar, flaking brick and worn masonry, before water does more damage.",
   },
   {
     icon: "flaticon-mansory",
     title: "Masonry Restoration",
-    text: "Restoring aging structures with precision while preserving their original appearance and strength.",
+    text: "Bringing older brick and stone back to good condition while keeping the original look.",
   },
   {
     icon: "flaticon-interior-design",
     title: "Masonry Design",
-    text: "Designing custom masonry with detailed stonework and lasting outdoor features tailored to your vision.",
+    text: "Custom stonework and outdoor features, designed around your property.",
   },
 ];
 

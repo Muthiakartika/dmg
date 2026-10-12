@@ -18,35 +18,35 @@ const masonryRepairFaqs = [
     uuid: "faq-repair-1",
     question: "What types of masonry problems do you repair?",
     answers: [
-      "We handle a wide range of masonry issues including cracked or failing mortar joints, damaged or shifting bricks, localized stone deterioration, and structural cracks. Each brick masonry repair is carried out to restore both stability and long-term performance of the structure."
+      "Cracked or failing mortar, loose or shifted bricks, flaking brick faces, damaged stone and structural cracks. If it's brick, stone or mortar and it's damaged, ask us."
     ]
   },
   {
     uuid: "faq-repair-2",
     question: "When should masonry be repaired instead of just monitored?",
     answers: [
-      "Masonry should be repaired as soon as signs of movement, widening cracks, or deteriorating mortar become visible. Delaying repairs can allow moisture to enter the structure, which may lead to more serious damage over time, especially in a climate like Calgary's with frequent freeze-thaw changes."
+      "As soon as you see movement, a crack that's getting wider, or mortar that's crumbling. Once water is getting in, each Calgary winter makes it worse. Some small cracks in a stable wall can be watched, and when we visit we'll tell you which kind you have."
     ]
   },
   {
     uuid: "faq-repair-3",
     question: "Do you offer partial repairs or full masonry restoration?",
     answers: [
-      "Yes. We provide both targeted masonry repairs and full masonry restoration services across Calgary and Alberta. The approach depends on the condition of the structure, allowing us to address specific problem areas while ensuring the overall integrity and durability of the masonry."
+      "Both. A small repair might be a few bricks or one section of joints. A full restoration covers a whole wall or building face. We recommend what the damage actually needs, not more."
     ]
   },
   {
     uuid: "faq-repair-4",
     question: "Will repaired areas match the existing brickwork?",
     answers: [
-      "Yes. We carefully match materials, textures, and joint finishes so repaired sections blend naturally with the existing brick or stonework. The goal is to maintain a consistent and cohesive appearance across the structure."
+      "We match the brick or stone, the mortar colour and the joint finish as closely as we can. On some older brick an exact match isn't always possible, but a good repair should be hard to spot."
     ]
   },
   {
     uuid: "faq-repair-5",
     question: "How does the masonry repair process begin?",
     answers: [
-      "Every project begins with a detailed on-site assessment. We evaluate the condition of the masonry, identify both visible damage and underlying causes, and then recommend the most effective repair approach to ensure long-term stability and performance."
+      "With a visit to your property. We look at the damage, work out what's causing it, and explain your options before any work starts."
     ]
   }
 ];
@@ -56,22 +56,22 @@ const masonryProcessSteps = [
   {
     image: "/images/services/service/masonry_repair/2.webp",
     title: "Inspect The Damage",
-    text: "We assess cracks and structural issues to identify the condition of the brick or stone.",
+    text: "We check the cracks, joints and surface to see what's wrong and why.",
   },
   {
     image: "/images/services/service/masonry_repair/3.webp",
     title: "Plan The Repair",
-    text: "We determine the most effective masonry repair approach for lasting results.",
+    text: "We decide how much needs replacing or repointing and talk you through the options.",
   },
   {
     image: "/images/services/service/masonry_repair/4.webp",
     title: "Restore The Masonry",
-    text: "Brick, stone, and mortar are repaired with durable materials.",
+    text: "Damaged brick, stone and mortar are cut out and replaced with matching materials.",
   },
   {
     image: "/images/services/service/masonry_repair/5.webp",
     title: "Ensure Lasting Performance",
-    text: "Repairs are completed with attention to durability and appearance.",
+    text: "We check the finished repair for strength, finish and how well it matches the original wall.",
   },
 ];
 
@@ -93,7 +93,7 @@ const masonryOverviewItems = [
 const masonryDamageTypes = [
   {
     title: "What is spalling brick?",
-    text: "Spalling is when the face of a brick flakes, chips or pops off, leaving a rough, crumbling surface. It happens when water soaks into the brick, freezes and expands. Calgary sees a high number of freeze-thaw cycles each winter, which is why spalling shows up here more than in milder climates. Spalled brick cannot be patched - the affected units are cut out and replaced.",
+    text: "Spalling is when the face of a brick flakes, chips or pops off, leaving a rough, crumbling surface. It happens when water soaks into the brick, freezes and expands. Calgary sees a high number of freeze-thaw cycles each winter, which is why spalling shows up here more than in milder climates. Spalled brick cannot be patched. The affected units are cut out and replaced.",
   },
   {
     title: "What does cracked or crumbling mortar mean?",
@@ -152,23 +152,23 @@ export default function Page() {
         mainImage="/images/services/service/masonry_repair/1.webp"
         mainImageFocus="40%"
         title="Masonry Repair in Calgary: Brick, Mortar & Stone Restoration"
-        description="DMG Masonry is a masonry repair contractor in Calgary, Alberta. We provide masonry repair and masonry restoration services designed to restore strength, stability, and timeless appearance for residential and commercial properties, helping structures perform reliably for years to come."
+        description="DMG Masonry repairs brick, stone and mortar on homes and commercial buildings across Calgary and Alberta. If you have cracked mortar, flaking brick or a wall that looks like it's moving, we'll come out, find the cause and fix it properly. Request a quote, or call 1-403-619-8727."
         paragraphsHeading="What Causes Brick to Crack, Crumble or Spall?"
         paragraphs={[
-          "Over time, masonry can experience cracks, surface wear, moisture damage, and structural deterioration caused by weather exposure and Calgary's freeze-thaw cycles. Our team handles brick and stone masonry repair carefully using reliable techniques and quality materials to restore both function and appearance while maintaining the original character of the structure.",
-          "Masonry restoration also helps extend the lifespan and long-term value of a property. With proper repair work and ongoing upkeep, masonry surfaces can remain durable, visually consistent, and resistant to further deterioration over time. Restoration work also supports better structural performance while preserving the timeless look of brick and stone construction."
+          "Most masonry damage comes down to water. It gets into the brick and mortar, freezes overnight and expands, then thaws and does it all again. Calgary goes through that cycle many times every winter, so a small crack or a worn joint turns into a bigger problem faster than it would in a milder climate.",
+          "Water isn't the only cause. Settlement under the wall, moisture trapped inside it and years of weather all play a part. That's why we look for the cause before we repair the damage. Patching a crack without fixing what opened it usually means doing the job twice."
         ]}
         benefits={[
-          "Structural Stability",
-          "Timeless Appearance",
-          "Long-Term Protection",
-          "Reliable Brick Restoration",
+          "Fixes the cause",
+          "Matches your brick",
+          "Keeps water out",
+          "Restores strength",
         ]}
         extraParagraphsHeading="What a Calgary Masonry Repair Project Involves"
         extraParagraphs={[
-          "Every masonry repair project requires a clear understanding of the structure, existing damage, and long-term performance goals. Our team carefully reviews the condition of the masonry to recommend repair and restoration solutions that support lasting durability and reliable structural integrity.",
-          "As masonry contractors in Calgary, we approach restoration work with a focus on preserving both strength and appearance. Whether handling brick masonry repair, worn mortar joints, or damaged stone surfaces, we aim to restore masonry in a way that feels consistent with the original structure while improving long-term performance.",
-          "Long-lasting masonry restoration requires the right combination of durable materials, experienced craftsmanship, and careful execution throughout every stage of the repair process. With precision workmanship and close attention to detail, we help masonry structures across Calgary and Alberta maintain their strength, stability, functionality, and timeless appearance for years to come."
+          "We start by looking at the wall. We check the bricks, the mortar joints and any cracks, and work out what's causing them. Then we tell you what needs fixing now and what can wait.",
+          "The work depends on the damage. It might be a few bricks cut out and replaced, a section of mortar raked out and repointed, or a full restoration of a wall or chimney face. We work on both brick and stone.",
+          "We match the new brick, the mortar colour and the joint finish to what's already there, so the repair blends in instead of standing out. We do this for homes and commercial buildings across Calgary and Alberta."
         ]}
       />
 
@@ -202,14 +202,15 @@ export default function Page() {
       <WhyChooseUs
         image="/images/services/service/masonry_repair/8.webp"
         title="Signs You Need Masonry Repair Near You"
-        description="Small masonry issues can develop into larger structural problems if left untreated. As masonry repair contractors in Calgary, we identify early signs of deterioration before they affect the structure's strength, stability, and appearance."
+        description="Small masonry problems get bigger when they're left alone. Water gets in through a cracked joint, freezes, and opens it further. These are the signs worth acting on:"
         listItems={[
-          "Cracked or deteriorating mortar joints",
-          "Bulging or shifting brickwork",
-          "Visible structural cracking",
-          "Moisture-related masonry damage",
-          "Spalling brick after Alberta freeze-thaw cycles"
+          "Mortar joints that are cracked, powdery or falling out",
+          "Bricks that bulge, lean or have shifted",
+          "Cracks that are getting wider or step diagonally along the joints",
+          "Brick faces flaking or popping off after winter",
+          "Damp patches or white powder on the wall"
         ]}
+        note="Not sure how serious it is? Send us a message and we'll take a look."
         buttonText="Contact Our Team"
         buttonLink="/contact-us"
       />
@@ -224,6 +225,7 @@ export default function Page() {
           image="/images/services/service/masonry_repair/9.webp"
           title="Request a Masonry Repair Quote in Calgary"
           subtitle="REQUEST A QUOTE"
+          description="Tell us what you're seeing and we'll come out for a look. Fill in the form, email will@dmgmasonry.ca or call 1-403-619-8727."
         />
       </div>
 

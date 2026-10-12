@@ -22,7 +22,8 @@ export interface ChimneyRepairLocationContent {
   whyChooseTitle: string;
   whyChooseDescription: string;
   whyChooseItems: string[];
-  climateContext: string;
+  /** Answer to the "How does local weather affect chimneys in …?" FAQ. */
+  weatherFaqAnswer: string;
   images: ChimneyRepairLocationImages;
 }
 
@@ -37,34 +38,33 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     metadataDescription:
       "Chimney repair in Bragg Creek, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
-      "DMG Masonry provides chimney repair in Bragg Creek for homes affected by cracked mortar, loose brickwork, water entry, and a deteriorated cap/crown. Our repairs are planned to restore stability while preserving the character of the existing masonry.",
+      "DMG Masonry repairs chimneys in Bragg Creek: cracked mortar, loose bricks, leaks and damaged caps or crowns. Our repairs aim to make the chimney sound again while keeping the look of the existing masonry.",
     paragraphs: [
-      "Bragg Creek chimneys face regular exposure to foothills moisture, snow, wind, and repeated freeze-thaw cycles. Small openings in mortar joints or at the chimney cap/crown can allow water into the assembly, where seasonal temperature changes may accelerate cracking, spalling, and movement.",
-      "We inspect the visible masonry, mortar joints, cap/crown, flashing transitions, and surrounding areas before recommending work. This helps us address the source of the damage and select a repair approach suited to the chimney rather than covering only the most obvious symptoms.",
+      "Bragg Creek sits in the foothills, so chimneys here see plenty of moisture, snow and wind, and many freeze-thaw cycles. A small gap in a mortar joint or at the crown lets water in, and each freeze makes the crack bigger.",
+      "We inspect the visible masonry, the mortar joints, the crown, the flashing and the area around the chimney before recommending anything. That way we fix where the damage starts, not just the most obvious crack.",
     ],
     benefits: [
-      "Brick & Mortar Restoration",
-      "Cap/Crown Repairs",
-      "Leak Source Assessment",
-      "Freeze-Thaw Protection",
-      "Spalling Brick Replacement",
+      "Brick and mortar restoration",
+      "Cap and crown repairs",
+      "Finding the source of leaks",
+      "Freeze-thaw protection",
+      "Spalled brick replacement",
     ],
     extraParagraphs: [
-      "Depending on the chimney's condition, repairs may include tuckpointing worn joints, replacing damaged units, rebuilding unstable sections, repairing the cap/crown, or improving vulnerable water-shedding details. Materials are selected for compatibility, durability, and a clean visual match with the existing work.",
-      "Timely repairs can help prevent moisture from reaching adjacent walls, ceilings, and fireplace components. They can also reduce the chance that a localized masonry problem develops into a more extensive rebuild after another winter season.",
-      "From established cabins to full-time residences, we approach each Bragg Creek chimney as an individual masonry system. The finished repair is intended to look cohesive, manage local weather exposure, and provide dependable long-term performance.",
+      "Depending on the condition, a repair might include tuckpointing worn joints, replacing damaged bricks, rebuilding an unstable section or repairing the crown. We choose materials that match the existing chimney.",
+      "Catching it early keeps water away from the walls, ceiling and fireplace around the chimney, and can avoid a bigger rebuild after another winter. Whether it's an older cabin or a full-time home, we treat each Bragg Creek chimney as its own job.",
     ],
     whyChooseTitle: "Chimney Repairs Built for Bragg Creek Conditions",
     whyChooseDescription:
-      "Foothills weather can expose weak mortar and masonry quickly. We combine a careful inspection with practical repair methods to strengthen vulnerable areas and improve resistance to future moisture damage.",
+      "Foothills weather finds weak mortar quickly. We inspect carefully, repair what's failing and make the chimney better able to keep water out.",
     whyChooseItems: [
-      "Detailed masonry condition assessment",
-      "Repairs for the cap/crown, brick, and mortar",
-      "Materials selected for the existing chimney",
-      "Clean workmanship and durable finishing",
+      "A careful look at the masonry",
+      "Repairs to the crown, brick and mortar",
+      "Materials chosen to match",
+      "Clean, durable finish",
     ],
-    climateContext:
-      "Bragg Creek's foothills setting brings moisture, snow, wind, and frequent freeze-thaw conditions that can expose weaknesses in chimney masonry.",
+    weatherFaqAnswer:
+      "Bragg Creek's foothills setting brings moisture, snow, wind and frequent freezing and thawing. Once water gets into a crack or open joint, freezing widens it and speeds up the damage. Sound mortar and a good crown keep that to a minimum.",
     images: {
       main: "/images/services/braggcreek/braggcreek-1.webp",
       process: [
@@ -82,33 +82,32 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     metadataDescription:
       "Chimney repair in Longview, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
-      "Our chimney repair services in Longview help homeowners correct weathered mortar, cracked brick, unstable masonry, and water-related deterioration. DMG Masonry focuses on repairs that support safe function, lasting strength, and a finish that suits the property.",
+      "DMG Masonry repairs chimneys in Longview: weathered mortar, cracked brick, unstable masonry and water damage. We aim for repairs that last and suit the property.",
     paragraphs: [
-      "In Longview's open foothills environment, chimneys can be exposed to strong winds, blowing snow, rain, and rapid seasonal temperature changes. Because the chimney rises above the roofline, even a small defect in the cap/crown or a mortar joint can receive repeated weather exposure and worsen over time.",
-      "A proper assessment looks beyond a single crack. We review the chimney from its accessible base to the top, checking joint depth, brick condition, cap/crown drainage, and signs that water has moved into nearby building materials.",
+      "Longview is open foothills country, so chimneys get strong wind, blowing snow, rain and quick changes in temperature. A chimney sticks up above the roof, so even a small defect in the crown or a joint is hit by the weather again and again and gets worse.",
+      "We look at the whole chimney, from the base we can reach to the top: joint depth, brick condition, how the crown drains, and any sign that water has reached nearby materials. One crack is rarely the whole story.",
     ],
     benefits: [
-      "Tuckpointing & Joint Repair",
-      "Spalling Brick Replacement",
-      "Chimney Cap/Crown Restoration",
-      "Wind & Moisture Protection",
+      "Tuckpointing and joint repair",
+      "Spalled brick replacement",
+      "Chimney crown restoration",
+      "Wind and moisture protection",
     ],
     extraParagraphs: [
-      "Repair recommendations are based on the extent and cause of deterioration. Sound sections may only require targeted repointing, while loose or fractured masonry may need selective rebuilding to restore proper bonding and structural support.",
-      "We pay close attention to how water is directed away from the chimney. Restoring mortar profiles, repairing the cap/crown, and correcting deteriorated masonry surfaces can help limit absorption and reduce future freeze-thaw stress.",
-      "Our goal is to give Longview property owners a clear repair plan and workmanship that holds up without looking like an obvious patch. Each completed area is finished for visual consistency and reliable service through changing Alberta seasons.",
+      "What we recommend depends on how far the damage goes and why. Sound sections may only need repointing. Loose or broken masonry may need to be rebuilt in places so it bonds and supports properly.",
+      "We also look at where water goes. Restoring the mortar profile, repairing the crown and fixing worn masonry surfaces limits how much water soaks in and cuts down freeze-thaw damage. You get a clear repair plan and neat work that doesn't look like an obvious patch.",
     ],
     whyChooseTitle: "Reliable Masonry Work for Longview Chimneys",
     whyChooseDescription:
-      "Exposed chimney masonry needs more than a surface patch. Our work addresses damaged materials and water-entry points so the repaired structure can perform reliably in Longview's foothills climate.",
+      "An exposed chimney needs more than a surface patch. We repair the damaged material and the places water gets in, so the chimney stands up to Longview's foothills climate.",
     whyChooseItems: [
-      "Repairs based on the actual source of damage",
+      "Repairs based on the actual cause",
       "Careful colour and material matching",
-      "Weather-conscious masonry detailing",
+      "Details built for the weather",
       "Straightforward inspection and recommendations",
     ],
-    climateContext:
-      "Longview's open foothills location can expose chimneys to wind, blowing precipitation, and sharp temperature changes throughout the year.",
+    weatherFaqAnswer:
+      "Longview's open foothills bring strong wind, blowing snow, rain and quick temperature swings. Water gets into small cracks, freezes and widens them. Sound joints and a well-drained crown help a lot.",
     images: {
       main: "/images/services/longview/longview-1.webp",
       process: [
@@ -126,34 +125,33 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     metadataDescription:
       "Chimney repair in Kananaskis, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
-      "DMG Masonry provides chimney repair in Kananaskis for cabins, residences, and mountain properties where masonry must withstand demanding seasonal exposure. We restore damaged brick, stone, mortar, and the cap/crown with an emphasis on stability and moisture protection.",
+      "DMG Masonry repairs chimneys in Kananaskis, for cabins, homes and other mountain properties. We repair damaged brick, stone, mortar and crowns, with a focus on keeping the chimney stable and dry.",
     paragraphs: [
-      "Mountain weather places sustained stress on exposed chimney assemblies. Snow accumulation, wind, moisture, and quick temperature changes can reveal weaknesses at mortar joints, the cap/crown, and transitions between masonry and the roof.",
-      "Before work begins, we assess accessible chimney components and identify whether deterioration is localized or part of a broader structural issue. We also consider site access and project conditions so the recommended scope is practical for the property and the repair can be completed efficiently.",
+      "Mountain weather is hard on chimneys. Heavy snow, wind, moisture and quick temperature changes find weak spots at the mortar joints, the crown and where the chimney meets the roof.",
+      "Before we start, we check the parts of the chimney we can reach and work out whether the damage is in one spot or part of a bigger problem. We also think about site access, so the plan is practical for your property.",
     ],
     benefits: [
-      "Mountain-Climate Masonry Repair",
-      "Stone & Brick Restoration",
-      "Cap/Crown & Joint Repairs",
-      "Moisture-Damage Prevention",
-      "Spalling Brick Replacement",
+      "Mountain-climate masonry repair",
+      "Stone and brick restoration",
+      "Crown and joint repairs",
+      "Preventing moisture damage",
+      "Spalled brick replacement",
     ],
     extraParagraphs: [
-      "Common repair scopes include renewing eroded mortar, replacing fractured masonry, rebuilding loose upper courses, and restoring a cap/crown that no longer sheds water correctly. Where possible, replacement materials are chosen to complement the texture and tone of the existing chimney.",
-      "Water management is especially important for remote and seasonally occupied properties, where a small leak may go unnoticed between visits. Correcting vulnerable areas early helps protect the chimney and nearby interior finishes from progressive moisture damage.",
-      "Our Kananaskis chimney repairs balance durable construction with the natural appearance expected of mountain properties. The result is a cleaner, stronger assembly designed to handle continued exposure while retaining the building's original character.",
+      "Typical repairs include renewing eroded mortar, replacing broken bricks or stones, rebuilding loose upper courses and restoring a crown that no longer sheds water. We choose replacement materials that suit the texture and colour of your chimney.",
+      "Water control matters most on remote or seasonal properties, where a small leak can go unnoticed between visits. Fixing weak spots early protects the chimney and the interior around it. We aim for strong, durable work that still looks natural on a mountain property.",
     ],
     whyChooseTitle: "Chimney Restoration for Mountain Properties",
     whyChooseDescription:
-      "Kananaskis properties need chimney repairs planned around mountain exposure and the existing building materials. We deliver focused masonry work that improves strength, water shedding, and long-term resilience.",
+      "Kananaskis chimneys need repairs planned around the mountain exposure and the materials already there. We do focused masonry work that improves strength and keeps water out.",
     whyChooseItems: [
-      "Experience with brick and stone assemblies",
-      "Repair planning for challenging exposure",
-      "Compatible materials and cohesive finishes",
-      "Focused protection at vulnerable chimney areas",
+      "Brick and stone experience",
+      "Repair plans for tough exposure",
+      "Matching materials and finish",
+      "Protection where the chimney is most vulnerable",
     ],
-    climateContext:
-      "Kananaskis mountain properties experience snow, moisture, wind, and fast temperature shifts that can be particularly demanding on exposed chimneys.",
+    weatherFaqAnswer:
+      "Mountain weather brings heavy snow, wind, moisture and fast temperature changes. Those stress the mortar joints, the crown and the roof junction. Water that gets in and freezes widens cracks, so fixing small openings early matters.",
     images: {
       main: "/images/services/kananaskis/kananaskis-1.webp",
       mainFocus: "20%",
@@ -174,34 +172,33 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     metadataDescription:
       "Chimney repair in Sundre, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
-      "DMG Masonry offers chimney repair in Sundre for residential and rural properties with cracked joints, damaged brick or stone, a leaking cap/crown, and aging masonry. Our work is designed to restore dependable performance without compromising the chimney's appearance.",
+      "DMG Masonry repairs chimneys in Sundre, for homes and rural properties with cracked joints, damaged brick or stone, a leaking crown or ageing masonry. We repair the chimney so it works properly and still looks right.",
     paragraphs: [
-      "Sundre's proximity to the foothills means chimney masonry can see snow, rain, wind, and repeated freezing and thawing. Mortar often shows wear first, but damage can also develop at the cap/crown or within brick and stone that has absorbed moisture.",
-      "We begin with a condition-based inspection to locate deteriorated materials and likely water-entry points. By separating cosmetic wear from structural movement, we can recommend targeted work where appropriate and more extensive restoration only where it is needed.",
+      "Sundre is close to the foothills, so chimneys see snow, rain, wind and repeated freezing and thawing. Mortar usually shows wear first, but damage can also start at the crown or inside brick and stone that has soaked up moisture.",
+      "We start with an inspection to find the worn materials and where water is getting in. We separate cosmetic wear from real movement, so we recommend targeted work where that's enough and a bigger restoration only where it's needed.",
     ],
     benefits: [
-      "Mortar Joint Repointing",
-      "Brick & Stone Repair",
-      "Cap/Crown Restoration",
-      "Residential & Rural Service",
-      "Spalling Brick Replacement",
+      "Mortar joint repointing",
+      "Brick and stone repair",
+      "Crown restoration",
+      "Homes and rural properties",
+      "Spalled brick replacement",
     ],
     extraParagraphs: [
-      "Repairs can range from renewing isolated mortar joints to replacing damaged masonry or rebuilding an unstable chimney top. We remove failed materials carefully, prepare sound bonding surfaces, and finish new work to integrate with the existing assembly.",
-      "A sound cap/crown is an important part of the chimney's defence against water. When it cracks or deteriorates, moisture may travel into the masonry below and contribute to staining, efflorescence, loose joints, or interior leaks.",
-      "For Sundre homeowners, early masonry maintenance is often the most economical approach. A well-timed repair can preserve more of the original chimney, improve weather resistance, and postpone the need for major reconstruction.",
+      "Repairs range from renewing a few joints to replacing damaged masonry or rebuilding an unstable chimney top. We take out the failed material, prepare a sound surface and finish the new work so it blends in.",
+      "The crown is the chimney's main defence against water. When it cracks, moisture gets into the masonry below and can cause staining, white deposits, loose joints and leaks inside. Repairing early often saves more of the original chimney and puts off a bigger rebuild.",
     ],
     whyChooseTitle: "Practical Chimney Repair in the Sundre Area",
     whyChooseDescription:
-      "We tailor each repair to the chimney's materials, condition, and level of exposure. That means clear recommendations, careful preparation, and a durable finish for Sundre homes and rural properties.",
+      "We tailor the repair to your chimney's materials, condition and exposure. You get clear recommendations, careful preparation and a durable finish.",
     whyChooseItems: [
-      "Targeted repairs that preserve sound masonry",
-      "Service for brick and stone chimneys",
-      "Attention to the cap/crown and moisture entry",
-      "Durable, visually consistent finishing",
+      "Targeted repairs that keep sound masonry",
+      "Brick and stone chimneys",
+      "Attention to the crown and water entry",
+      "Durable, consistent finish",
     ],
-    climateContext:
-      "Sundre's foothills weather brings seasonal moisture, snow, and freeze-thaw cycling that can gradually weaken mortar and masonry.",
+    weatherFaqAnswer:
+      "Sundre is near the foothills, so chimneys get snow, rain, wind and repeated freeze-thaw. Mortar wears first, then water gets in and freezing breaks it up further.",
     images: {
       main: "/images/services/sundre/sundre-1.webp",
       mainFocus: "45%",
@@ -220,33 +217,32 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     metadataDescription:
       "Chimney repair in Three Hills, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
-      "Our chimney repair service in Three Hills addresses failing mortar, cracked or spalling brick, cap/crown damage, leaks, and loose masonry. DMG Masonry provides a detailed assessment followed by repairs suited to the age and construction of the chimney.",
+      "DMG Masonry repairs chimneys in Three Hills: failing mortar, cracked or spalling brick, crown damage, leaks and loose masonry. We inspect first, then repair to suit the age and construction of your chimney.",
     paragraphs: [
-      "Prairie chimneys are highly exposed above the roofline. Wind-driven rain and snow can enter small cracks, while hot summers and cold winters create expansion and contraction that gradually wear down masonry joints and previously repaired areas.",
-      "We check for open joints, movement, fractured units, staining, cap/crown defects, and other clues that help explain how the damage developed. Understanding that pattern allows us to rebuild support and weather protection instead of relying on short-term surface sealing.",
+      "Prairie chimneys are very exposed above the roofline. Wind-driven rain and snow get into small cracks, and hot summers followed by cold winters make the masonry expand and contract until the joints wear down, including earlier repairs.",
+      "We check for open joints, movement, broken bricks, staining and crown defects to understand how the damage developed. That lets us rebuild the support and weather protection instead of relying on a quick surface seal.",
     ],
     benefits: [
-      "Crack & Joint Restoration",
-      "Spalling Brick Replacement",
-      "Cap/Crown & Water-Shedding Repairs",
-      "Structural Masonry Assessment",
+      "Crack and joint restoration",
+      "Spalled brick replacement",
+      "Crown and water-shedding repairs",
+      "Structural masonry assessment",
     ],
     extraParagraphs: [
-      "When mortar has lost depth or adhesion, tuckpointing restores the joint with properly prepared and placed material. Damaged brick can be removed individually where the surrounding masonry remains stable, helping preserve as much of the original chimney as possible.",
-      "Upper chimney courses and the cap/crown often receive the greatest exposure. Repairing these areas can improve stability and limit water absorption before it leads to deeper deterioration or visible damage around the fireplace and ceiling.",
-      "DMG Masonry gives Three Hills property owners a repair scope based on observed conditions. We focus on neat execution, compatible materials, and details that help the finished chimney stand up to open prairie weather.",
+      "When mortar has lost depth or grip, tuckpointing restores the joint with properly prepared mortar. Where the surrounding masonry is stable, damaged bricks can be taken out one at a time, which keeps as much of the original chimney as possible.",
+      "The upper courses and the crown take the most weather. Repairing them improves stability and limits water absorption before it causes deeper damage or stains around the fireplace and ceiling. You get a repair plan based on what we find, with neat work and compatible materials.",
     ],
     whyChooseTitle: "Chimney Masonry Prepared for Prairie Exposure",
     whyChooseDescription:
-      "Our Three Hills chimney repairs address the combined effects of wind, precipitation, and seasonal temperature swings with sound preparation and proven masonry techniques.",
+      "Our Three Hills chimney repairs deal with wind, rain, snow and big temperature swings, using sound preparation and proven masonry methods.",
     whyChooseItems: [
-      "Thorough review of exposed chimney areas",
-      "Selective repair or rebuilding as required",
-      "Strong, properly finished mortar joints",
-      "Work designed for long-term weather exposure",
+      "A thorough look at exposed areas",
+      "Selective repair or rebuilding",
+      "Strong, properly finished joints",
+      "Work for long-term weather exposure",
     ],
-    climateContext:
-      "Three Hills properties can experience open prairie wind, blowing precipitation, and large seasonal temperature swings that stress exposed masonry.",
+    weatherFaqAnswer:
+      "Open prairie means wind-driven rain and snow, hot summers and cold winters. That expansion and contraction slowly wears down joints, and water in small cracks makes it worse.",
     images: {
       main: "/images/services/threehills/threehills-1.webp",
       mainFocus: "90%",
@@ -265,33 +261,32 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     metadataDescription:
       "Chimney repair in Drumheller, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
-      "DMG Masonry provides chimney repair in Drumheller for masonry affected by age, movement, moisture, and temperature extremes. We repair mortar joints, brickwork, the cap/crown, and unstable sections to restore a stronger, cleaner chimney assembly.",
+      "DMG Masonry repairs chimneys in Drumheller, where age, movement, moisture and temperature extremes take their toll. We repair mortar joints, brickwork, crowns and unstable sections for a stronger, cleaner chimney.",
     paragraphs: [
-      "Drumheller's dry landscape does not eliminate chimney wear. Strong sun, wind, sudden weather changes, winter freezing, and occasional wind-driven moisture can all affect exposed mortar and masonry, particularly where small cracks already exist.",
-      "Our assessment considers both visible damage and the chimney details that control water. We examine mortar condition, brick faces, cap/crown slope and cracking, and accessible transitions to determine where deterioration begins and how far it extends.",
+      "Drumheller's dry landscape doesn't spare a chimney. Strong sun, wind, sudden weather changes, winter freezing and the occasional wind-driven rain all wear on exposed mortar and brick, especially where there are already small cracks.",
+      "We look at the visible damage and at the parts of the chimney that control water: the mortar, the brick faces, the slope of the crown and any cracks in it, and where the chimney meets the roof. That shows where the damage begins and how far it goes.",
     ],
     benefits: [
-      "Weathered Mortar Repair",
-      "Spalling Brick & Masonry Replacement",
-      "Cap/Crown Crack Restoration",
-      "Leak & Damage Assessment",
+      "Weathered mortar repair",
+      "Spalled brick and masonry replacement",
+      "Crown crack restoration",
+      "Leak and damage assessment",
     ],
     extraParagraphs: [
-      "Surface cracks and eroded joints should be evaluated before loose materials create a safety concern. Tuckpointing, selective unit replacement, and localized rebuilding can restore sound sections while retaining stable portions of the original structure.",
-      "Cap/crown repairs are completed with attention to drainage and edge protection, helping move water away from the masonry below. Proper detailing here supports every repair further down the chimney and helps slow the return of moisture-related damage.",
-      "For Drumheller homes, our aim is a repair that fits the existing architecture and performs through the area's varied conditions. We provide a clear scope, use durable masonry methods, and finish the work with close attention to alignment and appearance.",
+      "Surface cracks and worn joints should be checked before loose pieces become a safety problem. Tuckpointing, replacing individual bricks and rebuilding small sections can restore the sound areas while keeping the stable parts of the original chimney.",
+      "We repair crowns with drainage and edge protection in mind, so water runs off the chimney instead of into it. A good crown supports every other repair on the chimney. For Drumheller homes, we aim for a repair that fits the building, with a clear scope and tidy finishing.",
     ],
     whyChooseTitle: "Lasting Chimney Repair for Drumheller Homes",
     whyChooseDescription:
-      "From weathered joints to unstable upper courses, we repair the areas affecting chimney strength and water resistance while maintaining a finish that belongs on the home.",
+      "From weathered joints to unstable upper courses, we repair what affects the chimney's strength and water resistance, and finish it so it belongs on your home.",
     whyChooseItems: [
       "Diagnosis before repair recommendations",
-      "Careful preservation of sound masonry",
-      "Durable cap/crown and joint detailing",
-      "Clean integration with existing materials",
+      "Keeping sound masonry",
+      "Durable crown and joint detailing",
+      "A finish that blends in",
     ],
-    climateContext:
-      "Drumheller chimneys are exposed to sun, wind, winter freezing, and rapid weather changes that can widen existing cracks and weaken aged joints.",
+    weatherFaqAnswer:
+      "Drumheller is dry, but strong sun, wind, sudden weather changes and winter freezing still wear down mortar and brick. Small cracks let in water, and freezing makes them bigger.",
     images: {
       main: "/images/services/drumheller/drumheller-1.webp",
       mainFocus: "0%",
@@ -310,33 +305,32 @@ const locationContent: Record<ChimneyRepairAreaSlug, ChimneyRepairLocationConten
     metadataDescription:
       "Chimney repair in Claresholm, Alberta: cracks, leaks, caps and crowns repaired by DMG Masonry. Request an estimate or call 1-403-619-8727.",
     description:
-      "Our Claresholm chimney repair service restores deteriorated mortar, damaged brick or stone, a cracked cap/crown, and loose masonry. DMG Masonry plans each repair around the existing structure and the weather exposure common to southern Alberta.",
+      "DMG Masonry repairs chimneys in Claresholm: worn mortar, damaged brick or stone, a cracked crown and loose masonry. We plan each repair around your chimney and the weather in southern Alberta.",
     paragraphs: [
-      "Wind and quick temperature changes can be hard on chimneys in the Claresholm area. Open joints and hairline cap/crown cracks may admit wind-driven precipitation, and repeated freezing and thawing can gradually turn minor deterioration into loose or fractured masonry.",
-      "We inspect accessible chimney surfaces and components to identify the extent of the problem. The findings guide whether the chimney needs focused joint repairs, replacement of individual units, cap/crown work, or partial rebuilding of an unstable section.",
+      "Wind and quick temperature changes are hard on chimneys around Claresholm. Open joints and hairline cracks in the crown let wind-driven rain and snow in, and repeated freezing and thawing slowly turns small damage into loose or broken masonry.",
+      "We inspect the parts of the chimney we can reach to see how far the problem goes. That tells us whether you need a few joints repaired, individual bricks replaced, crown work, or a section rebuilt.",
     ],
     benefits: [
-      "Mortar & Masonry Restoration",
-      "Cap/Crown Repair",
-      "Spalling Brick Replacement",
-      "Chimney Stability Assessment",
+      "Mortar and masonry restoration",
+      "Crown repair",
+      "Spalled brick replacement",
+      "Chimney stability assessment",
     ],
     extraParagraphs: [
-      "Good preparation is essential to a durable repair. Failed mortar and masonry are removed back to sound material, bonding areas are cleaned, and replacement work is installed with attention to joint profile, alignment, and compatibility.",
-      "Restoring the top of the chimney is often just as important as repairing the walls below it. A sound cap/crown helps limit direct water entry and reduce the exposure that can shorten the life of new mortar and brickwork.",
-      "We help Claresholm homeowners protect their chimneys with repairs that are practical, tidy, and built for continued seasonal exposure. The goal is lasting performance and a cohesive appearance, not a temporary patch that will need repeated attention.",
+      "Preparation makes the repair last. We remove failed mortar and masonry back to sound material, clean the bonding surfaces and install the new work to match the joint profile and alignment.",
+      "The top of the chimney matters as much as the walls below it. A sound crown limits the water getting in and protects new mortar and brick. We aim for tidy repairs built for continued seasonal weather, not a temporary patch that needs attention again next year.",
     ],
     whyChooseTitle: "Chimney Repair Suited to Southern Alberta Weather",
     whyChooseDescription:
-      "Our repair process accounts for Claresholm's wind and changing temperatures, focusing on stable masonry, sound water-shedding details, and a finish compatible with the original chimney.",
+      "We allow for Claresholm's wind and changing temperatures: stable masonry, sound water-shedding details and a finish that matches the original chimney.",
     whyChooseItems: [
-      "Condition-based repair planning",
-      "Compatible brick, stone, and mortar work",
-      "Attention to wind-driven moisture entry",
-      "Professional finishing and site care",
+      "Repair plans based on condition",
+      "Matching brick, stone and mortar",
+      "Protection against wind-driven moisture",
+      "Neat finishing and site care",
     ],
-    climateContext:
-      "Claresholm's southern Alberta setting can bring strong wind and fast temperature shifts that test chimney joints, the cap/crown, and exposed masonry.",
+    weatherFaqAnswer:
+      "Claresholm's wind and fast temperature changes are hard on chimneys. Wind-driven rain and snow get into small cracks, and freezing and thawing breaks the masonry down over time.",
     images: {
       main: "/images/services/claresholm/claresholm-1.webp",
       mainFocus: "55%",

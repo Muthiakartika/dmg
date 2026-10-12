@@ -139,6 +139,14 @@
   color: var(--headingColor);
 }
 
+/* Intro line under the /services grid heading, spaced like the materials
+   intro above. (The materials intro sits inside .title-text, so `>` skips it.) */
+.services-wrap-area .section-title-wrap > p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: var(--textColor);
+}
+
 .services-wrap-area.without-bg-color .services-item {
   background-color: var(--cardBg);
 }

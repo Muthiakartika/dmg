@@ -5,14 +5,20 @@ import { services } from "@/lib/services";
 
 import arrowIcon from "../../../public/images/arrow-right.svg";
 
+interface ServicesGridProps {
+  /** Short intro under the heading, above the cards. */
+  description?: string;
+}
+
 /** Grid of every service on /services. */
-export default function ServicesGrid() {
+export default function ServicesGrid({ description }: ServicesGridProps) {
   return (
     <div className="services-wrap-area without-bg-color pt-100 pb-75">
       <div className="container">
         <div className="section-title-wrap">
           <span>SERVICES</span>
           <h2>Masonry Services for Calgary Homes & Businesses</h2>
+          {description && <p>{description}</p>}
         </div>
 
         <div className="row justify-content-center">

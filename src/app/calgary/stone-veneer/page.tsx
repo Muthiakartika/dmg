@@ -17,35 +17,35 @@ const stoneVeneerFaqs = [
     uuid: "faq-veneer-1",
     question: "What is the difference between stone veneer and full stone masonry?",
     answers: [
-      "Stone veneer is a thinner and lighter masonry surface designed to achieve the appearance of natural stone without the weight of full stone construction. It offers a more efficient installation process while still providing timeless visual appeal and long-term durability."
+      "Veneer is a thinner, lighter layer of stone that gives you the look of full stone without the weight. It's quicker to install and still durable."
     ]
   },
   {
     uuid: "faq-veneer-2",
     question: "Where can stone veneer be installed?",
     answers: [
-      "Stone veneer can be installed across a variety of interior and exterior surfaces, including fireplaces, feature walls, exterior facades, entryways, and accent areas. Its versatility makes it suitable for both residential and commercial applications."
+      "Inside and out: fireplaces, feature walls, exterior facades, entryways and accent areas, on homes and commercial buildings."
     ]
   },
   {
     uuid: "faq-veneer-3",
     question: "Is stone veneer suitable for Calgary's climate?",
     answers: [
-      "Yes. When installed properly, stone veneer performs reliably in Calgary's changing weather conditions. We use appropriate installation methods and durable materials to help the surface withstand moisture exposure and seasonal temperature fluctuations over time."
+      "Yes, when it's installed properly. We use suitable methods and durable materials so the veneer handles moisture and Calgary's temperature swings."
     ]
   },
   {
     uuid: "faq-veneer-4",
     question: "Do you provide custom stone veneer design guidance?",
     answers: [
-      "Yes. Our team helps clients select stone textures, colors, and layouts that complement the style and structure of the property. The goal is to create a balanced finish that maintains both timeless appearance and long-term value."
+      "Yes. We help you choose stone textures, colours and layouts that suit your house."
     ]
   },
   {
     uuid: "faq-veneer-5",
     question: "Can damaged stone veneer be repaired instead of replaced?",
     answers: [
-      "In many cases, yes. Damaged or aging stone veneer can be repaired rather than fully replaced. We assess the condition of the surface carefully and recommend repair solutions that help restore both appearance and structural reliability."
+      "Often, yes. Damaged or aging veneer can usually be repaired rather than replaced. We check the surface and tell you what it needs."
     ]
   }
 ];
@@ -55,22 +55,22 @@ const stoneVeneerProcessSteps = [
   {
     image: "/images/services/service/stone_veneer/2.webp",
     title: "Evaluate The Project",
-    text: "We review the space, surface conditions, and installation needs.",
+    text: "We look at the space and the surface we'll be working on.",
   },
   {
     image: "/images/services/service/stone_veneer/3.webp",
     title: "Prepare Materials & Layout",
-    text: "Stone veneer selections, layout patterns, and installation details are prepared.",
+    text: "We choose the stone, plan the layout pattern and prepare the details.",
   },
   {
     image: "/images/services/service/stone_veneer/4.webp",
     title: "Apply The Stone Veneer",
-    text: "Each section is installed carefully for secure placement and appearance.",
+    text: "We install each section carefully so it's secure and neat.",
   },
   {
     image: "/images/services/service/stone_veneer/5.webp",
     title: "Complete The Final Finish",
-    text: "The surface is refined to ensure clean detailing and long-term durability.",
+    text: "We finish the joints and details for a clean look.",
   },
 ];
 
@@ -152,11 +152,11 @@ export default function Page() {
         mainImage="/images/services/service/stone_veneer/1.webp"
         mainImageFocus="20%"
         title="Stone Veneer Installation in Calgary: Natural & Cultured Stone"
-        description="Stone veneer is a masonry finish that uses a thin layer of natural or engineered stone on interior and exterior surfaces. DMG Masonry is a stone veneer installer in Calgary, Alberta, focused on appearance, durability, and long-term performance."
+        description="Stone veneer is a thin layer of natural or manufactured stone applied to a wall. You get the look of full stone without the weight. DMG Masonry installs stone veneer in Calgary, inside and out."
         paragraphsHeading="What Is Stone Veneer and Why Use It?"
         paragraphs={[
-          "Stone veneer is widely used because it offers a flexible way to achieve a natural stone look without the weight and cost of full stone construction. It can be applied to feature walls, exterior facades, fireplaces, and other architectural surfaces while still maintaining structural efficiency.",
-          "In addition to its visual appeal, stone veneer is a practical choice for long-term property value. When installed correctly, it performs well in Calgary's changing weather conditions, requires minimal maintenance, and helps enhance both residential and commercial spaces with a timeless stone finish."
+          "Veneer is a flexible way to get a natural stone look without the weight and cost of full stone construction. We use it on feature walls, exterior facades, fireplaces and other surfaces.",
+          "Installed properly, it handles Calgary's weather, needs very little upkeep, and adds value to homes and commercial spaces."
         ]}
         benefits={[
           "Full Stone Veneer Installation",
@@ -166,9 +166,9 @@ export default function Page() {
         ]}
         extraParagraphsHeading="Stone Veneer Installer in Calgary: How Proper Installation Works"
         extraParagraphs={[
-          "Proper installation is essential to ensure stone veneer remains secure, stable, and performs well over time. Our team carefully handles surface preparation, material application, and finishing to achieve strong adhesion, clean detailing, and long-lasting results across both interior and exterior surfaces.",
-          "As stone veneer contractors in Calgary, we also guide clients through material and design selection to ensure the stone style complements the property's character, architecture, and intended use. By considering both function and appearance, we help create a balanced result that feels cohesive, durable, and visually appealing for the space.",
-          "We also provide stone veneer repair and maintenance for surfaces that have become loose, cracked, worn, or aged over time. Our goal is to restore both appearance and structural integrity so the surface continues to perform reliably while maintaining a clean, consistent, and well-finished appearance over the long term. Through careful repair work and proper material matching, we help preserve the overall look and durability of the masonry surface."
+          "Installation is where veneer succeeds or fails. We prepare the surface, apply the stone and finish the joints so it stays firmly attached and looks clean, indoors or out.",
+          "We also help you choose. We'll go through stone styles and colours with you, so the finish suits your house and how you use the space.",
+          "If you already have veneer that's loose, cracked or worn, we repair that too. We match the stone as closely as we can so the repair blends in."
         ]}
       />
 
@@ -196,12 +196,12 @@ export default function Page() {
       <WhyChooseUs
         image="/images/services/service/stone_veneer/8.webp"
         title="Why Do Calgary Property Owners Choose Stone Veneer?"
-        description="Stone veneer offers the timeless look of natural stone with a lighter structure and efficient installation. We create surfaces that enhance visual appeal, durability, and property value."
+        description="Veneer gives you the look of natural stone in a lighter, quicker-to-install form. We focus on clean installation and durable materials, so it looks good and lasts."
         listItems={[
-          "Custom stone veneer styles and finishes",
-          "Clean and precise installation",
-          "Durable long-term performance in Calgary's climate",
-          "Timeless architectural appearance"
+          "Custom styles and finishes",
+          "Clean, precise installation",
+          "Holds up in Calgary's climate",
+          "A natural stone look"
         ]}
         buttonText="Find Out More"
         buttonLink="/contact-us"
@@ -217,6 +217,7 @@ export default function Page() {
           image="/images/services/service/stone_veneer/9.webp"
           title="Request a Stone Veneer Quote in Calgary"
           subtitle="REQUEST A QUOTE"
+          description="Tell us about the wall or fireplace you have in mind. Call 1-403-619-8727 or fill in the form."
         />
       </div>
 

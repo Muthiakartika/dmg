@@ -164,6 +164,10 @@
   transform: translateY(-50%);
 }
 
+.about-two-content .about-two-note {
+  margin-top: 25px;
+}
+
 .about-two-content .about-btn {
   margin-top: 30px;
 }

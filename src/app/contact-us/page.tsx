@@ -19,7 +19,10 @@ export default function Page() {
       <PageTitle title="Contact DMG Masonry in Calgary" homeText="Home" homeUrl="/" titleAsHeading />
 
       <div className="ptb-100">
-        <ContactSection priorityImage />
+        <ContactSection
+          priorityImage
+          description="Have a project in mind, or a problem you'd like looked at? Call 1-403-619-8727, email will@dmgmasonry.ca, or fill in the form below. You'll find us at 1111 - 46 Ave S.E., Calgary, Alberta T2G 2A5."
+        />
       </div>
 
       <div className="pb-100">

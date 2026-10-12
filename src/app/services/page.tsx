@@ -17,14 +17,17 @@ export default function Page() {
     <>
       <Navbar />
       <PageTitle title="Masonry Services in Calgary" homeText="Home" homeUrl="/" titleAsHeading />
-      <ServicesGrid />
+      <ServicesGrid description="DMG Masonry offers masonry repair, new masonry builds and outdoor living projects for homes and commercial properties in Calgary and across Alberta. Choose a service below, or call 1-403-619-8727." />
 
       {/* The partner logo strip is left out until there are real partners to show:
           the template's placeholder brands would otherwise be indexed as our own.
           Component kept at src/components/Sections/Partners.tsx. */}
 
       <div className="pb-100">
-        <ContactSection title="Request a Quote for Your Masonry Project in Calgary" />
+        <ContactSection
+          title="Request a Quote for Your Masonry Project in Calgary"
+          description="Tell us what you need. Call 1-403-619-8727 or send us a message."
+        />
       </div>
 
       <Footer />

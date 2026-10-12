@@ -14,6 +14,29 @@ import sidebarImg from "../../../public/images/main-banner/home/9.webp";
 const videoUrl = "/video/video-loop.mp4";
 const posterUrl = "/images/video-poster.webp";
 
+const choosingTips = [
+  {
+    lead: "They look at the job first.",
+    text: "A good contractor visits the property before quoting, checks the damage or the site, and asks what you want.",
+  },
+  {
+    lead: "You get a clear quote.",
+    text: "It should say what's included, so there are no surprises later.",
+  },
+  {
+    lead: "Repairs blend in.",
+    text: "New brick and mortar should match what's already there.",
+  },
+  {
+    lead: "They keep you updated and clean up.",
+    text: "The work shouldn't leave you chasing answers or a mess.",
+  },
+  {
+    lead: "They tell you what can wait.",
+    text: "Not every crack needs fixing this year.",
+  },
+];
+
 /** "What Works and What to Consider" block with the looping video. */
 export default function VideoSection() {
   return (
@@ -25,11 +48,14 @@ export default function VideoSection() {
               <div className="title">
                 <span>SERVICE</span>
                 <h2>How to Choose a Masonry Company in Calgary</h2>
-                <p>
-                  At DMG Masonry, we believe good masonry work starts with clear planning and the
-                  right expectations. We help clients understand where masonry performs best so
-                  every project is built to last and completed efficiently.
-                </p>
+                <p>Choosing a masonry company is easier when you know what to look for:</p>
+                <ul className="mb-0">
+                  {choosingTips.map((tip) => (
+                    <li key={tip.lead}>
+                      <strong>{tip.lead}</strong> {tip.text}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -41,51 +67,24 @@ export default function VideoSection() {
               <LazyVideo src={videoUrl} poster={posterUrl} />
 
               <p style={{ marginTop: "30px" }}>
-                We works with masonry because it provides long-term durability, reliable
-                structural strength, and timeless performance across residential and commercial
-                projects. Its natural resistance to weather, moisture, fire, and everyday wear
-                makes masonry a dependable solution designed to last for years.
+                That&apos;s how we work. We plan the job before we start: the site, the materials
+                and the schedule. Then we keep you updated until it&apos;s finished.
               </p>
 
               <p>
-                Masonry also offers lasting visual appeal and practical long-term value for a
-                property. With proper construction, masonry structures typically require less
-                maintenance, improve energy efficiency through natural thermal mass, and maintain
-                their strength and appearance over time. Its durability, pest resistance, and long
-                lifespan continue to make masonry a trusted choice for timeless construction.
+                Why masonry in the first place? Brick and stone stand up to weather, moisture and
+                fire, need little maintenance, and hold heat well, which helps with energy use.
               </p>
 
               <div className="row justify-content-center">
                 <div className="col-lg-6 col-sm-6">
-                  <ArrowList items={["Weather Resistance", "Timeless Durability"]} icon={arrowIcon} />
+                  <ArrowList items={["Weather Resistance", "Low Maintenance"]} icon={arrowIcon} />
                 </div>
 
                 <div className="col-lg-6 col-sm-6">
-                  <ArrowList items={["Energy Efficiency", "Low Maintenance"]} icon={arrowIcon} />
+                  <ArrowList items={["Fire Resistance", "Holds Heat"]} icon={arrowIcon} />
                 </div>
               </div>
-
-              <p>
-                Proper masonry planning starts with careful coordination, material preparation,
-                and experienced project management. Because masonry materials require precise
-                handling and installation, our team plans each stage carefully to support safe
-                workflows, efficient construction, and lasting structural performance.
-              </p>
-
-              <p>
-                At DMG Masonry, we focus on practical planning that supports both durability and
-                long-term project quality. From foundation preparation to material selection and
-                scheduling, every detail is considered to help masonry structures perform reliably
-                over time.
-              </p>
-              <p>
-                Timeless masonry work requires more than durable materials alone. Through clear
-                communication, realistic timelines, and consistent on-site supervision, our team
-                carefully manages every stage of the project to maintain quality, efficiency, and
-                long-term performance. By combining practical planning with experienced
-                workmanship, we help create masonry projects designed to remain strong,
-                functional, and visually lasting for years to come.
-              </p>
             </div>
           </div>
 

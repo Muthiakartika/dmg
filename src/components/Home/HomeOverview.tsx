@@ -24,6 +24,7 @@ export default function HomeOverview() {
               <h3>
                 Outdoor Kitchen <span>Contractor</span>
               </h3>
+              <p>Built-in BBQs, counters and pizza ovens for your patio.</p>
             </div>
           </div>
 
@@ -40,6 +41,7 @@ export default function HomeOverview() {
               <h3>
                 Hardscape <span>Contractor</span>
               </h3>
+              <p>Patios, retaining walls and pavers.</p>
             </div>
           </div>
         </div>

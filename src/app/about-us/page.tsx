@@ -1,5 +1,4 @@
 import AboutContent from "@/components/About/AboutContent";
-import QuoteText from "@/components/About/QuoteText";
 import ContactSection from "@/components/Contact/ContactSection";
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
@@ -37,7 +36,11 @@ export default function Page() {
       <Navbar />
       <PageTitle title="About DMG Masonry: Calgary Masonry Contractors" homeText="Home" homeUrl="/" titleAsHeading />
       <AboutContent />
-      <QuoteText />
+
+      {/* The statement band ("We Help Every Client Create Functional and
+          Long-Lasting Masonry Spaces...") is left out: it repeated the section
+          above (Oct 2026 copy rewrite). Component kept at
+          src/components/About/QuoteText.tsx. */}
 
       <div className="ptb-100">
         <TestimonialCarousel feedbacks={feedbacks} />
@@ -48,7 +51,10 @@ export default function Page() {
           Component kept at src/components/About/TeamSection.tsx. */}
 
       <div className="pb-100 pt-100">
-        <ContactSection image="/images/about/new/3.webp" />
+        <ContactSection
+          image="/images/about/new/3.webp"
+          description="Tell us what you need and we'll get back to you. Call 1-403-619-8727 or send a message."
+        />
       </div>
 
       <Footer />

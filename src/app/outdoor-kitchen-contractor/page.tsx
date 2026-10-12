@@ -17,35 +17,35 @@ const outdoorKitchenFaqs = [
     uuid: "faq-kitchen-1",
     question: "Can you build outdoor kitchens for smaller outdoor spaces?",
     answers: [
-      "Yes. We design outdoor kitchens to make the most of available space while maintaining functionality, movement flow, and practical cooking use. Even compact Calgary backyards can be transformed into efficient outdoor cooking and gathering spaces.",
+      "Yes. We design outdoor kitchens to make the most of the space, with room to move and cook. Even a compact Calgary backyard can fit an efficient outdoor kitchen.",
     ],
   },
   {
     uuid: "faq-kitchen-2",
     question: "Do you install built-in BBQ features and appliances?",
     answers: [
-      "Absolutely. We build fully integrated outdoor BBQ kitchens in Calgary that can include built-in grills, sinks, storage solutions, pizza ovens, and other cooking appliances based on the project design and requirements.",
+      "Yes. We build outdoor BBQ kitchens with built-in grills, sinks, storage, pizza ovens and other appliances, based on your design.",
     ],
   },
   {
     uuid: "faq-kitchen-3",
     question: "Are outdoor kitchens built to withstand weather conditions?",
     answers: [
-      "Yes. We use durable materials and reliable construction methods designed to perform well in outdoor environments, including exposure to moisture, heat, and Calgary's seasonal weather changes.",
+      "Yes. We use durable materials and construction made for outdoor use, including moisture, heat and Calgary's seasonal changes.",
     ],
   },
   {
     uuid: "faq-kitchen-4",
     question: "Can outdoor kitchens include seating and lighting areas?",
     answers: [
-      "Yes. Many of our projects include integrated seating, bar areas, prep stations, and lighting features to create a more functional and comfortable outdoor entertainment space.",
+      "Yes. Many of our projects include bar seating, prep areas and lighting.",
     ],
   },
   {
     uuid: "faq-kitchen-5",
     question: "How much does an outdoor kitchen cost in Calgary?",
     answers: [
-      "Pricing depends on layout, material selection, size, and the features included in the design. We provide clear and detailed quotations so clients understand the scope and investment before the project begins.",
+      "It depends on the layout, materials, size and features. We give you a clear, detailed quote, so you know the scope and cost before work begins.",
     ],
   },
 ];
@@ -87,22 +87,22 @@ const outdoorKitchenProcessSteps = [
   {
     image: "/images/services/service/outdoor_kitchen/2.webp",
     title: "Assess The Space",
-    text: "We review layout, needs, and available outdoor area before starting.",
+    text: "We look at your layout, what you need and the outdoor area available.",
   },
   {
     image: "/images/services/service/outdoor_kitchen/3.webp",
     title: "Plan The Setup",
-    text: "Cooking needs, materials, and design are prepared for a functional layout.",
+    text: "We plan the cooking setup, materials and layout.",
   },
   {
     image: "/images/services/service/outdoor_kitchen/4.webp",
     title: "Build The Kitchen",
-    text: "We construct outdoor BBQ and cooking areas with durable materials and methods.",
+    text: "We build the BBQ and cooking areas with durable materials.",
   },
   {
     image: "/images/services/service/outdoor_kitchen/5.webp",
     title: "Finalize The Details",
-    text: "Finishing work ensures usability, clean look, and long-term performance.",
+    text: "We finish the details so it's easy to use and looks clean.",
   },
 ];
 
@@ -158,23 +158,23 @@ export default function Page() {
         mainImage="/images/services/service/outdoor_kitchen/1.webp"
         mainImageFocus="60%"
         title="Outdoor Kitchens in Calgary: Custom BBQ & Patio Kitchen Contractor"
-        description="DMG Masonry is an outdoor kitchen contractor in Calgary, Alberta. A professionally designed outdoor kitchen creates a space where cooking, dining, and gathering happen in one connected outdoor environment. We build practical and timeless outdoor BBQ and cooking spaces that complement your property."
+        description="DMG Masonry builds outdoor kitchens in Calgary. An outdoor kitchen puts cooking, dining and gathering in one place, so nobody is running back and forth to the house. We build BBQ areas and full outdoor kitchens in masonry, designed around your patio."
         paragraphsHeading="Outdoor Kitchen Ideas for Calgary Patios"
         paragraphs={[
-          "An outdoor kitchen is a permanent, built-in cooking and dining area, usually combining a BBQ grill, prep counters, storage and seating in one masonry structure. Outdoor cooking spaces experience continuous exposure to heat, moisture, changing temperatures, and everyday activity. Through reliable installation methods and carefully selected materials, we construct outdoor kitchens in Calgary designed to remain dependable, visually consistent, and suitable for regular use throughout the seasons.",
-          "Thoughtful outdoor layouts can also improve how a space feels and functions over time. From built-in grills and preparation counters to bar seating and entertainment areas, every feature is planned to create a welcoming outdoor setting that feels organized, comfortable, and naturally integrated with the surrounding space.",
+          "An outdoor kitchen is a permanent cooking and dining area, usually a BBQ grill, prep counters, storage and seating built into one masonry structure. It sits outside all year, through heat, moisture and Calgary's temperature swings, so we build it with durable materials and sound construction.",
+          "A good layout is what makes it work. From built-in grills and prep counters to bar seating, we plan each feature so the space is comfortable to use and fits your yard.",
         ]}
         benefits={[
-          "Personalized Layouts",
-          "Outdoor BBQ & Entertainment Integration",
-          "Reliable Outdoor Construction",
-          "Everyday-use Spaces",
+          "Layouts planned around you",
+          "BBQ and entertaining built in",
+          "Made for outdoor use",
+          "For everyday cooking",
         ]}
         extraParagraphsHeading="Planning Your Outdoor Kitchen: Layout, Materials & Cost"
         extraParagraphs={[
-          "Planning is an important part of every outdoor kitchen project. Layout, cooking requirements, available space, and material selection are all reviewed carefully to ensure the final design supports both usability and long-term performance while fitting naturally with the overall outdoor environment and how the space will be used day to day.",
-          "From simple outdoor barbecue stations to more complete outdoor cooking setups, each project we handle is approached with a focus on practical construction and clean execution. Every detail is considered to ensure the space works well in real use, not just in design, while also maintaining a balanced and functional layout that suits the property.",
-          "Long-term performance comes down to the combination of proper construction methods, quality materials, and careful installation. With this approach, we build outdoor kitchens across north and south Calgary that remain functional, visually consistent, and reliable over time, even with regular outdoor use and changing conditions.",
+          "Planning comes first. We look at how you cook, how much space you have and which materials suit your property, then design for how the kitchen will be used day to day.",
+          "We build everything from a simple BBQ station to a full outdoor cooking setup, across north and south Calgary.",
+          "Cost depends on the layout, the materials, the size and the features. We give you a clear, detailed quote, so you know what's included before work starts.",
         ]}
       />
 
@@ -200,12 +200,11 @@ export default function Page() {
       <WhyChooseUs
         image="/images/services/service/outdoor_kitchen/8.webp"
         title="Why Choose DMG Masonry For An Outdoor Kitchen In Calgary?"
-        description="Outdoor kitchen spaces work best when planned around how people cook, gather, and spend time outside. As outdoor kitchen builders in Calgary, our approach focuses on creating functional layouts that support everyday use and social outdoor experiences."
+        description="An outdoor kitchen works best when it's planned around how you cook and who you cook for. We build outdoor kitchens in Calgary with practical layouts, so the space gets used."
         listItems={[
           "Practical cooking layouts",
-          "Integrated outdoor BBQ features",
-          "Comfortable gathering spaces",
-          "Functional outdoor experience",
+          "BBQ built in",
+          "Space for people to gather",
           "Serving north and south Calgary",
         ]}
         buttonText="Talk to Our Team"
@@ -223,6 +222,7 @@ export default function Page() {
           image="/images/services/service/outdoor_kitchen/9.webp"
           title="Request an Outdoor Kitchen Quote in Calgary"
           subtitle="REQUEST A QUOTE"
+          description="Tell us about your space and how you like to cook. Call 1-403-619-8727 or fill in the form."
         />
       </div>
 

@@ -13,6 +13,8 @@ const LG_UP_QUERY = "(min-width: 992px)";
 interface ContactSectionProps {
   title?: string;
   subtitle?: string;
+  /** Short line under the heading, above the form. */
+  description?: string;
   image?: string | StaticImageData;
   /**
    * Load the side image eagerly. Only true on /contact-us, where this
@@ -26,6 +28,7 @@ interface ContactSectionProps {
 export default function ContactSection({
   title = "Contact Our Team to Discuss Your Masonry Project",
   subtitle = "CONTACT",
+  description,
   image = defaultImage,
   priorityImage = false,
 }: ContactSectionProps) {
@@ -71,6 +74,7 @@ export default function ContactSection({
               <div className="title">
                 <span>{subtitle}</span>
                 <h2>{title}</h2>
+                {description && <p>{description}</p>}
               </div>
 
               <div className="row align-items-center">

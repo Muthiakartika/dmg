@@ -11,10 +11,10 @@ import archiTextImg from "../../../public/images/about/archi-text.png";
 import arrowIcon from "../../../public/images/about/arrow.svg";
 
 const highlights = [
-  "Residential and commercial masonry projects",
-  "Timeless masonry built for long-term durability",
-  "Experienced craftsmanship and detailed workmanship",
-  "Custom masonry solutions for every project",
+  "Homes and commercial buildings",
+  "Repairs, restoration and new builds",
+  "Built for Calgary winters",
+  "Custom work, designed around your property",
 ];
 
 /** About block under the home hero. Carries the page's h1 (wording set by the
@@ -61,9 +61,10 @@ export default function HomeAbout() {
                 <div className="col-lg-7">
                   <div className="inner-content">
                     <p>
-                      We provide professional masonry services in Calgary for residential and
-                      commercial projects, combining timeless craftsmanship with durable materials
-                      and quality workmanship built to last.
+                      DMG Masonry is a Calgary masonry contractor with more than 35 years of
+                      experience. We repair and restore brick and stone, and we build custom
+                      fireplaces, fire pits, pizza ovens and outdoor kitchens for homes and
+                      commercial properties. Request a quote, or call 1-403-619-8727.
                     </p>
 
                     <ArrowList items={highlights} icon={arrowIcon} />

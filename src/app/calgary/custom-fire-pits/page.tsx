@@ -17,70 +17,63 @@ const firePitsFaqs = [
     uuid: "faq-firepit-1",
     question: "Do you build both gas and wood-burning fire pits?",
     answers: [
-      "Yes. We design and install both gas-fueled and wood-burning fire pits depending on the property layout, intended use, and outdoor design preferences. Each fire pit installation is carefully planned to support safe and reliable long-term performance.",
+      "Yes. We build both, and we'll help you choose based on your yard, how you'll use it and the look you want.",
     ],
   },
   {
     uuid: "faq-firepit-2",
     question: "Can the fire pit design be customized?",
     answers: [
-      "Absolutely. Our team customizes the shape, size, material finish, and overall layout of each custom fire pit to complement the surrounding outdoor space while matching your property's style and functional needs.",
+      "Yes. We customize the shape, size, finish and layout so the fire pit suits your yard and your house.",
     ],
   },
   {
     uuid: "faq-firepit-3",
     question: "Can a fire pit be integrated into an existing outdoor area?",
     answers: [
-      "Yes. Fire pits can be incorporated into patios, seating areas, and other hardscape features to create a more cohesive and functional outdoor environment. We carefully plan the layout so the fire pit installation feels naturally connected to the space.",
+      "Yes. A fire pit can be built into an existing patio, seating area or other hardscape. We plan the layout so it connects with what's already there.",
     ],
   },
   {
     uuid: "faq-firepit-4",
     question: "Are custom fire pits designed with safety in mind?",
     answers: [
-      "Yes. Every fire pit installation is completed using reliable construction methods and planned according to appropriate safety practices and local requirements. Proper spacing, material selection, and installation techniques all contribute to long-term safe use.",
+      "Yes. We follow safe construction practices and local requirements, with proper spacing and suitable materials.",
     ],
   },
   {
     uuid: "faq-firepit-5",
     question: "How long does a custom fire pit typically last?",
     answers: [
-      "With proper construction and durable materials, a professionally built fire pit can remain functional and visually appealing for many years. Regular maintenance and quality workmanship also help support long-term outdoor durability and performance.",
-    ],
-  },
-  {
-    uuid: "faq-firepit-6",
-    question: "Is a permit required to build a fire pit in Calgary?",
-    answers: [
-      "Permit requirements for a fire pit installation in Calgary can depend on the design, fuel type, and local building requirements. We can help you understand what applies to your specific fire pit project before construction begins.",
+      "A professionally built fire pit can last many years. Good materials, solid construction and basic upkeep, like clearing ash and checking the joints, keep it in good shape.",
     ],
   },
   {
     uuid: "faq-firepit-7",
     question: "How long does fire pit mortar need to cure before use?",
     answers: [
-      "Mortar used in fire pit construction typically needs several days to cure properly before the fire pit is used, similar to the cure time required for most masonry jobs. We'll let you know the recommended waiting period for your specific installation.",
+      "Typically several days, as with most masonry work. We'll tell you how long to wait before the first fire.",
     ],
   },
   {
     uuid: "faq-firepit-8",
     question: "What is the typical deposit required to start a fire pit installation?",
     answers: [
-      "Most fire pit installations, like other masonry projects, require an upfront deposit to secure materials and scheduling, with the remaining balance due as the project progresses or upon completion.",
+      "Most fire pit projects need a deposit up front to secure materials and scheduling. The balance is due as the work progresses or when it's finished.",
     ],
   },
   {
     uuid: "faq-firepit-9",
     question: "Can a fire pit be built with natural stone or stone veneer?",
     answers: [
-      "Yes. Fire pits can be finished with natural stone, stone veneer, brick, or other masonry materials depending on the look you're going for and your budget. We can walk you through the options during the design stage.",
+      "Yes. We can finish a fire pit in natural stone, stone veneer, brick or other masonry, depending on the look you want and your budget. We'll go through the options at the design stage.",
     ],
   },
   {
     uuid: "faq-firepit-10",
     question: "What's the difference between a wood-burning and gas fire pit?",
     answers: [
-      "Wood-burning fire pits offer a traditional look and feel, while gas and propane fire pits provide more convenient, consistent use without the need to manage firewood. The right choice often comes down to personal preference and how you plan to use the space.",
+      "Wood-burning fire pits give you the traditional look and feel of a real fire. Gas and propane ones are more convenient: no firewood to manage, and the flame is consistent. Which is better depends on how you plan to use the space.",
     ],
   },
 ];
@@ -109,22 +102,22 @@ const firePitMaterials = [
   {
     icon: "flaticon-cube",
     title: "Natural Stone",
-    text: "Natural stone gives a fire pit a textured, organic look that pairs well with both traditional and modern outdoor spaces, while standing up to years of outdoor exposure.",
+    text: "Gives a textured, natural look that suits both traditional and modern yards, and stands up to the weather.",
   },
   {
     icon: "flaticon-facade",
     title: "Stone Veneer",
-    text: "Stone veneer delivers the look of full stone masonry at a lighter weight, making it one of the most popular finishes for Calgary fire pit installations while still offering excellent durability.",
+    text: "Looks like full stone but weighs less. It's one of the most popular finishes for Calgary fire pits and is still very durable.",
   },
   {
     icon: "flaticon-mansory",
     title: "Brick",
-    text: "Brick provides a clean, classic finish that suits a wide range of backyard styles and holds up well to Calgary's seasonal temperature swings.",
+    text: "A clean, classic finish that suits many backyard styles and handles Calgary's temperature swings.",
   },
   {
     icon: "flaticon-houses",
     title: "Eco-Friendly & Custom Finishes",
-    text: "We're also able to source eco-friendly and sustainably produced masonry materials for homeowners who want their fire pit project to reflect that priority, along with custom finish options to match your outdoor space.",
+    text: "We can source eco-friendly and sustainably produced masonry materials, and custom finishes to match your outdoor space.",
   },
 ];
 
@@ -133,22 +126,22 @@ const firePitsProcessSteps = [
   {
     image: "/images/services/service/custom_firepit/2.webp",
     title: "Review The Space",
-    text: "We assess the layout and installation area before construction begins.",
+    text: "We look at the layout and the spot where the fire pit will go.",
   },
   {
     image: "/images/services/service/custom_firepit/3.webp",
     title: "Plan The Design",
-    text: "Materials, fuel type, and functionality are carefully planned for your custom fire pit.",
+    text: "We plan the materials, fuel type and layout for your fire pit.",
   },
   {
     image: "/images/services/service/custom_firepit/4.webp",
     title: "Build The Fire Pit",
-    text: "The structure is installed using durable masonry materials built to last.",
+    text: "We build the structure with durable masonry.",
   },
   {
     image: "/images/services/service/custom_firepit/5.webp",
     title: "Complete The Finishing",
-    text: "Final details support safe use, clean lines, and lasting visual balance.",
+    text: "We add the final details for safe use and a clean finish.",
   },
 ];
 
@@ -205,31 +198,30 @@ export default function Page() {
         mainImage="/images/services/service/custom_firepit/1.webp"
         mainImageFocus="45%"
         title="Fire Pits Calgary: Custom Fire Pit Installation & Design"
-        description="DMG Masonry builds custom fire pits in Calgary, Alberta. A custom fire pit can transform any outdoor area into a more comfortable and inviting space for gathering and relaxation. Our fire pit installation combines practical function with timeless design, giving homeowners a fire pit built for lasting enjoyment and everyday visual appeal."
+        description="DMG Masonry builds custom fire pits in Calgary. A good fire pit gives your yard somewhere to sit, gather and stay out longer. We design and build them in natural stone, stone veneer or brick, burning wood or gas."
         paragraphsHeading="What Makes a Custom Fire Pit Last in Alberta Winters?"
         paragraphs={[
-          "Outdoor fire features must be built to handle regular use, changing weather conditions, and long-term exposure to heat and moisture. Using reliable construction methods and durable masonry materials, our fire pit installation Calgary homeowners rely on is designed to maintain both structural stability and a consistent visual appearance for years to come.",
+          "A fire pit lives outside. It takes heat, rain, snow and freeze-thaw every year, so it has to be built for that. We use durable masonry on a proper base, with joints and finishes chosen to cope with Alberta winters. The result keeps its shape and its look season after season.",
         ]}
         benefits={[
-          "Custom Fire Pit Designs",
-          "Integrated Outdoor Features",
-          "Durable Masonry Construction",
-          "Safe Professional Installation",
-          "Fire Pit Installation Calgary Homeowners Trust",
-          "Wood-Burning & Gas Fire Pit Options",
-          "Natural Stone & Stone Veneer Finishes",
+          "Custom fire pit designs",
+          "Wood-burning and gas options",
+          "Natural stone and stone veneer finishes",
+          "Built with durable masonry",
+          "Integrated with your outdoor space",
+          "Installed with safety in mind",
         ]}
         extraParagraphsHeading="Fire Pit Planning & Design in Calgary"
         extraParagraphs={[
-          "Careful planning is an important part of every fire pit installation. Layout, material selection, fuel type, and overall functionality are all carefully considered to ensure the final custom fire pit complements the outdoor space while supporting reliable performance, practical everyday use, and long-term durability.",
-          "Our team designs and builds custom fire pits Calgary homeowners can enjoy for years, from modern outdoor features to more rustic masonry layouts, with quality craftsmanship maintained throughout each stage of construction. Every fire pit installation is completed with clean finishing, dependable functionality, and durable construction suited for outdoor living spaces.",
-          "Well-built outdoor fire pits depend on experienced workmanship, durable materials, and proper installation practices. By combining practical construction methods with timeless outdoor design, we create fire pit spaces across Calgary that remain functional, visually appealing, and naturally integrated into the overall character of the property.",
+          "We plan before we build. Layout, materials, fuel type and how you'll use the fire pit all affect the design, so we work them out first. Then the fire pit sits properly in your yard and works the way you use it.",
+          "We build custom fire pits for Calgary homes in modern and rustic styles, with clean finishing from the first course to the final detail.",
+          "Fire pits often sit alongside patios, seating walls and outdoor kitchens. We use the same stone throughout, so the whole space looks designed as one.",
         ]}
       />
 
       <MaterialsSection
         title="What Materials Are Fire Pits Made From?"
-        description="The material you choose has a big impact on how your fire pit looks and holds up over time outdoors. Here's a look at the finishes we work with most often on Calgary fire pits."
+        description="The material changes how your fire pit looks and how it holds up outdoors. Here are the finishes we use most."
         items={firePitMaterials}
       />
 
@@ -255,15 +247,13 @@ export default function Page() {
       <WhyChooseUs
         image="/images/services/service/custom_firepit/8.webp"
         title="Why Choose DMG Masonry For Custom Fire Pits In Calgary?"
-        description="An expertly crafted custom fire pit can create a more inviting outdoor setting while adding practical value and lasting character to your property. Our fire pit installation Calgary homeowners choose creates safe, dependable gathering areas built for everyday outdoor living."
+        description="A fire pit gives a yard a place to gather, and the right one adds real value to your property. We build safe, solid fire pits for everyday use, designed around your yard."
         listItems={[
-          "Safe and reliable construction",
-          "Custom fire pits Calgary homeowners design with us",
-          "Built for everyday outdoor use",
-          "Long-term durability and comfort",
-          "Wood-burning & gas fire pit options",
+          "Built safely and solidly",
+          "Custom designs for your yard",
+          "Made for everyday use",
+          "Wood-burning and gas options",
           "Natural stone and stone veneer finishes",
-          "Fire pit installation Calgary homeowners recommend",
         ]}
         buttonText="Plan Your Project"
         buttonLink="/contact-us"
@@ -279,6 +269,7 @@ export default function Page() {
           image="/images/services/service/custom_firepit/9.webp"
           title="Request a Fire Pit Installation Quote in Calgary"
           subtitle="REQUEST A QUOTE"
+          description="Ready to plan your fire pit? Tell us about your yard and what you have in mind. Call 1-403-619-8727 or fill in the form."
         />
       </div>
 

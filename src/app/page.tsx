@@ -48,25 +48,25 @@ const processSteps: ProcessStep[] = [
     image: processImg1,
     imageAlt: "Project Consultation",
     title: "Project Consultation",
-    text: "Reviewing your property and masonry needs.",
+    text: "We look at your property and talk through what you need.",
   },
   {
     image: processImg2,
     imageAlt: "Site & Material Planning ",
     title: "Site & Material Planning ",
-    text: "Coordinating materials and project preparation.",
+    text: "We plan the schedule and order the materials.",
   },
   {
     image: processImg3,
     imageAlt: "Professional Installation",
     title: "Professional Installation",
-    text: "Delivering durable masonry with skilled workmanship.",
+    text: "We do the work and keep you updated as we go.",
   },
   {
     image: processImg4,
     imageAlt: "Final Quality Review",
     title: "Final Quality Review",
-    text: "Ensuring lasting quality and clean results.",
+    text: "We check the finished work with you and clean up the site.",
   },
 ];
 
@@ -93,35 +93,35 @@ const faqs: FaqItem[] = [
     uuid: "faq-repair-1",
     question: "What masonry services do you provide in Calgary?",
     answers: [
-      "We provide complete masonry services in Calgary, including brick, stone, and concrete block construction for residential and commercial properties. Our work also includes masonry repairs, restorations, and custom installations designed to maintain long-term durability, timeless appearance, and lasting structural performance.",
+      "Brick, stone and concrete block work for homes and commercial properties. That covers repairs and restoration, plus custom builds such as fireplaces, fire pits, pizza ovens, outdoor kitchens, patios and retaining walls.",
     ],
   },
   {
     uuid: "faq-repair-2",
     question: "How do we know if masonry is the right choice for our project?",
     answers: [
-      "Our team reviews your project goals, budget, property layout, and site conditions before recommending the most suitable masonry solution. We focus on helping clients choose materials and construction methods that provide timeless style, reliable durability, and long-term value for the property.",
+      "Tell us what you're planning. We'll look at your goals, budget, property and site conditions, then recommend the materials and building method that fit.",
     ],
   },
   {
     uuid: "faq-repair-3",
     question: "Can masonry withstand Calgary’s weather conditions?",
     answers: [
-      "Yes, we work on both new masonry construction and repair projects. From cracked brickwork and deteriorated mortar to complete masonry installations, our goal is to restore or build masonry structures that remain functional, durable, and visually timeless for years to come.",
+      "Yes, when it's built and looked after properly. Brick and stone resist weather, moisture and fire. The main threat in Calgary is freeze-thaw: water gets into small cracks, freezes and makes them wider. Sound mortar joints and quick repairs keep that in check.",
     ],
   },
   {
     uuid: "faq-repair-4",
     question: "Do you handle both new construction and masonry repairs?",
     answers: [
-      "Yes, we work on both new masonry construction and repair projects. From cracked brickwork and deteriorated mortar to complete masonry installations, our goal is to restore or build masonry structures that remain functional, durable, and visually timeless for years to come.",
+      "Yes. We repair cracked brick and worn mortar, and we build new masonry such as fireplaces, patios and outdoor kitchens.",
     ],
   },
   {
     uuid: "faq-repair-5",
     question: "How do we get started with a masonry project?",
     answers: [
-      "Simply contact our team to discuss your project and masonry goals. We will review your needs, assess the site conditions, and provide professional guidance with a clear estimate so the project can move forward with careful planning and long-term performance in mind.",
+      "Contact us with a few details about your project. We'll look at the site and give you a clear estimate.",
     ],
   },
 ];

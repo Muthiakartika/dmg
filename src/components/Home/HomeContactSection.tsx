@@ -26,9 +26,8 @@ export default function HomeContactSection() {
                   <span>Request a Quote</span> from a Calgary Masonry Contractor
                 </h2>
                 <p>
-                  Let&apos;s discuss your masonry project and how we can help create a timeless
-                  results for your property. Our team provides masonry solutions built for
-                  lasting quality.
+                  Tell us about your project. We&apos;ll look at the site, talk through your
+                  options and give you a clear quote. Call 1-403-619-8727 or send us a message.
                 </p>
               </div>
 

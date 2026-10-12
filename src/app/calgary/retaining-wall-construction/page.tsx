@@ -17,35 +17,35 @@ const retainingWallFaqs = [
     uuid: "faq-retaining-1",
     question: "Why is proper drainage important for retaining walls?",
     answers: [
-      "Drainage plays a critical role in retaining wall performance. Without proper water management, pressure can build behind the wall over time, which may affect structural stability. Our retaining wall installations are planned with drainage considerations to support long-term durability and reliable performance.",
+      "Water is the main thing that pushes a wall over. If it can't drain, pressure builds up behind the wall and can affect its stability. We plan drainage into every wall.",
     ],
   },
   {
     uuid: "faq-retaining-2",
     question: "What materials are commonly used for retaining walls?",
     answers: [
-      "We work with a variety of retaining wall materials including natural stone, concrete blocks, modular wall systems, and other masonry products. Material selection depends on site conditions, structural needs, visual style, and overall project goals.",
+      "Natural stone, concrete block, modular wall systems and other masonry products. The right one depends on your site, what the wall has to hold back and the look you want.",
     ],
   },
   {
     uuid: "faq-retaining-3",
     question: "Can retaining walls be installed on sloped properties?",
     answers: [
-      "Yes. Retaining walls are often used to help manage elevation changes and improve the usability of sloped outdoor spaces. Before construction begins, we assess the site conditions carefully to determine the most appropriate wall structure and installation approach.",
+      "Yes. Retaining walls are often used to manage slopes and make them usable. We look at the site first to choose the right wall and method.",
     ],
   },
   {
     uuid: "faq-retaining-4",
     question: "Do retaining wall projects require permits or inspections?",
     answers: [
-      "Some retaining wall projects in Calgary may require permits depending on wall size, location, and local regulations. When required, our team helps coordinate the necessary approvals and ensures the work aligns with applicable building standards.",
+      "Some retaining walls in Calgary need a permit, depending on the size, location and local rules. When one is required, we help coordinate the approvals and make sure the work meets the applicable standards.",
     ],
   },
   {
     uuid: "faq-retaining-5",
     question: "How long does a retaining wall typically last?",
     answers: [
-      "When constructed with proper drainage, quality materials, and reliable installation methods, retaining walls can remain structurally stable and visually consistent for many years. Long-term performance also depends on site conditions and ongoing maintenance over time.",
+      "A wall built with good drainage, quality materials and sound methods can stay stable for many years. How long also depends on the site and on upkeep.",
     ],
   },
 ];
@@ -75,22 +75,22 @@ const retainingWallProcessSteps = [
   {
     image: "/images/services/service/retaining_wall/2.webp",
     title: "Evaluate The Site",
-    text: "We assess grading, drainage, and soil conditions before installation begins.",
+    text: "We check the grade, drainage and soil.",
   },
   {
     image: "/images/services/service/retaining_wall/3.webp",
     title: "Plan The Wall Structure",
-    text: "Layout, materials, and wall support requirements are carefully prepared.",
+    text: "We plan the layout, the materials and what the wall needs to hold back.",
   },
   {
     image: "/images/services/service/retaining_wall/4.webp",
     title: "Build The Retaining Wall",
-    text: "The retaining wall is constructed using durable materials and proper installation methods.",
+    text: "We build the wall with durable materials and proper methods.",
   },
   {
     image: "/images/services/service/retaining_wall/5.webp",
     title: "Complete The Finishing",
-    text: "Final adjustments help ensure structural support and a clean overall appearance.",
+    text: "We finish the details so the wall is solid and neat.",
   },
 ];
 
@@ -151,23 +151,23 @@ export default function Page() {
         mainImage="/images/services/service/retaining_wall/1.webp"
         mainImageFocus="75%"
         title="Retaining Wall Contractor in Calgary: Construction & Installation"
-        description="DMG Masonry builds retaining walls in Calgary, Alberta. Retaining walls help manage sloped landscapes while improving the structure and appearance of an outdoor space. Ours are designed for dependable support, proper drainage, and a clean finish that fits naturally with the property."
+        description="DMG Masonry builds retaining walls in Calgary. A retaining wall holds back soil on a slope, controls where water goes, and makes the ground above and below it easier to use. We build them with proper drainage and a clean finish that suits your property."
         paragraphsHeading="What a Retaining Wall Does for Calgary Yards"
         paragraphs={[
-          "A properly built retaining wall helps reduce soil movement, erosion, and water-related issues that can affect the stability of the landscape over time. Our team carefully plans each installation to ensure the wall performs reliably while maintaining a balanced and visually cohesive appearance within the outdoor environment.",
-          "Beyond structural support, retaining walls can also help define outdoor spaces and improve long-term property functionality. Whether used for elevation changes, garden areas, or landscape organization, a professionally installed retaining wall adds both durability and visual structure to the property.",
+          "A well-built retaining wall holds the soil in place. It reduces the erosion and water problems that can undermine a slope over time. We plan each wall so it does that job and looks right in your yard.",
+          "A wall can also give a yard shape. It can level off a garden bed, create a terrace, or separate one area of the yard from another.",
         ]}
         benefits={[
-          "Structural Support",
-          "Durable Wall Construction",
-          "Proper Drainage Solutions",
-          "Clean Landscape Integration",
+          "Holds back soil",
+          "Built to last",
+          "Drains properly",
+          "Fits your landscape",
         ]}
         extraParagraphsHeading="Planning a Retaining Wall: Slope, Drainage & Soil"
         extraParagraphs={[
-          "Proper planning is an essential part of any retaining wall installation. Before construction begins, we evaluate soil conditions, grading, drainage flow, and site layout to determine the most suitable wall structure for the property while helping support long-term stability and performance.",
-          "As a hardscape contractor in Calgary, we build retaining walls using a variety of materials and finish options to match different landscape styles and structural needs. Whether using natural stone, concrete block, or modular retaining wall systems, our installations are designed to provide dependable support while maintaining a clean and cohesive outdoor appearance.",
-          "Strong retaining wall construction depends on proper site preparation, reliable materials, and consistent workmanship throughout the installation process. By focusing on structural support, drainage efficiency, and durable construction methods, we build retaining walls Calgary properties can rely on through changing outdoor conditions while maintaining their overall appearance and functionality.",
+          "Planning decides how well a wall performs. Before we build, we check the soil, the grade, how water flows and the layout of the site, then choose the wall that suits the property.",
+          "We build with natural stone, concrete block and modular wall systems, whichever fits your site and the look you want.",
+          "A good wall depends on solid site preparation, the right materials and consistent workmanship. The base and the drainage behind the wall do most of the work.",
         ]}
       />
 
@@ -193,13 +193,13 @@ export default function Page() {
       <WhyChooseUs
         image="/images/services/service/retaining_wall/8.webp"
         title="Why Choose DMG Masonry as Your Retaining Wall Builder in Calgary?"
-        description="Retaining walls help support uneven ground and improve outdoor usability. We build retaining walls Calgary homeowners and commercial property owners rely on for dependable performance and a clean appearance."
+        description="A retaining wall makes uneven ground stable and usable. We build walls for homeowners and commercial properties in Calgary, with proper drainage and a clean finish."
         listItems={[
-          "Helps stabilize uneven terrain",
-          "Creates cleaner and more usable outdoor areas",
-          "Constructed with durable retaining wall materials",
-          "Designed to complement the surrounding landscape",
-          "Part of a full hardscape construction plan",
+          "Stabilizes uneven ground",
+          "Makes your yard more usable",
+          "Built with durable materials",
+          "Suited to the surrounding landscape",
+          "Part of a full hardscape plan",
         ]}
         buttonText="Start Your Project"
         buttonLink="/contact-us"
@@ -215,6 +215,7 @@ export default function Page() {
           image="/images/services/service/retaining_wall/9.webp"
           title="Request a Retaining Wall Quote in Calgary"
           subtitle="REQUEST A QUOTE"
+          description="Tell us about your slope and what you want the wall to do. Call 1-403-619-8727 or fill in the form."
         />
       </div>
 

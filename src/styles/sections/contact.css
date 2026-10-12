@@ -27,6 +27,10 @@
   font-weight: 400;
 }
 
+.contact-area.bg-white-wrap .contact-form-wrap .title p {
+  margin: 15px 0 0;
+}
+
 .contact-area.bg-white-wrap .contact-form-wrap form .form-group label {
   color: var(--headingColor);
 }

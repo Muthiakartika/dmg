@@ -22,6 +22,10 @@ export default function QuoteSection() {
               <div className="title">
                 <span>QUOTE</span>
                 <h2>Request A Quote Now For Your Next Project</h2>
+                <p>
+                  Tell us about your project: what you want built or what&apos;s damaged, and where
+                  it is. Add your phone number and we&apos;ll be in touch.
+                </p>
               </div>
 
               <div className="row justify-content-center">

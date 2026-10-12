@@ -18,10 +18,8 @@ export default function MissionVision() {
         </AccordionItemHeading>
         <AccordionItemPanel>
           <p>
-            Our mission is to provide masonry work that combines durability, functionality, and
-            clean finishing through dependable construction methods and experienced workmanship.
-            We aim to deliver projects that meet our clients needs while maintaining long-term
-            quality and structural reliability.
+            We want to do masonry work that&apos;s solid, practical and finished cleanly, using
+            proven methods and experienced hands, and to deliver what our clients need.
           </p>
         </AccordionItemPanel>
       </AccordionItem>
@@ -32,10 +30,8 @@ export default function MissionVision() {
         </AccordionItemHeading>
         <AccordionItemPanel>
           <p>
-            Our vision is to continue building a strong reputation in Calgary through consistent
-            workmanship, honest communication, and masonry solutions designed to perform well for
-            years to come. We believe quality construction should add lasting value to every
-            property we work on.
+            We want to keep building our reputation in Calgary through consistent work and honest
+            communication. Good construction should add lasting value to a property.
           </p>
         </AccordionItemPanel>
       </AccordionItem>

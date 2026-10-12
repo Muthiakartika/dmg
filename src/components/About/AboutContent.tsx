@@ -9,10 +9,10 @@ import aboutThumb from "../../../public/images/about/new/2.webp";
 import textShape from "../../../public/images/about/archi-text2.png";
 
 const strengths = [
-  "Durable Masonry & Hardscape Solutions",
-  "Skilled Workmanship & Reliable Construction",
-  <>{" "}Custom Outdoor Spaces Built Around Your Needs company</>,
-  "Quality-Focused Planning & Execution",
+  "Durable masonry and hardscape",
+  "Skilled workmanship",
+  "Custom outdoor spaces built around you",
+  "Careful planning",
 ];
 
 /** Intro, photos, mission/vision and company overview of /about-us. */
@@ -45,9 +45,10 @@ export default function AboutContent() {
             <div className="col-lg-6 col-md-12">
               <div className="about-three-left-content">
                 <p className="mb-0">
-                  At DMG Masonry, we create durable and visually timeless masonry and hardscape
-                  spaces for residential and commercial properties in Calgary, combining quality
-                  workmanship, practical design, and long-lasting performance.
+                  DMG Masonry is a Calgary masonry contractor with more than 35 years of
+                  experience. We repair brick and stone, and we build fireplaces, fire pits, pizza
+                  ovens, outdoor kitchens, patios and retaining walls for homes and commercial
+                  properties.
                 </p>
 
                 <ArrowList items={strengths} icon={arrowIcon} />
@@ -69,18 +70,15 @@ export default function AboutContent() {
                     Quality Masonry Work Built Through Experience, Planning, and Precision
                   </h2>
                   <p>
-                    DMG Masonry provides residential and commercial masonry services throughout
-                    Calgary, including masonry repair, retaining walls, patio stone installation,
-                    stone veneer, outdoor kitchens, fireplaces, pizza ovens, and custom hardscape
-                    construction. Every project is completed with a focus on durability, proper
-                    construction methods, and long-term performance.
+                    We provide masonry for homes and commercial properties across Calgary: masonry
+                    repair, retaining walls, patio stone installation, stone veneer, outdoor
+                    kitchens, fireplaces, pizza ovens and custom hardscape.
                   </p>
                   <p>
-                    We approach each project by understanding the property, project goals, and
-                    practical requirements before construction begins. From repairs and
-                    restorations to custom outdoor features, our team works carefully to ensure
-                    every installation remains functional, structurally sound, and visually
-                    consistent over time.
+                    We start by understanding your property, what you want and what&apos;s
+                    practical, before any building begins. Whether it&apos;s a repair, a
+                    restoration or a custom outdoor feature, we work carefully so the result is
+                    solid and looks right.
                   </p>
                 </div>
               </div>

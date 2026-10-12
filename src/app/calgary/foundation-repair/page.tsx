@@ -25,7 +25,7 @@ const foundationFaqs = [
     uuid: "faq-foundation-1",
     question: "What are the common signs of foundation damage?",
     answers: [
-      "Foundation issues can appear in several ways, including wall or floor cracks, uneven surfaces, sticking doors or windows, and signs of moisture near the structure. Identifying these issues early can help prevent more extensive structural problems over time.",
+      "Cracks in walls or floors, uneven surfaces, sticking doors or windows, and damp near the building. Catching them early helps prevent bigger problems.",
     ],
   },
   {
@@ -33,7 +33,7 @@ const foundationFaqs = [
     question:
       "Do you provide foundation repair for both residential and commercial properties?",
     answers: [
-      "Yes. We handle foundation repair projects in Calgary for both residential and commercial structures, with repair approaches planned according to the condition, size, and structural requirements of each property.",
+      "Yes. We repair foundations on homes and commercial buildings, and plan the work around the condition and size of the structure.",
     ],
   },
   {
@@ -41,7 +41,7 @@ const foundationFaqs = [
     question:
       "Can foundation problems become worse if repairs are delayed?",
     answers: [
-      "Yes. Foundation damage can gradually progress over time, leading to larger cracks, structural movement, moisture intrusion, and increased repair complexity if left unaddressed. Alberta's freeze-thaw cycles can accelerate that process.",
+      "Yes. Damage can spread: larger cracks, more movement and more water getting in. Alberta's freeze-thaw cycles can speed that up.",
     ],
   },
   {
@@ -49,7 +49,7 @@ const foundationFaqs = [
     question:
       "How do you determine the appropriate foundation repair solution?",
     answers: [
-      "Our process begins with a detailed assessment of the foundation condition, including the type, location, and severity of the damage. Based on our findings, we recommend repair methods that best support long-term structural stability and performance.",
+      "We assess the foundation first: the type, location and severity of the damage. Then we recommend the repair that fits the cause.",
     ],
   },
   {
@@ -57,7 +57,7 @@ const foundationFaqs = [
     question:
       "Will foundation repair affect daily activities on the property?",
     answers: [
-      "The level of disruption depends on the scope and location of the repair work. Our team plans projects carefully to maintain safe and efficient workflows while helping minimize interruptions throughout the repair process.",
+      "It depends on the size and location of the work. We plan jobs to keep disruption to a minimum.",
     ],
   },
 ];
@@ -91,22 +91,22 @@ const foundationProcessSteps = [
   {
     image: "/images/services/service/foundation_repair/2.webp",
     title: "Inspect the Foundation",
-    text: "We assess structural movement, cracks, and foundation conditions.",
+    text: "We check for movement, cracks and the overall condition.",
   },
   {
     image: "/images/services/service/foundation_repair/3.webp",
     title: "Plan the Repair",
-    text: "We determine the right foundation repair solution for the structure and damage level.",
+    text: "We decide on the right repair for the structure and how serious the damage is.",
   },
   {
     image: "/images/services/service/foundation_repair/4.webp",
     title: "Complete the Repairs",
-    text: "Foundation areas are reinforced using reliable repair methods and materials.",
+    text: "We reinforce and repair the affected areas.",
   },
   {
     image: "/images/services/service/foundation_repair/5.webp",
     title: "Ensure Long-Term Stability",
-    text: "Final work is completed with focus on strength, durability, and performance.",
+    text: "We check the finished repair for strength and performance.",
   },
 ];
 
@@ -148,23 +148,23 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/foundation_repair/1.webp"
         title="Foundation Repair Calgary: Structural & Masonry Foundation Repairs"
-        description="DMG Masonry is a masonry and foundation repair contractor in Calgary, Alberta. Foundation problems can affect the safety and condition of a property if left unresolved. We provide foundation repair services to correct structural issues and reinforce weakened areas."
+        description="DMG Masonry repairs foundations in Calgary. A foundation problem affects the safety and condition of the whole building, so it's worth dealing with early. We repair cracks, reinforce weak areas and fix the cause."
         paragraphsHeading="Signs of Foundation Damage in Calgary Homes"
         paragraphs={[
-          "Cracked foundation walls, uneven floors, sticking doors, and visible structural movement are often signs of underlying foundation issues. These problems can result from soil settlement, moisture exposure, or shifting structural loads over time. Our team carefully inspects the condition of the foundation to determine the cause and recommend repairs suited to the structure's specific needs.",
-          "Repairing foundation damage early can help limit further deterioration and reduce the risk of additional structural complications. Proper repair work also helps improve the overall reliability of the building while protecting against moisture intrusion and ongoing movement that may impact surrounding areas of the property.",
+          "Cracked foundation walls, uneven floors, sticking doors and visible movement can all point to a foundation problem. They can come from soil settling, moisture or shifting loads over time. We inspect the foundation to find the cause, then recommend a repair that fits.",
+          "Fixing foundation damage early helps limit further damage. It also keeps water out and stops ongoing movement from affecting the rest of the property.",
         ]}
         benefits={[
-          "Foundation Reinforcement",
-          "Residential & Commercial Work",
-          "Foundation Crack Repairs",
-          "Structural Stability",
+          "Foundation reinforcement",
+          "Homes and commercial buildings",
+          "Foundation crack repairs",
+          "Structural stability",
         ]}
         extraParagraphsHeading="What does foundation repair involve?"
         extraParagraphs={[
-          "Before beginning any foundation repair work, our team takes time to understand how the structure has been affected and what factors may be contributing to the issue. Settlement patterns, moisture exposure, and overall structural behavior are carefully reviewed to determine the most appropriate repair approach for the property.",
-          "Foundation repairs should do more than temporarily cover visible damage. Our goal is to correct underlying structural concerns while improving the overall stability of the building. From repairing foundation cracks to reinforcing weakened brick and block sections, every solution is carried out with long-term durability and dependable performance in mind.",
-          "A properly repaired foundation plays an important role in protecting the condition and value of a property over time. With experienced workmanship and careful construction practices, DMG Masonry delivers foundation repair across Calgary and Alberta designed to help structures remain secure, stable, and structurally reliable for years ahead.",
+          "Before we repair anything, we work out how the structure has been affected and why. We look at settlement patterns, moisture and how the building is behaving, then choose the repair.",
+          "A repair should fix the cause, not just cover up the damage. That can mean sealing a crack, reinforcing weak brick or block, or waterproofing the outside of the wall.",
+          "We do foundation repair across Calgary and Alberta, for homes and commercial buildings.",
         ]}
       />
 
@@ -190,13 +190,13 @@ export default function Page() {
       <WhyChooseUs
         image="/images/services/service/foundation_repair/8.webp"
         title="Why Choose DMG Masonry For Foundation Repair In Calgary?"
-        description="Foundation damage can affect the safety and performance of a building if not repaired properly. As masonry contractors in Calgary, we provide foundation repair services focused on structural stability."
+        description="A damaged foundation can affect a building's safety if it isn't repaired properly. We repair foundations in Calgary and look at the cause first, so the repair does its job."
         listItems={[
-          "Foundation Issue Assessment",
-          "Condition-Based Repairs",
-          "Durable Structural Support",
-          "Residential & Commercial Solutions",
-          "Serving Calgary and surrounding Alberta communities",
+          "Foundation assessment",
+          "Repairs based on the condition of the foundation",
+          "Durable structural support",
+          "Homes and commercial buildings",
+          "Calgary and surrounding Alberta communities",
         ]}
         buttonText="See What We Do"
         buttonLink="/contact-us"
@@ -212,6 +212,7 @@ export default function Page() {
           image="/images/services/service/foundation_repair/9.webp"
           title="Request a Foundation Repair Assessment in Calgary"
           subtitle="REQUEST A QUOTE"
+          description="Tell us what you've noticed and we'll arrange an assessment. Call 1-403-619-8727 or fill in the form."
         />
       </div>
 

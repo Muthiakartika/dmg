@@ -10,9 +10,9 @@ import arrowIcon from "../../../public/images/features/arrow.svg";
 import architecturalShape from "../../../public/images/features/architectural-shape.png";
 
 const features = [
-  "Outdoor masonry designed for long-term use",
-  "Timeless masonry that complements your property",
-  "Practical layouts with clean professional finishing",
+  "Built for outdoor use",
+  "Matches your property",
+  "Practical layouts, clean finish",
 ];
 
 /** "Form & Function" block with the 35+ years badge. */
@@ -50,9 +50,9 @@ export default function CoreFeatures() {
                 <div className="col-lg-8 col-md-7">
                   <div className="inner-content">
                     <p>
-                      DMG Masonry creates outdoor spaces that combine everyday function with
-                      timeless masonry design, helping your property maintain its strength and
-                      appearance for years to come.
+                      Calgary winters are hard on masonry. Water gets into brick and mortar,
+                      freezes, and slowly breaks it apart. We build and repair with that in mind,
+                      so your masonry holds up through the freeze-thaw cycles year after year.
                     </p>
 
                     <ArrowList items={features} icon={arrowIcon} />

@@ -16,35 +16,35 @@ const chimneyRepairFaqs = [
     uuid: "faq-chimney-1",
     question: "How do I know if my chimney needs repair?",
     answers: [
-      "Common signs of chimney damage include cracked mortar joints, loose brickwork, spalling brick faces that are flaking or crumbling, water leaks, visible deterioration, and reduced fireplace performance. During our inspection, we check for spalling brick that needs replacing and assess the overall condition of the chimney to determine the most appropriate repair approach based on structural condition and long-term performance needs.",
+      "Look for cracked or crumbling mortar, loose bricks, brick faces flaking off (spalling), water stains or leaks near the fireplace, and a fireplace that doesn't draw as well as it used to. If you see any of these, we'll inspect the chimney and tell you what needs doing.",
     ],
   },
   {
     uuid: "faq-chimney-2",
     question: "Can chimney damage become a safety concern?",
     answers: [
-      "Yes. Damaged chimneys can lead to structural instability, moisture intrusion, ventilation issues, and other safety concerns if left untreated. Addressing repairs early helps reduce the risk of more serious damage while supporting safer long-term chimney performance.",
+      "Yes. A damaged chimney can become unstable, let water into the house and cause ventilation problems. The earlier it's fixed, the less likely it is to turn into a bigger repair.",
     ],
   },
   {
     uuid: "faq-chimney-3",
     question: "Can chimney leaks affect other areas of the property?",
     answers: [
-      "Absolutely. Moisture entering through a damaged chimney can impact surrounding masonry, ceilings, walls, and nearby structural components over time. Early leak repairs help prevent additional deterioration and reduce the risk of larger repair issues later on.",
+      "Yes. Water coming in through a chimney can damage the brick around it and show up as stains on nearby ceilings and walls. Fixing the leak early stops the damage spreading.",
     ],
   },
   {
     uuid: "faq-chimney-4",
     question: "Do chimney repairs need to follow local building standards?",
     answers: [
-      "Yes. Proper chimney repair work should comply with applicable building and safety requirements. Our team completes repairs using reliable masonry methods and professional repair practices designed to support safe and lasting structural performance.",
+      "Yes. Chimney repairs have to meet the applicable building and safety requirements, and we do our work to those standards.",
     ],
   },
   {
     uuid: "faq-chimney-5",
     question: "How often should a chimney be inspected?",
     answers: [
-      "Regular chimney inspections help identify early signs of wear before they develop into larger structural problems. We generally recommend inspections at least once a year, particularly for chimneys exposed to frequent fireplace use and changing seasonal conditions.",
+      "We recommend at least once a year, especially if you use the fireplace a lot. A yearly check catches small problems before they grow.",
     ],
   },
 ];
@@ -54,22 +54,22 @@ const chimneyProcessSteps = [
   {
     image: "/images/services/service/chimney_repair/2.webp",
     title: "Inspect The Chimney",
-    text: "We assess cracks, spalling brick, and overall chimney condition.",
+    text: "We check for cracks, spalling brick and the overall condition.",
   },
   {
     image: "/images/services/service/chimney_repair/3.webp",
     title: "Plan The Repair",
-    text: "Repair solutions are prepared based on the structure and damage.",
+    text: "We put together a repair plan based on the damage we find.",
   },
   {
     image: "/images/services/service/chimney_repair/4.webp",
     title: "Strengthen The Structure",
-    text: "Spalling brick is replaced and damaged mortar is restored.",
+    text: "Spalled brick is replaced and damaged mortar is repaired.",
   },
   {
     image: "/images/services/service/chimney_repair/5.webp",
     title: "Seal & Protect",
-    text: "Repairs help improve safety, function, and long-term performance.",
+    text: "We seal the repair to keep water out and protect the chimney through winter.",
   },
 ];
 
@@ -121,21 +121,20 @@ export default function Page() {
         mainImage="/images/services/service/chimney_repair/1.webp"
         mainImageFocus="20%"
         title="Chimney Repair in Calgary: Leaks, Cracks, Caps & Crowns"
-        description="Chimneys are constantly exposed to moisture, temperature changes, and weather conditions that can weaken masonry over time. Our chimney repair services help restore safe performance, reliable function, and long-term durability for any property."
+        description="Water is the main enemy of any chimney. It gets into the brick and mortar, freezes and thaws through the winter, and slowly breaks the masonry down. If you've noticed cracked mortar, loose bricks or a leak near your fireplace, call us before it gets worse."
         paragraphs={[
-          "Cracked mortar joints, loose brickwork, water penetration, and surface deterioration are common signs of chimney damage. Through detailed inspections and careful repair methods, damaged areas are restored using durable materials that help maintain both structural stability and the original appearance of the chimney.",
-          "Repairing chimney issues early can also help prevent larger structural problems from developing over time. Proper maintenance and restoration work support better protection against moisture intrusion while helping the chimney continue performing reliably throughout changing seasonal conditions.",
+          "We repair chimneys in Calgary and the surrounding area. After an inspection, we replace damaged brick, repoint worn mortar, and repair the crown and cap, using materials that match the rest of the chimney.",
+          "Fixing a small problem early is simpler than waiting for water to reach your walls and ceiling.",
         ]}
         benefits={[
-          "Structural Stability",
-          "Moisture Protection",
-          "Long-Term Durability",
-          "Timely Restoration",
+          "Stops leaks",
+          "Fixes the mortar",
+          "Replaces damaged brick",
+          "Matches your chimney",
         ]}
         extraParagraphs={[
-          "Every chimney structure presents different repair conditions depending on age, exposure, and overall masonry condition. Before repairs begin, we carefully evaluate the existing structure, visible damage, and surrounding masonry areas to determine the most effective repair strategy for long-term performance, structural stability, and safety.",
-          "Our repair work may involve restoring damaged mortar joints, replacing spalling or otherwise deteriorated masonry units, or repairing chimney components affected by weather exposure and wear. Each stage of the process is completed with attention to durability, clean workmanship, and consistent structural support.",
-          "Reliable chimney restoration comes from combining experienced masonry techniques with proper planning and durable repair materials. By using careful repair methods and focusing on the overall condition of the structure, we help chimney systems maintain their strength, functionality, and original appearance while supporting long-term structural performance.",
+          "Every chimney is different. Age, exposure and the condition of the brick all change what it needs, so we inspect first: the brick, the mortar joints, the crown and cap, and the masonry around the chimney. Then we recommend a repair.",
+          "The work can include repointing worn mortar joints, replacing spalled brick, and repairing parts damaged by weather. We keep the finish clean so the repair doesn't look like a patch.",
         ]}
       />
 
@@ -155,12 +154,11 @@ export default function Page() {
       <WhyChooseUs
         image="/images/services/service/chimney_repair/8.webp"
         title="Brick Chimney Repair Built to Last"
-        description="Chimney damage can affect the safety and condition of a masonry structure over time. Our repair approach helps restore structural reliability and protect the chimney from further deterioration."
+        description="A damaged chimney can affect the safety and condition of the whole structure. Our repairs strengthen the chimney and keep water out, so the damage doesn't spread."
         listItems={[
-          "Reinforced structural stability",
-          "Protection against moisture damage",
-          "Protection against moisture damage",
-          "Long-term chimney performance",
+          "A stronger structure",
+          "Water kept out",
+          "Damage stopped before it spreads",
         ]}
         buttonText="See What We Do"
         buttonLink="/contact-us"
@@ -177,6 +175,7 @@ export default function Page() {
           image="/images/services/calgary/calgary-1.webp"
           title="Book a Chimney Repair Estimate in Calgary"
           subtitle="REQUEST A QUOTE"
+          description="Seeing cracks or a leak? Tell us what's happening and we'll arrange an inspection. Call 1-403-619-8727 or fill in the form."
         />
       </div>
 

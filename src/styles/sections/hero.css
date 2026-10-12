@@ -279,20 +279,20 @@
 }
 
 @media only screen and (max-width: 767px) {
-  /* The copy starts 190px down so the house's gables show above it. */
+  /* The whole photo sits at the top at full width, as on desktop, and the copy
+     follows below it. 44.3vw is the photo's height at 100vw (1840x815). */
   .main-banner-area {
-    padding-top: 190px;
-    padding-bottom: 40px;
+    padding-top: calc(44.3vw + 28px);
+    padding-bottom: 50px;
   }
 
-  /* Light over the gables, dark from where the copy starts. */
+  /* Almost clear over the photo, dark behind the copy. */
   .main-banner-area::before {
     background: linear-gradient(
       180deg,
-      rgba(22, 21, 18, 0.25) 0,
-      rgba(22, 21, 18, 0.45) 145px,
-      rgba(22, 21, 18, 0.72) 260px,
-      rgba(22, 21, 18, 0.75) 100%
+      rgba(22, 21, 18, 0.15) 0,
+      rgba(22, 21, 18, 0) 44.3vw,
+      rgba(22, 21, 18, 0.92) 44.3vw
     );
   }
 
@@ -330,19 +330,19 @@
     padding: 10px 20px;
   }
 
-  /* Spans the whole banner, so the photo's top (transparent sky band and the
-     gable peaks) lines up with the top of the banner. The <picture> in
-     HeroBanner switches to a smaller crop of the same photo here; see
+  /* The photo's own aspect ratio, pinned to the top of the banner. The <picture>
+     in HeroBanner switches to a smaller copy of the same photo here; see
      src/components/Home/heroImages.ts. */
   .main-banner-image {
     top: 0;
+    bottom: auto;
     left: 0;
     right: 0;
-    height: auto;
+    height: 44.3vw;
   }
 
   .main-banner-image img {
-    object-position: 72% top;
+    object-position: center top;
   }
 
   .main-banner-wrap-shape {

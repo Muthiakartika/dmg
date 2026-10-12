@@ -279,13 +279,21 @@
 }
 
 @media only screen and (max-width: 767px) {
+  /* The copy starts 190px down so the house's gables show above it. */
   .main-banner-area {
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 190px;
+    padding-bottom: 40px;
   }
 
+  /* Light over the gables, dark from where the copy starts. */
   .main-banner-area::before {
-    background: linear-gradient(180deg, rgba(22, 21, 18, 0.78) 0%, rgba(22, 21, 18, 0.62) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(22, 21, 18, 0.25) 0,
+      rgba(22, 21, 18, 0.45) 145px,
+      rgba(22, 21, 18, 0.72) 260px,
+      rgba(22, 21, 18, 0.75) 100%
+    );
   }
 
   .main-banner-area .container-fluid {
@@ -322,14 +330,19 @@
     padding: 10px 20px;
   }
 
+  /* Spans the whole banner, so the photo's top (transparent sky band and the
+     gable peaks) lines up with the top of the banner. The <picture> in
+     HeroBanner switches to a smaller crop of the same photo here; see
+     src/components/Home/heroImages.ts. */
   .main-banner-image {
-    /* The <picture> in HeroBanner switches to a smaller crop of the same photo
-       here; see src/components/Home/heroImages.ts. */
-    margin-right: 0;
+    top: 0;
     left: 0;
     right: 0;
-    text-align: center;
-    margin: auto;
+    height: auto;
+  }
+
+  .main-banner-image img {
+    object-position: 72% top;
   }
 
   .main-banner-wrap-shape {

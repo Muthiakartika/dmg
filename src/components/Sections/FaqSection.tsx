@@ -19,16 +19,13 @@ interface FaqSectionProps {
   faqs: readonly FaqItem[];
   title: string;
   subtitle?: string;
-  /** Wrap each question in an <h3> (default: plain text inside the accordion button). */
-  questionsAsHeadings?: boolean;
 }
 
-/** FAQ accordion with the first question open. */
+/** FAQ accordion with the first question open; each question is an <h3>. */
 export default function FaqSection({
   faqs,
   title,
   subtitle = "FAQ",
-  questionsAsHeadings = false,
 }: FaqSectionProps) {
   return (
     <div className="faq-area ptb-100">
@@ -46,11 +43,7 @@ export default function FaqSection({
             <AccordionItem uuid={faq.uuid} key={faq.uuid}>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  {questionsAsHeadings ? (
-                    <h3 className="faq-question">{faq.question}</h3>
-                  ) : (
-                    faq.question
-                  )}
+                  <h3 className="faq-question">{faq.question}</h3>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>

@@ -212,7 +212,6 @@ export default function Page() {
       />
 
       <FaqSection
-        questionsAsHeadings
         faqs={outdoorKitchenFaqs}
         title="Outdoor Kitchens Calgary: FAQs"
       />

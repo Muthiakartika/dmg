@@ -165,7 +165,6 @@ export default function Page() {
       />
 
       <FaqSection
-        questionsAsHeadings
         faqs={chimneyRepairFaqs}
         title="Calgary Chimney Repair FAQs"
       />

@@ -237,7 +237,6 @@ export default function Page() {
       />
 
       <FaqSection
-        questionsAsHeadings
         faqs={pizzaOvenFaqs}
         title="Pizza Oven Calgary FAQs"
       />

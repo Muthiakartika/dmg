@@ -23,7 +23,8 @@
   height: auto;
 }
 
-.footer-contact h3 {
+.footer-contact .footer-title {
+  max-width: none;
   margin: 0 0 14px;
   color: var(--footerHeading);
   font-size: 18px;
@@ -62,8 +63,8 @@
   font-weight: 700;
 }
 
-.footer-links-column h3,
-.footer-newsletter-column h3 {
+.footer-links-column .footer-title,
+.footer-newsletter-column .footer-title {
   margin: 0 0 26px;
   color: var(--footerHeading);
   font-size: 16px;
@@ -256,8 +257,8 @@
     font-size: 16px;
   }
 
-  .footer-links-column h3,
-  .footer-newsletter-column h3 {
+  .footer-links-column .footer-title,
+  .footer-newsletter-column .footer-title {
     margin-bottom: 20px;
   }
 

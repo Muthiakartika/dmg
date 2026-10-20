@@ -23,7 +23,7 @@ export default function Footer() {
               </Link>
 
               <div className="footer-contact">
-                <h3>D.M.G Masonry LTD</h3>
+                <p className="footer-title">D.M.G Masonry LTD</p>
                 <p>
                   1111 - 46 Ave S.E., Calgary,
                   <br />
@@ -37,7 +37,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-links-column" {...fadeUp(150)}>
-              <h3>Follow Us</h3>
+              <p className="footer-title">Follow Us</p>
 
               <ul className="footer-links-list">
                 {socialLinks.map((item) => (
@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-links-column" {...fadeUp(200)}>
-              <h3>Services</h3>
+              <p className="footer-title">Services</p>
 
               <ul className="footer-links-list footer-links-list-plain footer-services-list">
                 {footerServices.map((service) => (
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-newsletter-column" {...fadeUp(250)}>
-              <h3>Subscribe Newsletter</h3>
+              <p className="footer-title">Subscribe Newsletter</p>
               <NewsletterForm />
             </div>
           </div>

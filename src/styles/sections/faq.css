@@ -42,7 +42,7 @@
   top: 28px;
 }
 
-/* Questions marked up as <h3>: look exactly like the plain-text ones. */
+/* Questions are <h3>s but keep the accordion button's text style. */
 .faq-accordion .accordion__button .faq-question {
   font: inherit;
   color: inherit;

@@ -22,6 +22,8 @@ const routes: {
   path: string;
   priority: number;
   changeFrequency: ChangeFrequency;
+  /** Real last-modified date; left out when unknown (Google ignores a lastmod that is always "now"). */
+  lastmod?: string;
 }[] = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/about-us/", priority: 0.8, changeFrequency: "monthly" },
@@ -51,19 +53,19 @@ const routes: {
 ];
 
 export async function GET() {
-  const lastmod = new Date().toISOString();
   const blogRoutes = (await getPublishedBlogs()).map((post) => ({
     path: `/blogs/${post.slug}/`,
     priority: 0.6,
     changeFrequency: "monthly" as ChangeFrequency,
+    lastmod: post.updatedAt,
   }));
 
   const urls = [...routes, ...blogRoutes]
     .map(
-      ({ path, priority, changeFrequency }) =>
+      ({ path, priority, changeFrequency, lastmod }) =>
         `  <url>\n` +
         `    <loc>${siteConfig.url}${path}</loc>\n` +
-        `    <lastmod>${lastmod}</lastmod>\n` +
+        (lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : "") +
         `    <changefreq>${changeFrequency}</changefreq>\n` +
         `    <priority>${priority.toFixed(1)}</priority>\n` +
         `  </url>`,

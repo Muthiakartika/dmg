@@ -28,7 +28,7 @@ export default function ServicesGrid({ description }: ServicesGridProps) {
                 <div className="icon">
                   <Image
                     src={service.icon}
-                    alt={service.title}
+                    alt=""
                     width={80}
                     height={80}
                     style={{ borderRadius: "0px", objectFit: "cover" }}
@@ -38,8 +38,8 @@ export default function ServicesGrid({ description }: ServicesGridProps) {
                   <Link href={service.link}>{service.title}</Link>
                 </h3>
                 <p>{service.text}</p>
-                <Link href={service.link} className="services-btn">
-                  <Image src={arrowIcon} alt="arrow-right" width={18} height={18} />
+                <Link href={service.link} className="services-btn" aria-hidden="true" tabIndex={-1}>
+                  <Image src={arrowIcon} alt="" width={18} height={18} />
                 </Link>
               </div>
             </div>

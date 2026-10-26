@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import ArrowList from "@/components/UI/ArrowList";
 import { fadeUp } from "@/lib/aos";
+import { imageAlt } from "@/lib/imageAlts";
+import { renderInline } from "@/lib/richText";
 
 import arrowIcon from "../../../public/images/about/arrow2.svg";
 
@@ -35,7 +37,7 @@ export default function WhyChooseUs({
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-5 col-md-12">
             <div className="about-image-two" {...fadeUp(100)}>
-              <Image src={image} alt="image" width={1052} height={1120} />
+              <Image src={image} alt={imageAlt(image)} width={1052} height={1120} />
             </div>
           </div>
 
@@ -43,11 +45,11 @@ export default function WhyChooseUs({
             <div className="about-two-content" {...fadeUp(200)}>
               <span>{subtitle}</span>
               <h2>{title}</h2>
-              <p>{description}</p>
+              <p>{renderInline(description)}</p>
 
               <ArrowList items={listItems} icon={arrowIcon} />
 
-              {note && <p className="about-two-note">{note}</p>}
+              {note && <p className="about-two-note">{renderInline(note)}</p>}
 
               <div className="about-btn">
                 <Link href={buttonLink} className="default-btn">

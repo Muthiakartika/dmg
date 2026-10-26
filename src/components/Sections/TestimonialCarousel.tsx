@@ -39,7 +39,7 @@ export default function TestimonialCarousel({ feedbacks }: TestimonialCarouselPr
             content: (
               <div className="client-wrap-card">
                 <div className="icon">
-                  <Image src={quoteIcon} alt="quote" width={56} height={56} />
+                  <Image src={quoteIcon} alt="" width={56} height={56} />
                 </div>
 
                 <p>{feedback.feedbackText}</p>

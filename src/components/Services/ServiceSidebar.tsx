@@ -22,8 +22,8 @@ export default function ServiceSidebar() {
       {otherServices.map((service) => (
         <li className="d-flex align-items-center justify-content-between" key={service.id}>
           <Link href={service.link}>{service.title}</Link>
-          <Link href={service.link}>
-            <Image src={arrowIcon} alt="arrow-right" width={18} height={18} />
+          <Link href={service.link} aria-hidden="true" tabIndex={-1}>
+            <Image src={arrowIcon} alt="" width={18} height={18} />
           </Link>
         </li>
       ))}

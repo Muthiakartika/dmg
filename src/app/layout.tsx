@@ -10,6 +10,7 @@ import AosAnimation from "@/components/Layout/AosAnimation";
 import BackToTop from "@/components/Layout/BackToTop";
 import Preloader from "@/components/Layout/Preloader";
 import { ThemeProvider } from "@/components/Layout/ThemeProvider";
+import { businessSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
 
 const jost = Jost({ subsets: ["latin"] });
@@ -68,16 +69,7 @@ const themeInitializationScript = `
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${siteConfig.url}/#organization`,
-      name: siteConfig.name,
-      url: `${siteConfig.url}/`,
-      logo: `${siteConfig.url}/images/logo.webp`,
-      email: siteConfig.email,
-      telephone: siteConfig.telephone,
-      sameAs: siteConfig.sameAs,
-    },
+    businessSchema(),
     {
       "@type": "WebSite",
       "@id": `${siteConfig.url}/#website`,

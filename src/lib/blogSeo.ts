@@ -1,6 +1,7 @@
 export interface BlogSeoOverride {
   title: string;
-  description: string;
+  /** Falls back to the post's excerpt when left out. */
+  description?: string;
 }
 
 /**
@@ -12,6 +13,14 @@ export interface BlogSeoOverride {
  * falls back to its CMS title and excerpt.
  */
 export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
+  "building-a-brick-pizza-oven-materials-costs-what-makes-one-last": {
+    title: "Building a Brick Pizza Oven in Calgary: Materials & Costs",
+  },
+  "natural-vs-manufactured-stone-veneer-what-s-the-difference-for-calgary-homes": {
+    title: "Natural vs Manufactured Stone Veneer for Calgary Homes",
+    description:
+      "Natural or manufactured stone veneer? How they compare on cost, weight, looks and Calgary weather, and which suits your exterior or fireplace.",
+  },
   "how-to-seal-a-masonry-patio-a-diy-guide": {
     title: "How to Properly Seal a Masonry Patio Before Winter",
     description:

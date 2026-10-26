@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,6 +10,8 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { renderInline } from "@/lib/richText";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Custom Pizza Oven
@@ -29,60 +32,51 @@ const pizzaOvenFaqs = [
   },
   {
     uuid: "faq-oven-3",
-    question:
-      "Can a pizza oven be combined with an outdoor kitchen or BBQ area?",
+    question: "Can a pizza oven be combined with an outdoor kitchen or BBQ area?",
     answers: [
-      "Yes, and many of our projects do. We can build an oven into an outdoor kitchen with a BBQ, counters and prep space.",
+      "Yes, and many of our projects do. We can build an oven into an [outdoor kitchen](/outdoor-kitchen-contractor/) with a BBQ, counters and prep space.",
     ],
   },
   {
     uuid: "faq-oven-4",
-    question: "How do you ensure consistent cooking performance?",
+    question: "How much does a custom outdoor pizza oven cost in Calgary?",
     answers: [
-      "It comes down to the build: heat-resistant materials and a design that holds heat well. A well-built oven keeps steady temperatures, so cooking is predictable.",
+      "It depends on the oven size, the base and surround, the finish (brick, stone or stone veneer) and whether it's part of a larger outdoor kitchen. We give you a detailed quote once we've seen the space and agreed the design.",
     ],
   },
   {
     uuid: "faq-oven-5",
-    question: "Can the pizza oven design be customized?",
+    question: "What's the difference between a masonry pizza oven and a portable one?",
     answers: [
-      "Yes. We tailor the size, shape, finish and style to your project so it fits your space and the way you cook.",
+      "Portable ovens heat up quickly and can be moved or stored. A masonry oven holds heat for hours, so you can cook pizza, then bake bread or roast as it cools. It also becomes a permanent feature of the yard, built to suit your space.",
     ],
   },
   {
     uuid: "faq-oven-6",
+    question: "Can a masonry pizza oven stay outside through a Calgary winter?",
+    answers: [
+      "Yes, when it's built for it: a solid base, a dense, well-insulated dome and a finish that sheds water. Moisture is the main enemy. Cover the oven or build it under shelter, and in spring start with a few small fires to dry it out before cooking at full heat.",
+    ],
+  },
+  {
+    uuid: "faq-oven-7",
     question: "How long before I can use my new pizza oven after installation?",
     answers: [
       "A new oven needs time to cure. The masonry and mortar have to dry out slowly, and the first fires need to be small and gradual to avoid cracking. When your oven is finished, we'll give you a curing and first-use schedule for it.",
     ],
   },
   {
-    uuid: "faq-oven-7",
+    uuid: "faq-oven-8",
     question: "How long does it take to build a custom pizza oven?",
     answers: [
       "Most builds take from one to a few weeks, depending on size, design and materials. After we review your project, we'll give you a more exact timeline.",
     ],
   },
   {
-    uuid: "faq-oven-8",
+    uuid: "faq-oven-9",
     question: "Is brick or natural stone better for a pizza oven?",
     answers: [
       "Both work well. Firebrick lines the inside of most ovens, and stone or brick is used on the outside. For the outside, the choice mostly comes down to style and how the oven fits your yard. We'll go through the options during planning.",
-    ],
-  },
-  {
-    uuid: "faq-oven-9",
-    question:
-      "What should I ask a contractor before starting my pizza oven project?",
-    answers: [
-      "Ask how many pizza ovens they've built, how long the build will take, what materials they use and how they handle heat and durability. We're happy to go through all of this at the first consultation.",
-    ],
-  },
-  {
-    uuid: "faq-oven-10",
-    question: "Are there eco-friendly material options for a custom pizza oven?",
-    answers: [
-      "Yes. Eco-friendly and sustainably produced masonry materials are available for pizza ovens. We can talk through the options when we design your oven.",
     ],
   },
 ];
@@ -102,7 +96,7 @@ const pizzaOvenMaterials = [
   {
     icon: "flaticon-facade",
     title: "Stone Veneer & Brick Finishes",
-    text: "If you like the look of stone or brick but want less weight, veneer gives you the same look with a strong, long-lasting finish.",
+    text: "If you like the look of stone or brick but want less weight, [stone veneer](/calgary/stone-veneer/) gives you the same look with a strong, long-lasting finish.",
   },
   {
     icon: "flaticon-houses",
@@ -175,6 +169,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/calgary/custom-pizza-oven/")} />
+
       <Navbar />
 
       <PageTitle title="Custom Pizza Oven" homeText="Home" homeUrl="/" />
@@ -204,6 +200,9 @@ export default function Page() {
         title="Materials for Wood-Fired Pizza Ovens"
         description="A pizza oven runs hotter for longer than almost anything else in a backyard, so the materials matter. Here's what we usually build with."
         items={pizzaOvenMaterials}
+        after={renderInline(
+          "Our guide to [building a brick pizza oven](/blogs/building-a-brick-pizza-oven-materials-costs-what-makes-one-last/) covers materials, costs and what makes an oven last.",
+        )}
       />
 
       <ProcessSteps

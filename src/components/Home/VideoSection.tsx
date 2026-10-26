@@ -92,7 +92,7 @@ export default function VideoSection() {
             <div className="service-details-sidebar-image">
               <Image
                 src={sidebarImg}
-                alt="sidebar"
+                alt="Natural stone fireplace with a wood stove insert and stone hearth"
                 width={400}
                 height={800}
                 style={{ width: "100%", height: "550px", objectFit: "cover" }}

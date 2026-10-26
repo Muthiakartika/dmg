@@ -46,6 +46,43 @@ a:hover {
   text-decoration: none;
 }
 
+/* In-text links: brand colour, semi-bold, no underline. The weight is what sets
+   them apart from the body text for people who cannot tell the colours apart.
+   Menus, buttons and cards keep their own styles. */
+p a,
+li a.text-link,
+.text-link {
+  color: var(--primaryColor);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+p a:hover,
+.text-link:hover {
+  color: var(--headingColor);
+  text-decoration: none;
+}
+
+p a:focus-visible,
+.text-link:focus-visible {
+  outline: 2px solid var(--primaryColor) !important;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* On the light theme the brand colour is too pale on white (2.9:1), so use the
+   darker shade (5.3:1). */
+[data-theme="light"] p a,
+[data-theme="light"] .text-link {
+  color: #8a6347;
+}
+
+[data-theme="light"] p a:hover,
+[data-theme="light"] .text-link:hover {
+  color: var(--headingColor);
+}
+
 :focus {
   outline: 0 !important;
 }

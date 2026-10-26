@@ -3,6 +3,7 @@ import Image, { type StaticImageData } from "next/image";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import { fadeUp } from "@/lib/aos";
+import { imageAlt } from "@/lib/imageAlts";
 
 import defaultImage from "../../../public/images/contact/contact.png";
 import shape from "../../../public/images/contact/shape.png";
@@ -61,7 +62,7 @@ export default function ContactSection({
             <div className="contact-image">
               <Image
                 src={image}
-                alt="contact"
+                alt={imageAlt(image)}
                 width={700}
                 height={1012}
                 priority={priorityImage && !desktopOnly}
@@ -92,7 +93,7 @@ export default function ContactSection({
       </div>
 
       <div className="contact-shape1">
-        <Image src={shape} alt="image" width={116} height={82} />
+        <Image src={shape} alt="" width={116} height={82} />
       </div>
     </div>
   );

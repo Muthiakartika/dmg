@@ -2,12 +2,13 @@ import type { ReactNode } from "react";
 import Image, { type StaticImageData } from "next/image";
 
 import { fadeUp, staggerDelay } from "@/lib/aos";
+import { imageAlt } from "@/lib/imageAlts";
 
 export interface ProcessStep {
   image: string | StaticImageData;
   title: string;
   text: string;
-  /** Alt text for the step photo; defaults to "image". */
+  /** Alt text for the step photo; defaults to the one listed for the image path. */
   imageAlt?: string;
 }
 
@@ -32,7 +33,7 @@ export default function ProcessSteps({ title, steps }: ProcessStepsProps) {
                 <div className="process-image">
                   <Image
                     src={step.image}
-                    alt={step.imageAlt ?? "image"}
+                    alt={step.imageAlt ?? imageAlt(step.image)}
                     width={540}
                     height={310}
                   />

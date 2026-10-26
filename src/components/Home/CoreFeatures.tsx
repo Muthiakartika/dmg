@@ -39,7 +39,7 @@ export default function CoreFeatures() {
                     <div className="wrap">
                       <Image
                         src={featureImg}
-                        alt="Brick masonry outdoor fireplace built by DMG Masonry in Calgary"
+                        alt="Red brick outdoor fireplace with an arched firebox"
                         width={161}
                         height={231}
                       />
@@ -79,7 +79,7 @@ export default function CoreFeatures() {
       </div>
 
       <div className="features-shape">
-        <Image src={architecturalShape} alt="Architectural Shape" width={477} height={562} />
+        <Image src={architecturalShape} alt="" width={477} height={562} />
       </div>
     </div>
   );

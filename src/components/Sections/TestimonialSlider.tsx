@@ -45,7 +45,7 @@ export default function TestimonialSlider({
               content: (
                 <div className="client-content">
                   <div className="icon">
-                    <Image src={quoteIcon} alt="quote" width={56} height={56} />
+                    <Image src={quoteIcon} alt="" width={56} height={56} />
                   </div>
                   <p>{feedback.feedbackText}</p>
 
@@ -62,10 +62,10 @@ export default function TestimonialSlider({
       </div>
 
       <div className="client-shape1">
-        <Image src={shape1} alt="shape" width={88} height={125} />
+        <Image src={shape1} alt="" width={88} height={125} />
       </div>
       <div className="client-shape2">
-        <Image src={shape2} alt="shape" width={116} height={82} />
+        <Image src={shape2} alt="" width={116} height={82} />
       </div>
     </div>
   );

@@ -1,5 +1,9 @@
 "use client";
 
+import JsonLd from "@/components/UI/JsonLd";
+import { renderInline } from "@/lib/richText";
+import { faqPageSchema } from "@/lib/schema";
+
 import {
   Accordion,
   AccordionItem,
@@ -21,7 +25,11 @@ interface FaqSectionProps {
   subtitle?: string;
 }
 
-/** FAQ accordion with the first question open; each question is an <h3>. */
+/**
+ * FAQ accordion with the first question open; each question is an <h3>.
+ * Answers may hold `[anchor](/path/)` links. The same text is published as
+ * FAQPage structured data.
+ */
 export default function FaqSection({
   faqs,
   title,
@@ -29,6 +37,7 @@ export default function FaqSection({
 }: FaqSectionProps) {
   return (
     <div className="faq-area ptb-100">
+      <JsonLd data={faqPageSchema(faqs)} />
       <div className="container">
         <div className="section-title-wrap">
           <span>{subtitle}</span>
@@ -48,7 +57,7 @@ export default function FaqSection({
               </AccordionItemHeading>
               <AccordionItemPanel>
                 {faq.answers.map((answer, index) => (
-                  <p key={index}>{answer}</p>
+                  <p key={index}>{renderInline(answer)}</p>
                 ))}
               </AccordionItemPanel>
             </AccordionItem>

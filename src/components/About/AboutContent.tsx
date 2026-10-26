@@ -32,7 +32,7 @@ export default function AboutContent() {
               Cropped taller on phones; see .about-banner in about.css. */}
           <Image
             src={aboutImg}
-            alt="image"
+            alt="Bricklayer spreading mortar to build a red brick wall"
             width={1320}
             height={430}
             priority
@@ -54,7 +54,12 @@ export default function AboutContent() {
                 <ArrowList items={strengths} icon={arrowIcon} />
 
                 <div className="about-image-wrap">
-                  <Image src={aboutThumb} alt="image" width={1052} height={1120} />
+                  <Image
+                    src={aboutThumb}
+                    alt="Mason levelling a stone border and laying concrete pavers for a patio"
+                    width={1052}
+                    height={1120}
+                  />
                   {/* Kept for the existing CSS; the video button it held was removed. */}
                   <div className="wrap-video"></div>
                 </div>
@@ -88,7 +93,7 @@ export default function AboutContent() {
       </div>
 
       <div className="about-wrap-shape">
-        <Image src={textShape} alt="image" width={768} height={140} />
+        <Image src={textShape} alt="" width={768} height={140} />
       </div>
     </div>
   );

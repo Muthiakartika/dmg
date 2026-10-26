@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,43 +10,58 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Retaining Wall
 const retainingWallFaqs = [
   {
     uuid: "faq-retaining-1",
+    question: "Do I need a permit for a retaining wall in Calgary?",
+    answers: [
+      "It depends on the height. In Calgary, a residential retaining wall that holds back 1.2 m (4 ft) or more of soil generally needs City approval, and walls built close together are counted together. Lower walls usually don't. Rules change, so we check the current requirements for your property and help coordinate approvals when they're needed.",
+    ],
+  },
+  {
+    uuid: "faq-retaining-2",
+    question: "Which is best: block, natural stone or concrete retaining walls?",
+    answers: [
+      "Engineered block is the most common in Calgary: it drains through the wall, can be curved or stepped, and tolerates small ground movement. Natural stone and boulder walls suit terraced, natural-looking yards but need machine access. Poured concrete suits tight spaces and high loads and is often finished in stone veneer. Timber is cheaper, but rots much sooner in wet soil.",
+    ],
+  },
+  {
+    uuid: "faq-retaining-3",
     question: "Why is proper drainage important for retaining walls?",
     answers: [
       "Water is the main thing that pushes a wall over. If it can't drain, pressure builds up behind the wall and can affect its stability. We plan drainage into every wall.",
     ],
   },
   {
-    uuid: "faq-retaining-2",
-    question: "What materials are commonly used for retaining walls?",
-    answers: [
-      "Natural stone, concrete block, modular wall systems and other masonry products. The right one depends on your site, what the wall has to hold back and the look you want.",
-    ],
-  },
-  {
-    uuid: "faq-retaining-3",
-    question: "Can retaining walls be installed on sloped properties?",
-    answers: [
-      "Yes. Retaining walls are often used to manage slopes and make them usable. We look at the site first to choose the right wall and method.",
-    ],
-  },
-  {
     uuid: "faq-retaining-4",
-    question: "Do retaining wall projects require permits or inspections?",
+    question: "Why do retaining walls fail?",
     answers: [
-      "Some retaining walls in Calgary need a permit, depending on the size, location and local rules. When one is required, we help coordinate the approvals and make sure the work meets the applicable standards.",
+      "Most failures come from water: no drainage behind the wall, so pressure builds up and pushes it over. A poorly compacted base, walls built too tall for their design, and timber that has rotted are the other common causes.",
     ],
   },
   {
     uuid: "faq-retaining-5",
+    question: "How much does a retaining wall cost in Calgary?",
+    answers: [
+      "It depends on the height and length, the material, the drainage needed, and access to the site. Taller walls also need more base work and may need engineering. We quote after seeing the slope.",
+    ],
+  },
+  {
+    uuid: "faq-retaining-6",
     question: "How long does a retaining wall typically last?",
     answers: [
       "A wall built with good drainage, quality materials and sound methods can stay stable for many years. How long also depends on the site and on upkeep.",
+    ],
+  },
+  {
+    uuid: "faq-retaining-7",
+    question: "How long does it take to build a retaining wall?",
+    answers: [
+      "Most walls take one to a few weeks, depending on length, height and site conditions. We'll give you a more exact timeline once we've seen your property.",
     ],
   },
 ];
@@ -62,7 +78,7 @@ const retainingWallTypes = [
   },
   {
     title: "Poured and reinforced concrete walls",
-    text: "Used where the structural demand is high or the space is tight. Strong and long-lived, but less forgiving than block and typically clad afterwards in stone veneer if appearance matters.",
+    text: "Used where the structural demand is high or the space is tight. Strong and long-lived, but less forgiving than block and typically clad afterwards in [stone veneer](/calgary/stone-veneer/) if appearance matters.",
   },
   {
     title: "Why we do not recommend timber",
@@ -139,6 +155,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/calgary/retaining-wall-construction/")} />
+
       <Navbar />
 
       <PageTitle
@@ -165,7 +183,7 @@ export default function Page() {
         ]}
         extraParagraphsHeading="Planning a Retaining Wall: Slope, Drainage & Soil"
         extraParagraphs={[
-          "Planning decides how well a wall performs. Before we build, we check the soil, the grade, how water flows and the layout of the site, then choose the wall that suits the property.",
+          "Planning decides how well a wall performs. Before we build, we check the soil, the grade, how water flows and the layout of the site, then choose the wall that suits the property. Retaining walls are often one part of a bigger [hardscape project](/hardscape-contractor/), with a patio or steps above or below the wall.",
           "We build with natural stone, concrete block and modular wall systems, whichever fits your site and the look you want.",
           "A good wall depends on solid site preparation, the right materials and consistent workmanship. The base and the drainage behind the wall do most of the work.",
         ]}

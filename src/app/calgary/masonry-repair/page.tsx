@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -10,6 +11,7 @@ import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import Link from "next/link";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Masonry Repair
@@ -18,37 +20,44 @@ const masonryRepairFaqs = [
     uuid: "faq-repair-1",
     question: "What types of masonry problems do you repair?",
     answers: [
-      "Cracked or failing mortar, loose or shifted bricks, flaking brick faces, damaged stone and structural cracks. If it's brick, stone or mortar and it's damaged, ask us."
-    ]
+      "Cracked or failing mortar, loose or shifted bricks, flaking brick faces, damaged stone and structural cracks. If it's brick, stone or mortar and it's damaged, ask us.",
+    ],
   },
   {
     uuid: "faq-repair-2",
     question: "When should masonry be repaired instead of just monitored?",
     answers: [
-      "As soon as you see movement, a crack that's getting wider, or mortar that's crumbling. Once water is getting in, each Calgary winter makes it worse. Some small cracks in a stable wall can be watched, and when we visit we'll tell you which kind you have."
-    ]
+      "As soon as you see movement, a crack that's getting wider, or mortar that's crumbling. Once water is getting in, each Calgary winter makes it worse. Some small cracks in a stable wall can be watched, and when we visit we'll tell you which kind you have.",
+    ],
   },
   {
     uuid: "faq-repair-3",
-    question: "Do you offer partial repairs or full masonry restoration?",
+    question: "Should crumbling mortar be repointed, or do the bricks need replacing?",
     answers: [
-      "Both. A small repair might be a few bricks or one section of joints. A full restoration covers a whole wall or building face. We recommend what the damage actually needs, not more."
-    ]
+      "Usually the mortar is the problem, not the bricks. Mortar is meant to wear first, and repointing (raking out the failed joints and packing in fresh, matched mortar) repairs the wall while keeping the original brick. Bricks only need replacing when their faces have spalled, they're cracked through, or the wall has moved.",
+    ],
   },
   {
     uuid: "faq-repair-4",
-    question: "Will repaired areas match the existing brickwork?",
+    question: "How much does masonry repair cost in Calgary?",
     answers: [
-      "We match the brick or stone, the mortar colour and the joint finish as closely as we can. On some older brick an exact match isn't always possible, but a good repair should be hard to spot."
-    ]
+      "It depends on the type of damage, how much of the wall is affected, the height and access, and whether we're matching older brick or stone. A few bricks or a small area of joints is a small job; repointing a whole wall or rebuilding a section is larger. We quote after seeing the wall and tell you what's urgent and what can wait.",
+    ],
   },
   {
     uuid: "faq-repair-5",
-    question: "How does the masonry repair process begin?",
+    question: "Will repaired areas match the existing brickwork?",
     answers: [
-      "With a visit to your property. We look at the damage, work out what's causing it, and explain your options before any work starts."
-    ]
-  }
+      "We match the brick or stone, the mortar colour and the joint finish as closely as we can. On some older brick an exact match isn't always possible, but a good repair should be hard to spot.",
+    ],
+  },
+  {
+    uuid: "faq-repair-6",
+    question: "How do I choose a reliable masonry restoration company?",
+    answers: [
+      "Look for one that inspects before quoting, explains the cause of the damage, gives a clear quote listing what's included, shows photos of similar repairs and has reviews from local customers. Be wary of anyone who wants to patch over cracks without finding out why they opened.",
+    ],
+  },
 ];
 
 // Tahapan proses spesifik untuk Masonry Repair
@@ -109,7 +118,7 @@ const masonryDamageTypes = [
   },
   {
     title: "What do stair-step cracks mean?",
-    text: "Stair-step cracks follow the mortar joints diagonally in a stepped pattern. They usually point to movement or settlement below the wall rather than a fault in the brick itself, which is why the repair often starts at the foundation rather than the face of the masonry.",
+    text: "Stair-step cracks follow the mortar joints diagonally in a stepped pattern. They usually point to movement or settlement below the wall rather than a fault in the brick itself, which is why the repair often [starts at the foundation](/calgary/foundation-repair/) rather than the face of the masonry.",
   },
 ];
 
@@ -144,6 +153,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/calgary/masonry-repair/")} />
+
       <Navbar />
 
       <PageTitle title="Masonry Repair" homeText="Home" homeUrl="/" />
@@ -167,7 +178,7 @@ export default function Page() {
         extraParagraphsHeading="What a Calgary Masonry Repair Project Involves"
         extraParagraphs={[
           "We start by looking at the wall. We check the bricks, the mortar joints and any cracks, and work out what's causing them. Then we tell you what needs fixing now and what can wait.",
-          "The work depends on the damage. It might be a few bricks cut out and replaced, a section of mortar raked out and repointed, or a full restoration of a wall or chimney face. We work on both brick and stone.",
+          "The work depends on the damage. It might be a few bricks cut out and replaced, a section of mortar raked out and repointed, or a full restoration of a wall. We work on both brick and stone. For chimneys, see our [chimney repair service](/calgary/chimney-repair/).",
           "We match the new brick, the mortar colour and the joint finish to what's already there, so the repair blends in instead of standing out. We do this for homes and commercial buildings across Calgary and Alberta."
         ]}
       />
@@ -188,7 +199,9 @@ export default function Page() {
         after={
           <>
             Need a closer look at a specific wall? See our{" "}
-            <Link href="/calgary/brick-repair/">brick repair service in Calgary</Link>.
+            <Link href="/calgary/brick-repair/" className="text-link">
+              brick repair service in Calgary
+            </Link>.
           </>
         }
       />

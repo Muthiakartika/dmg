@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { blogImageAlt } from "@/lib/blogAssetAlts";
 import type { BlogSummary } from "@/lib/cmsBlogs";
 import { formatBlogDate, getBlogDisplayDate } from "@/lib/blogDate";
 import styles from "./BlogsCollection.module.css";
@@ -53,7 +54,7 @@ export default function BlogsCollection({
                       <Image
                         className={styles.image}
                         src={post.coverImage}
-                        alt={post.title}
+                        alt={blogImageAlt(post.coverImage, post.title)}
                         fill
                         sizes="(max-width: 991px) 100vw, 50vw"
                         // Top card of the grid, so it is the LCP on this page.

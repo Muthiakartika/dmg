@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ArrowList from "@/components/UI/ArrowList";
+import LazyBackground from "./LazyBackground";
 import { fadeUp } from "@/lib/aos";
+import { renderInline } from "@/lib/richText";
 
 import arrowShape from "../../../public/images/about/arrow-shape.png";
 import aboutBgImg from "../../../public/images/main-banner/home/2.webp";
@@ -17,6 +19,9 @@ const highlights = [
   "Custom work, designed around your property",
 ];
 
+const introCopy =
+  "DMG Masonry is a Calgary masonry contractor with more than 35 years of experience. We [repair and restore brick and stone](/calgary/masonry-repair/), and we build custom [fireplaces](/calgary/fireplace-installation/), fire pits, [pizza ovens](/calgary/custom-pizza-oven/) and [outdoor kitchens](/outdoor-kitchen-contractor/) for homes and commercial properties. Request a quote, or call 1-403-619-8727.";
+
 /** About block under the home hero. Carries the page's h1 (wording set by the
  *  client) because the hero tagline above is not a heading. */
 export default function HomeAbout() {
@@ -25,15 +30,11 @@ export default function HomeAbout() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-4 col-md-12">
-            <div
-              className="about-image-one"
-              style={{ backgroundImage: `url(${aboutBgImg.src})` }}
-              {...fadeUp(100)}
-            >
+            <LazyBackground className="about-image-one" src={aboutBgImg.src} {...fadeUp(100)}>
               <div className="arrow-shape">
-                <Image src={arrowShape} alt="Shape" width={182} height={128} />
+                <Image src={arrowShape} alt="" width={182} height={128} />
               </div>
-            </div>
+            </LazyBackground>
           </div>
 
           <div className="col-lg-8 col-md-12">
@@ -51,7 +52,7 @@ export default function HomeAbout() {
                   <div className="inner-image">
                     <Image
                       src={aboutImg}
-                      alt="Residential masonry construction with concrete foundation walls by DMG Masonry in Calgary"
+                      alt="Concrete block walls of a home under construction"
                       width={690}
                       height={590}
                     />
@@ -60,12 +61,7 @@ export default function HomeAbout() {
 
                 <div className="col-lg-7">
                   <div className="inner-content">
-                    <p>
-                      DMG Masonry is a Calgary masonry contractor with more than 35 years of
-                      experience. We repair and restore brick and stone, and we build custom
-                      fireplaces, fire pits, pizza ovens and outdoor kitchens for homes and
-                      commercial properties. Request a quote, or call 1-403-619-8727.
-                    </p>
+                    <p>{renderInline(introCopy)}</p>
 
                     <ArrowList items={highlights} icon={arrowIcon} />
 

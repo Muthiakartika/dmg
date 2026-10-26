@@ -9,21 +9,24 @@ const offerings = [
   {
     icon: "flaticon-measuring",
     title: "Masonry Repair",
+    link: "/calgary/masonry-repair/",
     text: "Fixes for cracked mortar, flaking brick and worn masonry, before water does more damage.",
   },
   {
     icon: "flaticon-mansory",
     title: "Masonry Restoration",
+    link: "/calgary/masonry-repair/",
     text: "Bringing older brick and stone back to good condition while keeping the original look.",
   },
   {
     icon: "flaticon-interior-design",
     title: "Masonry Design",
+    link: "/calgary/stone-veneer/",
     text: "Custom stonework and outdoor features, designed around your property.",
   },
 ];
 
-/** Three service cards on the home page; all link to /services. */
+/** Three service cards on the home page, each linking to the page for that service. */
 export default function WhatWeDo() {
   return (
     <div className="services-area pb-75">
@@ -48,11 +51,11 @@ export default function WhatWeDo() {
                   <i className={offering.icon}></i>
                 </div>
                 <h3>
-                  <Link href="/services">{offering.title}</Link>
+                  <Link href={offering.link}>{offering.title}</Link>
                 </h3>
                 <p>{offering.text}</p>
-                <Link href="/services" className="services-btn">
-                  <Image src={arrowRightIcon} alt="arrow-right" width={18} height={18} />
+                <Link href={offering.link} className="services-btn" aria-hidden="true" tabIndex={-1}>
+                  <Image src={arrowRightIcon} alt="" width={18} height={18} />
                 </Link>
               </div>
             </div>

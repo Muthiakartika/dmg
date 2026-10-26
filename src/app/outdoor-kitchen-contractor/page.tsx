@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,43 +10,58 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Outdoor Kitchen
 const outdoorKitchenFaqs = [
   {
     uuid: "faq-kitchen-1",
-    question: "Can you build outdoor kitchens for smaller outdoor spaces?",
+    question: "How much does an outdoor kitchen cost in Calgary?",
     answers: [
-      "Yes. We design outdoor kitchens to make the most of the space, with room to move and cook. Even a compact Calgary backyard can fit an efficient outdoor kitchen.",
+      "It depends on the layout, size, materials and features: a simple BBQ station with counters costs far less than a full kitchen with a sink, fridge, pizza oven and bar seating. We give you a clear, detailed quote, so you know the scope and cost before work begins.",
     ],
   },
   {
     uuid: "faq-kitchen-2",
+    question: "What's included in a masonry outdoor kitchen?",
+    answers: [
+      "Usually a built-in grill set into a masonry surround, prep counters on both sides, weatherproof storage doors and drawers, and optional extras: a sink, an outdoor fridge, a pizza oven or side burner, bar seating and lighting. We plan the layout around how you cook.",
+    ],
+  },
+  {
+    uuid: "faq-kitchen-3",
+    question: "Can an outdoor kitchen handle Calgary winters?",
+    answers: [
+      "Yes, if it's built for it. The masonry structure and stainless access doors stay out all year. Water lines need to be drained before frost, and most outdoor fridges are switched off or removed for winter. We plan the plumbing and electrical with that in mind.",
+    ],
+  },
+  {
+    uuid: "faq-kitchen-4",
     question: "Do you install built-in BBQ features and appliances?",
     answers: [
       "Yes. We build outdoor BBQ kitchens with built-in grills, sinks, storage, pizza ovens and other appliances, based on your design.",
     ],
   },
   {
-    uuid: "faq-kitchen-3",
-    question: "Are outdoor kitchens built to withstand weather conditions?",
-    answers: [
-      "Yes. We use durable materials and construction made for outdoor use, including moisture, heat and Calgary's seasonal changes.",
-    ],
-  },
-  {
-    uuid: "faq-kitchen-4",
-    question: "Can outdoor kitchens include seating and lighting areas?",
-    answers: [
-      "Yes. Many of our projects include bar seating, prep areas and lighting.",
-    ],
-  },
-  {
     uuid: "faq-kitchen-5",
-    question: "How much does an outdoor kitchen cost in Calgary?",
+    question: "Can an outdoor kitchen include a pizza oven or fire feature?",
     answers: [
-      "It depends on the layout, materials, size and features. We give you a clear, detailed quote, so you know the scope and cost before work begins.",
+      "Yes. A [pizza oven](/calgary/custom-pizza-oven/) or a [fire pit](/calgary/custom-fire-pits/) can be built in from the start, in the same stone as the kitchen. It's worth deciding early, because it affects the layout and the base.",
+    ],
+  },
+  {
+    uuid: "faq-kitchen-6",
+    question: "Can you build outdoor kitchens for smaller outdoor spaces?",
+    answers: [
+      "Yes. We design outdoor kitchens to make the most of the space, with room to move and cook. Even a compact Calgary backyard can fit an efficient outdoor kitchen.",
+    ],
+  },
+  {
+    uuid: "faq-kitchen-7",
+    question: "How long does it take to build an outdoor kitchen?",
+    answers: [
+      "It depends on the size, the features and whether plumbing or gas lines are needed. Once we've agreed the design, we'll give you a timeline before work starts.",
     ],
   },
 ];
@@ -74,7 +90,7 @@ const outdoorKitchenComponents = [
   },
   {
     title: "Pizza oven or side burner",
-    text: "A masonry pizza oven or a side burner extends what the kitchen can do. These are built in from the start rather than added later, so it is worth deciding early.",
+    text: "A [masonry pizza oven](/calgary/custom-pizza-oven/) or a side burner extends what the kitchen can do. These are built in from the start rather than added later, so it is worth deciding early.",
   },
   {
     title: "Bar seating and lighting",
@@ -136,7 +152,7 @@ const outdoorKitchenFeedbacks = [
 
 
 export const metadata = buildMetadata({
-  title: "Outdoor Kitchens Calgary – Custom BBQ & Patio Kitchens – DMG",
+  title: "Outdoor Kitchen Contractor Calgary – Custom Built BBQs – DMG",
   description:
     "Custom outdoor kitchens and built-in BBQs in Calgary, planned with layout, materials and cost upfront. Request a quote or call 1-403-619-8727.",
   path: "/outdoor-kitchen-contractor/",
@@ -146,6 +162,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/outdoor-kitchen-contractor/")} />
+
       <Navbar />
 
       <PageTitle
@@ -158,7 +176,7 @@ export default function Page() {
         mainImage="/images/services/service/outdoor_kitchen/1.webp"
         mainImageFocus="60%"
         title="Outdoor Kitchens in Calgary: Custom BBQ & Patio Kitchen Contractor"
-        description="DMG Masonry builds outdoor kitchens in Calgary. An outdoor kitchen puts cooking, dining and gathering in one place, so nobody is running back and forth to the house. We build BBQ areas and full outdoor kitchens in masonry, designed around your patio."
+        description="DMG Masonry builds outdoor kitchens in Calgary. An outdoor kitchen puts cooking, dining and gathering in one place, so nobody is running back and forth to the house. We build BBQ areas and full outdoor kitchens in masonry, [designed around your patio](/patio-stone-installation/)."
         paragraphsHeading="Outdoor Kitchen Ideas for Calgary Patios"
         paragraphs={[
           "An outdoor kitchen is a permanent cooking and dining area, usually a BBQ grill, prep counters, storage and seating built into one masonry structure. It sits outside all year, through heat, moisture and Calgary's temperature swings, so we build it with durable materials and sound construction.",

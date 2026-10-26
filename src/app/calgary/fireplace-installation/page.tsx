@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,6 +10,7 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Fireplace Installation
@@ -28,45 +30,45 @@ const fireplaceFaqs = [
     ],
   },
   {
-    uuid: "faq-fireplace-4",
-    question: "How is safety handled during fireplace construction?",
+    uuid: "faq-fireplace-3",
+    question: "Wood-burning or gas outdoor fireplace: which is better?",
     answers: [
-      "Safety is part of every stage. We use appropriate construction methods, materials and clearances so the fireplace works safely.",
+      "Wood gives you the crackle, smell and look of a real fire, but you need to manage firewood and ash. Gas lights at the push of a button, burns cleanly and needs less upkeep, but needs a gas line. Many Calgary homeowners choose gas for weeknights and convenience, wood for atmosphere.",
+    ],
+  },
+  {
+    uuid: "faq-fireplace-4",
+    question: "Do I need a permit for a fireplace in Calgary?",
+    answers: [
+      "Gas fireplaces need a gas permit and a licensed gas fitter, and a new wood-burning fireplace or chimney may need a building permit. Rules depend on the type and location of the fireplace, so we'll tell you what your project needs before work starts.",
     ],
   },
   {
     uuid: "faq-fireplace-5",
-    question: "Can the fireplace design be customized?",
+    question: "How much does an outdoor fireplace cost in Calgary?",
     answers: [
-      "Yes. We offer custom designs in different masonry finishes, layouts and sizes to match your property and how you'll use the fireplace.",
+      "It depends on the size, the fuel (wood or gas), the finish (natural stone, stone veneer or brick) and features such as built-in seating or wood storage. We quote after we've seen the space and agreed a design.",
     ],
   },
   {
     uuid: "faq-fireplace-6",
-    question: "Should I choose an indoor or outdoor fireplace?",
-    answers: [
-      "It depends on how you'll use the space. An indoor fireplace works all year as a feature of the room. An outdoor one extends your time on the patio.",
-    ],
-  },
-  {
-    uuid: "faq-fireplace-7",
-    question: "What is the typical deposit required to start a fireplace installation?",
-    answers: [
-      "Most fireplace projects need a deposit up front to secure materials and scheduling. The balance is due as the work progresses or when it's finished.",
-    ],
-  },
-  {
-    uuid: "faq-fireplace-8",
     question: "How long does mortar need to cure before a new fireplace can be used?",
     answers: [
       "Typically several days. We'll tell you how long to wait before the first fire.",
     ],
   },
   {
-    uuid: "faq-fireplace-9",
+    uuid: "faq-fireplace-7",
     question: "Can a fireplace be finished with natural stone or stone veneer?",
     answers: [
       "Yes. We can finish a fireplace in natural stone, stone veneer, brick or tile, depending on the look you want and how it fits your property. We'll go through the options at the design stage.",
+    ],
+  },
+  {
+    uuid: "faq-fireplace-8",
+    question: "Should I choose an indoor or outdoor fireplace?",
+    answers: [
+      "It depends on how you'll use the space. An indoor fireplace works all year as a feature of the room. An outdoor one extends your time on the patio.",
     ],
   },
 ];
@@ -75,12 +77,12 @@ const fireplaceOptions = [
   {
     icon: "flaticon-houses",
     title: "Indoor Luxury Fireplaces",
-    text: "An indoor fireplace can be the feature that anchors a living space. We choose materials and finishes to suit traditional or contemporary interiors.",
+    text: "An indoor fireplace can be the feature that anchors a living space. We choose materials and finishes to suit traditional or contemporary interiors. If your existing chimney needs work first, see [chimney repair](/calgary/chimney-repair/).",
   },
   {
     icon: "flaticon-fireplace",
     title: "Patio Outdoor Fireplace",
-    text: "A patio fireplace extends your outdoor season and gives your backyard, deck or garden somewhere to gather.",
+    text: "A patio fireplace extends your outdoor season and gives your backyard, deck or garden somewhere to gather. Prefer an open fire at ground level? See our [custom fire pits](/calgary/custom-fire-pits/).",
   },
 ];
 
@@ -148,6 +150,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/calgary/fireplace-installation/")} />
+
       <Navbar />
 
       <PageTitle
@@ -163,7 +167,7 @@ export default function Page() {
         description="DMG Masonry designs and builds fireplaces for homes and commercial properties in Calgary, indoors and out. A fireplace adds warmth and gives people somewhere to gather."
         paragraphs={[
           "An outdoor fireplace lets you use your patio or backyard through more of the year. Indoors, a fireplace becomes a feature of the room. We build gas, electric and wood-burning fireplaces, with finishes chosen to suit traditional and contemporary interiors.",
-          "Before we build, we plan the layout, ventilation and finishing details so the fireplace suits the space and meets the practical requirements. We work in natural stone, stone veneer, brick and tile, whichever fits the style of your property.",
+          "Before we build, we plan the layout, ventilation and finishing details so the fireplace suits the space and meets the practical requirements. We work in natural stone, [stone veneer](/calgary/stone-veneer/), brick and tile, whichever fits the style of your property.",
         ]}
         benefits={[
           "Indoor and outdoor fireplaces",

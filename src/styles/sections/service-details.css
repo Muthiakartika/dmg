@@ -192,6 +192,43 @@
   margin-top: 30px;
 }
 
+/* Extra h2 sections after the main copy (see ContentSections). */
+.services-details-desc .body-section {
+  margin-top: 30px;
+}
+
+.services-details-desc .body-subsection {
+  margin-bottom: 20px;
+}
+
+.services-details-desc .body-subsection h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.services-details-desc .body-bullets {
+  padding-left: 22px;
+}
+
+.services-details-desc .body-bullets li {
+  margin-bottom: 8px;
+}
+
+.area-links-list {
+  margin: 20px 0 0;
+  padding-left: 22px;
+}
+
+.area-links-list li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .services-details-desc .body-subsection h3 {
+    font-size: 20px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .services-details-desc {
     padding-right: 0;

@@ -62,7 +62,9 @@ export const services: Service[] = [
   },
   {
     id: "5",
-    icon: "/images/service/CustomFirePits.png",
+    // The two files are named the other way round: CustomFirePits.png draws a
+    // fireplace and FirePlaceInsta.png draws a fire pit.
+    icon: "/images/service/FirePlaceInsta.png",
     title: "Custom Fire Pits",
     text: "Custom wood-burning and gas fire pits for your yard.",
     link: "/calgary/custom-fire-pits",
@@ -97,7 +99,7 @@ export const services: Service[] = [
   },
   {
     id: "10",
-    icon: "/images/service/FirePlaceInsta.png",
+    icon: "/images/service/CustomFirePits.png",
     title: "Fireplace Installation",
     text: "Custom indoor and outdoor fireplaces.",
     link: "/calgary/fireplace-installation",

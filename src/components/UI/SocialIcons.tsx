@@ -11,7 +11,7 @@ export default function SocialIcons({ className }: SocialIconsProps) {
     <ul className={className}>
       {socialLinks.map((social) => (
         <li key={social.id}>
-          <a href={social.link} target="_blank">
+          <a href={social.link} target="_blank" rel="noreferrer" aria-label={social.label}>
             <i className={social.icon}></i>
           </a>
         </li>

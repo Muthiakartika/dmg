@@ -53,7 +53,7 @@ export default function HeroBanner() {
             browser finds it in the HTML instead of after the stylesheet, and
             PageSpeed times it as an image request. The <picture> picks the crop
             per breakpoint, so phones never download the desktop file.
-            Decorative, hence the empty alt. */}
+            Its alt describes the photo, as the home page's main image. */}
         <div className="main-banner-image">
           <picture>
             <source media={HERO_MOBILE_QUERY} srcSet={heroImageMobile.src} />
@@ -61,14 +61,14 @@ export default function HeroBanner() {
               src={heroImage.src}
               width={heroImage.width}
               height={heroImage.height}
-              alt=""
+              alt="Two-storey brick house with a gabled roof"
               fetchPriority="high"
             />
           </picture>
         </div>
 
         <div className="main-banner-wrap-shape">
-          <Image src={shapeImg} alt="Shape" width={502} height={287} />
+          <Image src={shapeImg} alt="" width={502} height={287} />
         </div>
 
         <div className="main-banner-video">
@@ -99,8 +99,8 @@ export default function HeroBanner() {
         <SocialIcons className="main-banner-social" />
 
         <div className="main-banner-arrow">
-          <Link href="/contact-us">
-            <Image src={arrowRightIcon} alt="arrow right" width={24} height={24} />
+          <Link href="/contact-us" aria-label="Contact us">
+            <Image src={arrowRightIcon} alt="" width={24} height={24} />
           </Link>
         </div>
 

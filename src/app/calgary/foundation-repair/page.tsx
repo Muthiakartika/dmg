@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,6 +10,7 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -30,34 +32,37 @@ const foundationFaqs = [
   },
   {
     uuid: "faq-foundation-2",
-    question:
-      "Do you provide foundation repair for both residential and commercial properties?",
+    question: "Are foundation cracks normal?",
     answers: [
-      "Yes. We repair foundations on homes and commercial buildings, and plan the work around the condition and size of the structure.",
+      "Thin, vertical hairline cracks from concrete shrinkage are common and often only need sealing. Cracks that are wider, horizontal, stair-stepped, leaking water or getting bigger point to movement or pressure, and should be assessed.",
     ],
   },
   {
     uuid: "faq-foundation-3",
-    question:
-      "Can foundation problems become worse if repairs are delayed?",
+    question: "How are foundation cracks repaired?",
+    answers: [
+      "It depends on the cause. Non-structural cracks are usually sealed from the inside by injecting epoxy or polyurethane. Leaks over a wider area may need the outside of the wall excavated and waterproofed. Deteriorated exterior surfaces are re-parged, and walls that have moved need reinforcement.",
+    ],
+  },
+  {
+    uuid: "faq-foundation-4",
+    question: "Can foundation problems become worse if repairs are delayed?",
     answers: [
       "Yes. Damage can spread: larger cracks, more movement and more water getting in. Alberta's freeze-thaw cycles can speed that up.",
     ],
   },
   {
-    uuid: "faq-foundation-4",
-    question:
-      "How do you determine the appropriate foundation repair solution?",
+    uuid: "faq-foundation-5",
+    question: "Do you provide foundation repair for both residential and commercial properties?",
     answers: [
-      "We assess the foundation first: the type, location and severity of the damage. Then we recommend the repair that fits the cause.",
+      "Yes. We repair foundations on homes and commercial buildings, and plan the work around the condition and size of the structure.",
     ],
   },
   {
-    uuid: "faq-foundation-5",
-    question:
-      "Will foundation repair affect daily activities on the property?",
+    uuid: "faq-foundation-6",
+    question: "How do you determine the appropriate foundation repair solution?",
     answers: [
-      "It depends on the size and location of the work. We plan jobs to keep disruption to a minimum.",
+      "We assess the foundation first: the type, location and severity of the damage. Then we recommend the repair that fits the cause.",
     ],
   },
 ];
@@ -141,6 +146,8 @@ const foundationFeedbacks = [
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/calgary/foundation-repair/")} />
+
       <Navbar />
 
       <PageTitle title="Foundation Repair" homeText="Home" homeUrl="/" />
@@ -163,7 +170,8 @@ export default function Page() {
         extraParagraphsHeading="What does foundation repair involve?"
         extraParagraphs={[
           "Before we repair anything, we work out how the structure has been affected and why. We look at settlement patterns, moisture and how the building is behaving, then choose the repair.",
-          "A repair should fix the cause, not just cover up the damage. That can mean sealing a crack, reinforcing weak brick or block, or waterproofing the outside of the wall.",
+          "A repair should fix the cause, not just cover up the damage. That can mean sealing a crack, [reinforcing weak brick or block](/calgary/masonry-repair/), or waterproofing the outside of the wall.",
+          "Not sure what you're looking at? Our guide to the [signs of foundation masonry failure](/blogs/signs-of-foundation-masonry-failure-causes-solutions/) explains the common cracks and what they mean.",
           "We do foundation repair across Calgary and Alberta, for homes and commercial buildings.",
         ]}
       />

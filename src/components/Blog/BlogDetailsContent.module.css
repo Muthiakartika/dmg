@@ -1,5 +1,8 @@
 .article:global(.blog-details-area) {
   overflow: visible;
+  /* "clip" rather than hidden keeps the sticky sidebar working. The row's g-5
+     gutter is wider than the container padding and pushed phones 12px sideways. */
+  overflow-x: clip;
 }
 
 .article :global(.blog-details-desc .title h1) {

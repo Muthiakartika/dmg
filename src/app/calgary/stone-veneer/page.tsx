@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,45 +10,53 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Stone Veneer
 const stoneVeneerFaqs = [
   {
     uuid: "faq-veneer-1",
-    question: "What is the difference between stone veneer and full stone masonry?",
+    question: "What's the difference between natural and manufactured stone veneer?",
     answers: [
-      "Veneer is a thinner, lighter layer of stone that gives you the look of full stone without the weight. It's quicker to install and still durable."
-    ]
+      "Natural thin veneer is real stone cut into thin pieces, with natural variation in colour and texture. Manufactured (cultured) stone is a cast product made to look like stone; it's lighter, more uniform and usually costs less. Both last when installed properly over a sound, moisture-protected wall. Our guide to [natural vs manufactured stone veneer](/blogs/natural-vs-manufactured-stone-veneer-what-s-the-difference-for-calgary-homes/) compares them in detail.",
+    ],
   },
   {
     uuid: "faq-veneer-2",
-    question: "Where can stone veneer be installed?",
+    question: "What is the difference between stone veneer and full stone masonry?",
     answers: [
-      "Inside and out: fireplaces, feature walls, exterior facades, entryways and accent areas, on homes and commercial buildings."
-    ]
+      "Veneer is a thinner, lighter layer of stone that gives you the look of full stone without the weight. It's quicker to install and still durable.",
+    ],
   },
   {
     uuid: "faq-veneer-3",
-    question: "Is stone veneer suitable for Calgary's climate?",
+    question: "Where can stone veneer be installed?",
     answers: [
-      "Yes, when it's installed properly. We use suitable methods and durable materials so the veneer handles moisture and Calgary's temperature swings."
-    ]
+      "Inside and out: fireplaces, feature walls, exterior facades, entryways and accent areas, on homes and commercial buildings.",
+    ],
   },
   {
     uuid: "faq-veneer-4",
-    question: "Do you provide custom stone veneer design guidance?",
+    question: "Can stone veneer go over existing brick or concrete?",
     answers: [
-      "Yes. We help you choose stone textures, colours and layouts that suit your house."
-    ]
+      "In many cases, yes, if the existing wall is sound and properly prepared. We check the surface first, because veneer applied over a wall that's already failing will fail with it.",
+    ],
   },
   {
     uuid: "faq-veneer-5",
+    question: "Is stone veneer suitable for Calgary's climate?",
+    answers: [
+      "Yes, when it's installed properly. We use suitable methods and durable materials so the veneer handles moisture and Calgary's temperature swings. Outside, the key is a proper moisture barrier and drainage behind the stone, so water that gets in can get out.",
+    ],
+  },
+  {
+    uuid: "faq-veneer-6",
     question: "Can damaged stone veneer be repaired instead of replaced?",
     answers: [
-      "Often, yes. Damaged or aging veneer can usually be repaired rather than replaced. We check the surface and tell you what it needs."
-    ]
-  }
+      "Often, yes. Damaged or aging veneer can usually be repaired rather than replaced. We check the surface and tell you what it needs.",
+    ],
+  },
 ];
 
 // Tahapan proses spesifik untuk Stone Veneer
@@ -96,11 +105,11 @@ const stoneVeneerApplications = [
   },
   {
     title: "Interior feature walls and fireplace surrounds",
-    text: "Indoors, stone veneer is used on fireplace surrounds, feature walls and basement bars. Interior installs avoid the freeze-thaw exposure of exterior work, so material choice is driven mainly by appearance.",
+    text: "Indoors, stone veneer is used on [fireplace surrounds](/calgary/fireplace-installation/), feature walls and basement bars. Interior installs avoid the freeze-thaw exposure of exterior work, so material choice is driven mainly by appearance.",
   },
   {
     title: "Outdoor kitchens, fire pits and retaining walls",
-    text: "Stone veneer is frequently used to clad outdoor kitchen bases, fire pit surrounds and the face of block retaining walls, which is how a hardscape project ends up looking like one connected design rather than separate builds.",
+    text: "Stone veneer is frequently used to clad outdoor kitchen bases, [fire pit surrounds](/calgary/custom-fire-pits/) and the face of [block retaining walls](/calgary/retaining-wall-construction/), which is how a hardscape project ends up looking like one connected design rather than separate builds.",
   },
   {
     title: "Can stone veneer go over existing brick or concrete?",
@@ -144,6 +153,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/calgary/stone-veneer/")} />
+
       <Navbar />
 
       <PageTitle title="Stone Veneer" homeText="Home" homeUrl="/" />

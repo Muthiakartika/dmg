@@ -13,7 +13,7 @@ export default function ArrowList({ items, icon }: ArrowListProps) {
     <ul className="list">
       {items.map((item, index) => (
         <li key={index}>
-          <Image src={icon} alt="arrow" width={28} height={10} />
+          <Image src={icon} alt="" width={28} height={10} />
           {item}
         </li>
       ))}

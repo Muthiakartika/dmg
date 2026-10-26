@@ -1,6 +1,9 @@
 import Image, { type StaticImageData } from "next/image";
 
 import ArrowList from "@/components/UI/ArrowList";
+import { imageAlt } from "@/lib/imageAlts";
+import { renderInline } from "@/lib/richText";
+import ContentSections, { type ContentSection } from "./ContentSections";
 import ServiceSidebar from "./ServiceSidebar";
 
 import arrowIcon from "../../../public/images/services-details/arrow.svg";
@@ -14,6 +17,7 @@ interface ServiceDetailsContentProps {
    * object-position x value (e.g. "85%"). Defaults to the centre.
    */
   mainImageFocus?: string;
+  /** May hold `[anchor](/path/)` links, like every paragraph below. */
   description: string;
   /** Question-form h2 introducing `paragraphs`. */
   paragraphsHeading?: string;
@@ -23,6 +27,8 @@ interface ServiceDetailsContentProps {
   /** Question-form h2 introducing `extraParagraphs`. */
   extraParagraphsHeading?: string;
   extraParagraphs: readonly string[];
+  /** Further h2 sections, shown after `extraParagraphs`. */
+  sections?: readonly ContentSection[];
 }
 
 /** Main article of a service page, with the other services in a sidebar. */
@@ -37,6 +43,7 @@ export default function ServiceDetailsContent({
   benefits,
   extraParagraphsHeading,
   extraParagraphs,
+  sections,
 }: ServiceDetailsContentProps) {
   const firstColumnSize = Math.ceil(benefits.length / 2);
 
@@ -49,7 +56,7 @@ export default function ServiceDetailsContent({
               <div className="title">
                 <span>{subtitle}</span>
                 <h1>{title}</h1>
-                <p>{description}</p>
+                <p>{renderInline(description)}</p>
               </div>
 
               {/* The banner is the LCP element on every page that renders this
@@ -59,7 +66,7 @@ export default function ServiceDetailsContent({
                   matters there, since the desktop box has the photo's own shape. */}
               <Image
                 src={mainImage}
-                alt={title}
+                alt={imageAlt(mainImage, title)}
                 width={1400}
                 height={645}
                 priority
@@ -70,7 +77,7 @@ export default function ServiceDetailsContent({
               {paragraphsHeading && <h2 className="body-question">{paragraphsHeading}</h2>}
 
               {paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index}>{renderInline(paragraph)}</p>
               ))}
 
               <div className="row justify-content-center">
@@ -88,8 +95,10 @@ export default function ServiceDetailsContent({
               )}
 
               {extraParagraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index}>{renderInline(paragraph)}</p>
               ))}
+
+              {sections && <ContentSections sections={sections} />}
             </div>
           </div>
 

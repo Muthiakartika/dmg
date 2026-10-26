@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,6 +10,7 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Hardscape Contractor
@@ -22,9 +24,9 @@ const hardscapeFaqs = [
   },
   {
     uuid: "faq-hardscape-2",
-    question: "Can hardscape designs be customized to my property?",
+    question: "What's the difference between hardscaping and landscaping?",
     answers: [
-      "Yes. Every project is planned around your property, how you'll use the space and your design preferences.",
+      "Hardscaping is the built part of an outdoor space: patios, walkways, retaining walls, steps and stone features. Landscaping usually means the planted part: lawn, beds, trees and shrubs. Most yards need both; we build the hardscape, so the planting has a solid, well-drained structure around it.",
     ],
   },
   {
@@ -66,14 +68,7 @@ const hardscapeFaqs = [
     uuid: "faq-hardscape-8",
     question: "How long does it take to build a retaining wall in Calgary?",
     answers: [
-      "Most retaining walls in Calgary take one to a few weeks, depending on length, height and site conditions. We'll give you a more specific estimate once we've seen your property.",
-    ],
-  },
-  {
-    uuid: "faq-hardscape-9",
-    question: "What is the typical deposit required to start a hardscape project?",
-    answers: [
-      "Most hardscape projects need a deposit up front to secure materials and scheduling. The balance is due as the work progresses or when it's finished.",
+      "Most retaining walls in Calgary take one to a few weeks, depending on length, height and site conditions. We'll give you a more specific estimate once we've seen your property. See our [retaining wall construction](/calgary/retaining-wall-construction/) page for more.",
     ],
   },
 ];
@@ -106,12 +101,12 @@ const hardscapeFeatures = [
   {
     icon: "flaticon-houses",
     title: "Patios",
-    text: "A well-built patio is a durable, low-maintenance place to spend time outside, finished in materials chosen for Calgary's climate.",
+    text: "[A well-built patio](/patio-stone-installation/) is a durable, low-maintenance place to spend time outside, finished in materials chosen for Calgary's climate.",
   },
   {
     icon: "flaticon-facade",
     title: "Retaining Walls",
-    text: "Retaining walls manage changes in ground level and support sloped areas, and they can look natural as well as hold the soil. We also build walkways, driveways and other stone features as part of a complete plan for your property.",
+    text: "[Retaining walls](/calgary/retaining-wall-construction/) manage changes in ground level and support sloped areas, and they can look natural as well as hold the soil. We also build walkways, driveways and other stone features as part of a complete plan for your property.",
   },
 ];
 
@@ -179,6 +174,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/hardscape-contractor/")} />
+
       <Navbar />
 
       <PageTitle title="Hardscape Contractor" homeText="Home" homeUrl="/" />
@@ -190,7 +187,7 @@ export default function Page() {
         description="DMG Masonry is a hardscape contractor in Calgary. We build patios, retaining walls, walkways and other outdoor surfaces, planned and finished to stand up to Calgary weather."
         paragraphsHeading="What Is Hardscaping? Patios, Walls and Walkways"
         paragraphs={[
-          "Hardscaping covers the built parts of an outdoor space: patios, retaining walls, walkways, driveways and outdoor kitchens. They deal with weather, moisture, ground movement and daily use, so they have to be built properly.",
+          "Hardscaping covers the built parts of an outdoor space: patios, retaining walls, walkways, driveways and [outdoor kitchens](/outdoor-kitchen-contractor/). They deal with weather, moisture, ground movement and daily use, so they have to be built properly.",
           "A well-planned hardscape makes a yard easier to use and adds to the property. Good layout and clean finishing mean it stays practical and needs little upkeep.",
         ]}
         benefits={[

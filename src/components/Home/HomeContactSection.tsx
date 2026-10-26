@@ -15,7 +15,7 @@ export default function HomeContactSection() {
         <div className="row justify-content-center">
           <div className="col-lg-5 col-md-12 pe-5" {...fadeUp(100)}>
             <div className="contact-image">
-              <Image src={contactImg} alt="contact" width={700} height={1012} />
+              <Image src={contactImg} alt="Fire burning in a small brick outdoor fireplace" width={700} height={1012} />
             </div>
           </div>
 

@@ -23,6 +23,10 @@ export const siteConfig = {
     "https://www.facebook.com/DMGMasonry/",
     "https://www.instagram.com/d.m.gmasonry/",
   ],
+  // Google Business Profile (the Maps listing). Kept apart from `sameAs`, whose
+  // first two entries feed the footer's social icons.
+  googleBusinessProfile:
+    "https://www.google.com/maps/place/D.M.G.+Masonry+LTD/@50.919583,-113.9621332,745m/data=!3m2!1e3!4b1!4m6!3m5!1s0x53717701781c0ddb:0x82f1044b969394fb!8m2!3d50.919583!4d-113.9621332!16s%2Fg%2F11xctrhj8k",
 } as const;
 
 export const contact = {

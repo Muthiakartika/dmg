@@ -19,7 +19,7 @@ export default function ThemeLogo({ width, height, priority }: ThemeLogoProps) {
   return (
     <Image
       src={theme === "dark" ? whiteLogo : logo}
-      alt="DMG Masonry Logo"
+      alt="DMG Masonry"
       width={width}
       height={height}
       priority={priority}

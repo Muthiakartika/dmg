@@ -46,25 +46,25 @@ const webPageSchema = {
 const processSteps: ProcessStep[] = [
   {
     image: processImg1,
-    imageAlt: "Project Consultation",
+    imageAlt: "Concrete block walls going up inside a building under construction",
     title: "Project Consultation",
     text: "We look at your property and talk through what you need.",
   },
   {
     image: processImg2,
-    imageAlt: "Site & Material Planning ",
+    imageAlt: "Rectangular stacked-stone fire pit on a concrete patio",
     title: "Site & Material Planning ",
     text: "We plan the schedule and order the materials.",
   },
   {
     image: processImg3,
-    imageAlt: "Professional Installation",
+    imageAlt: "Brick garden wall under construction with mortar and tools",
     title: "Professional Installation",
     text: "We do the work and keep you updated as we go.",
   },
   {
     image: processImg4,
-    imageAlt: "Final Quality Review",
+    imageAlt: "Stacked-stone outdoor kitchen with a built-in oven and stone emblem",
     title: "Final Quality Review",
     text: "We check the finished work with you and clean up the site.",
   },
@@ -90,38 +90,45 @@ const feedbacks: Testimonial[] = [
 
 const faqs: FaqItem[] = [
   {
-    uuid: "faq-repair-1",
+    uuid: "faq-home-1",
+    question: "What does a masonry contractor do?",
+    answers: [
+      "A masonry contractor builds and repairs structures made of brick, stone and concrete block: walls, chimneys, fireplaces, patios, retaining walls, outdoor kitchens and foundations. DMG Masonry does repairs and restoration as well as custom builds, for homes and commercial properties in Calgary.",
+    ],
+  },
+  {
+    uuid: "faq-home-2",
+    question: "How do I choose a masonry company in Calgary?",
+    answers: [
+      "Choose a contractor who visits before quoting, explains what's causing the damage, gives you a clear quote listing what's included, can show photos of similar work, and has reviews from local customers. They should also tell you what can wait. That's how we work on every job.",
+    ],
+  },
+  {
+    uuid: "faq-home-3",
     question: "What masonry services do you provide in Calgary?",
     answers: [
-      "Brick, stone and concrete block work for homes and commercial properties. That covers repairs and restoration, plus custom builds such as fireplaces, fire pits, pizza ovens, outdoor kitchens, patios and retaining walls.",
+      "Brick, stone and block repair and restoration, including [chimney repair](/calgary/chimney-repair/) and [foundation repair](/calgary/foundation-repair/), plus custom builds: fireplaces, [fire pits](/calgary/custom-fire-pits/), pizza ovens, outdoor kitchens, patios and [retaining walls](/calgary/retaining-wall-construction/).",
     ],
   },
   {
-    uuid: "faq-repair-2",
-    question: "How do we know if masonry is the right choice for our project?",
+    uuid: "faq-home-4",
+    question: "Can masonry stand up to Calgary's weather?",
     answers: [
-      "Tell us what you're planning. We'll look at your goals, budget, property and site conditions, then recommend the materials and building method that fit.",
+      "Yes, when it's built and maintained properly. Brick and stone resist weather, moisture and fire. The main threat in Calgary is freeze-thaw: Chinooks melt snow during the day, the water soaks into small cracks and freezes again at night, widening them. Sound mortar joints, good crowns and caps, and prompt repairs keep that in check.",
     ],
   },
   {
-    uuid: "faq-repair-3",
-    question: "Can masonry withstand Calgary’s weather conditions?",
+    uuid: "faq-home-5",
+    question: "Do you work outside Calgary?",
     answers: [
-      "Yes, when it's built and looked after properly. Brick and stone resist weather, moisture and fire. The main threat in Calgary is freeze-thaw: water gets into small cracks, freezes and makes them wider. Sound mortar joints and quick repairs keep that in check.",
+      "Yes. Besides Calgary, we do chimney repair in Bragg Creek, Kananaskis, Longview, Sundre, Three Hills, Drumheller and Claresholm, and take on masonry projects elsewhere in Alberta. Tell us your location when you get in touch.",
     ],
   },
   {
-    uuid: "faq-repair-4",
-    question: "Do you handle both new construction and masonry repairs?",
-    answers: [
-      "Yes. We repair cracked brick and worn mortar, and we build new masonry such as fireplaces, patios and outdoor kitchens.",
-    ],
-  },
-  {
-    uuid: "faq-repair-5",
+    uuid: "faq-home-6",
     question: "How do we get started with a masonry project?",
     answers: [
-      "Contact us with a few details about your project. We'll look at the site and give you a clear estimate.",
+      "Call 1-403-619-8727 or send the form with a few details and photos. We'll look at the site, talk through your options and give you a clear quote.",
     ],
   },
 ];

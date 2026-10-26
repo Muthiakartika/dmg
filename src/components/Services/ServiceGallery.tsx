@@ -1,6 +1,7 @@
 import Image, { type StaticImageData } from "next/image";
 
 import { fadeUp, staggerDelay } from "@/lib/aos";
+import { imageAlt } from "@/lib/imageAlts";
 
 export interface ServiceGalleryItem {
   image: string | StaticImageData;
@@ -27,7 +28,12 @@ export default function ServiceGallery({ items }: ServiceGalleryProps) {
               >
                 <div className="overview-card">
                   <div className="image">
-                    <Image src={item.image} alt={item.titleNormal} width={1320} height={780} />
+                    <Image
+                      src={item.image}
+                      alt={imageAlt(item.image, item.titleNormal)}
+                      width={1320}
+                      height={780}
+                    />
                   </div>
                   <h3>
                     {item.titleNormal} <span>{item.titleHighlight}</span>

@@ -5,8 +5,10 @@ import BlogDetailsContent from "@/components/Blog/BlogDetailsContent";
 import PageTitle from "@/components/Sections/PageTitle";
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import { getPublishedBlogBySlug, getPublishedBlogs } from "@/lib/cmsBlogs";
 import { getBlogSeoOverride } from "@/lib/blogSeo";
+import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 interface BlogDetailsPageProps {
@@ -48,6 +50,14 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Blogs", path: "/blogs/" },
+          { name: post.title, path: `/blogs/${post.slug}/` },
+        ])}
+      />
+
       <Navbar />
 
       <PageTitle title="Blog Details" homeText="Blogs" homeUrl="/blogs/" />

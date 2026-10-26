@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 import { fadeUp, staggerDelay } from "@/lib/aos";
+import { renderInline } from "@/lib/richText";
 
 export interface MaterialItem {
   // Optional: the icon font is subsetted to the 7 glyphs the site already
@@ -40,7 +41,7 @@ export default function MaterialsSection({
           <span>{subtitle}</span>
           <div className="title-text">
             <h2>{title}</h2>
-            {description && <p>{description}</p>}
+            {description && <p>{renderInline(description)}</p>}
           </div>
         </div>
 
@@ -58,7 +59,7 @@ export default function MaterialsSection({
                   </div>
                 )}
                 <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <p>{renderInline(item.text)}</p>
               </div>
             </div>
           ))}

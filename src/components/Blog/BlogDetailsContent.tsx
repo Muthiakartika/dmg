@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { applyBlogAssetAlts, blogImageAlt } from "@/lib/blogAssetAlts";
 import type { BlogSummary, CmsBlog } from "@/lib/cmsBlogs";
 import { formatBlogDate, getBlogDisplayDate } from "@/lib/blogDate";
 import styles from "./BlogDetailsContent.module.css";
@@ -43,7 +44,7 @@ export default function BlogDetailsContent({
 
               <Image
                 src={post.coverImage}
-                alt={post.title}
+                alt={blogImageAlt(post.coverImage, post.title)}
                 width={1320}
                 height={650}
                 sizes="(max-width: 991px) 100vw, 66vw"
@@ -53,7 +54,7 @@ export default function BlogDetailsContent({
 
               <div
                 className={styles.richContent}
-                dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+                dangerouslySetInnerHTML={{ __html: applyBlogAssetAlts(post.contentHtml) }}
               />
 
               <div className="bd-previous-next-post">

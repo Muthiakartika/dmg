@@ -13,7 +13,7 @@ export default function QuoteText() {
             Everyday Living
           </p>
           <div className="wrap-shape">
-            <Image src={shapeImg} alt="image" width={260} height={276} />
+            <Image src={shapeImg} alt="" width={260} height={276} />
           </div>
         </div>
       </div>

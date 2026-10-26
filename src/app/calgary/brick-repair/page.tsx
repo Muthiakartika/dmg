@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -6,6 +7,7 @@ import Footer from "@/components/Layout/Footer";
 import ProcessSteps from "@/components/Sections/ProcessSteps";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 const brickRepairFaqs = [
@@ -18,30 +20,37 @@ const brickRepairFaqs = [
   },
   {
     uuid: "faq-brick-repair-2",
+    question: "What's the difference between tuckpointing and repointing?",
+    answers: [
+      "In everyday use, both mean removing failed mortar and replacing it with fresh mortar. Strictly, tuckpointing also adds a fine line along the joint for a crisp finish. Most brick repair is repointing, with the new mortar matched to the colour and joint style of the existing wall.",
+    ],
+  },
+  {
+    uuid: "faq-brick-repair-3",
+    question: "Can you replace just a few damaged bricks?",
+    answers: [
+      "Yes. Cracked or spalled bricks can be cut out one at a time and replaced with matching brick, as long as the surrounding wall is stable. It's one of the most common repairs we do.",
+    ],
+  },
+  {
+    uuid: "faq-brick-repair-4",
+    question: "What causes bricks to crack in Calgary?",
+    answers: [
+      "Mostly water and freeze-thaw: water soaks into the brick or mortar, freezes and expands. Settlement under the wall and mortar that's harder than the brick around it can also crack bricks. We find the cause before repairing, so the damage doesn't come back.",
+    ],
+  },
+  {
+    uuid: "faq-brick-repair-5",
     question: "Do you repair both residential and commercial brickwork?",
     answers: [
       "Yes. We repair brick on homes and commercial buildings, and fit the repair to the size, condition and construction of the job.",
     ],
   },
   {
-    uuid: "faq-brick-repair-3",
-    question: "Is brick repointing included as part of your repair services?",
+    uuid: "faq-brick-repair-6",
+    question: "How much does brick repair cost?",
     answers: [
-      "When worn mortar joints are part of the problem, we recommend repointing as part of the repair. New mortar restores the wall's stability and keeps moisture out.",
-    ],
-  },
-  {
-    uuid: "faq-brick-repair-4",
-    question: "How do you determine the best repair method?",
-    answers: [
-      "We start with an inspection, looking at the type, location and extent of the damage. Then we recommend the repair that restores both the look and the strength of the wall.",
-    ],
-  },
-  {
-    uuid: "faq-brick-repair-5",
-    question: "Can repairing damaged brickwork help prevent future problems?",
-    answers: [
-      "Yes. Fixing damage early cuts the risk of water getting in, more cracking and loose brick. Keeping up with small repairs helps the wall last.",
+      "It depends on how many bricks or how much mortar needs replacing, the height and access, and how hard the brick is to match. We give you a clear quote after an inspection.",
     ],
   },
 ];
@@ -80,6 +89,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/calgary/brick-repair/")} />
+
       <Navbar />
 
       <PageTitle title="Brick Repair" homeText="Home" homeUrl="/" />
@@ -87,7 +98,7 @@ export default function Page() {
       <ServiceDetailsContent
         mainImage="/images/services/service/brick_repair/1.webp"
         title="Brick Repair in Calgary: Cracked Brick, Spalling & Mortar Repair"
-        description="Damaged brick doesn't fix itself. Moisture, temperature swings and a building settling over the years crack bricks and break down the mortar, and the damage gets worse each winter. DMG Masonry repairs brick walls on homes and commercial buildings in Calgary."
+        description="Damaged brick doesn't fix itself. Moisture, temperature swings and a building settling over the years crack bricks and break down the mortar, and the damage gets worse each winter. DMG Masonry repairs brick walls and [brick chimneys](/calgary/chimney-repair/) on homes and commercial buildings in Calgary."
         paragraphs={[
           "Cracked bricks, crumbling mortar joints, loose bricks and weather damage are all common as buildings age. Before we repair anything, we look for the cause, so we're fixing the problem and not just covering it up.",
           "Repairing brick early keeps the damage from spreading and helps keep water out of the wall.",
@@ -100,7 +111,7 @@ export default function Page() {
         ]}
         extraParagraphs={[
           "We start with an inspection: the damaged bricks, the mortar joints and the masonry around them. The age and construction of the building decide which repair suits it best.",
-          "Good brick repair is more than swapping out a damaged brick. We restore the strength of the wall and keep the repair in line with the rest of it, whether that means replacing cracked bricks or repointing worn mortar.",
+          "Good brick repair is more than swapping out a damaged brick. We restore the strength of the wall and keep the repair in line with the rest of it, whether that means replacing cracked bricks or repointing worn mortar. Stone, block and structural cracks are covered on our [masonry repair](/calgary/masonry-repair/) page.",
         ]}
       />
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { fadeUp } from "@/lib/aos";
 
@@ -16,13 +17,15 @@ export default function HomeOverview() {
               <div className="image">
                 <Image
                   src={outdoorKitchenImg}
-                  alt="Mason laying concrete blocks with mortar for an outdoor kitchen build in Calgary"
+                  alt="Outdoor kitchen with a built-in grill, tiled counter and stone base"
                   width={1320}
                   height={780}
                 />
               </div>
               <h3>
-                Outdoor Kitchen <span>Contractor</span>
+                <Link href="/outdoor-kitchen-contractor/">
+                  Outdoor Kitchen <span>Contractor</span>
+                </Link>
               </h3>
               <p>Built-in BBQs, counters and pizza ovens for your patio.</p>
             </div>
@@ -33,13 +36,15 @@ export default function HomeOverview() {
               <div className="image">
                 <Image
                   src={hardscapeImg}
-                  alt="Concrete block wall construction for a hardscape project in Calgary"
+                  alt="Mason cutting and laying concrete blocks with a power saw nearby"
                   width={1320}
                   height={780}
                 />
               </div>
               <h3>
-                Hardscape <span>Contractor</span>
+                <Link href="/hardscape-contractor/">
+                  Hardscape <span>Contractor</span>
+                </Link>
               </h3>
               <p>Patios, retaining walls and pavers.</p>
             </div>

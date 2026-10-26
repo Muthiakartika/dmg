@@ -1,4 +1,5 @@
 import Navbar from "@/components/Layout/Navbar";
+import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
@@ -9,43 +10,51 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
 import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
+import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Data FAQ khusus untuk halaman Patio Stone Installation
 const patioStoneFaqs = [
   {
     uuid: "faq-patio-1",
-    question: "Can patio stones be installed on uneven or sloped ground?",
+    question: "Pavers or natural flagstone: which is better for a Calgary patio?",
     answers: [
-      "Yes. We look at the site and prepare the base so the patio is stable and level, even on uneven or sloped ground. Good groundwork is what makes it last.",
+      "Interlocking pavers flex slightly with ground movement instead of cracking, and single pavers can be lifted and reset if a section settles. Natural flagstone gives a less uniform, more organic look and takes longer to lay, so it usually costs more. Both last when the base is built properly.",
     ],
   },
   {
     uuid: "faq-patio-2",
-    question: "What materials are commonly used for patio stone installation?",
+    question: "Can patio stones be installed on uneven or sloped ground?",
     answers: [
-      "Natural stone, concrete pavers and other masonry products. We choose based on the look you want and how well the material handles Calgary's weather.",
+      "Yes. We look at the site and prepare the base so the patio is stable and level, even on uneven or sloped ground. Good groundwork is what makes it last. On steeper slopes, a [retaining wall](/calgary/retaining-wall-construction/) may be needed to create a level area.",
     ],
   },
   {
     uuid: "faq-patio-3",
+    question: "How much does patio stone installation cost in Calgary?",
+    answers: [
+      "Cost depends on the area, the material, how much excavation the site needs and access for equipment. A flat, open backyard and a terraced site with a narrow gate are very different jobs at the same size, which is why we quote after seeing the space.",
+    ],
+  },
+  {
+    uuid: "faq-patio-4",
+    question: "Should I seal my patio?",
+    answers: [
+      "It's optional. Sealing helps resist staining and can deepen the colour of natural stone, but it needs redoing every few years and isn't what makes a patio last; the base is. Avoid de-icing salt on natural stone and some concrete pavers; sand is safer.",
+    ],
+  },
+  {
+    uuid: "faq-patio-5",
     question: "Can an existing patio be repaired instead of replaced?",
     answers: [
       "Often, yes. A patio can usually be repaired or re-levelled without replacing it. We fix uneven, cracked or shifted stones.",
     ],
   },
   {
-    uuid: "faq-patio-4",
+    uuid: "faq-patio-6",
     question: "How long does a patio stone installation typically last?",
     answers: [
       "A professionally built patio can last many years. How long depends mainly on base preparation, material quality and workmanship.",
-    ],
-  },
-  {
-    uuid: "faq-patio-5",
-    question: "Can patio stone layouts and patterns be customized?",
-    answers: [
-      "Yes. We design patio layouts around your property and how you'll use it, including stone patterns, shapes and flow.",
     ],
   },
 ];
@@ -54,7 +63,7 @@ const patioStoneFaqs = [
 const patioMaintenanceTopics = [
   {
     title: "Does a patio need sealing?",
-    text: "Sealing is optional. It helps with staining and can deepen the colour of natural stone, but it needs redoing periodically and is not what determines whether the patio lasts. Base preparation is.",
+    text: "Sealing is optional. It helps with staining and can deepen the colour of natural stone, but it needs redoing periodically and is not what determines whether the patio lasts. Base preparation is. Our guide on [how to seal a masonry patio](/blogs/how-to-seal-a-masonry-patio-a-diy-guide/) walks through it step by step.",
   },
   {
     title: "How do I maintain a paver patio?",
@@ -134,6 +143,8 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={servicePageSchema("/patio-stone-installation/")} />
+
       <Navbar />
 
       <PageTitle
@@ -163,6 +174,7 @@ export default function Page() {
           "We start by looking at the space: the soil, how water drains and how you'll use the patio. Those decide the best way to build it.",
           "During installation, each stone is placed and adjusted so the surface is level, aligned and solid underfoot.",
           "We build patios across Calgary and Alberta using solid construction methods and quality materials.",
+          "Planning more than a patio? Our [hardscape contractor](/hardscape-contractor/) page covers walls, walkways and full yard projects.",
         ]}
       />
 

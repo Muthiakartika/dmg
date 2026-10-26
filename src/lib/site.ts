@@ -17,8 +17,6 @@ export const siteConfig = {
   // (main-banner/home/1.webp is a transparent cut-out, which Google showed as a
   // blank or odd thumbnail).
   ogImage: "/images/og-default.jpg",
-  // Google Analytics 4 measurement ID (a public identifier, visible in the page's network traffic).
-  analyticsId: "G-R91CE85924",
   telephone: "+1-403-619-8727",
   email: "will@dmgmasonry.ca",
   sameAs: [

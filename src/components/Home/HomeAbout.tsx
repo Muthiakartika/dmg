@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import ArrowList from "@/components/UI/ArrowList";
 import LazyBackground from "./LazyBackground";
+import ViewportImage from "./ViewportImage";
 import { fadeUp } from "@/lib/aos";
 import { renderInline } from "@/lib/richText";
 
@@ -50,7 +51,7 @@ export default function HomeAbout() {
               <div className="row justify-content-center">
                 <div className="col-lg-5">
                   <div className="inner-image">
-                    <Image
+                    <ViewportImage
                       src={aboutImg}
                       alt="Concrete block walls of a home under construction"
                       width={690}

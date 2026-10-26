@@ -31,7 +31,7 @@ export default function LazyBackground({ src, style, children, ...rest }: LazyBa
           observer.disconnect();
         }
       },
-      { rootMargin: "400px 0px" },
+      { rootMargin: "0px" },
     );
     observer.observe(node);
     return () => observer.disconnect();

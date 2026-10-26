@@ -4,6 +4,7 @@ import Link from "next/link";
 import ArrowList from "@/components/UI/ArrowList";
 import { fadeUp } from "@/lib/aos";
 
+import LazyBackground from "./LazyBackground";
 import featureImg from "../../../public/images/main-banner/home/6.webp";
 import featureBgImg from "../../../public/images/main-banner/home/7.webp";
 import arrowIcon from "../../../public/images/features/arrow.svg";
@@ -69,11 +70,11 @@ export default function CoreFeatures() {
           </div>
 
           <div className="col-lg-4 col-md-12">
-            <div
+            <LazyBackground
               className="features-image"
+              src={featureBgImg.src}
               {...fadeUp(200)}
-              style={{ backgroundImage: `url(${featureBgImg.src})` }}
-            ></div>
+            />
           </div>
         </div>
       </div>

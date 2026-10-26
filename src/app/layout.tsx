@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import Script from "next/script";
 
+import AnalyticsEvents from "@/components/Layout/AnalyticsEvents";
 import AosAnimation from "@/components/Layout/AosAnimation";
 import BackToTop from "@/components/Layout/BackToTop";
 import Preloader from "@/components/Layout/Preloader";
@@ -122,6 +123,7 @@ gtag('config', '${siteConfig.analyticsId}');`}
 
         <Preloader />
         <AosAnimation />
+        <AnalyticsEvents />
         <BackToTop />
       </body>
     </html>

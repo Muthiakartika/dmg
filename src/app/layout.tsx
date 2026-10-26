@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
+import Script from "next/script";
 
 import AosAnimation from "@/components/Layout/AosAnimation";
 import BackToTop from "@/components/Layout/BackToTop";
@@ -103,6 +104,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
 
         <ThemeProvider>{children}</ThemeProvider>
+
+        {/* Google Analytics 4, loaded once the page has finished loading so it
+            cannot compete with the hero image (the LCP element) for bandwidth.
+            Replaces the Cloudflare Zaraz GA4 tool, whose ~190 KB script made
+            the mobile PageSpeed score swing between 74 and 98. */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.analyticsId}`}
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${siteConfig.analyticsId}');`}
+        </Script>
 
         <Preloader />
         <AosAnimation />

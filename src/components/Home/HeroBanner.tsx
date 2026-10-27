@@ -2,6 +2,7 @@
 
 import { useState, type CSSProperties } from "react";
 import dynamic from "next/dynamic";
+import { Barlow_Condensed } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,6 +16,15 @@ import arrowRightIcon from "../../../public/images/main-banner/arrow-right.svg";
 // The lightbox renders nothing until opened, so it is split into its own chunk
 // and loaded after hydration instead of with the page's initial JavaScript.
 const FsLightbox = dynamic(() => import("fslightbox-react"), { ssr: false });
+
+// The hero title's weight of the heading typeface. The root layout loads
+// 400-700 for headings on every page; 800 is loaded here, so only the home page
+// downloads it. hero.css reads it through the CSS variable.
+const titleFont = Barlow_Condensed({
+  weight: "800",
+  subsets: ["latin"],
+  variable: "--font-hero-title",
+});
 
 // The hero copy fades up with a CSS animation (.hero-reveal in hero.css), not
 // AOS: AOS keeps [data-aos] at opacity 0 until its script runs after
@@ -34,7 +44,10 @@ export default function HeroBanner() {
           <div className="main-banner-content">
             {/* Styled like a heading but deliberately not one: the page h1 is the
                 "Professional Masonry Services in Calgary" heading in HomeAbout. */}
-            <div className="banner-title hero-reveal" style={revealDelay(100)}>
+            <div
+              className={`banner-title hero-reveal ${titleFont.variable}`}
+              style={revealDelay(100)}
+            >
               Quality Masonry for <span>Calgary Homes and Businesses</span>
             </div>
             <p className="hero-reveal" style={revealDelay(200)}>

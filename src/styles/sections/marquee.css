@@ -11,6 +11,7 @@
 
 .animation-view-content .animation-view-text {
   white-space: nowrap;
+  font-family: var(--font-heading), sans-serif;
   font-size: 60px;
   line-height: 1.2;
   font-weight: bold;
@@ -24,12 +25,8 @@
   margin: 0 10px;
 }
 
-/* Outlined in the band's own colour: see src/components/UI/TextOutlineFilters.tsx. */
 .animation-view-content .animation-view-text span:nth-child(odd) {
-  filter: url(#text-outline-2);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  color: var(--primaryColor);
 }
 
 .animation-view-content .animation-view-text:hover {
@@ -49,10 +46,6 @@
   .animation-view-content .animation-view-text {
     font-size: 25px;
     color: var(--headingColor);
-  }
-
-  .animation-view-content .animation-view-text span:nth-child(odd) {
-    filter: url(#text-outline-1);
   }
 }
 

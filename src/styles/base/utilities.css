@@ -46,12 +46,9 @@
   margin-bottom: 0;
 }
 
-/* Outlined by an SVG filter: see src/components/UI/TextOutlineFilters.tsx. */
+/* The accent words are solid copper, like the home hero's. */
 .section-title h2 span {
-  filter: url(#text-outline-1-5);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  color: var(--primaryColor);
 }
 
 .section-title a {
@@ -139,10 +136,6 @@
 
   .section-title h2 {
     font-size: 25px;
-  }
-
-  .section-title h2 span {
-    filter: url(#text-outline-1);
   }
 
   .section-title a {

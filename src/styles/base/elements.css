@@ -31,6 +31,8 @@ h4,
 h5,
 h6 {
   color: var(--headingColor);
+  /* Barlow Condensed, loaded in src/app/layout.tsx; body text stays Jost. */
+  font-family: var(--font-heading), sans-serif;
   font-weight: bold;
 }
 

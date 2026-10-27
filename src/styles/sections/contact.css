@@ -98,10 +98,7 @@
 }
 
 .contact-form-wrap .title h2 span {
-  filter: url(#text-outline-1-5);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  color: var(--primaryColor);
 }
 
 .contact-form-wrap form .form-group {
@@ -251,10 +248,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .contact-form-wrap .title h2 span {
-    filter: url(#text-outline-1);
-  }
-
   .contact-image img {
     min-height: auto;
   }

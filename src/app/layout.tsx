@@ -4,17 +4,24 @@ import "@/styles/globals.css";
 
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
+import { Barlow_Condensed, Jost } from "next/font/google";
 
 import AosAnimation from "@/components/Layout/AosAnimation";
 import BackToTop from "@/components/Layout/BackToTop";
 import Preloader from "@/components/Layout/Preloader";
 import { ThemeProvider } from "@/components/Layout/ThemeProvider";
-import TextOutlineFilters from "@/components/UI/TextOutlineFilters";
 import { businessSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
 
 const jost = Jost({ subsets: ["latin"] });
+
+// Headings (src/styles/base/elements.css). The weights are the ones headings
+// use; the home hero loads its own 800 in HeroBanner.
+const headingFont = Barlow_Condensed({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
 
 const defaultTitle = "DMG Masonry — Masonry Contractor in Calgary";
 const defaultDescription =
@@ -97,7 +104,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: themeInitializationScript }}
         />
       </head>
-      <body className={jost.className}>
+      <body className={`${jost.className} ${headingFont.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -105,7 +112,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <ThemeProvider>{children}</ThemeProvider>
 
-        <TextOutlineFilters />
         <Preloader />
         <AosAnimation />
         <BackToTop />

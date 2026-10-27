@@ -41,10 +41,7 @@
 }
 
 .about-one-content .title h1 span {
-  filter: url(#text-outline-1-5);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  color: var(--primaryColor);
 }
 
 .about-one-content .inner-image {
@@ -395,10 +392,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .about-one-content .title h1 span {
-    filter: url(#text-outline-1);
-  }
-
   /* The /about-us banner is about 3:1, a thin strip on a phone. A 16:9 crop
      keeps the glove, trowel and brick; taller would upscale the 696px source
      too far. */

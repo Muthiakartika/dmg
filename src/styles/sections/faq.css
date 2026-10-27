@@ -42,9 +42,13 @@
   top: 28px;
 }
 
-/* Questions are <h3>s but keep the accordion button's text style. */
+/* Questions are <h3>s but keep the accordion button's weight, in the heading
+   typeface. 1.2em because the condensed face reads smaller than the Jost
+   answers at the same size. */
 .faq-accordion .accordion__button .faq-question {
   font: inherit;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 1.2em;
   color: inherit;
   margin: 0;
 }

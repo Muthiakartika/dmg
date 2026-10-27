@@ -10,6 +10,7 @@ import AosAnimation from "@/components/Layout/AosAnimation";
 import BackToTop from "@/components/Layout/BackToTop";
 import Preloader from "@/components/Layout/Preloader";
 import { ThemeProvider } from "@/components/Layout/ThemeProvider";
+import TextOutlineFilters from "@/components/UI/TextOutlineFilters";
 import { businessSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
 
@@ -104,6 +105,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <ThemeProvider>{children}</ThemeProvider>
 
+        <TextOutlineFilters />
         <Preloader />
         <AosAnimation />
         <BackToTop />

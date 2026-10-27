@@ -35,7 +35,7 @@ export default function HeroBanner() {
             {/* Styled like a heading but deliberately not one: the page h1 is the
                 "Professional Masonry Services in Calgary" heading in HomeAbout. */}
             <div className="banner-title hero-reveal" style={revealDelay(100)}>
-              A Legacy of Timeless Masonry <span>Craftsmanship & Quality</span>
+              Quality Masonry for <span>Calgary Homes and Businesses</span>
             </div>
             <p className="hero-reveal" style={revealDelay(200)}>
               Welcome to DMG Masonry, where timeless craftsmanship and enduring materials define

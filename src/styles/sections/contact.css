@@ -98,8 +98,7 @@
 }
 
 .contact-form-wrap .title h2 span {
-  color: transparent;
-  -webkit-text-stroke: 0.5px var(--headingColor);
+  filter: url(#text-outline-1-5);
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -253,7 +252,7 @@
 
 @media only screen and (max-width: 767px) {
   .contact-form-wrap .title h2 span {
-    -webkit-text-stroke: 1px var(--headingColor);
+    filter: url(#text-outline-1);
   }
 
   .contact-image img {

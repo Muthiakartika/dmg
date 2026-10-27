@@ -24,9 +24,9 @@
   margin: 0 10px;
 }
 
+/* Outlined in the band's own colour: see src/components/UI/TextOutlineFilters.tsx. */
 .animation-view-content .animation-view-text span:nth-child(odd) {
-  color: transparent;
-  -webkit-text-stroke: 0.5px #9C9C9C;
+  filter: url(#text-outline-2);
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -52,7 +52,7 @@
   }
 
   .animation-view-content .animation-view-text span:nth-child(odd) {
-    -webkit-text-stroke: 1px var(--headingColor);
+    filter: url(#text-outline-1);
   }
 }
 

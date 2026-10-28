@@ -118,6 +118,7 @@ const retainingWallRepairSections: ContentSection[] = [
         ],
       },
       { type: "p", text: "Almost every failure starts with water building up behind a wall that can't drain." },
+      { type: "p", text: "If one section has moved, it can often be taken down, the drainage behind it rebuilt, and the section put back. If the whole wall is leaning, or it's an old timber wall that has rotted, rebuilding is usually the safer and cheaper long-term fix. We often replace failing timber walls with block or natural stone. A wall that holds up a driveway, a fence or a building should be checked sooner rather than later." },
     ],
   },
 ];

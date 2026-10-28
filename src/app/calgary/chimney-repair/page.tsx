@@ -65,6 +65,13 @@ const chimneyRepairFaqs = [
     ],
   },
   {
+    uuid: "faq-chimney-9",
+    question: "What is the 3-2-10 rule for chimneys?",
+    answers: [
+      "It's the rule for how tall a chimney has to be. The flue must rise at least 3 feet (900 mm) above the highest point where the chimney meets the roof, and at least 2 feet (600 mm) above any part of the roof or building within 10 feet (3 m) of it. These minimums come from the National Building Code of Canada, which Alberta's building code is based on. A chimney that's too short can draw poorly and let smoke back into the house, so when the top of a chimney is rebuilt, it should be brought up to the required height.",
+    ],
+  },
+  {
     uuid: "faq-chimney-8",
     question: "Can I repair my chimney myself?",
     answers: [

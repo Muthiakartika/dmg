@@ -8,7 +8,6 @@ import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -148,21 +147,6 @@ const hardscapeOverviewItems = [
   }
 ];
 
-// Testimonial klien spesifik untuk Hardscape Contractor
-const hardscapeFeedbacks = [
-  {
-    feedbackText:
-      "One of the things I noticed right away was how much care went into the details. The lines are straight, everything feels solid, and nothing looks rushed.",
-    name: "Adam P.",
-  },
-  {
-    feedbackText:
-      "DMG Masonry helped us figure out a layout that made better use of the space. It turned out much more functional.",
-    name: "Jennifer L.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Hardscape Contractor Calgary – Patios & Retaining Walls",
   description:
@@ -224,12 +208,6 @@ export default function Page() {
         subtitle="MATERIALS"
         title="What Materials Are Used In Hardscape Construction?"
         items={hardscapeMaterials}
-      />
-
-      <TestimonialSlider
-        titleNormal="Calgary Hardscape"
-        titleHighlight="Contractor Reviews"
-        feedbacks={hardscapeFeedbacks}
       />
 
       <WhyChooseUs

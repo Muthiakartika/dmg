@@ -5,7 +5,9 @@ export type ContentBlock =
   | { type: "p"; text: string }
   | { type: "list"; items: readonly string[] }
   /** An h3 with the paragraph that answers it. */
-  | { type: "h3"; title: string; text: string };
+  | { type: "h3"; title: string; text: string }
+  /** A comparison or price table; the first cell of each row is its row header. */
+  | { type: "table"; head: readonly string[]; rows: readonly (readonly string[])[] };
 
 export interface ContentSection {
   heading: string;
@@ -30,6 +32,39 @@ export default function ContentSections({ sections }: ContentSectionsProps) {
                 <div className="body-subsection" key={index}>
                   <h3>{block.title}</h3>
                   <p>{renderInline(block.text)}</p>
+                </div>
+              );
+            }
+
+            if (block.type === "table") {
+              return (
+                <div className="body-table-wrap" key={index}>
+                  <table className="body-table">
+                    <thead>
+                      <tr>
+                        {block.head.map((cell, cellIndex) => (
+                          <th scope="col" key={cellIndex}>
+                            {renderInline(cell)}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row) => (
+                        <tr key={row[0]}>
+                          {row.map((cell, cellIndex) =>
+                            cellIndex === 0 ? (
+                              <th scope="row" key={cellIndex}>
+                                {renderInline(cell)}
+                              </th>
+                            ) : (
+                              <td key={cellIndex}>{renderInline(cell)}</td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               );
             }

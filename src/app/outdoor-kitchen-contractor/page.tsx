@@ -3,12 +3,12 @@ import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
+import type { ContentSection } from "@/components/Services/ContentSections";
 import Footer from "@/components/Layout/Footer";
 import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -62,6 +62,78 @@ const outdoorKitchenFaqs = [
     question: "How long does it take to build an outdoor kitchen?",
     answers: [
       "It depends on the size, the features and whether plumbing or gas lines are needed. Once we've agreed the design, we'll give you a timeline before work starts.",
+    ],
+  },
+  {
+    uuid: "faq-kitchen-8",
+    question: "Is an outdoor kitchen worth it in Calgary?",
+    answers: [
+      "It's worth it if you cook outside often or entertain. With the grill, counters and storage in one place, you stop carrying everything back and forth from the house. A masonry kitchen also stays outside all year, so there's nothing to set up each spring. If you only barbecue a few times a summer, a good freestanding grill on a solid patio may be all you need.",
+    ],
+  },
+  {
+    uuid: "faq-kitchen-9",
+    question: "Do I need a permit for an outdoor kitchen in Calgary?",
+    answers: [
+      "Gas lines and new outdoor electrical need permits. A roof, pergola or other covered structure may need a building permit, and anything close to a property line has to meet the City's setback rules. Check what applies to your address before work starts.",
+    ],
+  },
+];
+
+// Sections after "Outdoor Kitchen Ideas for Calgary Patios".
+const outdoorKitchenIntroSections: ContentSection[] = [
+  {
+    heading: "Masonry Outdoor Kitchen or Prefab BBQ Island?",
+    blocks: [
+      { type: "p", text: "Big-box stores sell prefab and flat-pack BBQ islands, and they're a fair choice for some yards. Here's how they compare with a kitchen built in masonry." },
+      {
+        type: "table",
+        head: ["", "Masonry-built kitchen", "Prefab or flat-pack island"],
+        rows: [
+          ["How it's built", "Block or brick base on a solid foundation, finished in stone, brick or stucco", "Metal frame with factory panels"],
+          ["Size and shape", "Built to fit your space: any length, L or U shape, bar seating", "Set module sizes"],
+          ["Pizza oven or fire feature", "Built in, in the same stone", "Usually a separate unit"],
+          ["Through the winter", "Stays outside all year", "Depends on the brand; check the maker's guidance"],
+          ["Can you move it?", "No, it's permanent", "Yes"],
+          ["Upfront cost", "Higher", "Lower"],
+        ],
+      },
+      { type: "p", text: "A prefab island makes sense if you want something quick, or you might move. A masonry kitchen makes sense when you want a permanent feature built for your yard, especially one with a [pizza oven](/calgary/custom-pizza-oven/) or a [fire pit](/calgary/custom-fire-pits/) alongside it." },
+    ],
+  },
+  {
+    heading: "Outdoor Kitchen Layouts That Work in Calgary Yards",
+    blocks: [
+      {
+        type: "list",
+        items: [
+          "**Straight run:** one counter with the grill in it, along the house or the edge of the patio. It suits most smaller yards.",
+          "**L-shape:** the grill on one side and prep or serving space on the other. It fits neatly into the corner of a patio.",
+          "**U-shape or galley:** the most counter space, for larger yards and people who cook outside a lot.",
+          "**Island with bar seating:** guests sit facing the cook. It needs room to walk all the way around.",
+        ],
+      },
+      { type: "p", text: "A few things decide whether a layout works:" },
+      {
+        type: "list",
+        items: [
+          "Keep the grill clear of siding, windows and anything that burns, following the grill maker's clearances.",
+          "Think about which way the wind usually blows, so smoke goes away from the seating and the house.",
+          "Leave about a metre behind the cook to work and walk.",
+          "Decide where gas, power and water will come from before the base is built.",
+        ],
+      },
+    ],
+  },
+];
+
+// Sections after "Planning Your Outdoor Kitchen: Layout, Materials & Cost".
+const outdoorKitchenSections: ContentSection[] = [
+  {
+    heading: "Gas, Power and Water: Plan Them Early",
+    blocks: [
+      { type: "p", text: "Gas lines and new outdoor wiring need permits, and should be done by a certified gas fitter and a licensed electrician. A sink needs a water line that can be drained before the first frost. All three run inside or under the base, so they're planned before the masonry goes up." },
+      { type: "p", text: "Planning a roof or pergola over the kitchen? A grill under a roof needs room above it, and often an outdoor-rated vent hood; follow the grill maker's instructions. A roofed structure may also need a permit from the City." },
     ],
   },
 ];
@@ -136,21 +208,6 @@ const outdoorKitchenOverviewItems = [
   }
 ];
 
-// Testimonial klien spesifik untuk Outdoor Kitchen
-const outdoorKitchenFeedbacks = [
-  {
-    feedbackText:
-      "We didn't have a huge backyard, so I wasn't sure an outdoor kitchen would work. The layout ended up making great use of the space without feeling crowded.",
-    name: "Jason W.",
-  },
-  {
-    feedbackText:
-      "Summer dinners have become a lot more fun since the project was finished. Instead of running back and forth between the house and the patio, everything we need is right outside.",
-    name: "Olivia C.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Outdoor Kitchen Contractor Calgary – Custom Built BBQs – DMG",
   description:
@@ -188,12 +245,14 @@ export default function Page() {
           "Made for outdoor use",
           "For everyday cooking",
         ]}
+        introSections={outdoorKitchenIntroSections}
         extraParagraphsHeading="Planning Your Outdoor Kitchen: Layout, Materials & Cost"
         extraParagraphs={[
           "Planning comes first. We look at how you cook, how much space you have and which materials suit your property, then design for how the kitchen will be used day to day.",
           "We build everything from a simple BBQ station to a full outdoor cooking setup, across north and south Calgary.",
           "Cost depends on the layout, the materials, the size and the features. We give you a clear, detailed quote, so you know what's included before work starts.",
         ]}
+        sections={outdoorKitchenSections}
       />
 
       <ProcessSteps
@@ -207,12 +266,6 @@ export default function Page() {
         subtitle="FEATURES"
         title="Built-In BBQ Grills, Counters & Features"
         items={outdoorKitchenComponents}
-      />
-
-      <TestimonialSlider
-        titleNormal="Calgary Outdoor"
-        titleHighlight="Kitchen Reviews"
-        feedbacks={outdoorKitchenFeedbacks}
       />
 
       <WhyChooseUs

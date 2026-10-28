@@ -3,8 +3,6 @@ import ContactSection from "@/components/Contact/ContactSection";
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import PageTitle from "@/components/Sections/PageTitle";
-import TestimonialCarousel from "@/components/Sections/TestimonialCarousel";
-import type { Testimonial } from "@/components/Sections/TestimonialSlider";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -17,19 +15,6 @@ export const metadata = buildMetadata({
   image: "/images/about/new/1.webp",
 });
 
-const feedbacks: Testimonial[] = [
-  {
-    feedbackText:
-      "I reached out to a few contractors before deciding, and I'm glad I chose DMG Masonry. They were easy to deal with, explained everything clearly, and the work turned out just the way we wanted.",
-    name: "Mark H.",
-  },
-  {
-    feedbackText:
-      "You can tell they care about doing things properly. We're really happy with how everything came together.",
-    name: "Laura P.",
-  },
-];
-
 export default function Page() {
   return (
     <>
@@ -41,10 +26,6 @@ export default function Page() {
           Long-Lasting Masonry Spaces...") is left out: it repeated the section
           above (Oct 2026 copy rewrite). Component kept at
           src/components/About/QuoteText.tsx. */}
-
-      <div className="ptb-100">
-        <TestimonialCarousel feedbacks={feedbacks} />
-      </div>
 
       {/* The team section is left out until there are real staff photos and names:
           the template's invented people would otherwise be indexed as our team.

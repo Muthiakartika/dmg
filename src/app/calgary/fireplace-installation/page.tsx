@@ -8,7 +8,6 @@ import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -124,21 +123,6 @@ const fireplaceOverviewItems = [
   },
 ];
 
-// Testimonial klien spesifik untuk Fireplace Installation
-const fireplaceFeedbacks = [
-  {
-    feedbackText:
-      "DMG Masonry worked with the layout we already had, so the fireplace doesn't feel like an add-on. It fits naturally with the patio and the rest of the backyard.",
-    name: "Chris W.",
-  },
-  {
-    feedbackText:
-      "It looks clean, feels well built, and gives the space a much more finished look.",
-    name: "Andrew M.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Outdoor Fireplaces Calgary – Design & Installation – DMG",
   description:
@@ -192,12 +176,6 @@ export default function Page() {
       />
 
       <ServiceGallery items={fireplaceOverviewItems} />
-
-      <TestimonialSlider
-        titleNormal="Calgary Outdoor"
-        titleHighlight="Fireplace Reviews"
-        feedbacks={fireplaceFeedbacks}
-      />
 
       <WhyChooseUs
         image="/images/services/service/fireplace_installation/8.webp"

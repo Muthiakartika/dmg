@@ -214,6 +214,40 @@
   margin-bottom: 8px;
 }
 
+/* Comparison and price tables in the body copy. On a phone a wide table
+   scrolls inside its own box instead of widening the page. */
+.services-details-desc .body-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.services-details-desc .body-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.services-details-desc .body-table th,
+.services-details-desc .body-table td {
+  border: 1px solid var(--borderColor);
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.services-details-desc .body-table th {
+  color: var(--headingColor);
+  font-weight: 500;
+}
+
+.services-details-desc .body-table thead th {
+  background-color: var(--cardBg);
+}
+
+/* ArticleSections follows a MaterialsSection, which already ends in pb-75. */
+.article-sections-area .body-section:first-child {
+  margin-top: 0;
+}
+
 .area-links-list {
   margin: 20px 0 0;
   padding-left: 22px;

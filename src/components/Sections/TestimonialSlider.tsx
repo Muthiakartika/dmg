@@ -18,7 +18,11 @@ interface TestimonialSliderProps {
   titleHighlight?: string;
 }
 
-/** Centred one-at-a-time testimonial slider (home and service pages). */
+/**
+ * Centred one-at-a-time testimonial slider. Not used on any page since
+ * Oct 2026: the named reviews could not be confirmed as real customers, so they
+ * came off the site. Kept for real Google reviews (shown with permission).
+ */
 export default function TestimonialSlider({
   feedbacks,
   titleNormal = "Our Clients",

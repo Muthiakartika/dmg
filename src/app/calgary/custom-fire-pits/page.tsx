@@ -8,7 +8,6 @@ import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -161,26 +160,6 @@ const firePitsOverviewItems = [
   }
 ];
 
-// Testimonial klien spesifik untuk Custom Fire Pits
-const firePitsFeedbacks = [
-  {
-    feedbackText:
-      "The fire pit has become our favorite part of the backyard. Big thanks to DMG Masonry.",
-    name: "Amanda S.",
-  },
-  {
-    feedbackText:
-      "I was mostly focused on how it would look, but it ended up being a really practical addition too. It's nice having a place where everyone naturally gathers.",
-    name: "Lisa W.",
-  },
-  {
-    feedbackText:
-      "It looks natural in the space, and the quality of the stonework really stands out.",
-    name: "Kyle T.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Fire Pits Calgary – Custom Fire Pit Design & Install – DMG",
   description:
@@ -240,12 +219,6 @@ export default function Page() {
         subtitle="BENEFITS"
         title="Why Add A Fire Pit To Your Outdoor Space?"
         items={firePitBenefits}
-      />
-
-      <TestimonialSlider
-        titleNormal="Calgary Fire Pit"
-        titleHighlight="Reviews"
-        feedbacks={firePitsFeedbacks}
       />
 
       <WhyChooseUs

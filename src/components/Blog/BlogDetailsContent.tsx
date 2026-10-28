@@ -100,7 +100,7 @@ export default function BlogDetailsContent({
                     >
                       <Image
                         src={suggestedPost.coverImage}
-                        alt=""
+                        alt={blogImageAlt(suggestedPost.coverImage, suggestedPost.title)}
                         fill
                         sizes="(max-width: 991px) 120px, 110px"
                       />

@@ -24,6 +24,8 @@ interface ServiceDetailsContentProps {
   paragraphs: readonly string[];
   /** Shown as two arrow lists side by side. */
   benefits: readonly string[];
+  /** Further h2 sections, shown after the benefits and before `extraParagraphs`. */
+  introSections?: readonly ContentSection[];
   /** Question-form h2 introducing `extraParagraphs`. */
   extraParagraphsHeading?: string;
   extraParagraphs: readonly string[];
@@ -41,6 +43,7 @@ export default function ServiceDetailsContent({
   paragraphsHeading,
   paragraphs,
   benefits,
+  introSections,
   extraParagraphsHeading,
   extraParagraphs,
   sections,
@@ -89,6 +92,8 @@ export default function ServiceDetailsContent({
                   <ArrowList items={benefits.slice(firstColumnSize)} icon={arrowIcon} />
                 </div>
               </div>
+
+              {introSections && <ContentSections sections={introSections} />}
 
               {extraParagraphsHeading && (
                 <h2 className="body-question">{extraParagraphsHeading}</h2>

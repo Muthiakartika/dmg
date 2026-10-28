@@ -8,7 +8,6 @@ import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -117,21 +116,6 @@ const patioStoneOverviewItems = [
   },
 ];
 
-// Testimonial klien spesifik untuk Patio Stone Installation
-const patioStoneFeedbacks = [
-  {
-    feedbackText:
-      "We originally contacted DMG Masonry about repairing our patio, but after talking through the options, we decided on a new installation instead. Looking back, it was definitely the right decision for our space.",
-    name: "Nicole H.",
-  },
-  {
-    feedbackText:
-      "Our backyard finally feels finished. The patio connects everything together, thank you DMG Masonry.",
-    name: "Melissa W.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Patio Stone Installation Calgary – Pavers & Flagstone – DMG",
   description:
@@ -189,12 +173,6 @@ export default function Page() {
         subtitle="MAINTENANCE & COST"
         title="Patio Maintenance, Sealing And Cost"
         items={patioMaintenanceTopics}
-      />
-
-      <TestimonialSlider
-        titleNormal="Calgary Patio Stone"
-        titleHighlight="Installation Reviews"
-        feedbacks={patioStoneFeedbacks}
       />
 
       <WhyChooseUs

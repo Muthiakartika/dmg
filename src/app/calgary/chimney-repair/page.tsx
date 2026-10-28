@@ -10,7 +10,6 @@ import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import AreaLinks from "@/components/Services/AreaLinks";
 import type { ContentSection } from "@/components/Services/ContentSections";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
@@ -63,6 +62,13 @@ const chimneyRepairFaqs = [
     question: "How often should a chimney be inspected?",
     answers: [
       "At least once a year, and before the heating season if you burn wood. A chimney sweep or WETT inspector checks the flue and the appliance; we repair the masonry: brick, stone, mortar joints, crown and cap. If an inspection report mentions cracked or loose masonry, send it to us with a few photos.",
+    ],
+  },
+  {
+    uuid: "faq-chimney-8",
+    question: "Can I repair my chimney myself?",
+    answers: [
+      "A few small jobs are reasonable for a handy homeowner, such as clearing debris from the cap or sealing hairline cracks in the crown with a sealer made for chimney crowns. Most chimney repair isn't a DIY job. Repointing, replacing spalled brick and rebuilding a crown or the top courses mean working on a roof with heavy materials. Mortar that's harder than the old brick can also cause new damage. Problems inside the flue, such as a damaged liner, are a job for a WETT-certified chimney professional. If you're not sure what's wrong, an inspection will tell you what needs fixing now and what can wait.",
     ],
   },
 ];
@@ -172,21 +178,6 @@ const chimneyOverviewItems = [
   }
 ];
 
-// Testimonial klien spesifik untuk Chimney Repair
-const chimneyFeedbacks = [
-  {
-    feedbackText:
-      "After a heavy rain, we started seeing signs of moisture around the fireplace. DMG Masonry found the problem with the chimney and repaired it before it turned into something bigger. It's been holding up well ever since.",
-    name: "Allison P.",
-  },
-  {
-    feedbackText:
-      "The finished work blends in really well, and it doesn't stand out like a patch job.",
-    name: "Trevor L.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Chimney Repair Calgary – Leaks, Cracks, Caps & Crowns – DMG",
   description:
@@ -232,12 +223,6 @@ export default function Page() {
       />
 
       <ServiceGallery items={chimneyOverviewItems} />
-
-      <TestimonialSlider
-        titleNormal="Calgary Chimney"
-        titleHighlight="Repair Reviews"
-        feedbacks={chimneyFeedbacks}
-      />
 
       <WhyChooseUs
         image="/images/services/service/chimney_repair/8.webp"

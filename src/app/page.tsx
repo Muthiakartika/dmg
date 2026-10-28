@@ -9,7 +9,6 @@ import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import FaqSection, { type FaqItem } from "@/components/Sections/FaqSection";
 import ProcessSteps, { type ProcessStep } from "@/components/Sections/ProcessSteps";
-import TestimonialSlider, { type Testimonial } from "@/components/Sections/TestimonialSlider";
 import TextMarquee from "@/components/Sections/TextMarquee";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
@@ -67,24 +66,6 @@ const processSteps: ProcessStep[] = [
     imageAlt: "Stacked-stone outdoor kitchen with a built-in oven and stone emblem",
     title: "Final Quality Review",
     text: "We check the finished work with you and clean up the site.",
-  },
-];
-
-const feedbacks: Testimonial[] = [
-  {
-    feedbackText:
-      "We had a few areas that needed repair, and everything was taken care of without any hassle. The team was easy to work with, kept us updated, and the finished work matched the original brick really well.",
-    name: "Michael R.",
-  },
-  {
-    feedbackText:
-      "The whole process was smooth from start to finish. They showed up on time, answered all of our questions, and made sure everything was cleaned up before they left.",
-    name: "Lisa M.",
-  },
-  {
-    feedbackText:
-      "I appreciated how straightforward everything was. The quote was clear and the work turned out exactly as discussed.",
-    name: "Kevin B.",
   },
 ];
 
@@ -156,11 +137,6 @@ export default function Home() {
           </>
         }
         steps={processSteps}
-      />
-      <TestimonialSlider
-        feedbacks={feedbacks}
-        titleNormal="Calgary Masonry"
-        titleHighlight="Contractor Reviews"
       />
       <FaqSection faqs={faqs} title="Masonry Contractors Calgary: FAQs" />
 

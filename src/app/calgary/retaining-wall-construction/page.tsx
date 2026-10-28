@@ -3,12 +3,13 @@ import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
+import ArticleSections from "@/components/Services/ArticleSections";
+import type { ContentSection } from "@/components/Services/ContentSections";
 import Footer from "@/components/Layout/Footer";
 import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -62,6 +63,61 @@ const retainingWallFaqs = [
     question: "How long does it take to build a retaining wall?",
     answers: [
       "Most walls take one to a few weeks, depending on length, height and site conditions. We'll give you a more exact timeline once we've seen your property.",
+    ],
+  },
+  {
+    uuid: "faq-retaining-8",
+    question: "What is the cheapest type of retaining wall?",
+    answers: [
+      "Timber costs the least to build, but in wet Calgary soil with freeze-thaw it usually needs replacing much sooner than masonry. Over the life of the wall, segmental block is often the better value.",
+    ],
+  },
+  {
+    uuid: "faq-retaining-9",
+    question: "Can a leaning retaining wall be fixed?",
+    answers: [
+      "Sometimes. If one section has moved because water built up behind it, that section can be taken down, the drainage fixed and the section rebuilt. If the whole wall leans or the timbers have rotted, rebuilding is usually the safer and cheaper long-term fix. Have it checked before it gets worse, especially if it holds up a driveway, a fence or a building.",
+    ],
+  },
+];
+
+// Sections after "Planning a Retaining Wall: Slope, Drainage & Soil".
+const retainingWallSections: ContentSection[] = [
+  {
+    heading: "Retaining Wall Permits in Calgary",
+    blocks: [
+      { type: "p", text: "According to the City of Calgary:" },
+      {
+        type: "list",
+        items: [
+          "A retaining wall needs a building permit when it holds back 1.2 m (4 ft) or more of soil.",
+          "Walls and garden boxes within 1 m of each other count as one height.",
+          "Some walls also need a development permit, for example when the design or location doesn't meet the land use bylaw for your property.",
+          "Before anyone digs, contact Utility Safety Partners to have buried lines marked.",
+        ],
+      },
+      { type: "p", text: "The current rules, fees and timelines are on the City's [fences and retaining walls page](https://www.calgary.ca/development/home-building/fences.html)." },
+    ],
+  },
+];
+
+// Sections after the wall types ("Concrete, Block & Natural Stone Retaining Walls").
+const retainingWallRepairSections: ContentSection[] = [
+  {
+    heading: "Retaining Wall Repair and Replacement",
+    blocks: [
+      { type: "p", text: "Signs a retaining wall is failing:" },
+      {
+        type: "list",
+        items: [
+          "it leans or bulges;",
+          "blocks or stones have shifted;",
+          "cracks run through the wall;",
+          "soil or water seeps through the face;",
+          "timbers have gone soft.",
+        ],
+      },
+      { type: "p", text: "Almost every failure starts with water building up behind a wall that can't drain." },
     ],
   },
 ];
@@ -124,26 +180,6 @@ const retainingWallOverviewItems = [
   },
 ];
 
-// Testimonial klien spesifik untuk Retaining Wall
-const retainingWallFeedbacks = [
-  {
-    feedbackText:
-      "The finished wall looks great, but what impressed me most was how solid everything feels. You can tell a lot of care went into getting it right.",
-    name: "Steven M.",
-  },
-  {
-    feedbackText:
-      "We'd been putting this project off for a while because we thought it would be more complicated. It ended up being a smooth process, and we're glad we finally got it done.",
-    name: "Brian L.",
-  },
-  {
-    feedbackText:
-      "They kept the site organized, and there wasn't much cleanup left for us once the job was finished.",
-    name: "Daniel H.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Retaining Walls Calgary – Contractor & Builder – DMG Masonry",
   description:
@@ -187,6 +223,7 @@ export default function Page() {
           "We build with natural stone, concrete block and modular wall systems, whichever fits your site and the look you want.",
           "A good wall depends on solid site preparation, the right materials and consistent workmanship. The base and the drainage behind the wall do most of the work.",
         ]}
+        sections={retainingWallSections}
       />
 
       <ProcessSteps
@@ -202,11 +239,7 @@ export default function Page() {
         items={retainingWallTypes}
       />
 
-      <TestimonialSlider
-        titleNormal="Calgary Retaining"
-        titleHighlight="Wall Reviews"
-        feedbacks={retainingWallFeedbacks}
-      />
+      <ArticleSections sections={retainingWallRepairSections} />
 
       <WhyChooseUs
         image="/images/services/service/retaining_wall/8.webp"

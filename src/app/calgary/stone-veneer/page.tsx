@@ -3,12 +3,13 @@ import JsonLd from "@/components/UI/JsonLd";
 import PageTitle from "@/components/Sections/PageTitle";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceDetailsContent from "@/components/Services/ServiceDetailsContent";
+import ArticleSections from "@/components/Services/ArticleSections";
+import type { ContentSection } from "@/components/Services/ContentSections";
 import Footer from "@/components/Layout/Footer";
 import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -55,6 +56,65 @@ const stoneVeneerFaqs = [
     question: "Can damaged stone veneer be repaired instead of replaced?",
     answers: [
       "Often, yes. Damaged or aging veneer can usually be repaired rather than replaced. We check the surface and tell you what it needs.",
+    ],
+  },
+  {
+    uuid: "faq-veneer-7",
+    question: "Is stone veneer cheaper than real stone?",
+    answers: [
+      "Usually, yes. Full-bed stone is thick and heavy: it needs a footing or ledge to sit on, and more labour to lay. Thin natural veneer and manufactured stone are applied to the wall itself, so both the material and the installation cost less, and the finished wall looks much the same.",
+    ],
+  },
+  {
+    uuid: "faq-veneer-8",
+    question: "What are the downsides of stone veneer?",
+    answers: [
+      "The main one is moisture getting trapped behind adhered veneer when the drainage layer or weep screed is left out. Manufactured stone can also fade slightly over many years in strong sun, and veneer costs more than vinyl or fibre cement siding. A proper installation prevents the moisture problem, and natural thin stone doesn't fade.",
+    ],
+  },
+];
+
+// Sections after the applications ("Where Can Stone Veneer Be Installed?").
+const stoneVeneerSections: ContentSection[] = [
+  {
+    heading: "Stone Veneer Siding for Calgary Homes",
+    blocks: [
+      { type: "p", text: "Stone veneer is used as siding in a few common ways:" },
+      {
+        type: "list",
+        items: [
+          "across the whole front of a house;",
+          "as a wainscot along the lower part of the walls;",
+          "on columns and entries;",
+          "on garage fronts.",
+        ],
+      },
+      { type: "p", text: "On an exterior wall, a proper installation includes:" },
+      {
+        type: "list",
+        items: [
+          "a weather-resistant barrier;",
+          "a drainage gap or rainscreen behind the stone;",
+          "metal lath and a scratch coat for adhered stone;",
+          "a weep screed at the bottom so water can get out;",
+          "flashing around windows and doors.",
+        ],
+      },
+      { type: "p", text: "That layer behind the stone matters in Calgary. Water that gets trapped behind veneer freezes, expands and pushes stones off the wall." },
+    ],
+  },
+  {
+    heading: "Downsides of Stone Veneer, and How to Avoid Them",
+    blocks: [
+      {
+        type: "list",
+        items: [
+          "**Trapped moisture:** the most common problem with adhered veneer. It happens when the drainage layer or weep screed is left out. Install it properly and it won't happen.",
+          "**Fading:** manufactured stone is coloured concrete, so in strong sun its colour can soften over many years. Natural thin stone doesn't fade.",
+          "**Loose or cracked stones:** usually caused by a poorly prepared wall or by movement in the structure behind it. Prep and the right mortar prevent most of it.",
+          "**Cost:** stone veneer costs more than vinyl or fibre cement siding. Many homeowners use it as a wainscot or on the entry to get the look for less.",
+        ],
+      },
     ],
   },
 ];
@@ -117,31 +177,6 @@ const stoneVeneerApplications = [
   },
 ];
 
-// Testimonial klien spesifik untuk Stone Veneer
-const stoneVeneerFeedbacks = [
-  {
-    feedbackText:
-      "We had stone veneer installed around our fireplace and it completely changed the space. The installation was neat and everything lined up nicely.",
-    name: "Olivia S.",
-  },
-  {
-    feedbackText:
-      "DMG Masonry helped us choose a stone that suited the style of our home instead of just picking what looked good on its own. Really happy with the result.",
-    name: "Melissa K.",
-  },
-  {
-    feedbackText:
-      "Our old fireplace looked pretty dated, so we decided to update it with stone veneer. The room feels much warmer and more inviting now.",
-    name: "Brian T.",
-  },
-  {
-    feedbackText:
-      "I liked that they took the time to explain the different options before we made a decision. It made choosing the right finish a lot easier than we expected.",
-    name: "Ashley M.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Stone Veneer Calgary – Installation & Design – DMG Masonry",
   description:
@@ -198,11 +233,7 @@ export default function Page() {
         items={stoneVeneerApplications}
       />
 
-      <TestimonialSlider
-        titleNormal="Calgary Stone"
-        titleHighlight="Veneer Reviews"
-        feedbacks={stoneVeneerFeedbacks}
-      />
+      <ArticleSections sections={stoneVeneerSections} />
 
       <WhyChooseUs
         image="/images/services/service/stone_veneer/8.webp"

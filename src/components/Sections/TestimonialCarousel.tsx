@@ -9,7 +9,10 @@ interface TestimonialCarouselProps {
   feedbacks: readonly Testimonial[];
 }
 
-/** Multi-card testimonial carousel (About page): 1, 2 or 3 cards per view. */
+/**
+ * Multi-card testimonial carousel: 1, 2 or 3 cards per view. Unused since the
+ * Oct 2026 removal of unconfirmed reviews; see TestimonialSlider.
+ */
 export default function TestimonialCarousel({ feedbacks }: TestimonialCarouselProps) {
   return (
     <div className="client-wrap-area pb-75">

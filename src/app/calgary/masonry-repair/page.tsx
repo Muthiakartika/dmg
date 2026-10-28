@@ -8,7 +8,6 @@ import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import Link from "next/link";
 import { servicePageSchema } from "@/lib/schema";
@@ -122,26 +121,6 @@ const masonryDamageTypes = [
   },
 ];
 
-// Testimonial klien spesifik untuk Masonry Repair
-const masonryFeedbacks = [
-  {
-    feedbackText:
-      "The damaged area had been bothering us for a while because it was becoming more noticeable each year. After the repairs, you wouldn't know there had ever been an issue.",
-    name: "Eric T.",
-  },
-  {
-    feedbackText:
-      "I wasn't sure if the cracks needed to be repaired right away, so I had them come take a look. They explained what was worth fixing now and what could wait. That kind of honesty was really appreciated.",
-    name: "Ryan K.",
-  },
-  {
-    feedbackText:
-      "Our brickwork was starting to show its age, especially around a few spots near the front of the house. The repairs kept the original look of the house without drawing attention to the repaired areas.",
-    name: "Emily W.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Masonry Repair Calgary – Restoration & Mortar Repair – DMG",
   description:
@@ -204,12 +183,6 @@ export default function Page() {
             </Link>.
           </>
         }
-      />
-
-      <TestimonialSlider
-        titleNormal="Calgary Masonry"
-        titleHighlight="Repair Reviews"
-        feedbacks={masonryFeedbacks}
       />
 
       <WhyChooseUs

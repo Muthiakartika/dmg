@@ -8,7 +8,6 @@ import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { renderInline } from "@/lib/richText";
 import { servicePageSchema } from "@/lib/schema";
@@ -143,21 +142,6 @@ const pizzaOvenOverviewItems = [
   },
 ];
 
-// Testimonial klien spesifik untuk Custom Pizza Oven
-const pizzaOvenFeedbacks = [
-  {
-    feedbackText:
-      "I'd wanted a wood-fired pizza oven for a long time, but never knew where to start. DMG Masonry helped us come up with a design that fit our backyard without taking over the whole space.",
-    name: "Matt R.",
-  },
-  {
-    feedbackText:
-      "The finished pizza oven looks really clean and fits the space perfectly.",
-    name: "Hannah M.",
-  },
-];
-
-
 export const metadata = buildMetadata({
   title: "Outdoor Pizza Ovens Calgary – Custom Wood-Fired Builds – DMG",
   description:
@@ -211,12 +195,6 @@ export default function Page() {
       />
 
       <ServiceGallery items={pizzaOvenOverviewItems} />
-
-      <TestimonialSlider
-        titleNormal="Calgary Pizza Oven"
-        titleHighlight="Reviews"
-        feedbacks={pizzaOvenFeedbacks}
-      />
 
       <WhyChooseUs
         image="/images/services/service/custome_pizza/8.webp"

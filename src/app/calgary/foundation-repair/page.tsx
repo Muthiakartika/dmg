@@ -8,7 +8,6 @@ import ProcessSteps from "@/components/Sections/ProcessSteps";
 import ServiceGallery from "@/components/Services/ServiceGallery";
 import WhyChooseUs from "@/components/Services/WhyChooseUs";
 import FaqSection from "@/components/Sections/FaqSection";
-import TestimonialSlider from "@/components/Sections/TestimonialSlider";
 import MaterialsSection from "@/components/Services/MaterialsSection";
 import { servicePageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -129,20 +128,6 @@ const foundationOverviewItems = [
   },
 ];
 
-// Testimonial klien spesifik untuk Foundation Repair
-const foundationFeedbacks = [
-  {
-    feedbackText:
-      "I appreciated that they answered all of our questions before starting the work. It made us feel a lot more comfortable moving forward with the repairs.",
-    name: "Karen L.",
-  },
-  {
-    feedbackText:
-      "The whole process was well organized from the inspection through the repairs. Once everything was finished, the work area was left clean and the repairs blended in nicely.",
-    name: "Jennifer W.",
-  },
-];
-
 export default function Page() {
   return (
     <>
@@ -187,12 +172,6 @@ export default function Page() {
         subtitle="REPAIR METHODS"
         title="Foundation Crack Repair Methods: Injection, Waterproofing & Parging"
         items={foundationRepairMethods}
-      />
-
-      <TestimonialSlider
-        titleNormal="Calgary Foundation"
-        titleHighlight="Repair Reviews"
-        feedbacks={foundationFeedbacks}
       />
 
       <WhyChooseUs

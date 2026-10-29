@@ -101,6 +101,12 @@ const allowedTags = [
   "a",
   "img",
   "hr",
+  "table",
+  "thead",
+  "tbody",
+  "tr",
+  "th",
+  "td",
 ];
 
 export function sanitizeContentHtml(content: string) {

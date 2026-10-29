@@ -38,6 +38,31 @@
   font-size: 23px;
 }
 
+.richContent table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 24px 0 28px;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.richContent th,
+.richContent td {
+  min-width: 120px;
+  padding: 10px 14px;
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid var(--borderColor);
+}
+
+.richContent th {
+  background: var(--cardBg);
+  font-weight: 600;
+}
+
 .richContent img {
   max-width: 100%;
   height: auto;

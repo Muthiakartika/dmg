@@ -14,29 +14,37 @@ export interface BlogSeoOverride {
  */
 export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
   "building-a-brick-pizza-oven-materials-costs-what-makes-one-last": {
-    title: "Building a Brick Pizza Oven in Calgary: Materials & Costs",
+    title: "Brick Pizza Oven in Calgary: Cost, Materials, Curing & vs Ooni | DMG",
+    description:
+      "What a brick pizza oven costs in Calgary, which materials survive freeze-thaw, the five-fire curing schedule, and how a built-in oven compares with an Ooni.",
   },
   "natural-vs-manufactured-stone-veneer-what-s-the-difference-for-calgary-homes": {
-    title: "Natural vs Manufactured Stone Veneer for Calgary Homes",
+    title: "Natural vs Manufactured Stone Veneer for Calgary Homes | DMG Masonry",
     description:
-      "Natural or manufactured stone veneer? How they compare on cost, weight, looks and Calgary weather, and which suits your exterior or fireplace.",
+      "Natural veneer is quarried stone sawn thin; manufactured veneer is cast concrete. How they compare on cost, weight, colour, salt and Calgary freeze-thaw.",
   },
   "how-to-seal-a-masonry-patio-a-diy-guide": {
-    title: "How to Properly Seal a Masonry Patio Before Winter",
+    title: "How to Seal a Paver or Stone Patio in Calgary: DIY Guide | DMG",
     description:
-      "This guide walks through the tools, timing and steps needed to protect a stone or brick patio from moisture, staining and long term winter freeze damage.",
+      "How to seal a paver, brick or stone patio in Calgary: timing, which sealer survives freeze-thaw and salt, cure times, reseal intervals, and when to call a pro.",
   },
   "maintaining-a-100-year-old-chimney-in-calgary": {
-    title: "Caring for a Century Old Chimney in Your Calgary Home",
+    title: "Maintaining a 100-Year-Old Chimney in Calgary: Repairs & Costs | DMG",
     description:
-      "Older chimneys face unique problems that newer builds do not. Here is what to expect during an inspection and how a full masonry restoration typically works.",
+      "How to maintain a 100-year-old brick chimney in Calgary: common problems, lime mortar repointing, inspections, repair vs rebuild, and typical costs.",
   },
   "signs-of-foundation-masonry-failure-causes-solutions": {
-    title: "Signs Your Foundation Masonry Needs Help Right Away",
+    title: "Foundation Cracks in Calgary: Normal or Serious? Signs & Repairs | DMG",
     description:
-      "From hairline cracks to shifting walls, here are the early warning signs of foundation masonry failure and the common causes and issues behind each one.",
+      "Are foundation cracks normal? How to read crack direction and width, what Calgary soil and freeze-thaw do, parging repair, and typical Calgary repair costs.",
   },
 };
+
+/**
+ * Named author shown in the byline and in the BlogPosting schema. Leave null
+ * until DMG confirms a real person and role; posts then credit the business.
+ */
+export const blogAuthor: { name: string; jobTitle: string } | null = null;
 
 export function getBlogSeoOverride(slug: string) {
   return blogSeoOverrides[slug];

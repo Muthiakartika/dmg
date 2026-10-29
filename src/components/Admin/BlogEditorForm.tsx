@@ -1,6 +1,7 @@
 "use client";
 
 import ImageExtension from "@tiptap/extension-image";
+import { TableKit } from "@tiptap/extension-table";
 import { EditorContent, useEditor, useEditorState } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "next/image";
@@ -43,7 +44,7 @@ export default function BlogEditorForm({ blog }: BlogEditorFormProps) {
 
   const editor = useEditor({
     immediatelyRender: false,
-    extensions: [StarterKit, ImageExtension],
+    extensions: [StarterKit, ImageExtension, TableKit],
     content: contentHtml,
     onUpdate: ({ editor: currentEditor }) => setContentHtml(currentEditor.getHTML()),
   });

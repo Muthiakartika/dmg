@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { applyBlogAssetAlts, blogImageAlt } from "@/lib/blogAssetAlts";
+import { getBlogUpdatedDate } from "@/lib/blogSchema";
+import { blogAuthor } from "@/lib/blogSeo";
 import type { BlogSummary, CmsBlog } from "@/lib/cmsBlogs";
 import { formatBlogDate, getBlogDisplayDate } from "@/lib/blogDate";
 import styles from "./BlogDetailsContent.module.css";
@@ -23,6 +25,7 @@ export default function BlogDetailsContent({
     .slice(0, 3);
   const hasSuggestedPosts = suggestedPosts.length > 0;
   const displayDate = getBlogDisplayDate(post);
+  const updatedDate = getBlogUpdatedDate(post);
 
   return (
     <div className={`blog-details-area pt-100 pb-100 ${styles.article}`}>
@@ -38,7 +41,12 @@ export default function BlogDetailsContent({
                   <li>
                     <time dateTime={displayDate}>{formatBlogDate(displayDate)}</time>
                   </li>
-                  <li>DMG Masonry</li>
+                  {updatedDate && (
+                    <li>
+                      Updated <time dateTime={updatedDate}>{formatBlogDate(updatedDate)}</time>
+                    </li>
+                  )}
+                  <li>{blogAuthor ? blogAuthor.name : "DMG Masonry"}</li>
                 </ul>
               </header>
 

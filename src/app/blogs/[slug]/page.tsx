@@ -7,7 +7,9 @@ import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import JsonLd from "@/components/UI/JsonLd";
 import { getPublishedBlogBySlug, getPublishedBlogs } from "@/lib/cmsBlogs";
-import { getBlogSeoOverride } from "@/lib/blogSeo";
+import { withDraftPreview } from "@/lib/blogDraftPreview";
+import { blogPostingSchema } from "@/lib/blogSchema";
+import { blogAuthor, getBlogSeoOverride } from "@/lib/blogSeo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
@@ -35,14 +37,16 @@ export async function generateMetadata({ params }: BlogDetailsPageProps): Promis
 }
 
 export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) {
-  const [post, posts] = await Promise.all([
+  const [publishedPost, posts] = await Promise.all([
     getPublishedBlogBySlug(params.slug),
     getPublishedBlogs(),
   ]);
 
-  if (!post) {
+  if (!publishedPost) {
     notFound();
   }
+
+  const post = withDraftPreview(publishedPost);
 
   const currentIndex = posts.findIndex((item) => item.slug === post.slug);
   const previousPost = posts[currentIndex - 1];
@@ -50,6 +54,13 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
 
   return (
     <>
+      <JsonLd
+        data={blogPostingSchema(
+          post,
+          getBlogSeoOverride(post.slug)?.description ?? post.excerpt,
+          blogAuthor,
+        )}
+      />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
